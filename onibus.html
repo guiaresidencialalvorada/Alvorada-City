@@ -51,23 +51,37 @@ body {
 
 /* MENU */
 .menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(2,6,23,0.95);
+    position: absolute;
+    top: 60px;
+    right: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.menu.open {
     display: flex;
-    gap: 14px;
 }
 
 .menu a {
     text-decoration: none;
     color: #e5e7eb;
     font-weight: 600;
-    padding: 8px 12px;
-    border-radius: 8px;
-    transition: all .2s;
+    padding: 10px 14px;
+    border-radius: 10px;
 }
 
 .menu a:hover {
     background: #38bdf8;
     color: #020617;
 }
+
+
+
 
 /* ================= CONTAINER ================= */
 .container {
@@ -207,6 +221,8 @@ body {
 
     <div class="logo">🚌 Ônibus Alvorada</div>
 
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
     <nav class="menu">
         <a href="index.html">Início</a>
         <a href="onibus.html">Ônibus</a>
@@ -215,6 +231,7 @@ body {
     </nav>
 
 </header>
+
 
 <!-- CONTEÚDO -->
 <main class="container">
@@ -295,6 +312,16 @@ body {
 <footer class="footer">
 <p>⚠️ Horários sujeitos a alteração sem aviso prévio.</p>
 </footer>
+
+
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+toggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+});
+</script>
 
 </body>
 </html>

@@ -348,41 +348,42 @@ document.getElementById('ano').innerText =
     `© ${new Date().getFullYear()} – Guia Comercial do Bairro Alvorada`;
 
 /* CARREGAR EMPRESAS */
+/* CARREGAR EMPRESAS */
 fetch('empresas.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Arquivo empresas.json não encontrado');
-        }
-        return response.json();
-    })
-    .then(empresas => {
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Arquivo empresas.json não encontrado');
+    }
+    return response.json();
+})
+.then(empresas => {
 
+    const grid = document.getElementById('lista-empresas');
+    const loading = document.getElementById('loading');
 
-        const grid = document.getElementById('lista-empresas');
-        grid.innerHTML = '';
-        
-        const loading = document.getElementById('loading');
-        loading.style.display = 'none';
-        grid.classList.remove('hidden');
+    loading.style.display = 'none';
+    grid.classList.remove('hidden');
+    grid.innerHTML = '';
 
-        grid.innerHTML = '';
+    if (!Array.isArray(empresas) || empresas.length === 0) {
+        grid.innerHTML =
+            '<p style="color:red; text-align:center;">Nenhuma empresa cadastrada.</p>';
+        return;
+    }
 
+    empresas.forEach(empresa => {
 
-        if (!Array.isArray(empresas) || empresas.length === 0) {
-            grid.innerHTML =
-                '<p style="color:red; text-align:center;">Nenhuma empresa cadastrada.</p>';
-            return;
-        }
+        const foneLimpo = empresa.fone.replace(/\D/g, '');
+        const foneFormatado = foneLimpo.replace(
+            /(\d{2})(\d{5})(\d{4})/,
+            '($1) $2-$3'
+        );
 
-        empresas.forEach(empresa => {
-            const foneLimpo = empresa.fone.replace(/\D/g, '');
-            const foneFormatado = foneLimpo.replace(
-                /(\d{2})(\d{5})(\d{4})/,
-                '($1) $2-$3'
-            );
-
-           grid.innerHTML += `
-        <div class="card" onclick="abrirSite('${empresa.site || ""}')">
+        grid.innerHTML += `
+        <div class="card"
+             data-abre="${empresa.abre || ''}"
+             data-fecha="${empresa.fecha || ''}"
+             onclick="abrirSite('${empresa.site || ""}')">
 
             <div class="icone">
                 <img 
@@ -395,6 +396,7 @@ fetch('empresas.json')
             <div class="info">
                 <h3>${empresa.nome}</h3>
                 <span class="categoria">${empresa.categoria}</span>
+                <span class="status"></span>
 
                 <div class="contatos">
 
@@ -413,25 +415,46 @@ fetch('empresas.json')
 
                 </div>
             </div>
-
         </div>
         `;
-
-
-        });
-    })
-    .catch(error => {
-        document.getElementById('lista-empresas').innerHTML = `
-            <p style="color:red; text-align:center; font-weight:bold;">
-                ${error.message}
-            </p>
-        `;
-        console.error(error);
     });
 
+    // APLICAR STATUS DEPOIS QUE OS CARDS EXISTEM
+    document.querySelectorAll(".card").forEach(card => {
+
+        const abre = card.dataset.abre;
+        const fecha = card.dataset.fecha;
+        const status = card.querySelector(".status");
+
+        if (!abre || !fecha) {
+            status.textContent = "Fechado";
+            status.classList.add("fechado");
+            return;
+        }
+
+        if (verificarStatus(abre, fecha)) {
+            status.textContent = "Aberto agora";
+            status.classList.add("aberto");
+        } else {
+            status.textContent = "Fechado";
+            status.classList.add("fechado");
+        }
+
+    });
+
+})
+.catch(error => {
+    document.getElementById('lista-empresas').innerHTML = `
+        <p style="color:red; text-align:center; font-weight:bold;">
+            ${error.message}
+        </p>
+    `;
+    console.error(error);
+});
 
 
-    function abrirSite(url) {
+// ABRIR SITE
+function abrirSite(url) {
 
     if(!url || url.trim() === "") {
         alert("Essa loja ainda não possui site.");
@@ -442,7 +465,9 @@ fetch('empresas.json')
 }
 
 
-    function verificarStatus(abre, fecha) {
+// VERIFICAR HORÁRIO
+function verificarStatus(abre, fecha) {
+
     const agora = new Date();
     const horaAtual = agora.getHours() * 60 + agora.getMinutes();
 
@@ -455,7 +480,8 @@ fetch('empresas.json')
     return horaAtual >= abreMin && horaAtual < fechaMin;
 }
 
-// Aplicar status em todos cards
+
+// APLICAR STATUS APÓS GERAR OS CARDS
 document.querySelectorAll(".card").forEach(card => {
 
     const abre = card.dataset.abre;
@@ -475,7 +501,9 @@ document.querySelectorAll(".card").forEach(card => {
         status.textContent = "Fechado";
         status.classList.add("fechado");
     }
+
 });
+
 
 </script>
 

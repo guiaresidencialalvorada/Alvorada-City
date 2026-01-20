@@ -5,8 +5,15 @@
     "fone": "61992049926",
     "logo": "assets/img/mercado-compre-mais.png",
     "site": "",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "08:00", "fecha": "20:00" },
+      "ter": { "abre": "08:00", "fecha": "20:00" },
+      "qua": { "abre": "08:00", "fecha": "20:00" },
+      "qui": { "abre": "08:00", "fecha": "20:00" },
+      "sex": { "abre": "08:00", "fecha": "20:00" },
+      "sab": { "abre": "08:00", "fecha": "18:00" },
+      "dom": { "abre": "08:00", "fecha": "13:00" }
+    }
   },
   {
     "nome": "Farmacinha Claudean",
@@ -14,8 +21,15 @@
     "fone": "61995273366",
     "logo": "assets/img/farmacinha-claudean.png",
     "site": "",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "07:30", "fecha": "19:00" },
+      "ter": { "abre": "07:30", "fecha": "19:00" },
+      "qua": { "abre": "07:30", "fecha": "19:00" },
+      "qui": { "abre": "07:30", "fecha": "19:00" },
+      "sex": { "abre": "07:30", "fecha": "19:00" },
+      "sab": { "abre": "08:00", "fecha": "14:00" },
+      "dom": { "fechado": true }
+    }
   },
   {
     "nome": "Renato JRS Pescados",
@@ -23,8 +37,15 @@
     "fone": "61998336735",
     "logo": "assets/img/renato-jrs-pescados.png",
     "site": "",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "07:00", "fecha": "18:00" },
+      "ter": { "abre": "07:00", "fecha": "18:00" },
+      "qua": { "abre": "07:00", "fecha": "18:00" },
+      "qui": { "abre": "07:00", "fecha": "18:00" },
+      "sex": { "abre": "07:00", "fecha": "18:00" },
+      "sab": { "abre": "07:00", "fecha": "14:00" },
+      "dom": { "fechado": true }
+    }
   },
   {
     "nome": "Restaurante Kolinas",
@@ -32,8 +53,15 @@
     "fone": "61992633504",
     "logo": "assets/img/restaurante-kolinas.png",
     "site": "https://restaurantekolinas-ctrl.github.io/cardapio-restaurante/index.html",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "11:00", "fecha": "22:00" },
+      "ter": { "abre": "11:00", "fecha": "22:00" },
+      "qua": { "abre": "11:00", "fecha": "22:00" },
+      "qui": { "abre": "11:00", "fecha": "22:00" },
+      "sex": { "abre": "11:00", "fecha": "23:00" },
+      "sab": { "abre": "11:00", "fecha": "23:00" },
+      "dom": { "fechado": true }
+    }
   },
   {
     "nome": "Agropecuária Casa da Ração",
@@ -41,8 +69,15 @@
     "fone": "83998766821",
     "logo": "assets/img/casa-da-racao.png",
     "site": "",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "08:00", "fecha": "18:00" },
+      "ter": { "abre": "08:00", "fecha": "18:00" },
+      "qua": { "abre": "08:00", "fecha": "18:00" },
+      "qui": { "abre": "08:00", "fecha": "18:00" },
+      "sex": { "abre": "08:00", "fecha": "18:00" },
+      "sab": { "abre": "08:00", "fecha": "14:00" },
+      "dom": { "fechado": true }
+    }
   },
   {
     "nome": "Agropecuária Casa do Criador",
@@ -50,8 +85,15 @@
     "fone": "61991254271",
     "logo": "assets/img/casa-do-criador.png",
     "site": "",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "08:00", "fecha": "18:00" },
+      "ter": { "abre": "08:00", "fecha": "18:00" },
+      "qua": { "abre": "08:00", "fecha": "18:00" },
+      "qui": { "abre": "08:00", "fecha": "18:00" },
+      "sex": { "abre": "08:00", "fecha": "18:00" },
+      "sab": { "abre": "08:00", "fecha": "14:00" },
+      "dom": { "fechado": true }
+    }
   },
   {
     "nome": "Criativa Papelaria",
@@ -59,8 +101,15 @@
     "fone": "61995651962",
     "logo": "assets/img/criativa-papelaria.png",
     "site": "",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "08:00", "fecha": "18:00" },
+      "ter": { "abre": "08:00", "fecha": "18:00" },
+      "qua": { "abre": "08:00", "fecha": "18:00" },
+      "qui": { "abre": "08:00", "fecha": "18:00" },
+      "sex": { "abre": "08:00", "fecha": "18:00" },
+      "sab": { "abre": "08:00", "fecha": "13:00" },
+      "dom": { "fechado": true }
+    }
   },
   {
     "nome": "Papelaria Art Performance",
@@ -68,8 +117,15 @@
     "fone": "61992611195",
     "logo": "assets/img/art-performance.png",
     "site": "",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "08:00", "fecha": "18:00" },
+      "ter": { "abre": "08:00", "fecha": "18:00" },
+      "qua": { "abre": "08:00", "fecha": "18:00" },
+      "qui": { "abre": "08:00", "fecha": "18:00" },
+      "sex": { "abre": "08:00", "fecha": "18:00" },
+      "sab": { "abre": "08:00", "fecha": "13:00" },
+      "dom": { "fechado": true }
+    }
   },
   {
     "nome": "Veneza 01",
@@ -77,8 +133,15 @@
     "fone": "61992042117",
     "logo": "assets/img/veneza-01.png",
     "site": "",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "06:00", "fecha": "20:00" },
+      "ter": { "abre": "06:00", "fecha": "20:00" },
+      "qua": { "abre": "06:00", "fecha": "20:00" },
+      "qui": { "abre": "06:00", "fecha": "20:00" },
+      "sex": { "abre": "06:00", "fecha": "20:00" },
+      "sab": { "abre": "06:00", "fecha": "18:00" },
+      "dom": { "abre": "06:00", "fecha": "12:00" }
+    }
   },
   {
     "nome": "Veneza 02",
@@ -86,8 +149,15 @@
     "fone": "61993031110",
     "logo": "assets/img/veneza-02.png",
     "site": "",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "06:00", "fecha": "20:00" },
+      "ter": { "abre": "06:00", "fecha": "20:00" },
+      "qua": { "abre": "06:00", "fecha": "20:00" },
+      "qui": { "abre": "06:00", "fecha": "20:00" },
+      "sex": { "abre": "06:00", "fecha": "20:00" },
+      "sab": { "abre": "06:00", "fecha": "18:00" },
+      "dom": { "abre": "06:00", "fecha": "12:00" }
+    }
   },
   {
     "nome": "Açaíteria Mais Sabor",
@@ -95,8 +165,15 @@
     "fone": "61992054262",
     "logo": "assets/img/acaiteria-mais-sabor.png",
     "site": "",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "14:00", "fecha": "22:00" },
+      "ter": { "abre": "14:00", "fecha": "22:00" },
+      "qua": { "abre": "14:00", "fecha": "22:00" },
+      "qui": { "abre": "14:00", "fecha": "22:00" },
+      "sex": { "abre": "14:00", "fecha": "23:00" },
+      "sab": { "abre": "14:00", "fecha": "23:00" },
+      "dom": { "abre": "14:00", "fecha": "21:00" }
+    }
   },
   {
     "nome": "Gás Advaldo",
@@ -104,8 +181,15 @@
     "fone": "61986542668",
     "logo": "assets/img/gas-advaldo.png",
     "site": "",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "07:00", "fecha": "19:00" },
+      "ter": { "abre": "07:00", "fecha": "19:00" },
+      "qua": { "abre": "07:00", "fecha": "19:00" },
+      "qui": { "abre": "07:00", "fecha": "19:00" },
+      "sex": { "abre": "07:00", "fecha": "19:00" },
+      "sab": { "abre": "08:00", "fecha": "16:00" },
+      "dom": { "fechado": true }
+    }
   },
   {
     "nome": "Chapury Distribuidora",
@@ -113,8 +197,15 @@
     "fone": "61992723796",
     "logo": "assets/img/chapury-distribuidora.png",
     "site": "",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "09:00", "fecha": "22:00" },
+      "ter": { "abre": "09:00", "fecha": "22:00" },
+      "qua": { "abre": "09:00", "fecha": "22:00" },
+      "qui": { "abre": "09:00", "fecha": "22:00" },
+      "sex": { "abre": "09:00", "fecha": "23:00" },
+      "sab": { "abre": "09:00", "fecha": "23:00" },
+      "dom": { "abre": "10:00", "fecha": "20:00" }
+    }
   },
   {
     "nome": "Visão Ferragens",
@@ -122,7 +213,14 @@
     "fone": "61993432778",
     "logo": "assets/img/visao-ferragens.png",
     "site": "",
-    "abre": "",
-    "fecha": ""
+    "horarios": {
+      "seg": { "abre": "08:00", "fecha": "18:00" },
+      "ter": { "abre": "08:00", "fecha": "18:00" },
+      "qua": { "abre": "08:00", "fecha": "18:00" },
+      "qui": { "abre": "08:00", "fecha": "18:00" },
+      "sex": { "abre": "08:00", "fecha": "18:00" },
+      "sab": { "abre": "08:00", "fecha": "13:00" },
+      "dom": { "fechado": true }
+    }
   }
 ]

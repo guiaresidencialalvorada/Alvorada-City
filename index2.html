@@ -162,10 +162,9 @@ h1#empresas {
 }
 
 .card .btn {
-    white-space: normal;
-    text-align: center;
     width: 100%;
 }
+
 
 
     
@@ -211,9 +210,11 @@ h1#empresas {
 .card .contatos {
     margin-top: auto;
     display: flex;
+    flex-direction: column;
+    align-items: stretch;
     gap: 6px;
-    flex-wrap: wrap;
 }
+
 
 .card .btn {
     border-radius: 8px;
@@ -231,12 +232,11 @@ h1#empresas {
 .btn.telefone {
     background: rgba(255,255,255,0.08);
     color: #000000;
-    justify-content: flex-start; /* alinha à esquerda */
+    justify-content: flex-start;
+    text-align: left;
     padding-left: 12px;
-    gap: 6px;
 }
 
-}
 
 .btn.telefone:hover {
     background: #38bdf8;

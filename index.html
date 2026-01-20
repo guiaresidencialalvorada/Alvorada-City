@@ -273,9 +273,10 @@ h1#empresas {
 <main class="container">
     <h1 id="empresas">Lojas do Residencial Alvorada</h1>
 
-    <div class="grid" id="lista-empresas">
-        <p style="text-align:center;">Carregando empresas...</p>
-    </div>
+    <p id="loading" class="loading">Carregando empresas...</p>
+
+   <div class="grid hidden" id="lista-empresas"></div>
+
 </main>
 
 <!-- FOOTER -->
@@ -307,8 +308,17 @@ fetch('empresas.json')
         return response.json();
     })
     .then(empresas => {
+
+
         const grid = document.getElementById('lista-empresas');
         grid.innerHTML = '';
+        
+        const loading = document.getElementById('loading');
+        loading.style.display = 'none';
+        grid.classList.remove('hidden');
+
+        grid.innerHTML = '';
+
 
         if (!Array.isArray(empresas) || empresas.length === 0) {
             grid.innerHTML =

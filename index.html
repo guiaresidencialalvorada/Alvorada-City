@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Guia Comercial | Bairro Alvorada</title>
+<meta charset="UTF-8">
+<title>Guia Comercial | Bairro Alvorada</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guia Comercial do Bairro Alvorada. Valorize o comércio local.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Guia Comercial do Bairro Alvorada. Valorize o comércio local.">
 
-  
 <style>
-/* ================= RESET ================= */
+
+/* RESET */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,15 +17,15 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-/* ================= BODY ================= */
+/* BODY */
 body {
     font-family: 'Segoe UI', Roboto, Arial, sans-serif;
     background: #f4f6f8;
-    color: #2b2b2b;
+    color: #000000;
     line-height: 1.6;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 .header {
     position: sticky;
     top: 0;
@@ -34,7 +34,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 12px; /* reduzido para alinhar com grid */
+    padding: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
@@ -42,7 +42,6 @@ body {
     font-weight: 700;
     font-size: 22px;
     color: #0b4da2;
-    text-transform: uppercase;
 }
 
 .menu-toggle {
@@ -50,7 +49,6 @@ body {
     border: none;
     font-size: 22px;
     cursor: pointer;
-    margin-right: 4px; /* alinhamento preciso à direita */
 }
 
 /* MENU MOBILE */
@@ -58,11 +56,11 @@ body {
     display: none;
     flex-direction: column;
     gap: 8px;
-    background: #fff;
+    background: #ffffff;
     position: absolute;
-    top: 52px; /* ajustado */
+    top: 55px;
     right: 12px;
-    padding: 8px;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
@@ -73,20 +71,19 @@ body {
 
 .menu a {
     text-decoration: none;
-    color: #333;
+    color: #000;
     font-weight: 600;
     padding: 8px 10px;
     border-radius: 6px;
-    transition: background 0.3s;
 }
 
 .menu a:hover {
     background: #e8f4f9;
 }
 
-/* ================= CONTAINER PRINCIPAL ================= */
+/* CONTAINER */
 .container {
-    padding: 22px 12px; /* reduzido para zero gap nas laterais */
+    padding: 18px 12px;
     max-width: 1200px;
     margin: auto;
 }
@@ -95,43 +92,34 @@ h1#empresas {
     text-align: center;
     font-size: 26px;
     color: #0a7c6d;
-    margin-bottom: 20px;
-    font-weight: 700;
+    margin-bottom: 18px;
 }
 
-/* ================= GRID ================= */
+/* GRID - SEMPRE 2 COLUNAS NO MOBILE */
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px; /* espaço menor e uniforme */
-    width: 100%; /* garante preencher largura */
+    gap: 12px;
 }
 
-/* ================= CARDS DAS EMPRESAS ================= */
+/* CARD */
 .card {
     background: #ffffff;
     border-radius: 10px;
-    padding: 10px 8px;
+    padding: 10px;
     display: flex;
     gap: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.07);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
     align-items: flex-start;
 }
 
-.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-
-/* ÍCONE DO CARD */
+/* ÍCONE */
 .card .icone {
     width: 60px;
     height: 60px;
     min-width: 60px;
-    min-height: 60px;
     background: #e8f4f9;
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,26 +129,27 @@ h1#empresas {
 .card .icone img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
-/* CONTEÚDO DO CARD */
+/* INFO */
 .card .info {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
+/* TITULO */
 .card h3 {
     font-size: 15px;
     font-weight: 700;
-    color: #0a7c6d;
-    margin-bottom: 2px;
+    color: #000000;
 }
 
+/* CATEGORIA */
 .card .categoria {
     font-size: 12px;
-    color: #555;
+    color: #333333;
     margin-bottom: 6px;
 }
 
@@ -169,10 +158,10 @@ h1#empresas {
     margin-top: auto;
     display: flex;
     gap: 6px;
-    justify-content: flex-start; /* alinha à esquerda */
     flex-wrap: wrap;
 }
 
+/* BOTÕES */
 .card .btn {
     border-radius: 6px;
     font-size: 11px;
@@ -182,67 +171,28 @@ h1#empresas {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    transition: background 0.3s ease;
 }
 
-/* BOTÕES */
 .btn.telefone {
     background: #eef2f7;
-    color: #333;
-}
-
-.btn.telefone:hover {
-    background: #d6e4ed;
+    color: #000000;
 }
 
 .btn.whatsapp {
     background: #25d366;
-    color: #fff;
+    color: #ffffff;
 }
 
-.btn.whatsapp:hover {
-    background: #1ea859;
-}
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 .footer {
-    margin-top: 28px;
-    padding: 16px 8px;
+    margin-top: 24px;
+    padding: 14px;
     text-align: center;
     font-size: 13px;
-    color: #555;
+    color: #333;
 }
 
-/* ================= RESPONSIVIDADE ================= */
-@media (min-width: 600px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 900px) {
-    .grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .menu {
-        display: flex !important;
-        flex-direction: row;
-        position: static;
-        box-shadow: none;
-        background: none;
-        gap: 14px;
-    }
-    .menu-toggle {
-        display: none;
-    }
-}
-
-.card .icone img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-/* LOADING SUAVE */
+/* LOADING */
 .loading {
     text-align: center;
     font-weight: 600;
@@ -254,20 +204,36 @@ h1#empresas {
     display: none;
 }
 
-    
+/* DESKTOP */
+@media (min-width: 900px) {
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .menu {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        box-shadow: none;
+        background: none;
+        gap: 14px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
 </style>
-
-
-
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
     <div class="logo">🏪 Guia Comercial</div>
 
-    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <button class="menu-toggle">☰</button>
 
     <nav class="menu">
         <a href="index.html">Início</a>
@@ -278,26 +244,24 @@ h1#empresas {
     </nav>
 </header>
 
-
-<!-- CONTEÚDO -->
 <main class="container">
-    <h1 id="empresas">Lojas do Residencial Alvorada</h1>
 
-    <p id="loading" class="loading">Carregando empresas...</p>
+<h1 id="empresas">Lojas do Residencial Alvorada</h1>
 
-   <div class="grid hidden" id="lista-empresas"></div>
+<p id="loading" class="loading">Carregando empresas...</p>
+
+<div class="grid hidden" id="lista-empresas"></div>
 
 </main>
 
-<!-- FOOTER -->
-<footer class="footer" id="contato">
-    <p id="ano"></p>
-    <p>Valorize o comércio local </p>
+<footer class="footer">
+<p id="ano"></p>
+<p>Valorize o comércio local</p>
 </footer>
 
-<!-- JS -->
 <script>
-/* MENU MOBILE */
+
+/* MENU */
 const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 
@@ -305,83 +269,84 @@ toggle.addEventListener('click', () => {
     menu.classList.toggle('open');
 });
 
-/* ANO AUTOMÁTICO */
+/* ANO */
 document.getElementById('ano').innerText =
-    `© ${new Date().getFullYear()} – Guia Comercial do Bairro Alvorada`;
+`© ${new Date().getFullYear()} – Guia Comercial do Bairro Alvorada`;
 
 /* CARREGAR EMPRESAS */
 fetch('empresas.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Arquivo empresas.json não encontrado');
-        }
-        return response.json();
-    })
-    .then(empresas => {
+.then(res => {
+    if (!res.ok) throw new Error('Arquivo empresas.json não encontrado');
+    return res.json();
+})
+.then(empresas => {
 
+    const grid = document.getElementById('lista-empresas');
+    const loading = document.getElementById('loading');
 
-        const grid = document.getElementById('lista-empresas');
-        grid.innerHTML = '';
-        
-        const loading = document.getElementById('loading');
-        loading.style.display = 'none';
-        grid.classList.remove('hidden');
+    loading.style.display = 'none';
+    grid.classList.remove('hidden');
 
-        grid.innerHTML = '';
+    if (!empresas.length) {
+        grid.innerHTML = "<p>Nenhuma empresa cadastrada.</p>";
+        return;
+    }
 
+    empresas.forEach(empresa => {
 
-        if (!Array.isArray(empresas) || empresas.length === 0) {
-            grid.innerHTML =
-                '<p style="color:red; text-align:center;">Nenhuma empresa cadastrada.</p>';
-            return;
-        }
+        const nome = empresa.nome || "Empresa sem nome";
+        const categoria = empresa.categoria || "Categoria não informada";
+        const logo = empresa.logo || "assets/img/padrao.png";
+        const fone = empresa.fone || "";
 
-        empresas.forEach(empresa => {
-            const foneLimpo = empresa.fone.replace(/\D/g, '');
+        let telefoneHTML = "";
+        let whatsappHTML = "";
+
+        if (fone) {
+            const foneLimpo = fone.replace(/\D/g, '');
             const foneFormatado = foneLimpo.replace(
                 /(\d{2})(\d{5})(\d{4})/,
                 '($1) $2-$3'
             );
 
-            grid.innerHTML += `
-            <div class="card">
-                <div class="icone">
-                    <img 
-                      src="${empresa.logo}" 
-                      alt="Logo ${empresa.nome}" 
-                      loading="lazy"
-                      onerror="this.src='assets/img/padrao.png'">
-                </div>
+            telefoneHTML = `
+            <a class="btn telefone" href="tel:${foneLimpo}">
+            📞 ${foneFormatado}
+            </a>`;
 
-                <div class="info">
-                    <h3>${empresa.nome}</h3>
-                    <span class="categoria">${empresa.categoria}</span>
+            whatsappHTML = `
+            <a class="btn whatsapp" target="_blank"
+            href="https://wa.me/55${foneLimpo}">
+            🟢 WhatsApp
+            </a>`;
+        }
 
-                    <div class="contatos">
-                        <a class="btn telefone" href="tel:${foneLimpo}">
-                            📞 ${foneFormatado}
-                        </a>
+        grid.innerHTML += `
+        <div class="card">
 
-                        <a class="btn whatsapp"
-                           href="https://wa.me/55${foneLimpo}"
-                           target="_blank">
-                            🟢 WhatsApp
-                        </a>
-                    </div>
+            <div class="icone">
+                <img src="${logo}" loading="lazy"
+                onerror="this.src='assets/img/padrao.png'">
+            </div>
+
+            <div class="info">
+                <h3>${nome}</h3>
+                <span class="categoria">${categoria}</span>
+
+                <div class="contatos">
+                    ${telefoneHTML}
+                    ${whatsappHTML}
                 </div>
             </div>
-        `;
 
-        });
-    })
-    .catch(error => {
-        document.getElementById('lista-empresas').innerHTML = `
-            <p style="color:red; text-align:center; font-weight:bold;">
-                ${error.message}
-            </p>
-        `;
-        console.error(error);
+        </div>`;
     });
+
+})
+.catch(err => {
+    document.getElementById('loading').innerText = err.message;
+});
+
 </script>
 
 </body>

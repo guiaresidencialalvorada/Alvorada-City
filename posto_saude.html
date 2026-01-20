@@ -62,10 +62,10 @@ body {
     gap: 8px;
     background: #fff;
     position: absolute;
-    top: 56px;
+    top: 60px;
     right: 12px;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 12px;
+    border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
@@ -85,7 +85,7 @@ body {
     background: #e8f4f9;
 }
 
-/* Desktop */
+/* Desktop Menu */
 @media (min-width: 900px) {
     .menu {
         display: flex !important;
@@ -94,7 +94,7 @@ body {
         background: transparent;
         box-shadow: none;
         padding: 0;
-        gap: 16px;
+        gap: 18px;
     }
 
     .menu-toggle {
@@ -112,7 +112,7 @@ body {
 /* ================= TITLE ================= */
 .page-title {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .page-title h1 {
@@ -130,7 +130,7 @@ body {
 .cards-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 14px;
 }
 
 @media (min-width: 600px) {
@@ -160,7 +160,7 @@ body {
 }
 
 .card-icon {
-    font-size: 46px;
+    font-size: 44px;
     text-align: center;
     padding: 18px;
     background: #e8f4f9;
@@ -206,12 +206,13 @@ body {
     max-width: 400px;
     width: 90%;
     text-align: center;
+    position: relative;
 }
 
 .close-btn {
     position: absolute;
-    right: 16px;
-    top: 12px;
+    right: 14px;
+    top: 10px;
     font-size: 20px;
     cursor: pointer;
 }
@@ -230,6 +231,8 @@ body {
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header class="header">
 <div class="logo">🏥 Posto de Saúde</div>
 
@@ -243,11 +246,13 @@ body {
 </nav>
 </header>
 
+<!-- ================= MAIN ================= -->
+
 <main class="container">
 
 <section class="page-title">
 <h1>Atendimentos do Posto de Saúde</h1>
-<p>Segunda a Sexta-feira</p>
+<p>Segunda a Domingo</p>
 </section>
 
 <section class="cards-grid">
@@ -279,24 +284,66 @@ body {
 </div>
 </article>
 
+<article class="card" onclick="openModal('quinta')">
+<div class="card-icon">👩‍⚕️</div>
+<div class="card-content">
+<h3>Quinta-feira</h3>
+<span class="horario">08:00 às 17:00</span>
+<p>Pré-natal e exames.</p>
+</div>
+</article>
+
+<article class="card" onclick="openModal('sexta')">
+<div class="card-icon">🏥</div>
+<div class="card-content">
+<h3>Sexta-feira</h3>
+<span class="horario">08:00 às 17:00</span>
+<p>Clínico geral.</p>
+</div>
+</article>
+
+<article class="card" onclick="openModal('sabado')">
+<div class="card-icon">🧾</div>
+<div class="card-content">
+<h3>Sábado</h3>
+<span class="horario">08:00 às 12:00</span>
+<p>Atendimento reduzido.</p>
+</div>
+</article>
+
+<article class="card" onclick="openModal('domingo')">
+<div class="card-icon">🚑</div>
+<div class="card-content">
+<h3>Domingo</h3>
+<span class="horario">Plantão</span>
+<p>Somente emergências.</p>
+</div>
+</article>
+
 </section>
 </main>
 
+<!-- ================= MODAL ================= -->
+
 <div id="modal" class="modal" onclick="closeModal()">
-<div class="modal-content">
-<span class="close-btn">✖</span>
+<div class="modal-content" onclick="event.stopPropagation()">
+<span class="close-btn" onclick="closeModal()">✖</span>
 <h2 id="modal-title"></h2>
 <p id="modal-description"></p>
 </div>
 </div>
 
+<!-- ================= FOOTER ================= -->
+
 <footer class="footer">
 <p>⚠️ Horários sujeitos a alteração.</p>
 </footer>
 
+<!-- ================= SCRIPT ================= -->
+
 <script>
 
-// MENU
+// MENU MOBILE
 const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 
@@ -312,6 +359,7 @@ document.querySelectorAll('.menu a').forEach(link => {
 
 // MODAL
 function openModal(dia) {
+
     const modal = document.getElementById("modal");
     const title = document.getElementById("modal-title");
     const desc = document.getElementById("modal-description");
@@ -319,7 +367,11 @@ function openModal(dia) {
     const dados = {
         segunda: { title: "Segunda-feira", desc: "Consultas médicas e enfermagem." },
         terca: { title: "Terça-feira", desc: "Vacinação e atendimento infantil." },
-        quarta: { title: "Quarta-feira", desc: "Odontologia e triagem." }
+        quarta: { title: "Quarta-feira", desc: "Odontologia e triagem." },
+        quinta: { title: "Quinta-feira", desc: "Pré-natal, exames e acompanhamento." },
+        sexta: { title: "Sexta-feira", desc: "Atendimento clínico geral." },
+        sabado: { title: "Sábado", desc: "Atendimento reduzido (meio período)." },
+        domingo: { title: "Domingo", desc: "Somente plantão de emergência." }
     };
 
     title.innerText = dados[dia].title;

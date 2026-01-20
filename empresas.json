@@ -3,84 +3,98 @@
     "nome": "Mercado Compre Mais",
     "categoria": "Supermercado",
     "fone": "61992049926",
-    "logo": "assets/img/mercado-compre-mais.png"
+    "logo": "assets/img/mercado-compre-mais.png",
+    "site": ""
   },
   {
     "nome": "Farmacinha Claudean",
     "categoria": "Farmácia",
     "fone": "61995273366",
-    "logo": "assets/img/farmacinha-claudean.png"
+    "logo": "assets/img/farmacinha-claudean.png",
+    "site": ""
   },
   {
     "nome": "Renato JRS Pescados",
     "categoria": "Peixaria / Alimentos",
     "fone": "61998336735",
-    "logo": "assets/img/renato-jrs-pescados.png"
+    "logo": "assets/img/renato-jrs-pescados.png",
+    "site": ""
   },
   {
     "nome": "Restaurante Kolinas",
     "categoria": "Restaurante / Refeições",
     "fone": "61992633504",
-    "logo": "assets/img/restaurante-kolinas.png"
+    "logo": "assets/img/restaurante-kolinas.png",
+    "site": ""
   },
   {
     "nome": "Agropecuária Casa da Ração",
     "categoria": "Agropecuária",
     "fone": "83998766821",
-    "logo": "assets/img/casa-da-racao.png"
+    "logo": "assets/img/casa-da-racao.png",
+    "site": ""
   },
   {
     "nome": "Agropecuária Casa do Criador",
     "categoria": "Agropecuária",
     "fone": "61991254271",
-    "logo": "assets/img/casa-do-criador.png"
+    "logo": "assets/img/casa-do-criador.png",
+    "site": ""
   },
   {
     "nome": "Criativa Papelaria",
     "categoria": "Papelaria",
     "fone": "61995651962",
-    "logo": "assets/img/criativa-papelaria.png"
+    "logo": "assets/img/criativa-papelaria.png",
+    "site": ""
   },
   {
     "nome": "Papelaria Art Performance",
     "categoria": "Papelaria",
     "fone": "61992611195",
-    "logo": "assets/img/art-performance.png"
+    "logo": "assets/img/art-performance.png",
+    "site": ""
   },
   {
     "nome": "Veneza 01",
     "categoria": "Padaria",
     "fone": "61992042117",
-    "logo": "assets/img/veneza-01.png"
+    "logo": "assets/img/veneza-01.png",
+    "site": ""
   },
   {
     "nome": "Veneza 02",
     "categoria": "Padaria",
     "fone": "61993031110",
-    "logo": "assets/img/veneza-02.png"
+    "logo": "assets/img/veneza-02.png",
+    "site": ""
   },
   {
     "nome": "Açaíteria Mais Sabor",
     "categoria": "Açaí",
     "fone": "61992054262",
-    "logo": "assets/img/acaiteria-mais-sabor.png"
+    "logo": "assets/img/acaiteria-mais-sabor.png",
+    "site": ""
   },
   {
     "nome": "Gás Advaldo",
     "categoria": "Gás",
     "fone": "61986542668",
-    "logo": "assets/img/gas-advaldo.png"
+    "logo": "assets/img/gas-advaldo.png",
+    "site": ""
   },
   {
     "nome": "Chapury Distribuidora",
     "categoria": "Distribuidora de Bebidas",
     "fone": "61992723796",
-    "logo": "assets/img/chapury-distribuidora.png"
+    "logo": "assets/img/chapury-distribuidora.png",
+    "site": ""
   },
   {
     "nome": "Visão Ferragens",
     "categoria": "Ferragens",
     "fone": "61993432778",
-    "logo": "assets/img/visao-ferragens.png"
+    "logo": "assets/img/visao-ferragens.png",
+    "site": ""
   }
 ]

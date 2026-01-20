@@ -381,9 +381,9 @@ fetch('empresas.json')
 
         grid.innerHTML += `
         <div class="card"
-             data-abre="${empresa.abre || ''}"
-             data-fecha="${empresa.fecha || ''}"
-             onclick="abrirSite('${empresa.site || ""}')">
+         data-horarios='${JSON.stringify(empresa.horarios)}'
+         onclick="abrirSite('${empresa.site || ""}')">
+
 
             <div class="icone">
                 <img 
@@ -419,38 +419,29 @@ fetch('empresas.json')
         `;
     });
 
+    
+
     // APLICAR STATUS DEPOIS QUE OS CARDS EXISTEM
-    document.querySelectorAll(".card").forEach(card => {
+document.querySelectorAll(".card").forEach(card => {
 
-        const abre = card.dataset.abre;
-        const fecha = card.dataset.fecha;
-        const status = card.querySelector(".status");
+    const horarios = JSON.parse(card.dataset.horarios);
+    const status = card.querySelector(".status");
 
-        if (!abre || !fecha) {
-            status.textContent = "Fechado";
-            status.classList.add("fechado");
-            return;
-        }
+    const resultado = verificarStatusPorDia(horarios);
 
-        if (verificarStatus(abre, fecha)) {
-            status.textContent = "Aberto agora";
-            status.classList.add("aberto");
-        } else {
-            status.textContent = "Fechado";
-            status.classList.add("fechado");
-        }
+    if (resultado.aberto) {
+        status.textContent = `Aberto agora • Fecha às ${resultado.fecha}`;
+        status.classList.add("aberto");
+    } else {
+        status.textContent = "Fechado";
+        status.classList.add("fechado");
+    }
 
-    });
-
-})
-.catch(error => {
-    document.getElementById('lista-empresas').innerHTML = `
-        <p style="color:red; text-align:center; font-weight:bold;">
-            ${error.message}
-        </p>
-    `;
-    console.error(error);
 });
+
+
+
+
 
 
 // ABRIR SITE
@@ -465,44 +456,36 @@ function abrirSite(url) {
 }
 
 
-// VERIFICAR HORÁRIO
-function verificarStatus(abre, fecha) {
+// VERIFICAR DIAS
+function verificarStatusPorDia(horarios) {
 
     const agora = new Date();
+
+    const dias = ["dom","seg","ter","qua","qui","sex","sab"];
+    const hoje = dias[agora.getDay()];
+
+    const horarioHoje = horarios[hoje];
+
+    if (!horarioHoje || horarioHoje.fechado) {
+        return { aberto: false };
+    }
+
     const horaAtual = agora.getHours() * 60 + agora.getMinutes();
 
-    const [hA, mA] = abre.split(":").map(Number);
-    const [hF, mF] = fecha.split(":").map(Number);
+    const [hA, mA] = horarioHoje.abre.split(":").map(Number);
+    const [hF, mF] = horarioHoje.fecha.split(":").map(Number);
 
     const abreMin = hA * 60 + mA;
     const fechaMin = hF * 60 + mF;
 
-    return horaAtual >= abreMin && horaAtual < fechaMin;
+    return {
+        aberto: horaAtual >= abreMin && horaAtual < fechaMin,
+        fecha: horarioHoje.fecha
+    };
 }
 
 
-// APLICAR STATUS APÓS GERAR OS CARDS
-document.querySelectorAll(".card").forEach(card => {
 
-    const abre = card.dataset.abre;
-    const fecha = card.dataset.fecha;
-    const status = card.querySelector(".status");
-
-    if (!abre || !fecha) {
-        status.textContent = "Fechado";
-        status.classList.add("fechado");
-        return;
-    }
-
-    if (verificarStatus(abre, fecha)) {
-        status.textContent = "Aberto agora";
-        status.classList.add("aberto");
-    } else {
-        status.textContent = "Fechado";
-        status.classList.add("fechado");
-    }
-
-});
 
 
 </script>

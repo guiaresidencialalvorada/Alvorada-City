@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Guia Comercial | Bairro Alvorada</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia Comercial do Bairro Alvorada. Valorize o comércio local.">
+
+  
+<style>
+/* ================= RESET ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: #f1f5f9;
+    color: #0f172a;
+    line-height: 1.6;
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+/* ================= HEADER ================= */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #38bdf8;
+    text-transform: uppercase;
+}
+
+/* MENU TOGGLE */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #38bdf8;
+}
+
+/* MENU MOBILE */
+.menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(2, 6, 23, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.menu.open {
+    display: flex;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+.menu a:hover {
+    background: #38bdf8;
+    color: #020617;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    padding: 26px 14px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+h1#empresas {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 24px;
+    font-weight: 800;
+    color: #38bdf8;
+}
+
+/* ================= GRID ================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+
+
+/* ================= CARD ================= */
+.card {
+    background: #ffffff;
+    backdrop-filter: blur(8px);
+    border-radius: 14px;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.01);
+    border-color: #38bdf8;
+    box-shadow: 0 0 18px rgba(56,189,248,0.35);
+}
+  .card {
+    min-width: 0;
+}
+  
+.card h3,
+.card .categoria {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+
+.card h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+.card .contatos {
+    flex-wrap: wrap;
+}
+
+.card .btn {
+    width: 100%;
+}
+
+
+
+    
+/* ================= LOGO ================= */
+.card .icone {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card .icone img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ================= INFO ================= */
+.card .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.card .categoria {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+/* ================= BOTÕES ================= */
+.card .contatos {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+}
+
+
+.card .btn {
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.25s ease;
+}
+
+/* TELEFONE */
+.btn.telefone {
+    background: rgba(255,255,255,0.08);
+    color: #000000;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 12px;
+}
+
+
+.btn.telefone:hover {
+    background: #38bdf8;
+    color: #020617;
+}
+
+/* WHATSAPP */
+.btn.whatsapp {
+    background: linear-gradient(135deg,#22c55e,#16a34a);
+    color: #ecfdf5;
+}
+
+.btn.whatsapp:hover {
+    filter: brightness(1.15);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* ================= RESPONSIVO ================= */
+/* TABLET */
+@media (min-width: 700px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1000px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+    .menu {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: transparent;
+        border: none;
+        padding: 0;
+        gap: 16px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+
+   /* CELULAR */ 
+@media (max-width: 400px) {
+    .card {
+        padding: 10px;
+    }
+
+    .card .icone {
+        width: 54px;
+        height: 54px;
+        min-width: 54px;
+    }
+
+    .card h3 {
+        font-size: 14px;
+    }
+}
+
+
+    
+
+    
+/* ================= LOADING ================= */
+.loading {
+    text-align: center;
+    font-weight: 700;
+    color: #38bdf8;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+/* ================= STATUS LOJA ================= */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.status::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.aberto {
+    color: #22c55e;
+}
+
+.aberto::before {
+    background: #22c55e;
+    box-shadow: 0 0 8px rgba(34,197,94,0.6);
+}
+
+.fechado {
+    color: #ef4444;
+}
+
+.fechado::before {
+    background: #ef4444;
+    box-shadow: 0 0 8px rgba(239,68,68,0.6);
+}
+
+    
+</style>
+
+
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">🏪 Guia Comercial</div>
+
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="#empresas">Lojas</a>
+        <a href="onibus.html">Ônibus</a>
+        <a href="posto_saude.html">Posto de Saúde</a>
+        <a href="contatos_uteis.html">Contatos Úteis</a>
+    </nav>
+</header>
+
+
+<!-- CONTEÚDO -->
+<main class="container">
+    <h1 id="empresas">Lojas do Residencial Alvorada</h1>
+
+    <p id="loading" class="loading">Carregando empresas...</p>
+
+   <div class="grid hidden" id="lista-empresas"></div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" id="contato">
+    <p id="ano"></p>
+    <p>Valorize o comércio local </p>
+</footer>
+
+<!-- JS -->
+<script>
+/* MENU MOBILE */
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+toggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+});
+
+/* ANO AUTOMÁTICO */
+document.getElementById('ano').innerText =
+    `© ${new Date().getFullYear()} – Guia Comercial do Bairro Alvorada`;
+
+
+/* ================= CARREGAR EMPRESAS ================= */
+
+fetch('empresas.json')
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Arquivo empresas.json não encontrado');
+    }
+    return response.json();
+})
+.then(empresas => {
+
+    const grid = document.getElementById('lista-empresas');
+    const loading = document.getElementById('loading');
+
+    loading.style.display = 'none';
+    grid.classList.remove('hidden');
+    grid.innerHTML = '';
+
+    if (!Array.isArray(empresas) || empresas.length === 0) {
+        grid.innerHTML = `
+            <p style="color:red; text-align:center;">
+                Nenhuma empresa cadastrada.
+            </p>`;
+        return;
+    }
+
+    empresas.forEach(empresa => {
+
+        const foneLimpo = empresa.fone.replace(/\D/g, '');
+
+        const foneFormatado = foneLimpo.replace(
+            /(\d{2})(\d{5})(\d{4})/,
+            '($1) $2-$3'
+        );
+
+        grid.innerHTML += `
+        <div class="card"
+            data-horarios='${JSON.stringify(empresa.horarios)}'
+            onclick="abrirSite('${empresa.site || ""}')">
+
+            <div class="icone">
+                <img 
+                    src="${empresa.logo}" 
+                    alt="Logo ${empresa.nome}" 
+                    loading="lazy"
+                    onerror="this.src='assets/img/padrao.png'">
+            </div>
+
+            <div class="info">
+                <h3>${empresa.nome}</h3>
+                <span class="categoria">${empresa.categoria}</span>
+                <span class="status"></span>
+
+                <div class="contatos">
+
+                    <a class="btn telefone" 
+                        onclick="event.stopPropagation()" 
+                        href="tel:${foneLimpo}">
+                        📞 ${foneFormatado}
+                    </a>
+
+                    <a class="btn whatsapp"
+                        onclick="event.stopPropagation()"
+                        href="https://wa.me/55${foneLimpo}"
+                        target="_blank">
+                        🟢 WhatsApp
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        `;
+    });
+
+    aplicarStatus();
+
+})
+.catch(error => {
+
+    console.error(error);
+
+    document.getElementById('loading').innerHTML = `
+        <p style="color:red; text-align:center; font-weight:bold;">
+            ❌ Erro ao carregar empresas.json
+        </p>`;
+});
+
+
+/* ================= STATUS DAS LOJAS ================= */
+
+function aplicarStatus() {
+
+    document.querySelectorAll(".card").forEach(card => {
+
+        const horarios = JSON.parse(card.dataset.horarios);
+        const status = card.querySelector(".status");
+
+        const resultado = verificarStatusPorDia(horarios);
+
+        if (resultado.aberto) {
+            status.textContent = `Aberto agora • Fecha às ${resultado.fecha}`;
+            status.className = "status aberto";
+        } else {
+            status.textContent = "Fechado";
+            status.className = "status fechado";
+        }
+
+    });
+}
+
+
+/* ================= VERIFICAR HORÁRIO ================= */
+
+function verificarStatusPorDia(horarios) {
+
+    const agora = new Date();
+
+    const dias = ["dom","seg","ter","qua","qui","sex","sab"];
+    const hoje = dias[agora.getDay()];
+
+    const hojeHorario = horarios[hoje];
+
+    if (!hojeHorario || hojeHorario.fechado) {
+        return { aberto: false };
+    }
+
+    const agoraMin = agora.getHours() * 60 + agora.getMinutes();
+
+    const [hA, mA] = hojeHorario.abre.split(":").map(Number);
+    const [hF, mF] = hojeHorario.fecha.split(":").map(Number);
+
+    const abreMin = hA * 60 + mA;
+    const fechaMin = hF * 60 + mF;
+
+    return {
+        aberto: agoraMin >= abreMin && agoraMin < fechaMin,
+        fecha: hojeHorario.fecha
+    };
+}
+
+
+// ABRIR SITE
+function abrirSite(url) {
+
+    if(!url || url.trim() === "") {
+        alert("Essa loja ainda não possui site.");
+        return;
+    }
+
+    window.open(url, "_blank");
+}
+
+
+
+</script>
+
+</body>
+</html>

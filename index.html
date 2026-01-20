@@ -226,6 +226,14 @@ h1#empresas {
         display: none;
     }
 }
+
+.card .icone img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+    
 </style>
 
 
@@ -305,28 +313,34 @@ fetch('empresas.json')
             );
 
             grid.innerHTML += `
-                <div class="card">
-                    <div class="icone">${empresa.icone}</div>
+            <div class="card">
+                <div class="icone">
+                    <img 
+                      src="${empresa.logo}" 
+                      alt="Logo ${empresa.nome}" 
+                      loading="lazy"
+                      onerror="this.src='assets/img/padrao.png'">
+                </div>
 
-                    <div class="info">
-                        <h3>${empresa.nome}</h3>
-                        <span class="categoria">${empresa.categoria}</span>
+                <div class="info">
+                    <h3>${empresa.nome}</h3>
+                    <span class="categoria">${empresa.categoria}</span>
 
-                        <div class="contatos">
-                            <a class="btn telefone" href="tel:${foneLimpo}">
-                                📞 ${foneFormatado}
-                            </a>
+                    <div class="contatos">
+                        <a class="btn telefone" href="tel:${foneLimpo}">
+                            📞 ${foneFormatado}
+                        </a>
 
-                            <a class="btn whatsapp"
-                               href="https://wa.me/55${foneLimpo}"
-                               target="_blank"
-                               aria-label="Conversar no WhatsApp">
-                                🟢 WhatsApp
-                            </a>
-                        </div>
+                        <a class="btn whatsapp"
+                           href="https://wa.me/55${foneLimpo}"
+                           target="_blank">
+                            🟢 WhatsApp
+                        </a>
                     </div>
                 </div>
-            `;
+            </div>
+        `;
+
         });
     })
     .catch(error => {

@@ -1,407 +1,302 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Guia Comercial | Posto de Saúde</title>
+<meta charset="UTF-8">
+<title>Guia Comercial | Posto de Saúde</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guia Comercial do Bairro Alvorada — Posto de Saúde">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Guia Comercial do Bairro Alvorada — Posto de Saúde">
 
-    <style>
-        /* ================= RESET ================= */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            -webkit-tap-highlight-color: transparent;
-        }
+<style>
 
-        /* ================= BODY ================= */
-        body {
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-            background: #f4f6f8;
-            color: #2b2b2b;
-            line-height: 1.6;
-        }
+/* ================= RESET ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
 
-        /* ================= HEADER ================= */
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 14px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-        }
+/* ================= BODY ================= */
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: #f4f6f8;
+    color: #2b2b2b;
+    line-height: 1.6;
+}
 
-        .logo {
-            font-weight: 700;
-            font-size: 22px;
-            color: #0a7c6d;
-            text-transform: uppercase;
-        }
+/* ================= HEADER ================= */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
 
-        .menu-toggle {
-            background: #e8f4f9;
-            border: none;
-            border-radius: 8px;
-            font-size: 22px;
-            padding: 6px 10px;
-            cursor: pointer;
-            color: #0a7c6d;
-        }
+.logo {
+    font-weight: 700;
+    font-size: 22px;
+    color: #0a7c6d;
+    text-transform: uppercase;
+}
 
+.menu-toggle {
+    background: #e8f4f9;
+    border: none;
+    border-radius: 8px;
+    font-size: 22px;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: #0a7c6d;
+}
 
-        /* MENU MOBILE */
-        .menu {
-            display: none;
-            flex-direction: column;
-            gap: 8px;
-            background: #fff;
-            position: absolute;
-            top: 52px;
-            right: 12px;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
+/* ================= MENU ================= */
+.menu {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    background: #fff;
+    position: absolute;
+    top: 56px;
+    right: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
 
-        .menu.open {
-            display: flex;
-        }
+.menu.open {
+    display: flex;
+}
 
-        .menu a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            padding: 8px 12px;
-            border-radius: 6px;
-            transition: background 0.3s;
-        }
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
 
-        .menu a:hover {
-            background: #e8f4f9;
-        }
+.menu a:hover {
+    background: #e8f4f9;
+}
 
-        @media (min-width: 900px) {
-            .menu {
-                position: static;
-                display: flex !important;
-                flex-direction: row;
-                background: transparent;
-                box-shadow: none;
-                padding: 0;
-                gap: 14px;
-            }
-        
-            .menu-toggle {
-                display: none;
-            }
-        }
+/* Desktop */
+@media (min-width: 900px) {
+    .menu {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        gap: 16px;
+    }
 
+    .menu-toggle {
+        display: none;
+    }
+}
 
-        
-        /* ================= PAGE TITLE ================= */
-        .container {
-            padding: 24px 14px;
-            max-width: 1200px;
-            margin: auto;
-        }
+/* ================= CONTAINER ================= */
+.container {
+    padding: 24px 14px;
+    max-width: 1200px;
+    margin: auto;
+}
 
-        .page-title {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+/* ================= TITLE ================= */
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        .page-title h1 {
-            font-size: 26px;
-            color: #0a7c6d;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
+.page-title h1 {
+    font-size: 26px;
+    color: #0a7c6d;
+    margin-bottom: 6px;
+}
 
-        .page-title p {
-            font-size: 15px;
-            color: #555;
-        }
+.page-title p {
+    font-size: 15px;
+    color: #555;
+}
 
-        /* ================= CARDS GRID ================= */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-            margin-top: 14px;
-        }
+/* ================= GRID ================= */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
 
-        @media (min-width: 600px) {
-            .cards-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+@media (min-width: 600px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-        @media (min-width: 900px) {
-            .cards-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
+@media (min-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-        /* ================= CARD ================= */
-        .card {
-            background: #ffffff;
-            border-radius: 14px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-            transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-        }
+/* ================= CARD ================= */
+.card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: .2s;
+    cursor: pointer;
+}
 
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-        }
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
 
-        /* ÍCONE DO CARD */
-        .card-icon {
-            font-size: 48px;
-            text-align: center;
-            padding: 18px 0;
-            background: #e8f4f9;
-            color: #0a7c6d;
-        }
+.card-icon {
+    font-size: 46px;
+    text-align: center;
+    padding: 18px;
+    background: #e8f4f9;
+    color: #0a7c6d;
+}
 
-        /* CARD CONTENT */
-        .card-content {
-            padding: 12px 14px 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
+.card-content {
+    padding: 14px;
+}
 
-        .card-content h3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #0a7c6d;
-        }
+.card-content h3 {
+    font-size: 18px;
+    color: #0a7c6d;
+}
 
-        .card-content .horario {
-            font-size: 14px;
-            font-weight: 600;
-            color: #444;
-        }
+.card-content .horario {
+    display: block;
+    margin: 6px 0;
+    font-weight: 600;
+    font-size: 14px;
+}
 
-        .card-content p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.4;
-        }
+.card-content p {
+    font-size: 14px;
+    color: #555;
+}
 
-        /* ================= MODAL ================= */
-        .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.6);
-            justify-content: center;
-            align-items: center;
-            padding: 12px;
-            z-index: 10000;
-        }
+/* ================= MODAL ================= */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
 
-        .modal-content {
-            background: #fff;
-            padding: 22px 18px;
-            border-radius: 12px;
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-        }
+.modal-content {
+    background: #fff;
+    padding: 22px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
 
-        .modal-content h2 {
-            font-size: 22px;
-            color: #0a7c6d;
-            margin-bottom: 8px;
-        }
+.close-btn {
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
 
-        .modal-content .horario {
-            display: block;
-            font-size: 16px;
-            font-weight: 600;
-            color: #444;
-            margin-top: 10px;
-        }
+/* ================= FOOTER ================= */
+.footer {
+    margin-top: 20px;
+    padding: 14px;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+}
 
-        .modal-content p {
-            font-size: 15px;
-            color: #555;
-            margin: 10px 0;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 8px;
-            right: 12px;
-            font-size: 22px;
-            cursor: pointer;
-            color: #999;
-        }
-
-        .close-btn:hover {
-            color: #333;
-        }
-
-        /* ================= FOOTER ================= */
-        .footer {
-            margin-top: 24px;
-            padding: 14px 10px;
-            text-align: center;
-            font-size: 13px;
-            color: #555;
-        }
-
-    </style>
-
+</style>
 </head>
+
 <body>
 
 <header class="header">
-    <div class="logo">🏥 Posto de Saúde</div>
-    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+<div class="logo">🏥 Posto de Saúde</div>
 
-    <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="#empresas">Lojas</a>
-        <a href="onibus.html">Ônibus</a>
-        <a href="posto_saude.html" class="active">Posto de Saúde</a>
-        <a href="contatos_uteis.html">Contatos Úteis</a>
-    </nav>
+<button class="menu-toggle">☰</button>
+
+<nav class="menu">
+<a href="index.html">Início</a>
+<a href="onibus.html">Ônibus</a>
+<a href="posto_saude.html">Posto</a>
+<a href="contatos_uteis.html">Contatos</a>
+</nav>
 </header>
 
 <main class="container">
-    <section class="page-title">
-        <h1>Atendimentos do Posto de Saúde</h1>
-        <p>Horários de atendimento — Segunda a Sexta-feira</p>
-    </section>
 
-    <section class="cards-grid">
-        <!-- SEGUNDA -->
-        <article class="card" onclick="openModal('segunda')">
-            <div class="card-icon">🩺</div>
-            <div class="card-content">
-                <h3>Segunda-feira</h3>
-                <span class="horario">🕒 08:00 às 12:00 | 13:00 às 17:00</span>
-                <p>Consultas médicas, aferição de pressão, atendimento de enfermagem e renovação de receitas.</p>
-            </div>
-        </article>
+<section class="page-title">
+<h1>Atendimentos do Posto de Saúde</h1>
+<p>Segunda a Sexta-feira</p>
+</section>
 
-        <!-- TERÇA -->
-        <article class="card" onclick="openModal('terca')">
-            <div class="card-icon">💉</div>
-            <div class="card-content">
-                <h3>Terça-feira</h3>
-                <span class="horario">🕒 08:00 às 12:00 | 13:00 às 17:00</span>
-                <p>Vacinação, curativos, atendimento infantil e acompanhamento de gestantes.</p>
-            </div>
-        </article>
+<section class="cards-grid">
 
-        <!-- QUARTA -->
-        <article class="card" onclick="openModal('quarta')">
-            <div class="card-icon">🦷</div>
-            <div class="card-content">
-                <h3>Quarta-feira</h3>
-                <span class="horario">🕒 08:00 às 12:00 | 13:00 às 17:00</span>
-                <p>Atendimento odontológico, triagem, prevenção e orientações de saúde bucal.</p>
-            </div>
-        </article>
+<article class="card" onclick="openModal('segunda')">
+<div class="card-icon">🩺</div>
+<div class="card-content">
+<h3>Segunda-feira</h3>
+<span class="horario">08:00 às 17:00</span>
+<p>Consultas e enfermagem.</p>
+</div>
+</article>
 
-        <!-- QUINTA -->
-        <article class="card" onclick="openModal('quinta')">
-            <div class="card-icon">🔬</div>
-            <div class="card-content">
-                <h3>Quinta-feira</h3>
-                <span class="horario">🕒 08:00 às 12:00 | 13:00 às 17:00</span>
-                <p>Coleta de exames, encaminhamentos, atendimento a hipertensos e diabéticos.</p>
-            </div>
-        </article>
+<article class="card" onclick="openModal('terca')">
+<div class="card-icon">💉</div>
+<div class="card-content">
+<h3>Terça-feira</h3>
+<span class="horario">08:00 às 17:00</span>
+<p>Vacinação e pediatria.</p>
+</div>
+</article>
 
-        <!-- SEXTA -->
-        <article class="card" onclick="openModal('sexta')">
-            <div class="card-icon">📋</div>
-            <div class="card-content">
-                <h3>Sexta-feira</h3>
-                <span class="horario">🕒 08:00 às 12:00</span>
-                <p>Atendimento geral, retorno de consultas, orientações e organização de prontuários.</p>
-            </div>
-        </article>
-    </section>
+<article class="card" onclick="openModal('quarta')">
+<div class="card-icon">🦷</div>
+<div class="card-content">
+<h3>Quarta-feira</h3>
+<span class="horario">08:00 às 17:00</span>
+<p>Odontologia.</p>
+</div>
+</article>
+
+</section>
 </main>
 
-<!-- Modal -->
 <div id="modal" class="modal" onclick="closeModal()">
-    <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">✖️</span>
-        <h2 id="modal-title"></h2>
-        <span id="modal-time" class="horario"></span>
-        <p id="modal-description"></p>
-    </div>
+<div class="modal-content">
+<span class="close-btn">✖</span>
+<h2 id="modal-title"></h2>
+<p id="modal-description"></p>
+</div>
 </div>
 
 <footer class="footer">
-    <p>⚠️ Horários sujeitos a alteração conforme demanda.</p>
+<p>⚠️ Horários sujeitos a alteração.</p>
 </footer>
 
 <script>
-    function openModal(dia) {
-        const modal = document.getElementById("modal");
-        const modalTitle = document.getElementById("modal-title");
-        const modalDescription = document.getElementById("modal-description");
-        const modalTime = document.getElementById("modal-time");
 
-        const content = {
-            "segunda": {
-                title: "Segunda-feira",
-                time: "🕒 08:00 às 12:00 | 13:00 às 17:00",
-                description: "Consultas médicas, aferição de pressão, atendimento de enfermagem e renovação de receitas."
-            },
-            "terca": {
-                title: "Terça-feira",
-                time: "🕒 08:00 às 12:00 | 13:00 às 17:00",
-                description: "Vacinação, curativos, atendimento infantil e acompanhamento de gestantes."
-            },
-            "quarta": {
-                title: "Quarta-feira",
-                time: "🕒 08:00 às 12:00 | 13:00 às 17:00",
-                description: "Atendimento odontológico, triagem, prevenção e orientações de saúde bucal."
-            },
-            "quinta": {
-                title: "Quinta-feira",
-                time: "🕒 08:00 às 12:00 | 13:00 às 17:00",
-                description: "Coleta de exames, encaminhamentos, atendimento a hipertensos e diabéticos."
-            },
-            "sexta": {
-                title: "Sexta-feira",
-                time: "🕒 08:00 às 12:00",
-                description: "Atendimento geral, retorno de consultas, orientações e organização de prontuários."
-            }
-        };
-
-        modalTitle.innerText = content[dia].title;
-        modalTime.innerText = content[dia].time;
-        modalDescription.innerText = content[dia].description;
-
-        modal.style.display = "flex";
-    }
-
-    function closeModal() {
-        document.getElementById("modal").style.display = "none";
-    }
-
-/* Menu toggle */
-<script>
+// MENU
 const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 
@@ -414,10 +309,30 @@ document.querySelectorAll('.menu a').forEach(link => {
         menu.classList.remove('open');
     });
 });
-</script>
+
+// MODAL
+function openModal(dia) {
+    const modal = document.getElementById("modal");
+    const title = document.getElementById("modal-title");
+    const desc = document.getElementById("modal-description");
+
+    const dados = {
+        segunda: { title: "Segunda-feira", desc: "Consultas médicas e enfermagem." },
+        terca: { title: "Terça-feira", desc: "Vacinação e atendimento infantil." },
+        quarta: { title: "Quarta-feira", desc: "Odontologia e triagem." }
+    };
+
+    title.innerText = dados[dia].title;
+    desc.innerText = dados[dia].desc;
+
+    modal.style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
 
 </script>
 
 </body>
 </html>
-

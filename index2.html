@@ -143,19 +143,29 @@ h1#empresas {
   
 .card h3,
 .card .categoria {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
+
+
+.card h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 
 .card .contatos {
     flex-wrap: wrap;
 }
 
 .card .btn {
-    max-width: 100%;
-    white-space: nowrap;
+    white-space: normal;
+    text-align: center;
 }
+
 
     
 /* ================= LOGO ================= */

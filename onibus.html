@@ -50,11 +50,21 @@ body {
 }
 
 /* MENU */
+/* MENU TOGGLE */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #38bdf8;
+}
+
+/* MENU MOBILE */
 .menu {
     display: none;
     flex-direction: column;
     gap: 10px;
-    background: rgba(2,6,23,0.95);
+    background: rgba(2, 6, 23, 0.95);
     position: absolute;
     top: 60px;
     right: 12px;
@@ -73,6 +83,7 @@ body {
     font-weight: 600;
     padding: 10px 14px;
     border-radius: 10px;
+    transition: all 0.25s ease;
 }
 
 .menu a:hover {

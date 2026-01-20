@@ -6,13 +6,13 @@
     "logo": "assets/img/mercado-compre-mais.png",
     "site": "",
     "horarios": {
-      "seg": { "abre": "08:00", "fecha": "20:00" },
-      "ter": { "abre": "08:00", "fecha": "20:00" },
-      "qua": { "abre": "08:00", "fecha": "20:00" },
-      "qui": { "abre": "08:00", "fecha": "20:00" },
-      "sex": { "abre": "08:00", "fecha": "20:00" },
-      "sab": { "abre": "08:00", "fecha": "18:00" },
-      "dom": { "abre": "08:00", "fecha": "13:00" }
+      "seg": { "abre": "07:00", "fecha": "21:00" },
+      "ter": { "abre": "07:00", "fecha": "21:00"  },
+      "qua": { "abre": "07:00", "fecha": "21:00" },
+      "qui": { "abre": "07:00", "fecha": "21:00" },
+      "sex": { "abre": "07:00", "fecha": "21:00"  },
+      "sab": { "abre": "07:00", "fecha": "21:00"  },
+      "dom": { "abre": "07:00", "fecha": "14:00" }
     }
   },
   {
@@ -22,13 +22,13 @@
     "logo": "assets/img/farmacinha-claudean.png",
     "site": "",
     "horarios": {
-      "seg": { "abre": "07:30", "fecha": "19:00" },
-      "ter": { "abre": "07:30", "fecha": "19:00" },
-      "qua": { "abre": "07:30", "fecha": "19:00" },
-      "qui": { "abre": "07:30", "fecha": "19:00" },
-      "sex": { "abre": "07:30", "fecha": "19:00" },
-      "sab": { "abre": "08:00", "fecha": "14:00" },
-      "dom": { "fechado": true }
+      "seg": { "abre": "09:00", "fecha": "19:00" },
+      "ter": { "abre": "09:00", "fecha": "19:00" },
+      "qua": { "abre": "09:00", "fecha": "19:00"},
+      "qui": { "abre": "09:00", "fecha": "19:00" },
+      "sex": { "abre": "09:00", "fecha": "19:00" },
+      "sab": { "abre": "09:00", "fecha": "19:00" },
+      "dom": { "abre": "09:00", "fecha": "19:00" }
     }
   },
   {
@@ -39,12 +39,12 @@
     "site": "",
     "horarios": {
       "seg": { "fechado": true  },
-      "ter": { "abre": "07:00", "fecha": "18:00" },
-      "qua": { "abre": "07:00", "fecha": "18:00" },
-      "qui": { "abre": "07:00", "fecha": "18:00" },
-      "sex": { "abre": "07:00", "fecha": "18:00" },
-      "sab": { "abre": "07:00", "fecha": "14:00" },
-      "dom": { "abre": "07:00", "fecha": "18:00" }
+      "ter": { "abre": "08:00", "fecha": "18:00" },
+      "qua": { "abre": "08:00", "fecha": "18:00" },
+      "qui": { "abre": "08:00", "fecha": "18:00" },
+      "sex": { "abre": "08:00", "fecha": "18:00" },
+      "sab": { "abre": "08:00", "fecha": "18:00" },
+      "dom": { "abre": "08:00", "fecha": "13:00" }
     }
   },
   {
@@ -54,13 +54,13 @@
     "logo": "assets/img/restaurante-kolinas.png",
     "site": "https://restaurantekolinas-ctrl.github.io/cardapio-restaurante/index.html",
     "horarios": {
-      "seg": { "abre": "11:00", "fecha": "22:00" },
-      "ter": { "abre": "11:00", "fecha": "22:00" },
-      "qua": { "abre": "11:00", "fecha": "22:00" },
-      "qui": { "abre": "11:00", "fecha": "22:00" },
-      "sex": { "abre": "11:00", "fecha": "23:00" },
-      "sab": { "abre": "11:00", "fecha": "23:00" },
-      "dom": { "fechado": true }
+      "seg": { "abre": "10:30", "fecha": "14:00" },
+      "ter": { "abre": "10:30", "fecha": "14:00" },
+      "qua": { "abre": "10:30", "fecha": "14:00" },
+      "qui": { "abre": "10:30", "fecha": "14:00" },
+      "sex": { "abre": "10:30", "fecha": "14:00" },
+      "sab": { "abre": "10:30", "fecha": "14:00" },
+      "dom": { "abre": "10:30", "fecha": "14:00" }
     }
   },
   {
@@ -86,12 +86,12 @@
     "logo": "assets/img/casa-do-criador.png",
     "site": "",
     "horarios": {
-      "seg": { "abre": "08:00", "fecha": "18:00" },
-      "ter": { "abre": "08:00", "fecha": "18:00" },
-      "qua": { "abre": "08:00", "fecha": "18:00" },
-      "qui": { "abre": "08:00", "fecha": "18:00" },
-      "sex": { "abre": "08:00", "fecha": "18:00" },
-      "sab": { "abre": "08:00", "fecha": "14:00" },
+      "seg": { "abre": "08:00", "fecha": "19:00" },
+      "ter": { "abre": "08:00", "fecha": "19:00" },
+      "qua": { "abre": "08:00", "fecha": "19:00" },
+      "qui": { "abre": "08:00", "fecha": "19:00" },
+      "sex": { "abre": "08:00", "fecha": "19:00" },
+      "sab": { "abre": "08:00", "fecha": "19:00" },
       "dom": { "fechado": true }
     }
   },
@@ -102,13 +102,13 @@
     "logo": "assets/img/criativa-papelaria.png",
     "site": "",
     "horarios": {
-      "seg": { "abre": "08:00", "fecha": "18:00" },
-      "ter": { "abre": "08:00", "fecha": "18:00" },
-      "qua": { "abre": "08:00", "fecha": "18:00" },
-      "qui": { "abre": "08:00", "fecha": "18:00" },
-      "sex": { "abre": "08:00", "fecha": "18:00" },
-      "sab": { "abre": "08:00", "fecha": "13:00" },
-      "dom": { "fechado": true }
+      "seg": { "abre": "08:00", "fecha": "20:00" },
+      "ter": { "abre": "08:00", "fecha": "20:00" },
+      "qua": { "abre": "08:00", "fecha": "20:00" },
+      "qui": { "abre": "08:00", "fecha": "20:00" },
+      "sex": { "abre": "08:00", "fecha": "20:00" },
+      "sab": { "abre": "08:00", "fecha": "20:00" },
+      "dom": { "abre": "08:00", "fecha": "14:00" }
     }
   },
   {
@@ -118,13 +118,13 @@
     "logo": "assets/img/art-performance.png",
     "site": "",
     "horarios": {
-      "seg": { "abre": "08:00", "fecha": "18:00" },
-      "ter": { "abre": "08:00", "fecha": "18:00" },
-      "qua": { "abre": "08:00", "fecha": "18:00" },
-      "qui": { "abre": "08:00", "fecha": "18:00" },
-      "sex": { "abre": "08:00", "fecha": "18:00" },
-      "sab": { "abre": "08:00", "fecha": "13:00" },
-      "dom": { "fechado": true }
+      "seg": { "abre": "08:00", "fecha": "19:00" },
+      "ter": { "abre": "08:00", "fecha": "19:00" },
+      "qua": { "abre": "08:00", "fecha": "19:00" },
+      "qui": { "abre": "08:00", "fecha": "19:00" },
+      "sex": { "abre": "08:00", "fecha": "19:00" },
+      "sab": { "abre": "08:00", "fecha": "19:00" },
+      "dom": { "abre": "08:00", "fecha": "19:00" }
     }
   },
   {
@@ -166,13 +166,13 @@
     "logo": "assets/img/acaiteria-mais-sabor.png",
     "site": "",
     "horarios": {
-      "seg": { "abre": "14:00", "fecha": "22:00" },
-      "ter": { "abre": "14:00", "fecha": "22:00" },
-      "qua": { "abre": "14:00", "fecha": "22:00" },
-      "qui": { "abre": "14:00", "fecha": "22:00" },
-      "sex": { "abre": "14:00", "fecha": "23:00" },
-      "sab": { "abre": "14:00", "fecha": "23:00" },
-      "dom": { "abre": "14:00", "fecha": "21:00" }
+      "seg": { "abre": "09:00", "fecha": "18:00" },
+      "ter": { "abre": "09:00", "fecha": "18:00" },
+      "qua": { "abre": "09:00", "fecha": "18:00" },
+      "qui": { "abre": "09:00", "fecha": "18:00" },
+      "sex": { "abre": "09:00", "fecha": "18:00" },
+      "sab": { "abre": "09:00", "fecha": "18:00" },
+      "dom": { "abre": "09:00", "fecha": "18:00" }
     }
   },
   {
@@ -207,6 +207,25 @@
       "dom": { "abre": "10:00", "fecha": "20:00" }
     }
   },
+{
+    "nome": "Barbearia do Maicon",
+    "categoria": "Distribuidora de Bebidas",
+    "fone": "61992723796",
+    "logo": "assets/img/barbearia-maicon.png",
+    "site": "",
+    "horarios": {
+      "seg": { "abre": "09:00", "fecha": "22:00" },
+      "ter": { "abre": "09:00", "fecha": "22:00" },
+      "qua": { "abre": "09:00", "fecha": "22:00" },
+      "qui": { "abre": "09:00", "fecha": "22:00" },
+      "sex": { "abre": "09:00", "fecha": "23:00" },
+      "sab": { "abre": "09:00", "fecha": "23:00" },
+      "dom": { "abre": "10:00", "fecha": "20:00" }
+    }
+  },
+
+
+  
   {
     "nome": "Visão Ferragens",
     "categoria": "Ferragens",
@@ -214,13 +233,13 @@
     "logo": "assets/img/visao-ferragens.png",
     "site": "",
     "horarios": {
-      "seg": { "abre": "08:00", "fecha": "18:00" },
-      "ter": { "abre": "08:00", "fecha": "18:00" },
-      "qua": { "abre": "08:00", "fecha": "18:00" },
-      "qui": { "abre": "08:00", "fecha": "18:00" },
-      "sex": { "abre": "08:00", "fecha": "18:00" },
-      "sab": { "abre": "08:00", "fecha": "13:00" },
-      "dom": { "fechado": true }
+      "seg": { "abre": "08:00", "fecha": "20:00" },
+      "ter": { "abre": "08:00", "fecha": "20:00" },
+      "qua": { "abre": "08:00", "fecha": "20:00" },
+      "qui": { "abre": "08:00", "fecha": "20:00" },
+      "sex": { "abre": "08:00", "fecha": "20:00" },
+      "sab": { "abre": "08:00", "fecha": "20:00" },
+      "dom": { "abre": "08:00", "fecha": "14:00"  }
     }
   }
 ]

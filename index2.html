@@ -429,6 +429,8 @@ document.querySelectorAll(".card").forEach(card => {
 
     const resultado = verificarStatusPorDia(horarios);
 
+   status.classList.remove("aberto", "fechado");
+
     if (resultado.aberto) {
         status.textContent = `Aberto agora • Fecha às ${resultado.fecha}`;
         status.classList.add("aberto");
@@ -436,6 +438,7 @@ document.querySelectorAll(".card").forEach(card => {
         status.textContent = "Fechado";
         status.classList.add("fechado");
     }
+
 
 });
 

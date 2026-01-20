@@ -25,6 +25,12 @@ body {
     line-height: 1.6;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+
+
 /* ================= HEADER ================= */
 .header {
     position: sticky;
@@ -106,9 +112,10 @@ h1#empresas {
 /* ================= GRID ================= */
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 14px;
 }
+
 
 /* ================= CARD ================= */
 .card {
@@ -128,7 +135,27 @@ h1#empresas {
     border-color: #38bdf8;
     box-shadow: 0 0 18px rgba(56,189,248,0.35);
 }
+  .card {
+    min-width: 0;
+}
+  
+.card h3,
+.card .categoria {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
+.card .contatos {
+    flex-wrap: wrap;
+}
+
+.card .btn {
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+    
 /* ================= LOGO ================= */
 .card .icone {
     width: 64px;

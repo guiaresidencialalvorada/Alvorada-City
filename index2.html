@@ -441,6 +441,42 @@ fetch('empresas.json')
     window.open(url, "_blank");
 }
 
+
+    function verificarStatus(abre, fecha) {
+    const agora = new Date();
+    const horaAtual = agora.getHours() * 60 + agora.getMinutes();
+
+    const [hA, mA] = abre.split(":").map(Number);
+    const [hF, mF] = fecha.split(":").map(Number);
+
+    const abreMin = hA * 60 + mA;
+    const fechaMin = hF * 60 + mF;
+
+    return horaAtual >= abreMin && horaAtual < fechaMin;
+}
+
+// Aplicar status em todos cards
+document.querySelectorAll(".card").forEach(card => {
+
+    const abre = card.dataset.abre;
+    const fecha = card.dataset.fecha;
+    const status = card.querySelector(".status");
+
+    if (!abre || !fecha) {
+        status.textContent = "Fechado";
+        status.classList.add("fechado");
+        return;
+    }
+
+    if (verificarStatus(abre, fecha)) {
+        status.textContent = "Aberto agora";
+        status.classList.add("aberto");
+    } else {
+        status.textContent = "Fechado";
+        status.classList.add("fechado");
+    }
+});
+
 </script>
 
 </body>

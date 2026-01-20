@@ -19,30 +19,33 @@
         /* BODY */
         body {
             font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-            background: #f4f6f8;
-            color: #333;
+            background: #f1f5f9;
+            color: #0f172a;
             line-height: 1.6;
         }
 
         /* HEADER */
         .header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 16px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(15, 23, 42, 0.9);
+        backdrop-filter: blur(12px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 16px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+       }
 
         .logo {
-            font-weight: 700;
-            font-size: 22px;
-            color: #0a7c6d;
+            font-weight: 800;
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: #38bdf8;
             text-transform: uppercase;
         }
+
 
         .menu-toggle {
             background: none;
@@ -96,18 +99,20 @@
 
         /* PERCURSO */
         .card.percurso {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 18px;
+        border: 1px solid rgba(0,0,0,0.05);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
         }
 
-        .card.percurso h2 {
-            font-size: 22px;
-            color: #0a7c6d;
-            margin-bottom: 10px;
+
+       .card.percurso h2 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #0f172a;
         }
+
 
         .card.percurso ul {
             list-style: none;
@@ -136,16 +141,20 @@
         /* CARDS DE LINHAS */
         .linha-card {
             background: #ffffff;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 16px;
+            padding: 16px;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            transition: all 0.25s ease;
         }
 
+
         .linha-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 10px 22px rgba(56,189,248,0.25);
+            border-color: #38bdf8;
         }
+
 
         .linha-card header {
             text-align: center;
@@ -153,24 +162,27 @@
         }
 
         .linha-card h3 {
-            font-size: 20px;
-            color: #0a7c6d;
-            margin-bottom: 5px;
+            font-size: 16px;
+            font-weight: 800;
+            color: #0f172a;
         }
+
 
         .linha-card span {
-            font-size: 14px;
-            color: #888;
+            font-size: 12px;
+            color: #64748b;
         }
 
+
         /* HORÁRIOS */
-        .horarios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-            gap: 12px;
-            margin-top: 10px;
-            padding: 0;
-            list-style: none;
+        .horarios-grid li {
+            background: #e8f4f9;
+            padding: 8px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 12px;
+            color: #0f172a;
         }
 
         .horarios-grid li {
@@ -201,8 +213,10 @@
 
         /* RESPONSIVIDADE */
         @media (max-width: 600px) {
-            .page-title h1 {
-                font-size: 24px;
+           .page-title h1 {
+                font-size: 26px;
+                font-weight: 800;
+                color: #38bdf8;
             }
 
             .linha-card {

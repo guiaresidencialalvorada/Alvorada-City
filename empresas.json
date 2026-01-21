@@ -223,10 +223,24 @@
       "dom": { "abre": "10:00", "fecha": "20:00" }
     }
   },
+{
+    "nome": "Lily Fashion",
+    "categoria": "loja de roupas Masculina e Feminina",
+    "fone": "61993780157",
+    "logo": "assets/img/lily.png",
+    "site": "",
+    "horarios": {
+      "seg":  { "fechado": true },
+      "ter": { "abre": "09:00", "fecha": "18:00" },
+      "qua": { "abre": "09:00", "fecha": "18:00" },
+      "qui": { "abre": "09:00", "fecha": "18:00" },
+      "sex": { "abre": "09:00", "fecha": "18:00" },
+      "sab": { "abre": "09:00", "fecha": "18:00" },
+      "dom":  { "fechado": true }
+    }
+  },
 
-
-  
-  {
+    {
     "nome": "Visão Ferragens",
     "categoria": "Ferragens",
     "fone": "61993432778",

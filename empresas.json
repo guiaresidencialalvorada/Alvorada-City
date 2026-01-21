@@ -231,12 +231,12 @@
     "logo": "assets/img/cida-lanches.png",
     "site": "",
     "horarios": {
-      "seg": { "abre": "07:00", "fecha": "23:00" },
-      "ter": { "abre": "07:00", "fecha": "23:00" },
-      "qua": { "abre": "07:00", "fecha": "23:00" },
-      "qui": { "abre": "07:00", "fecha": "23:00" },
-      "sex": { "abre": "07:00", "fecha": "23:00" },
-      "sab": { "abre": "07:00", "fecha": "23:00" },
+      "seg": { "abre": "19:00", "fecha": "23:00" },
+      "ter": { "abre": "19:00", "fecha": "23:00" },
+      "qua": { "abre": "19:00", "fecha": "23:00" },
+      "qui": { "abre": "19:00", "fecha": "23:00" },
+      "sex": { "abre": "19:00", "fecha": "23:00" },
+      "sab": { "abre": "19:00", "fecha": "23:00" },
       "dom":  { "fechado": true }
     }
   },

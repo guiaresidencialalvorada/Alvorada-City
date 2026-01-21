@@ -208,21 +208,40 @@
     }
   },
 {
-    "nome": "Barbearia do Maicon",
-    "categoria": "Distribuidora de Bebidas",
+    "nome": "Barbearia do Maycon",
+    "categoria": "Barbearia",
     "fone": "61992723796",
-    "logo": "assets/img/barbearia-maicon.png",
+    "logo": "assets/img/barbearia-maycon.png",
     "site": "",
     "horarios": {
-      "seg": { "abre": "09:00", "fecha": "22:00" },
-      "ter": { "abre": "09:00", "fecha": "22:00" },
-      "qua": { "abre": "09:00", "fecha": "22:00" },
-      "qui": { "abre": "09:00", "fecha": "22:00" },
-      "sex": { "abre": "09:00", "fecha": "23:00" },
-      "sab": { "abre": "09:00", "fecha": "23:00" },
-      "dom": { "abre": "10:00", "fecha": "20:00" }
+      "seg": { "abre": "09:00", "fecha": "20:00" },
+      "ter": { "abre": "09:00", "fecha": "20:00" },
+      "qua": { "abre": "09:00", "fecha": "20:00" },
+      "qui": { "abre": "09:00", "fecha": "20:00" },
+      "sex": { "abre": "09:00", "fecha": "20:00" },
+      "sab": { "abre": "09:00", "fecha": "20:00" },
+      "dom": { "abre": "09:00", "fecha": "13:00" }
     }
   },
+
+{
+    "nome": "Cida Lanches",
+    "categoria": "Lanchonete",
+    "fone": "61992536718",
+    "logo": "assets/img/cida-lanches.png",
+    "site": "",
+    "horarios": {
+      "seg": { "abre": "07:00", "fecha": "23:00" },
+      "ter": { "abre": "07:00", "fecha": "23:00" },
+      "qua": { "abre": "07:00", "fecha": "23:00" },
+      "qui": { "abre": "07:00", "fecha": "23:00" },
+      "sex": { "abre": "07:00", "fecha": "23:00" },
+      "sab": { "abre": "07:00", "fecha": "23:00" },
+      "dom":  { "fechado": true }
+    }
+  },
+  
+  
 {
     "nome": "Lily Fashion",
     "categoria": "loja de roupas Masculina e Feminina",

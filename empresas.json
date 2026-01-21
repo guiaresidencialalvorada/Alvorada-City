@@ -240,7 +240,22 @@
       "dom":  { "fechado": true }
     }
   },
-  
+  {
+    "nome": " Distribuidora do Galego",
+    "categoria": "Bebidas",
+    "fone": "61992183588",
+    "logo": "assets/img/distribuidora-galego.png",
+    "site": "",
+    "horarios": {
+      "seg":  { "fechado": true },
+      "ter": { "abre": "09:00", "fecha": "18:00" },
+      "qua": { "abre": "09:00", "fecha": "18:00" },
+      "qui": { "abre": "09:00", "fecha": "18:00" },
+      "sex": { "abre": "09:00", "fecha": "18:00" },
+      "sab": { "abre": "09:00", "fecha": "18:00" },
+      "dom":  { "fechado": true }
+    }
+  },
   
 {
     "nome": "Lily Fashion",

@@ -51,7 +51,7 @@
     "nome": "Restaurante Kolinas",
     "categoria": "Restaurante / Refeições",
     "fone": "61992633504",
-    "logo": "assets/img/restaurante-kolinas.png",
+    "logo": "assets/img/restaurante-kolina.png",
     "site": "https://restaurantekolinas-ctrl.github.io/cardapio-restaurante/index.html",
     "horarios": {
       "seg": { "abre": "10:30", "fecha": "14:00" },

@@ -34,25 +34,28 @@ body {
 
 /* ================= HEADER ================= */
 .header {
-    position: sticky;
+    position: absolute;
     top: 0;
-    z-index: 1000;
-    background: rgba(15, 23, 42, 0.85);
-    backdrop-filter: blur(12px);
+    width: 100%;
+    z-index: 10;
+    background: transparent;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 14px 14px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+
 
 .logo {
     font-weight: 800;
     font-size: 20px;
     letter-spacing: 1px;
-    color: #38bdf8;
+    color: #ffffff; /* BRANCO */
     text-transform: uppercase;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
+
 
 /* MENU TOGGLE */
 .menu-toggle {
@@ -107,8 +110,9 @@ h1#empresas {
     font-size: 26px;
     margin-bottom: 24px;
     font-weight: 800;
-    color: #38bdf8;
+    color: #0f172a; /* PRETO */
 }
+
 
 /* ================= GRID ================= */
 .grid {
@@ -403,7 +407,7 @@ h1#empresas {
 .hero-alvorada {
     position: relative;
     width: 100%;
-    height: 100px;
+    height: 150px;
     overflow: hidden;
 }
 
@@ -546,7 +550,7 @@ h1#empresas {
 
 <!-- HEADER -->
 <header class="header">
-    <div class="logo">Residencial Alvorada</div> 
+    <div class="logo">Residencial Alvorada</div>
 
     <button class="menu-toggle" aria-label="Abrir menu">☰</button>
 
@@ -556,17 +560,16 @@ h1#empresas {
         <a href="onibus.html">Ônibus</a>
         <a href="posto_saude.html">Posto de Saúde</a>
         <a href="contatos_uteis.html">Contatos Úteis</a>
-        <a href="novo_gama.html">Noticias de Novo Gama</a>
-
+        <a href="novo_gama.html">Notícias de Novo Gama</a>
     </nav>
 </header>
 
 <!-- HERO ALVORADA (DIA / NOITE) -->
 <section class="hero-alvorada">
     <img id="heroImagem" src="" alt="Bairro Alvorada">
+
     <div class="hero-datetime" id="heroDateTime"></div>
 </section>
-
 
 <!-- NOTÍCIAS DO BAIRRO -->
 <section class="news-ticker">
@@ -578,6 +581,7 @@ h1#empresas {
         </div>
     </div>
 </section>
+
 
 
 

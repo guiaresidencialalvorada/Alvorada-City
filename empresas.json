@@ -1,19 +1,39 @@
 [
   {
-    "nome": "Mercado Compre Mais",
-    "categoria": "Supermercado",
-    "fone": "61992049926",
-    "logo": "assets/img/mercado-compre-mais.png",
-    "site": "",
-    "horarios": {
-      "seg": { "abre": "07:00", "fecha": "21:00" },
-      "ter": { "abre": "07:00", "fecha": "21:00"  },
-      "qua": { "abre": "07:00", "fecha": "21:00" },
-      "qui": { "abre": "07:00", "fecha": "21:00" },
-      "sex": { "abre": "07:00", "fecha": "21:00"  },
-      "sab": { "abre": "07:00", "fecha": "21:00"  },
-      "dom": { "abre": "07:00", "fecha": "14:00" }
-    }
+  "id": 1,
+  "nome": "Mercado Compre Mais",
+  "categoria": "Supermercado",
+  "fone": "61992049926",
+  "whatsapp": "61992049926",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/mercado-compre-mais.png",
+
+  "endereco": "Rua Principal, Bairro Alvorada - Novo Gama - GO",
+
+  "maps": "https://www.google.com/maps/search/?api=1&query=Mercado+Compre+Mais+Bairro+Alvorada+Novo+Gama+GO",
+
+  "descricao": "Supermercado completo com açougue, padaria e hortifruti. Atendimento de qualidade e preços acessíveis.",
+
+  "horarios": {
+    "seg": { "abre": "07:00", "fecha": "21:00" },
+    "ter": { "abre": "07:00", "fecha": "21:00" },
+    "qua": { "abre": "07:00", "fecha": "21:00" },
+    "qui": { "abre": "07:00", "fecha": "21:00" },
+    "sex": { "abre": "07:00", "fecha": "21:00" },
+    "sab": { "abre": "07:00", "fecha": "21:00" },
+    "dom": { "abre": "07:00", "fecha": "14:00" }
+  },
+
+  "redes": {
+    "instagram": "",
+    "facebook": ""
+  },
+
+  "ativo": true,
+  "destaque": true
+}
+
   },
   {
     "nome": "Farmacinha Claudean",

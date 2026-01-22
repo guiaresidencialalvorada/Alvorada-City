@@ -1,78 +1,94 @@
 [
   {
-  "id": 1,
-  "nome": "Mercado Compre Mais",
-  "categoria": "Supermercado",
-  "fone": "61992049926",
-  "whatsapp": "61992049926",
-  "email": "",
-  "site": "",
-  "logo": "assets/img/mercado-compre-mais.png",
-
-  "endereco": "Rua Principal, Bairro Alvorada - Novo Gama - GO",
-
-  "maps": "https://www.google.com/maps/search/?api=1&query=Mercado+Compre+Mais+Bairro+Alvorada+Novo+Gama+GO",
-
-  "descricao": "Supermercado completo com açougue, padaria e hortifruti. Atendimento de qualidade e preços acessíveis.",
-
-  "horarios": {
-    "seg": { "abre": "07:00", "fecha": "21:00" },
-    "ter": { "abre": "07:00", "fecha": "21:00" },
-    "qua": { "abre": "07:00", "fecha": "21:00" },
-    "qui": { "abre": "07:00", "fecha": "21:00" },
-    "sex": { "abre": "07:00", "fecha": "21:00" },
-    "sab": { "abre": "07:00", "fecha": "21:00" },
-    "dom": { "abre": "07:00", "fecha": "14:00" }
+    "id": 1,
+    "nome": "Mercado Compre Mais",
+    "categoria": "Supermercado",
+    "fone": "61992049926",
+    "whatsapp": "61992049926",
+    "email": "",
+    "site": "",
+    "logo": "assets/img/mercado-compre-mais.png",
+    "endereco": "Rua Principal, Bairro Alvorada - Novo Gama - GO",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Mercado+Compre+Mais+Bairro+Alvorada+Novo+Gama+GO",
+    "descricao": "Supermercado completo com açougue, padaria e hortifruti. Atendimento de qualidade e preços acessíveis.",
+    "horarios": {
+      "seg": { "abre": "07:00", "fecha": "21:00" },
+      "ter": { "abre": "07:00", "fecha": "21:00" },
+      "qua": { "abre": "07:00", "fecha": "21:00" },
+      "qui": { "abre": "07:00", "fecha": "21:00" },
+      "sex": { "abre": "07:00", "fecha": "21:00" },
+      "sab": { "abre": "07:00", "fecha": "21:00" },
+      "dom": { "abre": "07:00", "fecha": "14:00" }
+    },
+    "redes": { "instagram": "", "facebook": "" },
+    "ativo": true,
+    "destaque": true
   },
 
-  "redes": {
-    "instagram": "",
-    "facebook": ""
-  },
-
-  "ativo": true,
-  "destaque": true
-}
-
-  },
   {
+    "id": 2,
     "nome": "Farmacinha Claudean",
     "categoria": "Farmácia",
     "fone": "61995273366",
-    "logo": "assets/img/farmacinha-claudean.png",
+    "whatsapp": "",
+    "email": "",
     "site": "",
+    "logo": "assets/img/farmacinha-claudean.png",
+    "endereco": "",
+    "maps": "",
+    "descricao": "",
     "horarios": {
       "seg": { "abre": "09:00", "fecha": "19:00" },
       "ter": { "abre": "09:00", "fecha": "19:00" },
-      "qua": { "abre": "09:00", "fecha": "19:00"},
+      "qua": { "abre": "09:00", "fecha": "19:00" },
       "qui": { "abre": "09:00", "fecha": "19:00" },
       "sex": { "abre": "09:00", "fecha": "19:00" },
       "sab": { "abre": "09:00", "fecha": "19:00" },
       "dom": { "abre": "09:00", "fecha": "19:00" }
-    }
+    },
+    "redes": { "instagram": "", "facebook": "" },
+    "ativo": true,
+    "destaque": false
   },
+
   {
+    "id": 3,
     "nome": "Renato JRS Pescados",
     "categoria": "Peixaria / Alimentos",
     "fone": "61998336735",
-    "logo": "assets/img/renato-jrs-pescados.png",
+    "whatsapp": "",
+    "email": "",
     "site": "",
+    "logo": "assets/img/renato-jrs-pescados.png",
+    "endereco": "",
+    "maps": "",
+    "descricao": "",
     "horarios": {
-      "seg": { "fechado": true  },
+      "seg": { "fechado": true },
       "ter": { "abre": "08:00", "fecha": "18:00" },
       "qua": { "abre": "08:00", "fecha": "18:00" },
       "qui": { "abre": "08:00", "fecha": "18:00" },
       "sex": { "abre": "08:00", "fecha": "18:00" },
       "sab": { "abre": "08:00", "fecha": "18:00" },
       "dom": { "abre": "08:00", "fecha": "13:00" }
-    }
+    },
+    "redes": { "instagram": "", "facebook": "" },
+    "ativo": true,
+    "destaque": false
   },
+
   {
+    "id": 4,
     "nome": "Restaurante Kolina",
     "categoria": "Restaurante / Refeições",
     "fone": "61992633504",
-    "logo": "assets/img/restaurante-kolina.png",
+    "whatsapp": "",
+    "email": "",
     "site": "https://restaurantekolinas-ctrl.github.io/cardapio-restaurante/index.html",
+    "logo": "assets/img/restaurante-kolina.png",
+    "endereco": "",
+    "maps": "",
+    "descricao": "",
     "horarios": {
       "seg": { "abre": "10:30", "fecha": "14:00" },
       "ter": { "abre": "10:30", "fecha": "14:00" },
@@ -81,14 +97,24 @@
       "sex": { "abre": "10:30", "fecha": "14:00" },
       "sab": { "abre": "10:30", "fecha": "14:00" },
       "dom": { "abre": "10:30", "fecha": "14:00" }
-    }
+    },
+    "redes": { "instagram": "", "facebook": "" },
+    "ativo": true,
+    "destaque": false
   },
+
   {
+    "id": 5,
     "nome": "Agropecuária Casa da Ração",
     "categoria": "Agropecuária",
     "fone": "839876821",
-    "logo": "assets/img/casa-da-racao.png",
+    "whatsapp": "",
+    "email": "",
     "site": "",
+    "logo": "assets/img/casa-da-racao.png",
+    "endereco": "",
+    "maps": "",
+    "descricao": "",
     "horarios": {
       "seg": { "abre": "08:00", "fecha": "18:00" },
       "ter": { "abre": "08:00", "fecha": "18:00" },
@@ -97,14 +123,24 @@
       "sex": { "abre": "08:00", "fecha": "18:00" },
       "sab": { "abre": "08:00", "fecha": "14:00" },
       "dom": { "fechado": true }
-    }
+    },
+    "redes": { "instagram": "", "facebook": "" },
+    "ativo": true,
+    "destaque": false
   },
+
   {
+    "id": 6,
     "nome": "Agropecuária Casa do Criador",
     "categoria": "Agropecuária",
     "fone": "61991254271",
-    "logo": "assets/img/casa-do-criador.png",
+    "whatsapp": "",
+    "email": "",
     "site": "",
+    "logo": "assets/img/casa-do-criador.png",
+    "endereco": "",
+    "maps": "",
+    "descricao": "",
     "horarios": {
       "seg": { "abre": "08:00", "fecha": "19:00" },
       "ter": { "abre": "08:00", "fecha": "19:00" },
@@ -113,14 +149,24 @@
       "sex": { "abre": "08:00", "fecha": "19:00" },
       "sab": { "abre": "08:00", "fecha": "19:00" },
       "dom": { "fechado": true }
-    }
+    },
+    "redes": { "instagram": "", "facebook": "" },
+    "ativo": true,
+    "destaque": false
   },
+
   {
+    "id": 7,
     "nome": "Criativa Papelaria",
     "categoria": "Papelaria",
     "fone": "61995651962",
-    "logo": "assets/img/criativa-papelaria.png",
+    "whatsapp": "",
+    "email": "",
     "site": "",
+    "logo": "assets/img/criativa-papelaria.png",
+    "endereco": "",
+    "maps": "",
+    "descricao": "",
     "horarios": {
       "seg": { "abre": "08:00", "fecha": "20:00" },
       "ter": { "abre": "08:00", "fecha": "20:00" },
@@ -129,221 +175,352 @@
       "sex": { "abre": "08:00", "fecha": "20:00" },
       "sab": { "abre": "08:00", "fecha": "20:00" },
       "dom": { "abre": "08:00", "fecha": "14:00" }
-    }
-  },
-  {
-    "nome": "Papelaria Art Performance",
-    "categoria": "Papelaria",
-    "fone": "61992611195",
-    "logo": "assets/img/art-performance.png",
-    "site": "",
-    "horarios": {
-      "seg": { "abre": "08:00", "fecha": "19:00" },
-      "ter": { "abre": "08:00", "fecha": "19:00" },
-      "qua": { "abre": "08:00", "fecha": "19:00" },
-      "qui": { "abre": "08:00", "fecha": "19:00" },
-      "sex": { "abre": "08:00", "fecha": "19:00" },
-      "sab": { "abre": "08:00", "fecha": "19:00" },
-      "dom": { "abre": "08:00", "fecha": "19:00" }
-    }
-  },
-  {
-    "nome": "Veneza 01",
-    "categoria": "Padaria",
-    "fone": "61992042117",
-    "logo": "assets/img/veneza-01.png",
-    "site": "",
-    "horarios": {
-      "seg": { "abre": "06:00", "fecha": "21:00" },
-      "ter": { "abre": "06:00", "fecha": "21:00" },
-      "qua": { "abre": "06:00", "fecha": "21:00" },
-      "qui": { "abre": "06:00", "fecha": "21:00" },
-      "sex": { "abre": "06:00", "fecha": "21:00" },
-      "sab": { "abre": "06:00", "fecha": "21:00" },
-      "dom": { "abre": "06:00", "fecha": "20:00" }
-    }
-  },
-  {
-    "nome": "Veneza 02",
-    "categoria": "Padaria",
-    "fone": "61993031110",
-    "logo": "assets/img/veneza-02.png",
-    "site": "",
-    "horarios": {
-      "seg": { "abre": "06:00", "fecha": "20:00" },
-      "ter": { "abre": "06:00", "fecha": "20:00" },
-      "qua": { "abre": "06:00", "fecha": "20:00" },
-      "qui": { "abre": "06:00", "fecha": "20:00" },
-      "sex": { "abre": "06:00", "fecha": "20:00" },
-      "sab": { "abre": "06:00", "fecha": "20:00" },
-      "dom": { "abre": "06:00", "fecha": "19:00" }
-    }
-  },
-  {
-    "nome": "Açaíteria Mais Sabor",
-    "categoria": "Açaí",
-    "fone": "61992054262",
-    "logo": "assets/img/acaiteria-mais-sabor.png",
-    "site": "",
-    "horarios": {
-      "seg": { "abre": "09:00", "fecha": "18:00" },
-      "ter": { "abre": "09:00", "fecha": "18:00" },
-      "qua": { "abre": "09:00", "fecha": "18:00" },
-      "qui": { "abre": "09:00", "fecha": "18:00" },
-      "sex": { "abre": "09:00", "fecha": "18:00" },
-      "sab": { "abre": "09:00", "fecha": "18:00" },
-      "dom": { "abre": "09:00", "fecha": "18:00" }
-    }
-  },
-  {
-    "nome": "Gás Advaldo",
-    "categoria": "Gás",
-    "fone": "61986542668",
-    "logo": "assets/img/gas-advaldo.png",
-    "site": "",
-    "horarios": {
-      "seg": { "abre": "07:00", "fecha": "19:00" },
-      "ter": { "abre": "07:00", "fecha": "19:00" },
-      "qua": { "abre": "07:00", "fecha": "19:00" },
-      "qui": { "abre": "07:00", "fecha": "19:00" },
-      "sex": { "abre": "07:00", "fecha": "19:00" },
-      "sab": { "abre": "08:00", "fecha": "16:00" },
-      "dom": { "fechado": true }
-    }
-  },
-  {
-    "nome": "Chapury Distribuidora",
-    "categoria": "Distribuidora de Bebidas",
-    "fone": "61992723796",
-    "logo": "assets/img/chapury-distribuidora.png",
-    "site": "",
-    "horarios": {
-      "seg": { "abre": "09:00", "fecha": "22:00" },
-      "ter": { "abre": "09:00", "fecha": "22:00" },
-      "qua": { "abre": "09:00", "fecha": "22:00" },
-      "qui": { "abre": "09:00", "fecha": "22:00" },
-      "sex": { "abre": "09:00", "fecha": "23:00" },
-      "sab": { "abre": "09:00", "fecha": "23:00" },
-      "dom": { "abre": "10:00", "fecha": "20:00" }
-    }
-  },
-{
-    "nome": "Barbearia do Maycon",
-    "categoria": "Barbearia",
-    "fone": "61992723796",
-    "logo": "assets/img/barbearia-maycon.png",
-    "site": "",
-    "horarios": {
-      "seg": { "abre": "09:00", "fecha": "20:00" },
-      "ter": { "abre": "09:00", "fecha": "20:00" },
-      "qua": { "abre": "09:00", "fecha": "20:00" },
-      "qui": { "abre": "09:00", "fecha": "20:00" },
-      "sex": { "abre": "09:00", "fecha": "20:00" },
-      "sab": { "abre": "09:00", "fecha": "20:00" },
-      "dom": { "abre": "09:00", "fecha": "13:00" }
-    }
+    },
+    "redes": { "instagram": "", "facebook": "" },
+    "ativo": true,
+    "destaque": false
   },
 
 {
-    "nome": "Cida Lanches",
-    "categoria": "Lanchonete",
-    "fone": "61992536718",
-    "logo": "assets/img/cida-lanches.png",
-    "site": "",
-    "horarios": {
-      "seg": { "abre": "19:00", "fecha": "23:00" },
-      "ter": { "abre": "19:00", "fecha": "23:00" },
-      "qua": { "abre": "19:00", "fecha": "23:00" },
-      "qui": { "abre": "19:00", "fecha": "23:00" },
-      "sex": { "abre": "19:00", "fecha": "23:00" },
-      "sab": { "abre": "19:00", "fecha": "23:00" },
-      "dom":  { "fechado": true }
-    }
+  "id": 8,
+  "nome": "Papelaria Art Performance",
+  "categoria": "Papelaria",
+  "fone": "61992611195",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/art-performance.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+    "seg": { "abre": "08:00", "fecha": "19:00" },
+    "ter": { "abre": "08:00", "fecha": "19:00" },
+    "qua": { "abre": "08:00", "fecha": "19:00" },
+    "qui": { "abre": "08:00", "fecha": "19:00" },
+    "sex": { "abre": "08:00", "fecha": "19:00" },
+    "sab": { "abre": "08:00", "fecha": "19:00" },
+    "dom": { "abre": "08:00", "fecha": "19:00" }
   },
-  {
-    "nome": " Distribuidora do Galego",
-    "categoria": "Bebidas",
-    "fone": "61992183588",
-    "logo": "assets/img/distribuidora-galego.png",
-    "site": "",
-    "horarios": {
-      "seg":  { "fechado": true },
-      "ter": { "abre": "09:00", "fecha": "18:00" },
-      "qua": { "abre": "09:00", "fecha": "18:00" },
-      "qui": { "abre": "09:00", "fecha": "18:00" },
-      "sex": { "abre": "09:00", "fecha": "18:00" },
-      "sab": { "abre": "09:00", "fecha": "18:00" },
-      "dom":  { "fechado": true }
-    }
-  },
-  
-{
-    "nome": "Lily Fashion",
-    "categoria": "loja de roupas Masculina e Feminina",
-    "fone": "61993780157",
-    "logo": "assets/img/lily.png",
-    "site": "",
-    "horarios": {
-      "seg":  { "fechado": true },
-      "ter": { "abre": "09:00", "fecha": "18:00" },
-      "qua": { "abre": "09:00", "fecha": "18:00" },
-      "qui": { "abre": "09:00", "fecha": "18:00" },
-      "sex": { "abre": "09:00", "fecha": "18:00" },
-      "sab": { "abre": "09:00", "fecha": "18:00" },
-      "dom":  { "fechado": true }
-    }
-  },
-
-  {
-    "nome": "JR Ambientes Planejados",
-    "categoria": " Moveis Planejados",
-    "fone": "61981985988",
-    "logo": "assets/img/moveis_planejados.png",
-    "site": "",
-    "horarios": {
-      "seg": { "abre": "09:00", "fecha": "18:00" },
-      "ter": { "abre": "09:00", "fecha": "18:00" },
-      "qua": { "abre": "09:00", "fecha": "18:00" },
-      "qui": { "abre": "09:00", "fecha": "18:00" },
-      "sex": { "abre": "09:00", "fecha": "18:00" },
-      "sab": { "fechado": true },
-      "dom":  { "fechado": true }
-    }
-  },
+  "redes": { "instagram": "", "facebook": "" },
+  "ativo": true,
+  "destaque": false
+},
 
 {
-    "nome": "Luthieria",
-    "categoria": "Consertos de instrumentos musicais.",
-    "fone": "6196049596",
-    "logo": "assets/img/luthieria.png",
-    "site": "",
-    "horarios": {
-      "seg": { "abre": "08:00", "fecha": "23:59" },
-      "ter": { "abre": "08:00", "fecha": "23:59" },
-      "qua": { "abre": "08:00", "fecha": "23:59" },
-      "qui": { "abre": "08:00", "fecha": "23:59" },
-      "sex": { "abre": "08:00", "fecha": "23:59" },
-      "sab": { "abre": "08:00", "fecha": "23:59" },
-      "dom": { "abre": "08:00", "fecha": "23:59" }
-    }
+  "id": 9,
+  "nome": "Veneza 01",
+  "categoria": "Padaria",
+  "fone": "61992042117",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/veneza-01.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+    "seg": { "abre": "06:00", "fecha": "21:00" },
+    "ter": { "abre": "06:00", "fecha": "21:00" },
+    "qua": { "abre": "06:00", "fecha": "21:00" },
+    "qui": { "abre": "06:00", "fecha": "21:00" },
+    "sex": { "abre": "06:00", "fecha": "21:00" },
+    "sab": { "abre": "06:00", "fecha": "21:00" },
+    "dom": { "abre": "06:00", "fecha": "20:00" }
   },
+  "redes": { "instagram": "", "facebook": "" },
+  "ativo": true,
+  "destaque": false
+},
+
+{
+  "id": 10,
+  "nome": "Veneza 02",
+  "categoria": "Padaria",
+  "fone": "61993031110",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/veneza-02.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+    "seg": { "abre": "06:00", "fecha": "20:00" },
+    "ter": { "abre": "06:00", "fecha": "20:00" },
+    "qua": { "abre": "06:00", "fecha": "20:00" },
+    "qui": { "abre": "06:00", "fecha": "20:00" },
+    "sex": { "abre": "06:00", "fecha": "20:00" },
+    "sab": { "abre": "06:00", "fecha": "20:00" },
+    "dom": { "abre": "06:00", "fecha": "19:00" }
+  },
+  "redes": { "instagram": "", "facebook": "" },
+  "ativo": true,
+  "destaque": false
+},
+
+{
+  "id": 11,
+  "nome": "Açaíteria Mais Sabor",
+  "categoria": "Açaí",
+  "fone": "61992054262",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/acaiteria-mais-sabor.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+    "seg": { "abre": "09:00", "fecha": "18:00" },
+    "ter": { "abre": "09:00", "fecha": "18:00" },
+    "qua": { "abre": "09:00", "fecha": "18:00" },
+    "qui": { "abre": "09:00", "fecha": "18:00" },
+    "sex": { "abre": "09:00", "fecha": "18:00" },
+    "sab": { "abre": "09:00", "fecha": "18:00" },
+    "dom": { "abre": "09:00", "fecha": "18:00" }
+  },
+  "redes": { "instagram": "", "facebook": "" },
+  "ativo": true,
+  "destaque": false
+},
+
+{
+  "id": 12,
+  "nome": "Gás Advaldo",
+  "categoria": "Gás",
+  "fone": "61986542668",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/gas-advaldo.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+    "seg": { "abre": "07:00", "fecha": "19:00" },
+    "ter": { "abre": "07:00", "fecha": "19:00" },
+    "qua": { "abre": "07:00", "fecha": "19:00" },
+    "qui": { "abre": "07:00", "fecha": "19:00" },
+    "sex": { "abre": "07:00", "fecha": "19:00" },
+    "sab": { "abre": "08:00", "fecha": "16:00" },
+    "dom": { "fechado": true }
+  },
+  "redes": { "instagram": "", "facebook": "" },
+  "ativo": true,
+  "destaque": false
+},
+
+{
+  "id": 13,
+  "nome": "Chapury Distribuidora",
+  "categoria": "Distribuidora de Bebidas",
+  "fone": "61992723796",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/chapury-distribuidora.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+    "seg": { "abre": "09:00", "fecha": "22:00" },
+    "ter": { "abre": "09:00", "fecha": "22:00" },
+    "qua": { "abre": "09:00", "fecha": "22:00" },
+    "qui": { "abre": "09:00", "fecha": "22:00" },
+    "sex": { "abre": "09:00", "fecha": "23:00" },
+    "sab": { "abre": "09:00", "fecha": "23:00" },
+    "dom": { "abre": "10:00", "fecha": "20:00" }
+  },
+  "redes": { "instagram": "", "facebook": "" },
+  "ativo": true,
+  "destaque": false
+},
+
+{
+  "id": 14,
+  "nome": "Barbearia do Maycon",
+  "categoria": "Barbearia",
+  "fone": "61992723796",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/barbearia-maycon.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+    "seg": { "abre": "09:00", "fecha": "20:00" },
+    "ter": { "abre": "09:00", "fecha": "20:00" },
+    "qua": { "abre": "09:00", "fecha": "20:00" },
+    "qui": { "abre": "09:00", "fecha": "20:00" },
+    "sex": { "abre": "09:00", "fecha": "20:00" },
+    "sab": { "abre": "09:00", "fecha": "20:00" },
+    "dom": { "abre": "09:00", "fecha": "13:00" }
+  },
+  "redes": { "instagram": "", "facebook": "" },
+  "ativo": true,
+  "destaque": false
+},
+
+{
+  "id": 15,
+  "nome": "Cida Lanches",
+  "categoria": "Lanchonete",
+  "fone": "61992536718",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/cida-lanches.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+    "seg": { "abre": "19:00", "fecha": "23:00" },
+    "ter": { "abre": "19:00", "fecha": "23:00" },
+    "qua": { "abre": "19:00", "fecha": "23:00" },
+    "qui": { "abre": "19:00", "fecha": "23:00" },
+    "sex": { "abre": "19:00", "fecha": "23:00" },
+    "sab": { "abre": "19:00", "fecha": "23:00" },
+    "dom": { "fechado": true }
+  },
+  "redes": { "instagram": "", "facebook": "" },
+  "ativo": true,
+  "destaque": false
+},
+
+{
+  "id": 16,
+  "nome": "Distribuidora do Galego",
+  "categoria": "Bebidas",
+  "fone": "61992183588",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/distribuidora-galego.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+    "seg": { "fechado": true },
+    "ter": { "abre": "09:00", "fecha": "18:00" },
+    "qua": { "abre": "09:00", "fecha": "18:00" },
+    "qui": { "abre": "09:00", "fecha": "18:00" },
+    "sex": { "abre": "09:00", "fecha": "18:00" },
+    "sab": { "abre": "09:00", "fecha": "18:00" },
+    "dom": { "fechado": true }
+  },
+  "redes": { "instagram": "", "facebook": "" },
+  "ativo": true,
+  "destaque": false
+},
+
+{
+  "id": 17,
+  "nome": "Lily Fashion",
+  "categoria": "Loja de Roupas Masculina e Feminina",
+  "fone": "61993780157",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/lily.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+    "seg": { "fechado": true },
+    "ter": { "abre": "09:00", "fecha": "18:00" },
+    "qua": { "abre": "09:00", "fecha": "18:00" },
+    "qui": { "abre": "09:00", "fecha": "18:00" },
+    "sex": { "abre": "09:00", "fecha": "18:00" },
+    "sab": { "abre": "09:00", "fecha": "18:00" },
+    "dom": { "fechado": true }
+  },
+  "redes": { "instagram": "", "facebook": "" },
+  "ativo": true,
+  "destaque": false
+},
+
+{
+  "id": 18,
+  "nome": "JR Ambientes Planejados",
+  "categoria": "Móveis Planejados",
+  "fone": "61981985988",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/moveis_planejados.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+    "seg": { "abre": "09:00", "fecha": "18:00" },
+    "ter": { "abre": "09:00", "fecha": "18:00" },
+    "qua": { "abre": "09:00", "fecha": "18:00" },
+    "qui": { "abre": "09:00", "fecha": "18:00" },
+    "sex": { "abre": "09:00", "fecha": "18:00" },
+    "sab": { "fechado": true },
+    "dom": { "fechado": true }
+  },
+  "redes": { "instagram": "", "facebook": "" },
+  "ativo": true,
+  "destaque": false
+},
+
+{
+  "id": 19,
+  "nome": "Luthieria",
+  "categoria": "Conserto de Instrumentos Musicais",
+  "fone": "6196049596",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/luthieria.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+    "seg": { "abre": "08:00", "fecha": "23:59" },
+    "ter": { "abre": "08:00", "fecha": "23:59" },
+    "qua": { "abre": "08:00", "fecha": "23:59" },
+    "qui": { "abre": "08:00", "fecha": "23:59" },
+    "sex": { "abre": "08:00", "fecha": "23:59" },
+    "sab": { "abre": "08:00", "fecha": "23:59" },
+    "dom": { "abre": "08:00", "fecha": "23:59" }
+  },
+  "redes": { "instagram": "", "facebook": "" },
+  "ativo": true,
+  "destaque": false
+},
+
+{
+  "id": 20,
+  "nome": "Visão Ferragens",
+  "categoria": "Ferragens",
+  "fone": "61993432778",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/visao-ferragens.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+    "seg": { "abre": "08:00", "fecha": "20:00" },
+    "ter": { "abre": "08:00", "fecha": "20:00" },
+    "qua": { "abre": "08:00", "fecha": "20:00" },
+    "qui": { "abre": "08:00", "fecha": "20:00" },
+    "sex": { "abre": "08:00", "fecha": "20:00" },
+    "sab": { "abre": "08:00", "fecha": "20:00" },
+    "dom": { "abre": "08:00", "fecha": "14:00" }
+  },
+  "redes": { "instagram": "", "facebook": "" },
+  "ativo": true,
+  "destaque": false
+}
 
 
 
-    {
-    "nome": "Visão Ferragens",
-    "categoria": "Ferragens",
-    "fone": "61993432778",
-    "logo": "assets/img/visao-ferragens.png",
-    "site": "",
-    "horarios": {
-      "seg": { "abre": "08:00", "fecha": "20:00" },
-      "ter": { "abre": "08:00", "fecha": "20:00" },
-      "qua": { "abre": "08:00", "fecha": "20:00" },
-      "qui": { "abre": "08:00", "fecha": "20:00" },
-      "sex": { "abre": "08:00", "fecha": "20:00" },
-      "sab": { "abre": "08:00", "fecha": "20:00" },
-      "dom": { "abre": "08:00", "fecha": "14:00"  }
-    }
-  }
+
+
 ]

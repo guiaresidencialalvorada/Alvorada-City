@@ -274,6 +274,42 @@
     }
   },
 
+  {
+    "nome": "JR Ambientes Planejados",
+    "categoria": " Moveis Planejados",
+    "fone": "61981985988",
+    "logo": "assets/img/moveis_planejados.png",
+    "site": "",
+    "horarios": {
+      "seg": { "abre": "09:00", "fecha": "18:00" },
+      "ter": { "abre": "09:00", "fecha": "18:00" },
+      "qua": { "abre": "09:00", "fecha": "18:00" },
+      "qui": { "abre": "09:00", "fecha": "18:00" },
+      "sex": { "abre": "09:00", "fecha": "18:00" },
+      "sab": { "fechado": true },
+      "dom":  { "fechado": true }
+    }
+  },
+
+{
+    "nome": "Luthieria",
+    "categoria": "Consertos de instrumentos musicais.",
+    "fone": "6196049596",
+    "logo": "assets/img/luthieria.png",
+    "site": "",
+    "horarios": {
+      "seg": { "abre": "08:00", "fecha": "23:59" },
+      "ter": { "abre": "08:00", "fecha": "23:59" },
+      "qua": { "abre": "08:00", "fecha": "23:59" },
+      "qui": { "abre": "08:00", "fecha": "23:59" },
+      "sex": { "abre": "08:00", "fecha": "23:59" },
+      "sab": { "abre": "08:00", "fecha": "23:59" },
+      "dom": { "abre": "08:00", "fecha": "23:59" }
+    }
+  },
+
+
+
     {
     "nome": "Visão Ferragens",
     "categoria": "Ferragens",

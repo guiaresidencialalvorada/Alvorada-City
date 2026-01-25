@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "titulo": "Sessão de Cinema Comunitária",
+    "data": "22/01/2026",
+    "horario": "19h",
+    "local": "Capela Nossa Senhora das Graças",
+    "descricao": "Exibição de filme para a comunidade, promovendo um momento de reflexão, convivência e lazer para todas as famílias do bairro.",
+   "imagem": "assets/img/eventos/filme-capela.png",
+    "link": ""
+  }
+]

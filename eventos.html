@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eventos do Bairro | Guia Alvorada</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f5f6f8;
+  color: #222;
+}
+
+
+/* ================= HEADER ================= */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+header .logo {
+  font-weight: 400;
+  font-size: 1.15rem;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.7rem;
+}
+
+.menu-overlay {
+  display: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+  padding: 60px 20px 120px; /* espaço embaixo para a aba subir */
+  text-align: center;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.hero p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* ================= EVENTOS ================= */
+.eventos-section {
+  position: relative;
+  z-index: 10;
+
+  max-width: 1200px;
+  margin: -80px auto 0; /* SOBE e cobre o hero */
+  
+  padding: 60px 20px;
+  background: #ffffff;
+  border-radius: 28px 28px 0 0;
+
+  box-shadow: 0 -20px 40px rgba(0,0,0,0.12);
+}
+
+.eventos-header {
+  max-width: 480px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.eventos-header h2 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.eventos-header p {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* GRID */
+.eventos-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.evento-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.4s ease;
+}
+
+.evento-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(0,0,0,0.15);
+}
+
+/* IMAGEM */
+.evento-img {
+  height: 200px;
+  position: relative;
+}
+
+.evento-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DATA */
+.evento-data {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  padding: 7px 11px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+/* CONTEÚDO */
+.evento-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.evento-content h3 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.evento-info {
+  margin: 10px 0;
+  font-size: 0.88rem;
+  color: #475569;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.evento-content p {
+  font-size: 0.93rem;
+  color: #475569;
+  margin-bottom: auto;
+}
+
+/* BOTÃO */
+.btn-evento {
+  margin-top: 18px;
+  padding: 11px;
+  text-align: center;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #0f172a;
+  color: #94a3b8;
+  text-align: center;
+  padding: 18px;
+  font-size: 0.8rem;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    background: #0f172a;
+    height: 100vh;
+    width: 240px;
+    padding: 28px;
+    transition: 0.3s;
+  }
+
+  .menu.open {
+    right: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-overlay.active {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .eventos-header h2 {
+    font-size: 1.7rem;
+  }
+}
+
+.menu {
+  z-index: 9999;
+}
+
+.menu-overlay {
+  z-index: 9998;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<div class="menu-overlay"></div>
+
+<header>
+  <div class="logo">Residencial Alvorada</div>
+  <button class="menu-toggle">☰</button>
+  <nav class="menu">
+    <a href="index.html">Início</a>
+    <a href="onibus.html">Ônibus</a>
+    <a href="posto_saude.html">Posto de Saúde</a>
+    <a href="eventos.html">Eventos & Lazer</a>
+    <a href="contatos_uteis.html">Contatos Úteis</a>
+    <a href="novo_gama.html">Notícias</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Eventos do Bairro</h2>
+  <p>Fique por dentro do que acontece no Alvorada</p>
+</section>
+
+<section class="eventos-section">
+  <div class="eventos-header">
+    <h2>Próximos Eventos</h2>
+    <p>Programações, ações comunitárias e eventos locais</p>
+  </div>
+
+  <div class="eventos-grid" id="lista-eventos"></div>
+</section>
+
+<footer>
+© 2026 Guia Alvorada · Todos os direitos reservados
+</footer>
+
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+const overlay = document.querySelector('.menu-overlay');
+
+toggle.onclick = () => {
+  menu.classList.toggle('open');
+  overlay.classList.toggle('active');
+};
+
+overlay.onclick = () => {
+  menu.classList.remove('open');
+  overlay.classList.remove('active');
+};
+
+fetch('eventos.json')
+  .then(r => r.json())
+  .then(eventos => {
+    const grid = document.getElementById('lista-eventos');
+
+    eventos.forEach(e => {
+      const card = document.createElement('div');
+      card.className = 'evento-card';
+
+      card.innerHTML = `
+        <div class="evento-img">
+          <img src="${e.imagem}">
+          <span class="evento-data">${e.data}</span>
+        </div>
+        <div class="evento-content">
+          <h3>${e.titulo}</h3>
+          <div class="evento-info">
+            <span>⏰ ${e.horario}</span>
+            <span>📍 ${e.local}</span>
+          </div>
+          <p>${e.descricao}</p>
+          ${e.link ? `<a href="${e.link}" class="btn-evento">Ver detalhes</a>` : ''}
+        </div>
+      `;
+
+      grid.appendChild(card);
+      observer.observe(card);
+    });
+  });
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = 1;
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+},{ threshold: 0.2 });
+</script>
+
+</body>
+</html>

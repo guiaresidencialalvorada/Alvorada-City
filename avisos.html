@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avisos da Comunidade | Bairro Alvorada</title>
+    <meta name="description" content="Avisos importantes da comunidade do Bairro Alvorada. Fique informado sobre falta de água, obras, eventos e alertas de segurança.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f3f4f6;
+            color: #111827;
+        }
+
+        header {
+            background: #0f766e;
+            padding: 15px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 20px;
+        }
+
+        nav {
+            margin-top: 8px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .avisos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .aviso {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .aviso h3 {
+            margin-top: 10px;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .aviso p {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .aviso small {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            color: white;
+        }
+
+        /* TIPOS DE AVISO */
+
+        .agua {
+            border-left: 6px solid #0284c7;
+        }
+
+        .agua .tag {
+            background: #0284c7;
+        }
+
+        .obras {
+            border-left: 6px solid #f59e0b;
+        }
+
+        .obras .tag {
+            background: #f59e0b;
+        }
+
+        .evento {
+            border-left: 6px solid #16a34a;
+        }
+
+        .evento .tag {
+            background: #16a34a;
+        }
+
+        .alerta {
+            border-left: 6px solid #dc2626;
+        }
+
+        .alerta .tag {
+            background: #dc2626;
+        }
+
+        footer {
+            background: #0f766e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📢 Avisos da Comunidade - Bairro Alvorada</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="comercio.html">Comércio</a>
+        <a href="avisos.html">Avisos</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <div class="titulo">
+        <h2>Fique informado sobre o que acontece no bairro</h2>
+        <p>Atualizações importantes para moradores do Bairro Alvorada</p>
+    </div>
+
+    <div class="avisos-grid">
+
+        <div class="aviso agua">
+            <span class="tag">Falta de Água</span>
+            <h3>Manutenção no Abastecimento</h3>
+            <p>Hoje das 08h às 16h haverá interrupção temporária no fornecimento de água em algumas quadras.</p>
+            <small>📅 24/01/2026</small>
+        </div>
+
+        <div class="aviso obras">
+            <span class="tag">Obras</span>
+            <h3>Interdição na Rua Principal</h3>
+            <p>A rua central está passando por recapeamento. Motoristas devem utilizar rotas alternativas.</p>
+            <small>📅 25/01/2026</small>
+        </div>
+
+        <div class="aviso evento">
+            <span class="tag">Evento</span>
+            <h3>Feira Comunitária</h3>
+            <p>Neste sábado acontece a feira do bairro na praça central a partir das 18h.</p>
+            <small>📅 27/01/2026</small>
+        </div>
+
+        <div class="aviso alerta">
+            <span class="tag">Alerta de Segurança</span>
+            <h3>Atenção Moradores</h3>
+            <p>Relatos de movimentação suspeita durante a madrugada na Quadra 5. Fique atento.</p>
+            <small>📅 24/01/2026</small>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 - Projeto Comunitário Bairro Alvorada | Desenvolvido para a comunidade</p>
+</footer>
+
+</body>
+</html>

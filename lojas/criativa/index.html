@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Criativa | Residencial Alvorada</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* ================= VARIÁVEIS ================= */
+:root {
+  --roxo: #2e1065;
+  --roxo-claro: #4c1d95;
+  --rosa: #ec4899;
+  --fundo: #fce7f3;
+  --whatsapp: #25D366;
+}
+
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--fundo);
+  color: #111;
+}
+
+/* ================= HEADER ================= */
+.topo {
+  background: linear-gradient(135deg, var(--roxo), var(--roxo-claro));
+  color: #fff;
+  padding: 22px 12px;
+  text-align: center;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 10px 28px rgba(76,29,149,.45);
+}
+
+/* LOGO */
+.logo-loja {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+}
+
+/* TITULO */
+.topo h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* SUB */
+.topo p {
+  font-size: 13px;
+  opacity: .9;
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 16px;
+}
+
+/* RESPONSIVO */
+@media (min-width: 700px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1000px) {
+  .grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ================= CARD ================= */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(76,29,149,.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: .25s ease;
+}
+.card img {
+  background:#f1f1f1;
+  border-bottom:2px solid #ec4899;
+}
+
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(236,72,153,.35);
+}
+
+/* IMAGEM */
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  background: #f1f1f1;
+}
+
+/* INFO */
+.info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.info h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--roxo);
+  margin-bottom: 4px;
+}
+
+.info p {
+  font-size: 12px;
+  color: #6b21a8;
+  margin-bottom: 8px;
+}
+
+/* PREÇO */
+.preco {
+  margin-top: auto;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--rosa);
+}
+
+/* BOTÃO */
+.btn {
+  background: linear-gradient(135deg, var(--whatsapp), #16a34a);
+  color: #fff;
+  text-align: center;
+  padding: 11px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border-top: 1px solid rgba(255,255,255,.15);
+  transition: .2s;
+}
+
+.btn:hover {
+  filter: brightness(1.15);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  padding: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--roxo-claro);
+}
+/* ================= MODAL IMAGEM ================= */
+
+.modal-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(6px);
+}
+
+.modal-img.active {
+  display: flex;
+}
+
+.modal-img img {
+  max-width: 95%;
+  max-height: 90%;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0,0,0,.5);
+  animation: zoom .25s ease;
+}
+
+.fechar-modal {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #ec4899;
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,.4);
+}
+
+@keyframes zoom {
+  from { transform: scale(.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="topo">
+
+  <img src="logo.png" class="logo-loja" alt="Logo Criativa" loading="lazy">
+
+  <h2>Criativa</h2>
+  <p>Catálogo digital — Atendimento direto no WhatsApp</p>
+
+</header>
+
+<!-- ================= PRODUTOS ================= -->
+<main class="grid" id="produtos"></main>
+
+
+
+
+
+<!-- MODAL IMAGEM -->
+<div class="modal-img" id="modalImg">
+  <button class="fechar-modal" id="fecharModal">×</button>
+  <img id="imgModal">
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  Residencial Alvorada • Guia Comercial Digital
+</footer>
+
+<script>
+const produtosArea = document.getElementById("produtos");
+
+// Modal
+const modal = document.getElementById("modalImg");
+const modalImg = document.getElementById("imgModal");
+const fecharModal = document.getElementById("fecharModal");
+
+fetch("produtos.json")
+  .then(res => res.json())
+  .then(produtos => {
+
+    produtosArea.innerHTML = "";
+
+    produtos.forEach(prod => {
+
+      const mensagem = encodeURIComponent(
+        `Olá! Tenho interesse no produto:\n\n📦 Produto: ${prod.nome}\n💰 Valor: ${prod.preco}`
+      );
+
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const img = document.createElement("img");
+      img.src = prod.imagem;
+      img.loading = "lazy";
+      img.alt = prod.nome;
+
+      // 👉 ABRIR MODAL AO CLICAR
+      img.onclick = () => {
+        modal.classList.add("active");
+        modalImg.src = img.src;
+      };
+
+      card.innerHTML = `
+        <div class="info">
+          <h3>${prod.nome}</h3>
+          <p>${prod.descricao || ""}</p>
+          <span class="preco">${prod.preco || ""}</span>
+        </div>
+
+        <a class="btn" target="_blank"
+           href="https://wa.me/${prod.whatsapp}?text=${mensagem}">
+           💬 Falar no WhatsApp
+        </a>
+      `;
+
+      card.prepend(img);
+      produtosArea.appendChild(card);
+
+    });
+
+  });
+
+// FECHAR MODAL
+fecharModal.onclick = () => {
+  modal.classList.remove("active");
+};
+
+// CLICAR FORA FECHA
+modal.onclick = (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+  }
+};
+</script>
+
+
+
+
+
+
+</body>
+</html>

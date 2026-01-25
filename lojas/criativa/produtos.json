@@ -1,0 +1,65 @@
+[
+  {
+    "nome": "MOCHILA S SPORT",
+    "preco": "R$ 69,99",
+    "descricao": "Mochila na cor preta.",
+    "imagem": "img/1.png",
+    "whatsapp": "5561995651962"
+  },
+  {
+    "nome": "MOCHILA S SPORT",
+    "preco": "R$ 69,99",
+    "descricao": "Mochila na cor vermelha.",
+    "imagem": "img/2.png",
+    "whatsapp": "5561995651962"
+  },
+  {
+    "nome": "GIZ DE CERA MASTER",
+    "preco": "R$ 6,99",
+    "descricao": "Giz de Cera Master.",
+    "imagem": "img/3.png",
+    "whatsapp": "5561995651962"
+  },
+  {
+    "nome": "LÁPIS DE COR BAZZE WAVE",
+    "preco": "R$ 5,99",
+    "descricao": "Lápis de Cor.",
+    "imagem": "img/4.png",
+    "whatsapp": "5561995651962"
+  },
+  {
+    "nome": "CHAMEQUINHO SENINHA COLORIDO (AZUL, ROSA, VERDE)",
+    "preco": "R$ 11,99",
+    "descricao": "Chamequinho colorido.",
+    "imagem": "img/5.png",
+    "whatsapp": "5561995651962"
+  },
+  {
+    "nome": "CANETA BIC (AZUL, PRETA, VERMELHA)",
+    "preco": "R$ 1,50",
+    "descricao": "Canetas BIC.",
+    "imagem": "img/6.png",
+    "whatsapp": "5561995651962"
+  },
+  {
+    "nome": "ESTOJO UNISEX DUPLA DIVISÓRIA",
+    "preco": "R$ 24,99",
+    "descricao": "Estojo escolar.",
+    "imagem": "img/7.png",
+    "whatsapp": "5561995651962"
+  },
+  {
+    "nome": "LÁPIS DE ESCREVER LÉO E LÉO",
+    "preco": "R$ 0,50",
+    "descricao": "Lápis grafite.",
+    "imagem": "img/8.png",
+    "whatsapp": "5561995651962"
+  },
+  {
+    "nome": "CHAMEQUINHO SENINHA COM 100 FOLHAS",
+    "preco": "R$ 10,00",
+    "descricao": "Chamequinho com 100 folhas.",
+    "imagem": "img/9.png",
+    "whatsapp": "5561995651962"
+  }
+]

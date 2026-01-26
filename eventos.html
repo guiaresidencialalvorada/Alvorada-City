@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -21,126 +21,140 @@ body {
   color: #222;
 }
 
-
 /* ================= HEADER ================= */
-header {
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
-  background: #0f172a;
-  color: #ffffff;
+  align-items: center;
+  padding: 14px 20px;
 }
 
-header .logo {
-  font-weight: 400;
-  font-size: 1.15rem;
+.logo {
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0,0,0,.6);
 }
 
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #38bdf8;
+  cursor: pointer;
+}
+
+/* ================= MENU ================= */
 .menu {
+  position: fixed;
+  top: 64px; /* logo abaixo do header */
+  right: -260px;
+  width: 240px;
+  background: #020617;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 16px 0 0 16px;
+  box-shadow: -10px 20px 40px rgba(0,0,0,.35);
+  transition: .3s ease;
+  z-index: 1001;
+}
+
+
+.menu.open {
+  right: 0;
 }
 
 .menu a {
   color: #e5e7eb;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #ffffff;
-  font-size: 1.7rem;
+.menu a:hover {
+  background: #38bdf8;
+  color: #020617;
 }
 
-.menu-overlay {
-  display: none;
+
+
+/* DESKTOP MENU */
+@media (min-width: 1000px) {
+  .menu {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    background: transparent;
+    padding: 0;
+    right: 0;
+  }
+
+  .menu-overlay,
+  .menu-toggle {
+    display: none;
+  }
 }
 
 /* ================= HERO ================= */
-.hero {
-  padding: 60px 20px 120px; /* espaço embaixo para a aba subir */
+.hero-alvorada {
+  height: 180px;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #ffffff;
-  position: relative;
-  z-index: 1;
 }
 
-.hero h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 6px;
+.hero-text {
+  color: #fff;
 }
 
-.hero p {
-  font-size: 0.95rem;
-  opacity: 0.9;
+.hero-text h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 15px;
+  opacity: 0.85;
 }
 
 /* ================= EVENTOS ================= */
 .eventos-section {
-  position: relative;
-  z-index: 10;
-
-  max-width: 1200px;
-  margin: -80px auto 0; /* SOBE e cobre o hero */
-  
-  padding: 60px 20px;
-  background: #ffffff;
+  background: #fff;
+  margin-top: -60px;
   border-radius: 28px 28px 0 0;
-
-  box-shadow: 0 -20px 40px rgba(0,0,0,0.12);
+  padding: 60px 20px;
 }
 
 .eventos-header {
-  max-width: 480px;
-  margin: 0 auto 45px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
-.eventos-header h2 {
-  font-size: 2.1rem;
-  font-weight: 600;
-  color: #1e293b;
-}
-
-.eventos-header p {
-  font-size: 0.95rem;
-  color: #64748b;
-}
-
-/* GRID */
 .eventos-grid {
-  max-width: 1100px;
-  margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-/* CARD */
 .evento-card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.4s ease;
+  transition: .4s;
 }
 
-.evento-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 22px 45px rgba(0,0,0,0.15);
-}
-
-/* IMAGEM */
 .evento-img {
   height: 200px;
   position: relative;
@@ -152,20 +166,17 @@ header .logo {
   object-fit: cover;
 }
 
-/* DATA */
 .evento-data {
   position: absolute;
   top: 12px;
   left: 12px;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #ffffff;
-  padding: 7px 11px;
+  background: #2563eb;
+  color: #fff;
+  padding: 6px 10px;
   border-radius: 10px;
-  font-weight: 600;
-  font-size: 0.75rem;
+  font-size: .75rem;
 }
 
-/* CONTEÚDO */
 .evento-content {
   padding: 20px;
   display: flex;
@@ -173,38 +184,19 @@ header .logo {
   height: 100%;
 }
 
-.evento-content h3 {
-  font-size: 1.1rem;
-  color: #0f172a;
-  margin-bottom: 6px;
-}
-
-.evento-info {
-  margin: 10px 0;
-  font-size: 0.88rem;
-  color: #475569;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
 .evento-content p {
-  font-size: 0.93rem;
-  color: #475569;
   margin-bottom: auto;
 }
 
-/* BOTÃO */
 .btn-evento {
   margin-top: 18px;
-  padding: 11px;
+  background: linear-gradient(135deg,#2563eb,#1d4ed8);
+  color: #fff;
   text-align: center;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #ffffff;
+  padding: 12px;
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.9rem;
 }
 
 /* ================= FOOTER ================= */
@@ -213,67 +205,18 @@ footer {
   color: #94a3b8;
   text-align: center;
   padding: 18px;
-  font-size: 0.8rem;
+  font-size: .8rem;
 }
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    flex-direction: column;
-    background: #0f172a;
-    height: 100vh;
-    width: 240px;
-    padding: 28px;
-    transition: 0.3s;
-  }
-
-  .menu.open {
-    right: 0;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .menu-overlay.active {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-  }
-
-  .hero h2 {
-    font-size: 1.6rem;
-  }
-
-  .eventos-header h2 {
-    font-size: 1.7rem;
-  }
-}
-
-.menu {
-  z-index: 9999;
-}
-
-.menu-overlay {
-  z-index: 9998;
-}
-
-
-
 </style>
 </head>
 
 <body>
 
-<div class="menu-overlay"></div>
-
-<header>
+<header class="header">
   <div class="logo">Residencial Alvorada</div>
-  <button class="menu-toggle">☰</button>
+
+  <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
   <nav class="menu">
     <a href="index.html">Início</a>
     <a href="onibus.html">Ônibus</a>
@@ -284,48 +227,58 @@ footer {
   </nav>
 </header>
 
-<section class="hero">
-  <h2>Eventos do Bairro</h2>
-  <p>Fique por dentro do que acontece no Alvorada</p>
+
+<section class="hero-alvorada">
+  <div class="hero-text">
+    <h2>Eventos do Bairro</h2>
+    <p>Fique por dentro do que acontece</p>
+  </div>
 </section>
+
 
 <section class="eventos-section">
   <div class="eventos-header">
     <h2>Próximos Eventos</h2>
-    <p>Programações, ações comunitárias e eventos locais</p>
+    <p>Programações e ações comunitárias</p>
   </div>
-
   <div class="eventos-grid" id="lista-eventos"></div>
 </section>
 
-<footer>
-© 2026 Guia Alvorada · Todos os direitos reservados
-</footer>
+<footer>© 2026 Guia Alvorada</footer>
 
 <script>
 const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
-const overlay = document.querySelector('.menu-overlay');
 
-toggle.onclick = () => {
+toggle.addEventListener('click', () => {
   menu.classList.toggle('open');
-  overlay.classList.toggle('active');
-};
+});
 
-overlay.onclick = () => {
-  menu.classList.remove('open');
-  overlay.classList.remove('active');
-};
+/* Fecha ao clicar fora */
+document.addEventListener('click', (e) => {
+  if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+    menu.classList.remove('open');
+  }
+});
+
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = 1;
+      e.target.style.transform = 'translateY(0)';
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
 
 fetch('eventos.json')
   .then(r => r.json())
   .then(eventos => {
     const grid = document.getElementById('lista-eventos');
-
     eventos.forEach(e => {
       const card = document.createElement('div');
       card.className = 'evento-card';
-
       card.innerHTML = `
         <div class="evento-img">
           <img src="${e.imagem}">
@@ -333,28 +286,14 @@ fetch('eventos.json')
         </div>
         <div class="evento-content">
           <h3>${e.titulo}</h3>
-          <div class="evento-info">
-            <span>⏰ ${e.horario}</span>
-            <span>📍 ${e.local}</span>
-          </div>
           <p>${e.descricao}</p>
           ${e.link ? `<a href="${e.link}" class="btn-evento">Ver detalhes</a>` : ''}
         </div>
       `;
-
       grid.appendChild(card);
       observer.observe(card);
     });
   });
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.opacity = 1;
-      e.target.style.transform = 'translateY(0)';
-    }
-  });
-},{ threshold: 0.2 });
 </script>
 
 </body>

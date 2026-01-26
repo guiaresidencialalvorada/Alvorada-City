@@ -57,54 +57,60 @@ body {
 }
 
 /* MENU */
+/* ================= MENU ================= */
 .menu {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background: rgba(2, 6, 23, 0.95);
-    position: absolute;
-    top: 60px;
-    right: 12px;
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
+  position: fixed;
+  top: 64px; /* logo abaixo do header */
+  right: -260px;
+  width: 240px;
+  background: #020617;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 16px 0 0 16px;
+  box-shadow: -10px 20px 40px rgba(0,0,0,.35);
+  transition: .3s ease;
+  z-index: 1001;
 }
 
+
 .menu.open {
-    display: flex;
+  right: 0;
 }
 
 .menu a {
-    text-decoration: none;
-    color: #e5e7eb;
-    font-weight: 600;
-    padding: 10px 14px;
-    border-radius: 10px;
-    transition: .25s;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .menu a:hover {
-    background: #38bdf8;
-    color: #020617;
+  background: #38bdf8;
+  color: #020617;
 }
 
-/* DESKTOP */
-@media (min-width: 900px) {
-    .menu {
-        display: flex !important;
-        flex-direction: row;
-        position: static;
-        background: transparent;
-        border: none;
-        padding: 0;
-        gap: 16px;
-    }
 
-    .menu-toggle {
-        display: none;
-    }
+
+/* DESKTOP MENU */
+@media (min-width: 1000px) {
+  .menu {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    background: transparent;
+    padding: 0;
+    right: 0;
+  }
+
+  .menu-overlay,
+  .menu-toggle {
+    display: none;
+  }
 }
-
 /* ================= CONTAINER ================= */
 .container {
     padding: 26px 14px;
@@ -238,7 +244,6 @@ body {
 
     <nav class="menu">
         <a href="index.html">Início</a>
-        <a href="#empresas">Lojas</a>
         <a href="onibus.html">Ônibus</a>
         <a href="posto_saude.html">Posto de Saúde</a>
         <a href="eventos.html">Eventos & Lazer</a>

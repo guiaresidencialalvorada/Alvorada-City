@@ -300,15 +300,15 @@
   "logo": "assets/img/gas-advaldo.png",
   "endereco": "",
   "maps": "https://maps.app.goo.gl/6rcBoYSk6LeQ8Cr28",
-  "descricao": "",
+  "descricao": "Atendimento no estabelecimento 24horas ",
   "horarios": {
-    "seg": { "abre": "07:00", "fecha": "19:00" },
-    "ter": { "abre": "07:00", "fecha": "19:00" },
-    "qua": { "abre": "07:00", "fecha": "19:00" },
-    "qui": { "abre": "07:00", "fecha": "19:00" },
-    "sex": { "abre": "07:00", "fecha": "19:00" },
-    "sab": { "abre": "08:00", "fecha": "16:00" },
-    "dom": { "fechado": true }
+    "seg": { "abre": "07:00", "fecha": "21:00" },
+    "ter": { "abre": "07:00", "fecha": "21:00" },
+    "qua": { "abre": "07:00", "fecha": "21:00" },
+    "qui": { "abre": "07:00", "fecha": "21:00" },
+    "sex": { "abre": "07:00", "fecha": "21:00" },
+    "sab": { "abre": "07:00", "fecha": "16:00" },
+    "dom": { "abre": "07:00", "fecha": "16:00" }
   },
   "redes": { "instagram": "", "facebook": "" },
   "ativo": true,

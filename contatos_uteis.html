@@ -74,53 +74,60 @@ body {
 
 /* ================= MENU VIDRO ================= */
 
+/* ================= MENU ================= */
 .menu {
   position: fixed;
-  top: 0;
+  top: 64px; /* logo abaixo do header */
   right: -260px;
   width: 240px;
-  height: 100vh;
-  padding: 60px 20px;
-
+  background: #020617;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-
-  background: rgba(15,15,15,.75);
-  backdrop-filter: blur(12px);
-
-  transition: .35s ease;
-  z-index: 1000;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 16px 0 0 16px;
+  box-shadow: -10px 20px 40px rgba(0,0,0,.35);
+  transition: .3s ease;
+  z-index: 1001;
 }
+
 
 .menu.open {
   right: 0;
 }
 
 .menu a {
-  color: #fff;
+  color: #e5e7eb;
   text-decoration: none;
-  font-size: 14px;
   font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-/* OVERLAY */
-
-.menu-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: .3s;
-  z-index: 998;
+.menu a:hover {
+  background: #38bdf8;
+  color: #020617;
 }
 
-.menu-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
 
+
+/* DESKTOP MENU */
+@media (min-width: 1000px) {
+  .menu {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    background: transparent;
+    padding: 0;
+    right: 0;
+  }
+
+  .menu-overlay,
+  .menu-toggle {
+    display: none;
+  }
+}
 /* ================= CONTAINER ================= */
 
 .container {

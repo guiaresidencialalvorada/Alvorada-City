@@ -539,14 +539,14 @@
   "maps": "https://maps.app.goo.gl/VgCPLRegDFjatKoJ8?g_st=ac",
   "descricao": "Loja especializada em ferragens, ferramentas e materiais para construção. Atendimento de qualidade e produtos para obras, reformas e manutenção em geral.",
   "horarios": {
-    "seg": { "abre": "08:00", "fecha": "02:00" },
-    "ter": { "abre": "08:00", "fecha": "02:00" },
-    "qua": { "abre": "08:00", "fecha": "02:00" },
-    "qui": { "abre": "08:00", "fecha": "02:00" },
-    "sex": { "abre": "08:00", "fecha": "02:00" },
-    "sab": { "abre": "08:00", "fecha": "02:00" },
-    "dom": { "abre": "08:00", "fecha": "02:00" }
-  },
+  "seg": { "abre": "08:00", "fecha": "02:00" },
+  "ter": { "abre": "08:00", "fecha": "02:00" },
+  "qua": { "abre": "08:00", "fecha": "02:00" },
+  "qui": { "abre": "08:00", "fecha": "02:00" },
+  "sex": { "abre": "08:00", "fecha": "02:00" },
+  "sab": { "abre": "08:00", "fecha": "02:00" },
+  "dom": { "abre": "08:00", "fecha": "02:00" }
+},
   "redes": {
     "instagram": "",
     "facebook": ""

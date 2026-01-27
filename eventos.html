@@ -207,6 +207,62 @@ footer {
   padding: 18px;
   font-size: .8rem;
 }
+
+/* ================= MODAL IMAGEM ================= */
+
+.img-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,23,0.85);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.img-modal img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.6);
+  animation: zoomIn .3s ease;
+}
+
+.close-img {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  background: rgba(0,0,0,.4);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animação */
+@keyframes zoomIn {
+  from {
+    transform: scale(.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Cursor na imagem */
+.evento-img img {
+  cursor: zoom-in;
+}
+
 </style>
 </head>
 
@@ -217,15 +273,14 @@ footer {
 
   <button class="menu-toggle" aria-label="Abrir menu">☰</button>
 
-    <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="onibus.html">Ônibus</a>
-        <a href="posto_saude.html">Posto de Saúde</a>
-        <a href="eventos.html">Eventos & Lazer</a>
-        <a href="contatos_uteis.html">Contatos Úteis</a>
-        <a href="novo_gama.html">Notícias de Novo Gama</a>
-        <a href="reclamacoes.html">Reclamações e Melhorias</a>
-    </nav>
+  <nav class="menu">
+    <a href="index.html">Início</a>
+    <a href="onibus.html">Ônibus</a>
+    <a href="posto_saude.html">Posto de Saúde</a>
+    <a href="eventos.html">Eventos & Lazer</a>
+    <a href="contatos_uteis.html">Contatos Úteis</a>
+    <a href="novo_gama.html">Notícias</a>
+  </nav>
 </header>
 
 
@@ -297,6 +352,13 @@ fetch('eventos.json')
   });
 </script>
 
+
+<!-- MODAL IMAGEM EVENTO -->
+<div class="img-modal" id="imgModal">
+  <span class="close-img" onclick="fecharImagem()">✕</span>
+  <img id="imgModalConteudo">
+</div>
+
+
 </body>
 </html>
-

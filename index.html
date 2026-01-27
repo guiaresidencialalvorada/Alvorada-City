@@ -1126,22 +1126,68 @@ function verificarStatusPorDia(horarios) {
 
     const agora = new Date();
     const dias = ["dom","seg","ter","qua","qui","sex","sab"];
-    const hoje = dias[agora.getDay()];
-    const hojeHorario = horarios[hoje];
 
+    const hojeIndex = agora.getDay();
+    const hoje = dias[hojeIndex];
+    const ontem = dias[(hojeIndex + 6) % 7];
+
+    const agoraMin = agora.getHours() * 60 + agora.getMinutes();
+
+    const hojeHorario = horarios[hoje];
+    const ontemHorario = horarios[ontem];
+
+    // 👉 VERIFICA SE CONTINUOU ABERTO DO DIA ANTERIOR
+    if (ontemHorario && ontemHorario.diaSeguinte) {
+
+        const [hA2, mA2] = ontemHorario.abre.split(":").map(Number);
+        const [hF2, mF2] = ontemHorario.fecha.split(":").map(Number);
+
+        const inicioOntem = hA2 * 60 + mA2;
+        const fimHoje = hF2 * 60 + mF2;
+
+        if (agoraMin < fimHoje) {
+            return {
+                aberto: true,
+                fecha: ontemHorario.fecha
+            };
+        }
+    }
+
+    // 👉 VERIFICA HORÁRIO NORMAL DE HOJE
     if (!hojeHorario || hojeHorario.fechado) {
         return { aberto: false };
     }
 
-    const agoraMin = agora.getHours() * 60 + agora.getMinutes();
     const [hA, mA] = hojeHorario.abre.split(":").map(Number);
     const [hF, mF] = hojeHorario.fecha.split(":").map(Number);
 
-    return {
-        aberto: agoraMin >= (hA * 60 + mA) && agoraMin < (hF * 60 + mF),
-        fecha: hojeHorario.fecha
-    };
+    const inicio = hA * 60 + mA;
+    const fim = hF * 60 + mF;
+
+    // Caso vire o dia
+    if (hojeHorario.diaSeguinte) {
+
+        if (agoraMin >= inicio) {
+            return {
+                aberto: true,
+                fecha: hojeHorario.fecha
+            };
+        }
+
+    } else {
+
+        if (agoraMin >= inicio && agoraMin < fim) {
+            return {
+                aberto: true,
+                fecha: hojeHorario.fecha
+            };
+        }
+
+    }
+
+    return { aberto: false };
 }
+
 
 /* ================= SITE ================= */
 

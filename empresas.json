@@ -581,9 +581,36 @@
   },
   "ativo": true,
   "destaque": false
+},
+{
+  "id": 23,
+  "nome": " Casa de Bolos e Lanchonete da Familia",
+  "categoria": "Lanchonete",
+  "fone": "61985990469",
+  "whatsapp": "61985990469",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/casa-bolos.png",
+  "endereco": "",
+  "maps": "https://maps.app.goo.gl/oyRTpiz86H57GHmA6",
+  "descricao": "",
+  "horarios": {
+  "seg": { "abre": "06:30", "fecha": "19:30" },
+  "ter": { "abre": "06:30", "fecha": "19:30" },
+  "qua": { "abre": "06:30", "fecha": "19:30" },
+  "qui": { "abre": "06:30", "fecha": "19:30" },
+  "sex": { "abre": "06:30", "fecha": "19:30" },
+  "sab": { "abre": "06:30", "fecha": "19:30" },
+  "dom": { "abre": "06:30", "fecha": "19:30" }
+},
+  "redes": {
+    "instagram": "",
+    "facebook": ""
+  },
+  "ativo": true,
+  "destaque": false
 }  
-
-
-
+  
+  
 
 ]

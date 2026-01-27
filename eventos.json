@@ -8,8 +8,22 @@
     "descricao": "Educar Faz Bem é um evento dedicado a fortalecer a educação como base para um futuro melhor. Um momento de aprendizado, troca de experiências e incentivo ao desenvolvimento de crianças, jovens e famílias, promovendo conhecimento, valores e oportunidades para toda a comunidade.",
    "imagem": "assets/img/img/eventos/escola.png",
     "link": ""
+  },
+
+  {
+    "id": 2,
+    "titulo": " Comunicado Entrega de Uniformes ",
+    "data": "28/01/2026",
+    "horario": "09:00h",
+    "local": "Escola ",
+    "descricao": "Entrega de Uniformes.",
+   "imagem": "assets/img/img/eventos/comunicado.png",
+    "link": ""
   }
+
+  
 ]
+
 
 
 

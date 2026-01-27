@@ -595,13 +595,13 @@
   "maps": "https://maps.app.goo.gl/oyRTpiz86H57GHmA6",
   "descricao": "",
   "horarios": {
-  "seg": { "abre": "06:30", "fecha": "19:30" },
-  "ter": { "abre": "06:30", "fecha": "19:30" },
-  "qua": { "abre": "06:30", "fecha": "19:30" },
-  "qui": { "abre": "06:30", "fecha": "19:30" },
-  "sex": { "abre": "06:30", "fecha": "19:30" },
-  "sab": { "abre": "06:30", "fecha": "19:30" },
-  "dom": { "abre": "06:30", "fecha": "19:30" }
+  "seg": { "abre": "07:00", "fecha": "19:00" },
+  "ter": { "abre": "07:00", "fecha": "19:00" },
+  "qua": { "abre": "07:00", "fecha": "19:00" },
+  "qui": { "abre": "07:00", "fecha": "19:00" },
+  "sex": { "abre": "07:00", "fecha": "19:00" },
+  "sab": { "abre": "07:00", "fecha": "19:00" },
+  "dom": { "fechado": true }
 },
   "redes": {
     "instagram": "",

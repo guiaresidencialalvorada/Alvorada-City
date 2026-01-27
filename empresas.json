@@ -537,7 +537,7 @@
   "logo": "assets/img/melk-distribuidora.png",
   "endereco": "",
   "maps": "https://maps.app.goo.gl/VgCPLRegDFjatKoJ8?g_st=ac",
-  "descricao": "Loja especializada em ferragens, ferramentas e materiais para construção. Atendimento de qualidade e produtos para obras, reformas e manutenção em geral.",
+  "descricao": "",
   "horarios": {
   "seg": { "abre": "08:00", "fecha": "23:59" },
   "ter": { "abre": "08:00", "fecha": "23:59" },
@@ -553,7 +553,35 @@
   },
   "ativo": true,
   "destaque": false
-}
+},
+{
+  "id": 22,
+  "nome": " Pastelaria e Lanchonete Alvorada",
+  "categoria": "Lanchonete",
+  "fone": "61994104153",
+  "whatsapp": "61994104153",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/pastelaria.png",
+  "endereco": "",
+  "maps": "https://goo.gl/maps/BTj1cQD9aacyWdZJ6",
+  "descricao": "",
+  "horarios": {
+  "seg": { "abre": "06:30", "fecha": "19:30" },
+  "ter": { "abre": "06:30", "fecha": "19:30" },
+  "qua": { "abre": "06:30", "fecha": "19:30" },
+  "qui": { "abre": "06:30", "fecha": "19:30" },
+  "sex": { "abre": "06:30", "fecha": "19:30" },
+  "sab": { "abre": "06:30", "fecha": "19:30" },
+  "dom": { "abre": "06:30", "fecha": "19:30" }
+},
+  "redes": {
+    "instagram": "",
+    "facebook": ""
+  },
+  "ativo": true,
+  "destaque": false
+}  
 
 
 

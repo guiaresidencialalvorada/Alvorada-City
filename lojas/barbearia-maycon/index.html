@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+
+<meta charset="UTF-8">
+<title>Barbearia do Maycon | Serviços Premium</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --gold: #d4af37;
+    --bg: #070a12;
+    --card: rgba(255,255,255,0.06);
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #0f172a, var(--bg));
+    color: var(--text);
+    padding: 30px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== HEADER ===== */
+.header {
+    position: relative;
+    background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(0,247,255,0.1));
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 22px;
+    padding: 35px;
+    box-shadow: var(--shadow);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* LOGO */
+.logo-box {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.55);
+    border: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        0 0 25px rgba(212,175,55,0.5),
+        0 0 60px rgba(212,175,55,0.25);
+}
+
+
+.logo-box img {
+    width: 95%;
+    height: auto;
+}
+
+
+/* MICRO GIF */
+.micro-gif {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0.25;
+}
+
+.micro-gif img {
+    width: 80px;
+    filter: drop-shadow(0 0 10px rgba(212,175,55,0.4));
+}
+
+.header h1 {
+    text-shadow: 
+        2px 2px 0 rgba(0,0,0,0.6),
+        0 0 20px rgba(212,175,55,0.4);
+}
+
+
+
+
+.header p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* INFO */
+.info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.info div {
+    background: rgba(0,0,0,0.4);
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== SERVIÇOS ===== */
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card);
+    backdrop-filter: blur(12px);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 40px rgba(212,175,55,0.4);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body h3 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.preco {
+    font-size: 26px;
+    color: var(--gold);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-whats {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #25d366, #1ebe5d);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-whats:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(37,211,102,0.6);
+}
+
+.fumaca {
+    position: absolute;
+    inset: 0;
+    background: url("fumaca.png") no-repeat center;
+    background-size: cover;
+    opacity: 0.18;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    border-radius: 22px;
+}
+
+.icon-gold {
+    color: var(--gold);
+    margin-right: 8px;
+    font-size: 20px;
+    text-shadow: 0 0 8px rgba(212,175,55,0.5);
+}
+
+
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 13px;
+    color: var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+
+        <div class="logo-box">
+            <img src="logo-barbearia1.png" alt="Barbearia do Maycon">
+        </div>
+
+        <div class="fumaca"></div>
+
+
+        <h1>Barbearia Maycon</h1>
+        <p>Estilo • Precisão • Tecnologia</p>
+
+        <div class="info">
+            <div>📍 <strong>Endereço:</strong><br>Rua Principal do Alvorada</div>
+            <div>⏰ <strong>Horário:</strong><br>08:00 às 20:00</div>
+            <div>📞 <strong>Contato:</strong><br>(61) 99263-0980</div>
+        </div>
+    </div>
+
+    <!-- SERVIÇOS -->
+    <div class="servicos">
+
+        <div class="card">
+            <img src="corte.png" alt="Corte">
+            <div class="card-body">
+                <h3><i class="fa-solid fa-scissors icon-gold"></i>Corte</h3>
+                <div class="preco">R$ 25</div>
+                <a class="btn-whats" href="https://wa.me/5561992630980?text=Daqui%20a%20pouco%20estou%20indo%20a%C3%AD">WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="barba.png" alt="Barba">
+            <div class="card-body">
+                <h3><i class="fa-solid fa-user icon-gold"></i>Barba</h3>
+                <div class="preco">R$ 15</div>
+                <a class="btn-whats" href="https://wa.me/5561992630980?text=Daqui%20a%20pouco%20estou%20indo%20a%C3%AD">WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="selagem.png" alt="Selagem">
+            <div class="card-body">
+                <h3><i class="fa-solid fa-gem icon-gold"></i>Selagem</h3>
+                <div class="preco">R$ 45</div>
+                <a class="btn-whats" href="https://wa.me/5561992630980?text=Daqui%20a%20pouco%20estou%20indo%20a%C3%AD">WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="luzes.png" alt="Luzes">
+            <div class="card-body">
+               <h3><i class="fa-solid fa-wand-magic-sparkles icon-gold"></i>Luzes</h3>
+                <div class="preco">R$ 70</div>
+                <a class="btn-whats" href="https://wa.me/5561992630980?text=Daqui%20a%20pouco%20estou%20indo%20a%C3%AD">WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="pezinho.png" alt="Pezinho">
+            <div class="card-body">
+                <h3><i class="fa-solid fa-fire icon-gold"></i>Pezinho</h3>
+                <div class="preco">R$ 10</div>
+                <a class="btn-whats" href="https://wa.me/5561992630980?text=Daqui%20a%20pouco%20estou%20indo%20a%C3%AD">WhatsApp</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 Barbearia do Maycon • Luxo & Precisão
+    </div>
+
+</div>
+
+</body>
+</html>

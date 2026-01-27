@@ -990,9 +990,31 @@ fetch('empresas.json')
             </p>`;
     });
 
+    function ordenarPorStatus(empresas) {
+
+        return empresas.sort((a, b) => {
+
+            const statusA = verificarStatusPorDia(a.horarios).aberto;
+            const statusB = verificarStatusPorDia(b.horarios).aberto;
+
+            // 👉 abertas primeiro
+            if (statusA && !statusB) return -1;
+            if (!statusA && statusB) return 1;
+
+            // 👉 se ambas abertas ou fechadas mantém ordem original
+            return 0;
+        });
+    }
+
+
+
+
 /* ================= RENDERIZAR ================= */
 
 function renderizarEmpresas(empresas) {
+
+    empresas = ordenarPorStatus(empresas);
+
 
     const grid = document.getElementById('lista-empresas');
     grid.innerHTML = '';
@@ -1068,6 +1090,11 @@ function renderizarEmpresas(empresas) {
 
     aplicarStatus();
 }
+
+setInterval(() => {
+    renderizarEmpresas(todasEmpresas);
+}, 60000);
+
 
 /* ================= BUSCA ================= */
 

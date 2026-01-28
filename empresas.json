@@ -12,7 +12,7 @@
     "maps": "https://maps.app.goo.gl/dZXcWk3R7NYdfsVDA?g_st=ac",
     "descricao": "Supermercado completo com açougue, padaria e hortifruti. Atendimento de qualidade e preços acessíveis.",
     "horarios": {
-      "seg": { "abre": "07:00", "fecha": "21:00" },
+      "seg": { "abre": "07:00", "fecha": "21:00" }, 
       "ter": { "abre": "07:00", "fecha": "21:00" },
       "qua": { "abre": "07:00", "fecha": "21:00" },
       "qui": { "abre": "07:00", "fecha": "21:00" },
@@ -653,12 +653,12 @@
   "maps": "",
   "descricao": "",
   "horarios": {
-  "seg": { "abre": "07:00", "fecha": "19:00" },
-  "ter": { "abre": "07:00", "fecha": "19:00" },
-  "qua": { "abre": "07:00", "fecha": "19:00" },
-  "qui": { "abre": "07:00", "fecha": "19:00" },
-  "sex": { "abre": "07:00", "fecha": "19:00" },
-  "sab": { "abre": "07:00", "fecha": "19:00" },
+  "seg": { "abre": "09:00", "fecha": "11:30","abre": "14:00", "fecha": "18:00" },
+  "ter": { "abre": "09:00", "fecha": "11:30","abre": "14:00", "fecha": "18:00" },
+  "qua": { "abre": "09:00", "fecha": "11:30","abre": "14:00", "fecha": "18:00" },
+  "qui": { "abre": "09:00", "fecha": "11:30","abre": "14:00", "fecha": "18:00" },
+  "sex": { "abre": "09:00", "fecha": "11:30","abre": "14:00", "fecha": "18:00" },
+  "sab": { "abre": "09:00", "fecha": "11:30","abre": "14:00", "fecha": "18:00" },
   "dom": { "fechado": true }
 },
   "redes": {

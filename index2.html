@@ -482,9 +482,20 @@ h1#empresas {
 .hero-alvorada {
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 200px;
     overflow: hidden;
 }
+.hero-alvorada::after {
+    background: linear-gradient(
+        to bottom,
+        rgba(2,6,23,0.65),
+        rgba(2,6,23,0.35),
+        rgba(2,6,23,0.85)
+    );
+}
+
+
+
 
 .hero-alvorada img {
     width: 100%;
@@ -525,7 +536,7 @@ h1#empresas {
 /* Responsivo */
 @media (min-width: 900px) {
     .hero-alvorada {
-        height: 340px;
+        height: 360px;
     }
 }
 

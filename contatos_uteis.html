@@ -34,27 +34,24 @@ body {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  -webkit-font-smoothing: antialiased;
 }
 
-/* ================= HEADER TOPO ================= */
+/* ================= HEADER ================= */
 
 .top-header {
   background: #000;
   color: #fff;
   padding: 12px 16px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: var(--shadow);
 }
 
 .logo-area h1 {
   font-size: 1.1rem;
-  line-height: 1.2;
 }
 
 .logo-area p {
@@ -72,12 +69,11 @@ body {
   cursor: pointer;
 }
 
-/* ================= MENU VIDRO ================= */
-
 /* ================= MENU ================= */
+
 .menu {
   position: fixed;
-  top: 64px; /* logo abaixo do header */
+  top: 64px;
   right: -260px;
   width: 240px;
   background: #020617;
@@ -87,10 +83,9 @@ body {
   padding: 16px;
   border-radius: 16px 0 0 16px;
   box-shadow: -10px 20px 40px rgba(0,0,0,.35);
-  transition: .3s ease;
+  transition: .3s;
   z-index: 1001;
 }
-
 
 .menu.open {
   right: 0;
@@ -109,25 +104,20 @@ body {
   color: #020617;
 }
 
+/* OVERLAY */
 
-
-/* DESKTOP MENU */
-@media (min-width: 1000px) {
-  .menu {
-    position: static;
-    flex-direction: row;
-    height: auto;
-    width: auto;
-    background: transparent;
-    padding: 0;
-    right: 0;
-  }
-
-  .menu-overlay,
-  .menu-toggle {
-    display: none;
-  }
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  display: none;
+  z-index: 1000;
 }
+
+.menu-overlay.active {
+  display: block;
+}
+
 /* ================= CONTAINER ================= */
 
 .container {
@@ -145,9 +135,7 @@ body {
 .section h2 {
   font-size: 1.1rem;
   margin-bottom: 12px;
-  color: #000;
   display: flex;
-  align-items: center;
   gap: 8px;
 }
 
@@ -169,21 +157,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
 .title {
-  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }
 
 .desc {
@@ -202,84 +184,51 @@ body {
   font-size: .9rem;
   color: #fff;
   text-align: center;
-  display: block;
 }
 
 .btn-primary {
   background: var(--primary);
 }
 
-.btn-primary:hover {
-  background: #0d6b63;
-}
-
 .btn-danger {
   background: var(--danger);
-}
-
-.btn-danger:hover {
-  background: #b91c1c;
 }
 
 /* ================= FOOTER ================= */
 
 footer {
   text-align: center;
-  margin: 22px 0 16px;
+  margin: 22px 0;
   font-size: .8rem;
   color: var(--muted);
 }
 
-/* ================= RESPONSIVO ================= */
-
-@media (max-width: 480px) {
-
-  .logo-area h1 {
-    font-size: 1rem;
-  }
-
-  .section h2 {
-    font-size: 1rem;
-  }
-
-  .grid {
-    gap: 12px;
-  }
-
-}
-
-/* ================= DESKTOP MENU ================= */
+/* ================= DESKTOP ================= */
 
 @media (min-width: 900px) {
 
-  .menu {
-    position: static;
-    height: auto;
-    width: auto;
-    flex-direction: row;
-    background: none;
-    backdrop-filter: none;
-    padding: 0;
-    right: 0;
-  }
+.menu {
+  position: static;
+  flex-direction: row;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
 
-  .menu-toggle,
-  .menu-overlay {
-    display: none;
-  }
+.menu-toggle,
+.menu-overlay {
+  display: none;
+}
 
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- OVERLAY -->
 <div class="menu-overlay"></div>
 
-<!-- HEADER -->
 <header class="top-header">
   <div class="logo-area">
     <h1>📞 Contatos Úteis</h1>
@@ -288,17 +237,16 @@ footer {
 
   <button class="menu-toggle">☰</button>
 
-    <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="onibus.html">Ônibus</a>
-        <a href="posto_saude.html">Posto de Saúde</a>
-        <a href="eventos.html">Eventos & Lazer</a>
-        <a href="contatos_uteis.html">Contatos Úteis</a>
-        <a href="novo_gama.html">Notícias de Novo Gama</a>
-        <a href="reclamacoes.html">Reclamações e Melhorias</a>
-    </nav>
+  <nav class="menu">
+    <a href="index.html">Início</a>
+    <a href="onibus.html">Ônibus</a>
+    <a href="posto_saude.html">Posto de Saúde</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="contatos_uteis.html">Contatos</a>
+    <a href="novo_gama.html">Notícias</a>
+    <a href="reclamacoes.html">Reclamações</a>
+  </nav>
 </header>
-
 
 <div class="container">
 
@@ -309,43 +257,27 @@ footer {
 <div class="grid">
 
 <div class="card">
-<div>
 <div class="title">🚓 Polícia Militar</div>
-<div class="desc">Atendimento policial imediato</div>
-</div>
+<div class="desc">Atendimento imediato</div>
 <a href="tel:190" class="btn btn-danger">Ligar 190</a>
 </div>
 
 <div class="card">
-<div>
 <div class="title">🚒 Bombeiros</div>
-<div class="desc">Incêndios, resgates e acidentes</div>
-</div>
+<div class="desc">Incêndios e resgates</div>
 <a href="tel:193" class="btn btn-danger">Ligar 193</a>
 </div>
 
 <div class="card">
-<div>
 <div class="title">🚑 SAMU</div>
 <div class="desc">Emergência médica</div>
-</div>
 <a href="tel:192" class="btn btn-danger">Ligar 192</a>
 </div>
 
 <div class="card">
-<div>
-<div class="title">🚔 Viatura Res. Alvorada</div>
-<div class="desc">Apoio policial local</div>
-</div>
-<a href="tel:6199768883" class="btn btn-danger">Ligar 61 9976-8883</a>
-</div>
-
-<div class="card">
-<div>
-<div class="title">🚒 Bombeiro Valparaíso</div>
-<div class="desc">Central de incêndio regional</div>
-</div>
-<a href="tel:6136245210" class="btn btn-danger">Ligar 61 3624-5210</a>
+<div class="title">🚔 Viatura Alvorada</div>
+<div class="desc">Apoio local</div>
+<a href="tel:6199768883" class="btn btn-danger">Ligar</a>
 </div>
 
 </div>
@@ -358,44 +290,48 @@ footer {
 <div class="grid">
 
 <div class="card">
-<div>
 <div class="title">⚡ Equatorial Energia</div>
-<div class="desc">Quedas de energia e emergências</div>
-</div>
+<div class="desc">Queda de energia</div>
 <a href="tel:08000620196" class="btn btn-primary">Ligar</a>
 </div>
 
 <div class="card">
-<div>
 <div class="title">💧 Saneago</div>
-<div class="desc">Vazamentos e falta de água</div>
-</div>
+<div class="desc">Água e vazamentos</div>
 <a href="tel:08006450115" class="btn btn-primary">Ligar</a>
-</div>
-
-<div class="card">
-<div>
-<div class="title">🚒 Site Bombeiros GO</div>
-<div class="desc">Informações oficiais do Corpo de Bombeiros</div>
-</div>
-<a href="https://www.bombeiros.go.gov.br/" target="_blank" class="btn btn-primary">Acessar Site</a>
 </div>
 
 </div>
 </section>
 
-<!-- EDUCAÇÃO -->
+<!-- EDUCAÇÃO & CONSELHOS -->
 <section class="section">
-<h2>🏫 Educação</h2>
+<h2>🏫 Educação & Conselhos</h2>
 
 <div class="grid">
 
 <div class="card">
-<div>
 <div class="title">🎓 Colégio Benedito Vieira</div>
 <div class="desc">Unidade Alvorada</div>
-</div>
 <a href="tel:6130209867" class="btn btn-primary">Ligar</a>
+</div>
+
+<div class="card">
+<div class="title">🏛️ CMAS / CMPI / CMDCA</div>
+<div class="desc">Conselhos Municipais</div>
+<a href="tel:61996477835" class="btn btn-primary">Ligar</a>
+</div>
+
+<div class="card">
+<div class="title">🏥 Conselho de Saúde</div>
+<div class="desc">Fiscalização da saúde</div>
+<a href="tel:61994251010" class="btn btn-primary">Ligar</a>
+</div>
+
+<div class="card">
+<div class="title">🧒 Conselho Tutelar</div>
+<div class="desc">Proteção infantil</div>
+<a href="tel:61983180283" class="btn btn-primary">Ligar</a>
 </div>
 
 </div>
@@ -407,26 +343,23 @@ footer {
 © 2026 Alvorada Esperto · Informação que ajuda
 </footer>
 
-
 <script>
+
 const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 const overlay = document.querySelector('.menu-overlay');
 
-// ABRIR
 toggle.addEventListener('click', () => {
   menu.classList.toggle('open');
   overlay.classList.toggle('active');
 });
 
-// FECHAR AO CLICAR FORA
 overlay.addEventListener('click', () => {
   menu.classList.remove('open');
   overlay.classList.remove('active');
 });
+
 </script>
 
 </body>
 </html>
-
-

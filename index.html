@@ -482,7 +482,7 @@ h1#empresas {
 .hero-alvorada {
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 280px;
     overflow: hidden;
 }
 
@@ -498,6 +498,8 @@ h1#empresas {
     content: "";
     position: absolute;
     inset: 0;
+    z-index: 1;
+
     background: linear-gradient(
         to bottom,
         rgba(2,6,23,0.55),
@@ -505,6 +507,7 @@ h1#empresas {
         rgba(2,6,23,0.65)
     );
 }
+
 
 /* Label DIA / NOITE */
 .hero-label {
@@ -525,7 +528,7 @@ h1#empresas {
 /* Responsivo */
 @media (min-width: 900px) {
     .hero-alvorada {
-        height: 340px;
+        height: 420px;
     }
 }
 
@@ -533,32 +536,63 @@ h1#empresas {
 
 .hero-datetime {
     position: absolute;
-    bottom: 16px;
+    bottom: 72px;
     right: 18px;
-    z-index: 2;
+    z-index: 3;
+
     color: #ffffff;
-    font-size: 13px;
+    font-size: 15px;
+    padding: 0; /* remove caixa */
+
     font-weight: 700;
     letter-spacing: 0.6px;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.65);
-    backdrop-filter: blur(4px);
+
+    /* sombra no texto pra manter leitura */
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+
+    /* REMOVE EMBASADO */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    background: transparent;
+
+    border-radius: 0;
+
     text-align: right;
 }
 
+
+/* HERO TEXTO POSICIONAMENTO */
+
+/* Mobile padrão */
+.hero-overlay {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 3;
+}
+
 /* Desktop */
 @media (min-width: 900px) {
-    .hero-datetime {
-        font-size: 14px;
+
+    .hero-overlay {
+        top: 140px; /* distância segura do menu */
     }
+
+    .hero-overlay h1 {
+        font-size: 42px;
+    }
+
+    .hero-overlay p {
+        font-size: 18px;
+    }
+
 }
 
 
-/* Desktop */
-@media (min-width: 900px) {
-    .hero-datetime {
-        font-size: 14px;
-    }
-}
+
 
 /* ================= NEWS TICKER ================= */
 .news-ticker {
@@ -757,25 +791,7 @@ h1#empresas {
     cursor: pointer;
 }
 
-.clima-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  width: 100%;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-  color: #fff;
-
-  padding: 4px 12px;      /* ULTRA FINO */
-  min-height: 44px;      /* altura controlada */
-
-  border-radius: 8px;
-/* cima | lados | baixo */
-  margin: 1px 0 1px; 
-
-
-  box-shadow: 0 3px 8px rgba(0,0,0,.12);
-}
 
 /* Remove tamanho fixo */
 .card-clima {
@@ -783,24 +799,33 @@ h1#empresas {
   height: auto;
 }
 
-/* Texto bem compacto */
+/* Texto compacto + branco */
+.clima-info h1 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
 .clima-info h2 {
   font-size: 12px;
   margin: 0;
   line-height: 1.1;
-}
-
-.clima-info h1 {
-  font-size: 18px;
-  margin: 0;
-  font-weight: 600;
-  line-height: 1.1;
+  color: #ffffff;
 }
 
 .clima-info span {
   font-size: 11px;
-  opacity: .85;
+  color: rgba(255,255,255,0.9);
 }
+
+/* Nome da cidade */
+#cidade {
+  color: rgba(255,255,255,0.85);
+}
+
+
 
 /* Ícone mini */
 .clima-animacao {
@@ -811,8 +836,7 @@ h1#empresas {
 /* Mobile */
 @media (max-width: 600px) {
   .clima-card {
-    padding: 4px 10px;
-    min-height: 40px;
+    padding: 5px 12px;
   }
 
   .clima-info h1 {
@@ -820,13 +844,124 @@ h1#empresas {
   }
 
   .clima-animacao {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    color: #ffffff;
+}
+
+
+.hero-overlay h1 {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    text-shadow: 0 3px 10px rgba(0,0,0,.65);
+}
+
+.hero-overlay p {
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.9;
+    text-shadow: 0 2px 6px rgba(0,0,0,.6);
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+    .hero-overlay h1 {
+        font-size: 42px;
+    }
+
+    .hero-overlay p {
+        font-size: 18px;
+    }
+}
+
+.banner-alvorada {
+  position: relative;
+  width: 100%;
+  height: 260px;
+
+  background-image: url("alvorada-dia.jpg");
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 0 0 18px 18px;
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+
+  .banner-alvorada {
+    height: 220px;
+  }
+
+  
+
+}
+
+.clima-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* FUNDO TOTALMENTE TRANSPARENTE */
+  background: transparent;
+
+  /* REMOVE QUALQUER FOSCO */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+
+  border: none;
+
+  margin: 0;
+  padding: 6px 14px;
+
+  border-radius: 0;
+
+  color: #ffffff;
+
+  /* SOMBRA LEVE PRA DESTACAR DO FUNDO */
+  text-shadow: 0 2px 6px rgba(0,0,0,.7);
+
+  box-shadow: none;
+
+  z-index: 3;
 }
 
 
 
+
+@media (max-width: 600px) {
+
+  .hero-datetime {
+    bottom: 60px;
+    font-size: 14px;
+  }
+
+ 
+}
 
 
 
@@ -841,7 +976,7 @@ h1#empresas {
 
 <!-- HEADER -->
 <header class="header">
-    <div class="logo">Residencial Alvorada</div>
+    <div class="logo"></div>
 
     <button class="menu-toggle" aria-label="Abrir menu">☰</button>
 
@@ -858,36 +993,15 @@ h1#empresas {
 
 <!-- HERO ALVORADA (DIA / NOITE) -->
 <section class="hero-alvorada">
-    <img id="heroImagem" src="" alt="Bairro Alvorada">
+    <img id="heroImagem" src="assets/img/alvorada-dia.png" alt="Bairro Alvorada">
+    <div class="hero-overlay">
+        <h1>RESIDENCIAL ALVORADA</h1> 
+        <p>Guia comercial do bairro</p>
+    </div>
 
     <div class="hero-datetime" id="heroDateTime"></div>
-</section>
 
-<!-- NOTÍCIAS DO NOVO GAMA -->
-<section class="news-ticker">
-  <div class="ticker-wrap">
-    <div class="ticker"></div>
-  </div>
-</section>
-
-
-
-
-
-
-
-<!-- MODAL NOTÍCIAS -->
-<div class="news-modal hidden" id="newsModal">
-  <div class="news-modal-content">
-    <button class="close-modal" onclick="fecharNoticias()">✕</button>
-    <h2>📰 Notícias de Novo Gama – 2026</h2>
-
-    <ul id="listaNoticiasModal"></ul>
-  </div>
-</div>
-
-
-<!-- INFORMAÇÕES DO CLIMA-->
+<!-- INFORMAÇÕES DO CLIMA--> 
 <section class="clima-card">
   <div class="clima-info">
     <p id="cidade">Carregando...</p>
@@ -915,6 +1029,13 @@ h1#empresas {
     </svg>
   </div>
 </section>
+
+
+
+
+</section>
+
+
 
 
 
@@ -1230,28 +1351,103 @@ function abrirSite(url) {
 <script>
 /* ================= HERO DIA / NOITE (SEM TEXTO) ================= */
 
-function atualizarHero() {
-    const agora = new Date();
-    const hora = agora.getHours();
+<script>
+(() => {
 
-    const img = document.getElementById("heroImagem");
+  const CONFIG = {
+    apiKey: "2f654e652d590de2865656ec9faeb51c",
+    lat: -16.0586,
+    lon: -48.0412,
+    pastaImg: "assets/img/",
+    padraoDia: "alvorada-dia.png",
+    padraoNoite: "alvorada-noite.png"
+  };
 
-    const imgDia = "assets/img/alvorada-dia.png";
-    const imgNoite = "assets/img/alvorada-noite.png";
+  const heroImg = document.getElementById("heroImagem");
 
-    if (hora >= 6 && hora < 18) {
-        img.src = imgDia;
-    } else {
-        img.src = imgNoite;
+  function isDia() {
+    const hora = new Date().getHours();
+    return hora >= 6 && hora < 18;
+  }
+
+  function definirImagem(tipo) {
+
+    const periodo = isDia() ? "dia" : "noite";
+
+    let nomeArquivo;
+
+    switch (tipo) {
+
+      case "chuva":
+        nomeArquivo = `alvorada-chuva-${periodo}.png`;
+        break;
+
+      case "neblina":
+        nomeArquivo = `alvorada-neblina-${periodo}.png`;
+        break;
+
+      case "nublado":
+
+        // Só existe nublado-noite no seu padrão
+        if (!isDia()) {
+          nomeArquivo = "alvorada-nublado-noite.png";
+        } else {
+          nomeArquivo = CONFIG.padraoDia;
+        }
+
+        break;
+
+      default:
+        nomeArquivo = isDia()
+          ? CONFIG.padraoDia
+          : CONFIG.padraoNoite;
     }
+
+    heroImg.src = CONFIG.pastaImg + nomeArquivo;
+  }
+
+  async function atualizarHeroClima() {
+<script>
+function atualizarImagemHero(climaID) {
+
+  const agora = new Date();
+  const hora = agora.getHours();
+  const isDia = hora >= 6 && hora < 18;
+
+  let imagem = "alvorada-dia.png"; // padrão
+
+  // 🌧️ Chuva
+  if (climaID >= 200 && climaID < 600) {
+    imagem = isDia ? "alvorada-chuva-dia.png" : "alvorada-chuva-noite.png";
+  }
+
+  // 🌫️ Neblina
+  else if (climaID >= 700 && climaID < 800) {
+    imagem = isDia ? "alvorada-neblina-dia.png" : "alvorada-neblina-noite.png";
+  }
+
+  // ☁️ Nublado noite
+  else if (climaID > 800 && !isDia) {
+    imagem = "alvorada-nublado-noite.png";
+  }
+
+  // ☀️ Normal
+  else {
+    imagem = isDia ? "alvorada-dia.png" : "alvorada-noite.png";
+  }
+
+  const hero = document.getElementById("heroImagem");
+  hero.src = `assets/img/${imagem}`;
+
+  console.log("IMAGEM HERO:", imagem);
 }
-
-// Executa ao carregar
-atualizarHero();
-
-// Atualiza a cada 5 minutos
-setInterval(atualizarHero, 300000);
 </script>
+
+    
+
+}
+</script>
+
 
 
 
@@ -1291,110 +1487,116 @@ setInterval(atualizarDataHoraHero, 60000);
 
 
 
-<script>
-const noticias = [
-  "🏫 Nova unidade da Escola Municipal Benedito de Vieira é entregue à comunidade do Residencial Alvorada em 2026",
-  "🏥 Obras do Hospital Municipal de Novo Gama avançam e entram em nova etapa neste ano",
-  "🤝 Programa Goiás Social realiza ações e atendimentos para famílias de Novo Gama",
-  "👩‍👧 Famílias do município recebem cartões do programa Mães de Goiás em nova etapa de distribuição",
-  "🚔 Polícia Civil conclui investigação e prende suspeitos de crime ocorrido no Residencial Alvorada",
-  "🛣️ Prefeitura realiza operação de tapa-buracos em vias principais de Novo Gama",
-  "💡 Manutenção na iluminação pública melhora segurança em bairros do município",
-  "🚌 Ajustes em linhas de ônibus ampliam horários para moradores do Residencial Alvorada",
-  "🌱 Ação ambiental promove limpeza de áreas públicas e conscientização da população",
-  "📚 Escolas municipais iniciam atividades pedagógicas e projetos educacionais em 2026",
-  "🏗️ Obras de infraestrutura seguem em andamento em diferentes regiões da cidade",
-  "👮 Reforço no patrulhamento policial amplia segurança em pontos estratégicos do município"
-];
-
-
-const ticker = document.querySelector(".ticker");
-
-ticker.innerHTML = noticias.map(n => 
-  `<span onclick="abrirNoticiasModal()">${n}</span>`
-).join("");
-
-</script>
-
 
 <script>
-const input = document.getElementById('busca');
-const clearBtn = document.getElementById('clearSearch');
+(() => {
 
-input.addEventListener('input', () => {
-    clearBtn.style.display = input.value ? 'flex' : 'none';
-});
+  const CONFIG = {
+    apiKey: "2f654e652d590de2865656ec9faeb51c",
+    lat: -16.0586,
+    lon: -48.0412,
+    cidade: "Residencial Alvorada"
+  };
 
-clearBtn.addEventListener('click', () => {
-    input.value = '';
-    input.focus();
-    clearBtn.style.display = 'none';
+  const elCidade = document.getElementById("cidade");
+  const elTemp   = document.getElementById("temp");
+  const elDesc   = document.getElementById("descricao");
+  const elAnim   = document.getElementById("animacao");
+  const elSol    = document.getElementById("sol");
+  const heroImg  = document.getElementById("heroImagem");
 
-    // Dispara evento caso sua busca seja automática
-    input.dispatchEvent(new Event('input'));
-});
+  function atualizarImagemHero(climaID) {
 
+    const hora = new Date().getHours();
+    const isDia = hora >= 6 && hora < 18;
 
-function abrirNoticiasModal() {
+    let imagem = "alvorada-dia.png"; // padrão
 
-    const modal = document.getElementById("newsModal");
-    const lista = document.getElementById("listaNoticiasModal");
-
-    lista.innerHTML = "";
-
-    noticias.forEach(noticia => {
-        const li = document.createElement("li");
-        li.textContent = noticia;
-        lista.appendChild(li);
-    });
-
-    modal.classList.remove("hidden");
-    document.body.style.overflow = "hidden";
-}
-
-function fecharNoticias() {
-    const modal = document.getElementById("newsModal");
-    modal.classList.add("hidden");
-    document.body.style.overflow = "auto";
-}
-
-</script>
-
-<script>
-const apiKey = "2f654e652d590de2865656ec9faeb51c"; // sua chave
-const lat = -15.7939; // ajuste conforme cidade
-const lon = -47.8828;
-
-fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${apiKey}`)
-  .then(res => res.json())
-  .then(data => {
-
-    document.getElementById("cidade").innerText = "Residencial Alvorada";
-    document.getElementById("temp").innerText = `${Math.round(data.main.temp)}°C`;
-    document.getElementById("descricao").innerText = data.weather[0].description;
-
-    const clima = data.weather[0].main.toLowerCase();
-    const animacao = document.getElementById("animacao");
-
-    animacao.innerHTML = ""; // limpa animação anterior
-
-    if (clima.includes("rain")) {
-      animacao.innerHTML = '🌧️'; // você pode futuramente trocar por SVG chuva
-    } 
-    else if (clima.includes("cloud")) {
-      animacao.innerHTML = '☁️'; // ou SVG nuvem animada
-    } 
-    else {
-      // Sol pequeno SVG
-      animacao.innerHTML = document.getElementById("sol").outerHTML;
+    // 🌧️ Chuva
+    if (climaID >= 200 && climaID < 600) {
+      imagem = isDia
+        ? "alvorada-chuva-dia.png"
+        : "alvorada-chuva-noite.png";
     }
 
-  })
-  .catch(() => {
-    document.getElementById("cidade").innerText = "Residencial Alvorada";
-    document.getElementById("descricao").innerText = "Clima indisponível";
-  });
+    // 🌫️ Neblina
+    else if (climaID >= 700 && climaID < 800) {
+      imagem = isDia
+        ? "alvorada-neblina-dia.png"
+        : "alvorada-neblina-noite.png";
+    }
+
+    // ☁️ Nublado à noite
+    else if (climaID > 800 && !isDia) {
+      imagem = "alvorada-nublado-noite.png";
+    }
+
+    // ☀️ Céu limpo
+    else {
+      imagem = isDia
+        ? "alvorada-dia.png"
+        : "alvorada-noite.png";
+    }
+
+    if (heroImg) {
+      heroImg.src = `assets/img/${imagem}`;
+    }
+
+    console.log("IMAGEM HERO:", imagem);
+  }
+
+  async function buscarClima() {
+
+    try {
+
+      const res = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${CONFIG.lat}&lon=${CONFIG.lon}&units=metric&lang=pt_br&appid=${CONFIG.apiKey}`,
+        { cache: "no-store" }
+      );
+
+      const data = await res.json();
+
+      console.log("CLIMA ATUAL:", data);
+
+      elCidade.textContent = CONFIG.cidade;
+      elTemp.textContent = Math.round(data.main.temp) + "°C";
+      elDesc.textContent = data.weather[0].description;
+
+      const id = data.weather[0].id;
+      elAnim.innerHTML = "";
+
+      if (id >= 200 && id < 300) elAnim.textContent = "⛈️";
+      else if (id >= 300 && id < 600) elAnim.textContent = "🌧️";
+      else if (id >= 700 && id < 800) elAnim.textContent = "🌫️";
+      else if (id === 800) elAnim.innerHTML = elSol.outerHTML;
+      else elAnim.textContent = "☁️";
+
+      if (data.rain && data.rain["1h"]) {
+        elDesc.textContent += " • ☔ " + data.rain["1h"] + " mm";
+      }
+
+      // 🔥 ATUALIZA IMAGEM DO HERO
+      atualizarImagemHero(id);
+
+    } catch (err) {
+
+      console.error("Erro clima:", err);
+
+      elCidade.textContent = CONFIG.cidade;
+      elTemp.textContent = "--°C";
+      elDesc.textContent = "Erro ao carregar clima";
+      elAnim.textContent = "⚠️";
+
+    }
+
+  }
+
+  buscarClima();
+  setInterval(buscarClima, 600000); // 10 minutos
+
+})();
 </script>
+
 
 
 

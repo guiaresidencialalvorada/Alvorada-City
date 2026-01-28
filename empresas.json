@@ -609,7 +609,38 @@
   },
   "ativo": true,
   "destaque": false
-}  
+},
+
+ {
+  "id": 24,
+  "nome": " Sacolão Alvorada",
+  "categoria": "Sacolão",
+  "fone": "61993163488",
+  "whatsapp": "61993163488",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/sacolao-alvorada.png",
+  "endereco": "",
+  "maps": "https://maps.app.goo.gl/c2Y7fCYirZSfkN6C9",
+  "descricao": "",
+  "horarios": {
+  "seg": { "abre": "07:00", "fecha": "19:00" },
+  "ter": { "abre": "07:00", "fecha": "19:00" },
+  "qua": { "abre": "07:00", "fecha": "19:00" },
+  "qui": { "abre": "07:00", "fecha": "19:00" },
+  "sex": { "abre": "07:00", "fecha": "19:00" },
+  "sab": { "abre": "07:00", "fecha": "19:00" },
+  "dom": { "fechado": true }
+},
+  "redes": {
+    "instagram": "",
+    "facebook": ""
+  },
+  "ativo": true,
+  "destaque": false
+} 
+  
+  
   
   
 

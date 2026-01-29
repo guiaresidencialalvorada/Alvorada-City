@@ -669,7 +669,7 @@
   "destaque": false
 },
 
-  {
+ {
   "id": 26,
   "nome": " KSR Personalizados",
   "categoria": "Personalizados ",
@@ -696,8 +696,35 @@
   },
   "ativo": true,
   "destaque": false
-} 
-  
+}, 
+ {
+  "id": 27,
+  "nome": " Almeida Barbearia",
+  "categoria": "barbearia ",
+  "fone": "61994464744",
+  "whatsapp": "61994464744",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/almeidabarbearia.png",
+  "endereco": "Qd 201 lote 38",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+  "seg": { "abre": "08:00", "fecha": "20:00" },
+  "ter": { "abre": "08:00", "fecha": "20:00" },
+  "qua": { "abre": "08:00", "fecha": "20:00" },
+  "qui": { "abre": "08:00", "fecha": "20:00" },
+  "sex": { "abre": "08:00", "fecha": "20:00" },
+  "sab": { "abre": "08:00", "fecha": "20:00" },
+  "dom": { "fechado": true }
+},
+  "redes": {
+    "instagram": "",
+    "facebook": ""
+  },
+  "ativo": true,
+  "destaque": false
+}  
   
   
   

@@ -724,7 +724,38 @@
   },
   "ativo": true,
   "destaque": false
+},
+
+{
+  "id": 28,
+  "nome": " Trans Neri",
+  "categoria": "transporte ",
+  "fone": "61993962635",
+  "whatsapp": "61994464744",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/almeidabarbearia.png",
+  "endereco": "Qd 201 lote 38",
+  "maps": "",
+  "descricao": " Transporte Escolar: Boa Vista, Alvorada, América, Mont Serrat, Lunabel, P/Gama Santa Maria Creche.",
+  "horarios": {
+  "seg": { "abre": "06:00", "fecha": "19:00" },
+  "ter": { "abre": "06:00", "fecha": "19:00" },
+  "qua": { "abre": "06:00", "fecha": "19:00" },
+  "qui": { "abre": "06:00", "fecha": "19:00" },
+  "sex": { "abre": "06:00", "fecha": "19:00" },
+  "sab": { "abre": "06:00", "fecha": "19:00" },
+  "dom": { "fechado": true }
+},
+  "redes": {
+    "instagram": "",
+    "facebook": ""
+  },
+  "ativo": true,
+  "destaque": false
 }  
+
+  
   
   
   

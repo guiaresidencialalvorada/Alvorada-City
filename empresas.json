@@ -667,7 +667,36 @@
   },
   "ativo": true,
   "destaque": false
-}   
+},
+
+  {
+  "id": 26,
+  "nome": " KSR Personalizados",
+  "categoria": "Perssonalizados ",
+  "fone": "61935005077",
+  "whatsapp": "61935005077",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/ksrpersonalizados.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "",
+  "horarios": {
+  "seg": { "abre": "07:00", "fecha": "19:00" },
+  "ter": { "abre": "07:00", "fecha": "19:00" },
+  "qua": { "abre": "07:00", "fecha": "19:00" },
+  "qui": { "abre": "07:00", "fecha": "19:00" },
+  "sex": { "abre": "07:00", "fecha": "19:00" },
+  "sab": { "abre": "07:00", "fecha": "19:00" },
+  "dom": { "fechado": true }
+},
+  "redes": {
+    "instagram": "",
+    "facebook": ""
+  },
+  "ativo": true,
+  "destaque": false
+} 
   
   
   

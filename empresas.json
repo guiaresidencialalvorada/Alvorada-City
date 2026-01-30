@@ -753,11 +753,38 @@
   },
   "ativo": true,
   "destaque": false
-}  
+},
+
+{
+  "id": 29,
+  "nome": "Barbearia Delmondes",
+  "categoria": "Barbearia",
+  "fone": "6183585475",
+  "whatsapp": "6183585475",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/barbeariadelmondes.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": ".",
+  "horarios": {
+    "seg": { "fechado": true },
+    "ter": { "abre": "08:00", "fecha": "20:00" },
+    "qua": { "abre": "08:00", "fecha": "20:00" },
+    "qui": { "abre": "08:00", "fecha": "20:00" },
+    "sex": { "abre": "08:00", "fecha": "20:00" },
+    "sab": { "abre": "08:00", "fecha": "20:00" },
+    "dom": { "abre": "08:00", "fecha": "13:30" }
+  },
+  "redes": {
+    "instagram": "",
+    "facebook": ""
+  },
+  "ativo": true,
+  "destaque": false
+} 
 
   
-  
-  
-  
+
 
 ]

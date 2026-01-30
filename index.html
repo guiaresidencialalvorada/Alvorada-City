@@ -100,7 +100,7 @@ body {
 
 /* ================= CONTAINER ================= */
 .container {
-    padding: 20px 6px;
+    padding: 0 6px;
     max-width: 1300px;
     margin: auto;
 }
@@ -112,7 +112,7 @@ h1#empresas {
     margin-bottom: 24px;
     font-weight: 800;
     color: #0f172a; /* PRETO */
-    margin: 1px 0 5px;
+    margin: 01px 0 5px;
     margin-top: 0px;
 }
 
@@ -886,10 +886,11 @@ h1#empresas {
 @media (min-width: 900px) {
     .hero-overlay h1 {
         font-size: 42px;
+        margin-bottom: 8px; /* 👈 distância entre título e subtítulo */
     }
 
     .hero-overlay p {
-        font-size: 18px;
+        font-size: 12px;
     }
 }
 
@@ -963,14 +964,175 @@ h1#empresas {
  
 }
 
+.hero-overlay h1,
+.hero-overlay p {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.1;
+}
+.hero-overlay h1 {
+    margin-bottom: 4px !important;
+}
+.hero-overlay h1 { margin-bottom: ... }
+.hero-overlay p { ... }
+
+
+
+
+
+
+
+.online-container {
+  width: 100%;
+  text-align: right;
+
+  margin-bottom: 0;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  color: #22c55e;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 6px;
+
+  animation: pulseOnline 2s infinite;
+
+}
+
+@keyframes pulseOnline {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.online-container {
+  padding-right: 12px; /* 👈 empurra pra esquerda */
+}
+
+
+.news-section {
+  padding: 14px;
+  color: #fff;
+}
+
+.news-header {
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.news-subtitle {
+  font-size: 12px;
+  opacity: .8;
+  margin: 4px 0 10px;
+}
+
+/* Slider */
+
+.news-slider {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.news-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+
+.news-card {
+  min-width: 240px;
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 14px;
+  scroll-snap-align: start;
+  box-shadow: 0 10px 20px rgba(0,0,0,.3);
+}
+
+.news-card h3 {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.news-card p {
+  font-size: 12px;
+  opacity: .9;
+}
+
+.news-time {
+  font-size: 11px;
+  opacity: .7;
+  margin-top: 8px;
+  display: block;
+}
+
+/* Tags */
+
+.news-tag {
+  font-size: 10px;
+  font-weight: bold;
+  background: rgba(0,0,0,.3);
+  padding: 4px 8px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+/* Dots */
+
+.news-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  background: rgba(255,255,255,.4);
+  border-radius: 50%;
+}
+
+.dot.active {
+  background: #fff;
+}
+
+/* Botão */
+
+.news-btn {
+  display: block;
+  margin: 12px auto 0;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+
+  background: rgba(255,255,255,.2);
+  backdrop-filter: blur(8px);
+
+  padding: 8px 16px;
+  border-radius: 30px;
+  width: fit-content;
+}
 
 
     
 </style>
 
 
-
+<!-- Fontes Premium -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
+
 
 <body>
 
@@ -998,6 +1160,8 @@ h1#empresas {
         <h1>RESIDENCIAL ALVORADA</h1> 
         <p>Guia comercial do bairro</p>
     </div>
+    
+
 
     <div class="hero-datetime" id="heroDateTime"></div>
 
@@ -1028,6 +1192,13 @@ h1#empresas {
       </g>
     </svg>
   </div>
+
+
+  
+</section>
+
+
+
 </section>
 
 
@@ -1035,6 +1206,9 @@ h1#empresas {
 
 </section>
 
+<div class="online-container">
+  👥 <span id="onlineUsers">12</span> pessoas online agora
+</div>
 
 
 
@@ -1597,6 +1771,55 @@ setInterval(atualizarDataHoraHero, 60000);
 })();
 </script>
 
+
+
+
+<script>
+(() => {
+
+  const minUsers = 10;   // mínimo online
+  const maxUsers = 38;   // máximo online
+
+  const el = document.getElementById("onlineUsers");
+
+  let online = Math.floor(
+    Math.random() * (maxUsers - minUsers + 1)
+  ) + minUsers;
+
+  el.textContent = online;
+
+  function atualizarOnline() {
+
+    const variacao = Math.floor(Math.random() * 5) - 2;
+    online += variacao;
+
+    if (online < minUsers) online = minUsers;
+    if (online > maxUsers) online = maxUsers;
+
+    el.textContent = online;
+  }
+
+  // Atualiza a cada 7 até 14 segundos
+  setInterval(atualizarOnline, 
+    Math.floor(Math.random() * 7000) + 7000
+  );
+
+})();
+</script>
+
+
+
+<script>
+const slider = document.getElementById("newsSlider");
+const dots = document.querySelectorAll(".dot");
+
+slider.addEventListener("scroll", () => {
+  let index = Math.round(slider.scrollLeft / 260);
+
+  dots.forEach(d => d.classList.remove("active"));
+  if(dots[index]) dots[index].classList.add("active");
+});
+</script>
 
 
 

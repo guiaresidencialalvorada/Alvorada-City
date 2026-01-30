@@ -765,7 +765,7 @@
   "site": "",
   "logo": "assets/img/barbeariadelmondes.png",
   "endereco": "Qd 212 lote 19",
-  "maps": "",
+  "maps": "https://maps.app.goo.gl/AFeiE1QFQJaLUojJ8",
   "descricao": ".",
   "horarios": {
     "seg": { "fechado": true },

@@ -1194,7 +1194,7 @@ h1#empresas {
   </div>
 
 
-  
+
 </section>
 
 
@@ -1239,6 +1239,28 @@ h1#empresas {
    <div class="grid hidden" id="lista-empresas"></div>
 
 </main>
+
+<script>
+const inputBusca = document.getElementById('busca');
+const clearBtn = document.getElementById('clearSearch');
+
+inputBusca.addEventListener('input', () => {
+    // mostra ou esconde o X
+    clearBtn.style.display = inputBusca.value.trim() ? 'flex' : 'none';
+});
+
+// clique no X
+clearBtn.addEventListener('click', () => {
+    inputBusca.value = '';
+    inputBusca.focus();
+
+    clearBtn.style.display = 'none';
+
+    // volta todas as empresas
+    renderizarEmpresas(todasEmpresas);
+});
+</script>
+
 
 <!-- FOOTER -->
 <footer class="footer" id="contato">

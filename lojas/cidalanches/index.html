@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cida Lanches</title>
+
+
+
+<style>
+
+ header img{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--yellow);
+  outline:2px solid rgba(255,255,255,.15);
+  outline-offset:4px;
+  background:#000;
+}
+
+.qtd-box{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:8px;
+}
+
+.qtd-box button{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  border:none;
+  background:var(--pink);
+  color:#fff;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.qtd-box span{
+  min-width:20px;
+  text-align:center;
+}
+
+.adicionais{
+  font-size:.8rem;
+  margin-top:6px;
+}
+
+:root{
+  --pink:#ff4fd8;
+  --yellow:#ffd400;
+  --orange:#ff7a00;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', Arial, sans-serif;
+}
+
+body{
+  background:#000;
+  color:#fff;
+  padding-bottom:150px;
+}
+
+
+/* ===== HERO FUNDO PREMIUM ===== */
+.header-bg{
+  position:relative;
+  height:340px;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.85), rgba(0,0,0,.4), #000),
+    url("gif/fundo.png") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding-bottom:40px;
+}
+
+/* Vinheta elegante */
+.header-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  box-shadow:inset 0 -80px 80px rgba(0,0,0,.9);
+  pointer-events:none;
+}
+
+/* QUADRO DE VIDRO DA LOGO */
+.header-content{
+  background:transparent;
+  backdrop-filter:none;
+  border:none;
+  box-shadow:none;
+  padding:20px 24px;
+  max-width:340px;
+  width:90%;
+}
+
+header{
+  position:relative;
+  text-align:center;
+  z-index:2;
+}
+
+
+
+header h1{
+  color:var(--pink);
+  font-size:2.2rem;
+  text-shadow:0 0 15px rgba(255,79,216,.8);
+}
+
+header p{
+  color:var(--yellow);
+  margin-top:1px;
+}
+
+/* ===== CONTEÚDO ===== */
+.container{
+  padding:0px;
+}
+
+h2{
+  color:var(--yellow);
+  margin:25px 0 15px;
+  font-size:1.4rem;
+}
+
+/* GRID 2 COLUNAS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:0;
+}
+
+
+.card{
+  background:rgba(15,15,15,.95);
+  border-radius:18px;
+  padding:10px;
+  border:1px solid rgba(255,212,0,.2);
+  box-shadow:0 0 25px rgba(0,0,0,.6);
+  display:flex;
+  flex-direction:column;
+}
+
+.card img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:10px;
+}
+
+.card strong{
+  color:var(--orange);
+  font-size:1rem;
+}
+
+.card p{
+  font-size:.85rem;
+  color:#ccc;
+  margin:6px 0;
+}
+
+.card b{
+  color:var(--yellow);
+  margin-top:auto;
+}
+
+.card button{
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--yellow),var(--orange));
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* ===== cor do botão Adicionar ===== */
+.card .btn-add{
+  flex:1;
+  padding:3px 10px;        /* ↓ reduz altura */
+  border:none;
+  border-radius:10px;     /* mais elegante */
+  font-weight:600;        /* menos “pesado” */
+  font-size:.85rem;       /* padrão mobile */
+  cursor:pointer;
+  background:linear-gradient(135deg,#00c853,#00a844);
+  color:#fff;
+  min-height:36px;        /* UX mobile */
+}
+
+
+
+/* Botão Adicionais - Cinza Premium */
+.card .btn-adicionais{
+  flex:1;
+  padding:10px;
+  border:none;
+  border-radius:12px;
+  font-size:.85rem;
+  font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(135deg,#334155,#0f172a);
+  color:#fff;
+}
+
+
+/* ===== CARRINHO ===== */
+.cart{
+  position:fixed;
+  bottom:15px;
+  left:15px;
+  right:15px;
+  background:linear-gradient(135deg,#111,#000);
+  border-radius:20px;
+  padding:15px;
+  border:1px solid rgba(255,212,0,.3);
+  box-shadow:0 0 30px rgba(255,212,0,.25);
+}
+
+.cart h3{
+  color:var(--pink);
+  margin-bottom:8px;
+}
+
+.cart-items{
+  font-size:.9rem;
+  color:#ddd;
+  max-height:70px;
+  overflow:auto;
+}
+
+.cart button{
+  margin-top:10px;
+  width:100%;
+  padding:14px;
+  font-size:1rem;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--yellow),var(--orange));
+  font-weight:bold;
+}
+
+
+
+
+
+
+.adicionais-box{
+  margin-top:10px;
+}
+
+/* BOTÃO */
+.btn-adicionais{
+  background:linear-gradient(135deg,var(--pink),var(--orange));
+  color:#000;
+  border:none;
+  width:100%;
+  padding:8px;
+  border-radius:10px;
+  font-size:.85rem;
+  font-weight:bold;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+}
+
+/* BOTÃO ATIVO */
+.btn-adicionais.aberto{
+  background:linear-gradient(135deg,var(--orange),var(--yellow));
+}
+
+/* LISTA */
+.lista-adicionais{
+  display:none;
+  background:#111;
+  border:1px solid rgba(255,212,0,.2);
+  border-radius:10px;
+  padding:8px;
+  margin-top:6px;
+  font-size:.8rem;
+}
+
+/* CHECKBOX */
+.lista-adicionais label{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-bottom:4px;
+}
+
+
+
+
+
+/* Função + e - do Quantidade */
+
+.preco-qtd{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:6px;
+}
+
+.preco-qtd b{
+  font-size: 1.3rem; /* aumenta ou diminui aqui */
+  font-weight: 700;
+}
+
+
+.btn-adicionais{
+  margin-top:8px;
+  padding:10px;
+  border:none;
+  border-radius:12px;
+  background:var(--yellow);
+  color:#000;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.adicionais{
+  margin-top:8px;
+  background:#111;
+  padding:10px;
+  border-radius:12px;
+  font-size:.85rem;
+}
+
+.adicionais label{
+  display:block;
+  margin-bottom:6px;
+}
+
+.oculto{
+  display:none;
+}
+
+
+
+.card .btn-adicionais:hover,
+.card .btn-add:hover{
+  filter:brightness(1.08);
+}
+
+
+
+
+/* Cor dos botões da Adicionais */
+.acoes{
+  display:flex;
+  gap:6px;          /* menos espaço entre eles */
+  margin-top:8px;   /* reduz altura geral */
+}
+
+/* Botão Adicionais */
+.card .btn-adicionais{
+  flex:1;
+  padding:5px 8px;          /* ↓ mais fino */
+  border:none;
+  border-radius:9px;
+  font-size:.78rem;         /* menor */
+  font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(135deg,#2563eb,#1e40af); /* azul big tech */
+  color:#fff;
+  min-height:34px;
+}
+
+/* Botão Adicionar */
+.card .btn-add{
+  flex:1;
+  padding:5px 8px;
+  border:none;
+  border-radius:9px;
+  font-size:.8rem;
+  font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(135deg,#2ecc71,#1e8449);
+  color:#fff;
+  min-height:34px;
+}
+
+
+
+/* Caixa de adicionais */
+.adicionais{
+  margin-top:8px;
+  background:#111;
+  padding:10px;
+  border-radius:12px;
+  font-size:.85rem;
+}
+
+.oculto{
+  display:none;
+}
+
+/* ===== MODAL FINALIZAR ===== */
+.modal-box{
+  background:#0f0f0f;
+  padding:20px;
+  border-radius:18px;
+  max-width:420px;
+  margin:60px auto;
+  box-shadow:0 0 30px rgba(0,0,0,.8);
+}
+
+.modal-box h3{
+  color:var(--yellow);
+  margin-bottom:15px;
+  text-align:center;
+  font-size:1.4rem;
+}
+
+.modal-box input,
+.modal-box select{
+  width:100%;
+  padding:14px;
+  margin-bottom:12px;
+  border-radius:12px;
+  border:none;
+  font-size:.95rem;
+  outline:none;
+}
+
+.modal-box input::placeholder{
+  color:#666;
+}
+
+#taxa{
+  margin:8px 0 14px;
+  color:#ffd400;
+  font-weight:bold;
+  text-align:center;
+}
+
+/* Botões */
+.btn-confirmar{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#00c853,#00a844);
+  color:#fff;
+  font-size:1rem;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.btn-voltar{
+  width:100%;
+  margin-top:8px;
+  padding:12px;
+  border:none;
+  border-radius:14px;
+  background:#222;
+  color:#fff;
+  font-size:.95rem;
+  cursor:pointer;
+}
+
+
+
+/* BOTÃO FLUTUANTE */
+#cart-fab{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:linear-gradient(135deg,var(--yellow),var(--orange));
+  color:#000;
+  padding:14px 18px;
+  border-radius:30px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 0 20px rgba(255,212,0,.5);
+  display:none;
+  z-index:90;
+}
+
+#cart-count{
+  background:#000;
+  color:#fff;
+  border-radius:50%;
+  padding:2px 8px;
+  margin-left:6px;
+  font-size:.85rem;
+}
+
+/* MINI CARRINHO */
+#mini-cart{
+  position:fixed;
+  top:0;
+  right:-360px;
+  width:320px;
+  height:100%;
+  background:#0f0f0f;
+  box-shadow:-10px 0 30px rgba(0,0,0,.8);
+  transition:right .3s ease;
+  z-index:100;
+  display:flex;
+  flex-direction:column;
+}
+
+#mini-cart.aberto{
+  right:0;
+}
+
+/* HEADER */
+.mini-cart-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px;
+  background:#111;
+  border-bottom:1px solid rgba(255,212,0,.2);
+}
+
+.mini-cart-header span{
+  color:var(--pink);
+  font-size:1.1rem;
+  font-weight:bold;
+}
+
+.mini-cart-header button{
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:1.2rem;
+  cursor:pointer;
+}
+
+/* ITENS */
+.mini-cart-items{
+  flex:1;
+  padding:14px;
+  overflow-y:auto;
+  font-size:.9rem;
+}
+
+/* BOTÃO */
+.mini-cart-btn{
+  margin:14px;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#00c853,#00a844);
+  color:#fff;
+  font-size:1rem;
+  font-weight:bold;
+}
+
+/* ===== BUSCA + CATEGORIAS ===== */
+.top-actions{
+  margin-top:-50px;
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  position:relative;
+  z-index:5;
+}
+
+/* BUSCA GLASS */
+.search-box{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 0 20px rgba(255,212,0,.15);
+}
+
+.search-box input{
+  width:100%;
+  padding:14px 16px;
+  background:transparent;
+  border:none;
+  outline:none;
+  color:#fff;
+  font-size:1rem;
+}
+
+.search-box input::placeholder{
+  color:#ccc;
+}
+
+/* CATEGORIAS GLASS */
+.categorias-glass{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding-bottom:4px;
+}
+
+/* CARD */
+.categorias-glass button{
+  min-width:80px;              /* menor */
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:22px;          /* mais redondo */
+  padding:6px 6px 8px;
+  color:#fff;
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  transition:.25s;
+}
+
+/* IMAGEM */
+.categorias-glass img{
+  width:48px;
+  height:48px;                 /* menor */
+  object-fit:cover;
+  border-radius:50%;           /* redonda */
+  background:rgba(255,255,255,.15);
+  padding:4px;
+}
+
+/* TEXTO */
+.categorias-glass span{
+  font-size:.72rem;            /* menor */
+  font-weight:600;
+  text-align:center;
+  line-height:1.1;
+}
+
+/* HOVER */
+.categorias-glass button:hover{
+  transform:translateY(-2px) scale(1.03);
+  box-shadow:0 0 14px rgba(255,212,0,.35);
+}
+
+/* ATIVO */
+.categorias-glass button.ativo{
+  background:linear-gradient(135deg,var(--yellow),var(--orange));
+  color:#000;
+}
+
+
+
+
+/* OVERLAY FUNDO CLICK FORA- FECHAR CARRINHO CLICANDO FORA */
+#overlay-cart{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  backdrop-filter: blur(2px);
+  z-index:95;
+  display:none;
+}
+
+
+.status-box{
+  margin-top:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:6px 14px;
+  border-radius:20px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter: blur(8px);
+  border:1px solid rgba(255,255,255,.15);
+  font-size:.85rem;
+  font-weight:600;
+  width:fit-content;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Bolinha animada */
+.status-box .dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#00ff7b;
+  box-shadow:0 0 10px #00ff7b;
+  animation:pulse 1.5s infinite;
+}
+
+/* Quando fechado */
+.status-box.fechado .dot{
+  background:#ff3b3b;
+  box-shadow:0 0 10px #ff3b3b;
+}
+
+@keyframes pulse{
+  0%{opacity:.5}
+  50%{opacity:1}
+  100%{opacity:.5}
+}
+
+
+.search-box{
+  position:relative;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 0 20px rgba(255,212,0,.15);
+}
+
+/* INPUT */
+.search-box input{
+  width:100%;
+  padding:14px 40px 14px 42px; /* espaço lupa + X */
+  background:transparent;
+  border:none;
+  outline:none;
+  color:#fff;
+  font-size:1rem;
+}
+
+/* LUPA */
+.search-icon{
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:18px;
+  opacity:.7;
+  pointer-events:none;
+}
+
+/* BOTÃO LIMPAR */
+.clear-btn{
+  position:absolute;
+  right:14px;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+  font-size:18px;
+  color:#aaa;
+  display:none;
+}
+
+.clear-btn:hover{
+  color:#fff;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- TOPO COM GIF -->
+<div class="header-bg">
+  <div class="header-gif"></div>
+
+  <header class="header-content">
+    <div class="logo-box">
+      <img src="imagens/logo-cida.png" alt="Cida Lanches">
+    </div>
+
+    <h1>Cida Lanches</h1>
+    <p>Lanches feitos com carinho ❤️</p>
+    
+
+  <div id="status-loja" class="status-box">
+  <span class="dot"></span>
+  <span id="status-text">Verificando horário...</span>
+  </div>
+  
+  </header>
+
+
+</div>
+
+
+
+
+
+
+<!-- BUSCA + CATEGORIAS -->
+<div class="top-actions">
+
+  <!-- BUSCA -->
+  <div class="search-box">
+  <span class="search-icon">🔍</span>
+
+  <input 
+    type="text" 
+    id="busca"
+    placeholder="Buscar lanche..."
+    onkeyup="filtrarItens(this.value)"
+  >
+
+  <span class="clear-btn" onclick="limparBusca()">✕</span>
+</div>
+
+
+
+  <!-- CATEGORIAS -->
+  <div class="categorias-glass">
+    <button onclick="filtrarCategoria('Todos')" class="ativo">
+      <img src="imagens/cat-todos.png">
+      <span>Todos</span>
+    </button>
+
+    <button onclick="filtrarCategoria('Lanches')">
+      <img src="imagens/cat-lanches.png">
+      <span>Lanches</span>
+    </button>
+
+    <button onclick="filtrarCategoria('Bebidas')">
+      <img src="imagens/cat-bebidas.png">
+      <span>Bebidas</span>
+    </button>
+
+    <button onclick="filtrarCategoria('Combos Tradicionais')">
+      <img src="imagens/cat-combostradicionais.png">
+      <span>Combos Tradicionais</span>
+    </button>
+
+    <button onclick="filtrarCategoria('Combos Artesanais')">
+      <img src="imagens/cat-combosartesanais.png">
+      <span>Combos Artesanais</span>
+    </button>
+
+  </div>
+
+</div>
+
+
+<div class="container" id="menu"></div>
+
+<div id="cart-fab" onclick="abrirCarrinho()">
+  🛒 Carrinho
+  <span id="cart-count">0</span>
+</div>
+
+
+<div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:99;">
+ <div class="modal-box">
+
+    <h3 style="color:#ffd400">Finalizar Pedido</h3>
+
+    <input id="nomeCliente" placeholder="Seu nome" style="width:100%;margin:8px 0;padding:10px;border-radius:8px">
+    
+    <select id="bairro" style="width:100%;margin:8px 0;padding:10px;border-radius:8px">
+      <option value="">Selecione o bairro</option>
+      <option value="Alvorada">Alvorada</option>
+      <option value="Lago Azul">Boa vista 1</option>
+      <option value="Lunabel">Lunabel</option>
+    </select>
+
+<input id="endereco" placeholder="Rua, número, complemento">
+
+    <select id="pagamento" style="width:100%;margin:8px 0;padding:10px;border-radius:8px">
+      <option value="">Forma de pagamento</option>
+      <option>Dinheiro</option>
+      <option>Cartão</option>
+      <option>Pix</option>
+    </select>
+    <input 
+      id="troco" 
+      placeholder="Troco para quanto?" 
+      style="width:100%;margin:8px 0;padding:10px;border-radius:8px;display:none"
+      type="number"
+      min="0"
+    >
+
+
+
+    <p id="taxa"></p>
+
+    <button class="btn-confirmar" onclick="confirmar()">Confirmar Pedido</button>
+
+    <button class="btn-voltar" onclick="fecharModal()">
+      ⬅️ Voltar para o pedido
+    </button>
+
+  </div>
+</div>
+
+
+
+<script>
+
+const pagamentoSelect = document.getElementById("pagamento");
+const trocoInput = document.getElementById("troco");
+
+if (pagamentoSelect){
+  pagamentoSelect.addEventListener("change", e => {
+    if (e.target.value === "Dinheiro"){
+      trocoInput.style.display = "block";
+    } else {
+      trocoInput.style.display = "none";
+      trocoInput.value = "";
+    }
+  });
+}
+
+let carrinho = [];
+let whatsapp = "";
+
+const taxas = {
+  "Alvorada": 3,
+  "Boa vista 1": 5,
+  "Lunabel": 5
+};
+
+
+fetch("cardapio.json")
+.then(r => r.json())
+.then(data => {
+  whatsapp = data.contato.whatsapp;
+  verificarStatusLoja(data.funcionamento);
+  const menu = document.getElementById("menu");
+
+  data.categorias.forEach(cat => {
+    let html = `<h2>${cat.nome}</h2><div class="grid">`;
+
+    cat.itens.forEach(item => {
+      html += `
+      <div class="card">
+        <img src="imagens/${item.imagens[0]}">
+        <strong>${item.nome}</strong>
+        <p>${item.descricao}</p>
+
+        <div class="preco-qtd">
+          <b>R$ ${item.preco.toFixed(2)}</b>
+
+          <div class="qtd-box">
+            <button onclick="alterarQtd(this,-1)">−</button>
+            <span>1</span>
+            <button onclick="alterarQtd(this,1)">+</button>
+          </div>
+        </div>
+
+       <div class="acoes">
+      ${item.adicionais ? `
+        <button class="btn-adicionais" onclick="toggleAdicionais(this)">
+          Adicionais
+        </button>
+      ` : ""}
+
+      <button class="btn-add" onclick="add('${item.nome}',${item.preco},this)">
+        Adicionar
+      </button>
+    </div>
+
+    ${item.adicionais ? `
+      <div class="adicionais oculto">
+        ${item.adicionais.map(ad => `
+          <label>
+            <input type="checkbox"
+              data-nome="${ad.nome}"
+              data-preco="${ad.preco}">
+            ${ad.nome} (+R$ ${ad.preco.toFixed(2)})
+          </label>
+        `).join("")}
+      </div>
+    ` : ""}
+
+      </div>
+      `;
+    });
+
+    html += `</div>`;
+    menu.innerHTML += html;
+  });
+});
+
+
+function verificarStatusLoja(horarios){
+
+  if(!horarios) return;
+
+  const dias = [
+    "domingo","segunda","terca","quarta","quinta","sexta","sabado"
+  ];
+
+  const agora = new Date();
+  const diaAtual = dias[agora.getDay()];
+  const horaAtual = agora.getHours() * 60 + agora.getMinutes();
+
+  const statusBox = document.getElementById("status-loja");
+  const statusText = document.getElementById("status-text");
+
+  if(!horarios[diaAtual]){
+    statusText.innerText = "❌ Hoje fechado";
+    statusBox.classList.add("fechado");
+    return;
+  }
+
+  const [abre, fecha] = horarios[diaAtual];
+
+  const [ah, am] = abre.split(":");
+  const [fh, fm] = fecha.split(":");
+
+  const inicio = parseInt(ah) * 60 + parseInt(am);
+  const fim = parseInt(fh) * 60 + parseInt(fm);
+
+  const aberto = horaAtual >= inicio && horaAtual <= fim;
+
+  if(aberto){
+    statusText.innerText = "🟢 Aberto agora";
+    statusBox.classList.remove("fechado");
+  } else {
+    statusText.innerText = "🔴 Fechado no momento";
+    statusBox.classList.add("fechado");
+  }
+}
+
+
+function alterarQtd(btn, valor){
+  const span = btn.parentElement.querySelector("span");
+  let qtd = parseInt(span.innerText) + valor;
+
+  if (qtd < 1) qtd = 1;
+
+  span.innerText = qtd;
+}
+
+
+function add(nome, preco, el){
+  const card = el.closest(".card");
+  const qtd = parseInt(card.querySelector(".qtd-box span").innerText);
+
+  let adicionais = [];
+  let totalAdicionais = 0;
+
+  card.querySelectorAll(".adicionais input[type=checkbox]:checked")
+    .forEach(chk => {
+      adicionais.push(chk.dataset.nome);
+      totalAdicionais += parseFloat(chk.dataset.preco);
+    });
+
+  const totalProduto = preco * qtd;
+  const total = totalProduto + totalAdicionais;
+
+  carrinho.push({
+    nome,
+    preco,
+    qtd,
+    adicionais,
+    totalProduto,
+    totalAdicionais,
+    total
+  });
+
+  // Limpa checkboxes
+  card.querySelectorAll(".adicionais input[type=checkbox]")
+    .forEach(chk => chk.checked = false);
+
+  atualizarCarrinho();
+  el.parentElement
+  .querySelectorAll("input[type=checkbox]")
+  .forEach(chk => chk.checked = false);
+
+}
+
+
+function atualizarCarrinho(){
+  const div = document.getElementById("pedido");
+  const fab = document.getElementById("cart-fab");
+  const count = document.getElementById("cart-count");
+
+  if(carrinho.length === 0){
+    div.innerHTML = "Nenhum item";
+    fab.style.display = "none";
+    fecharCarrinho();
+    return;
+  }
+
+  // Mostra botão flutuante
+  fab.style.display = "block";
+  count.innerText = carrinho.length;
+
+  div.innerHTML = carrinho.map((i, index) => `
+    <div style="
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      margin-bottom:10px;
+      gap:8px;
+      border-bottom:1px dashed rgba(255,212,0,.2);
+      padding-bottom:8px
+    ">
+      <div>
+        <b>${i.qtd}x ${i.nome}</b>
+        ${i.adicionais.length 
+          ? `<br><small style="color:#ffd400">+ ${i.adicionais.join(", ")}</small>` 
+          : ""
+        }
+        <br><span style="color:#fff">R$ ${i.total.toFixed(2)}</span>
+      </div>
+
+      <button
+        onclick="removerItem(${index})"
+        style="
+          background:none;
+          border:none;
+          color:#ff4fd8;
+          font-size:1.1rem;
+          cursor:pointer;
+          line-height:1
+        "
+        title="Remover item">
+        ❌
+      </button>
+    </div>
+  `).join("");
+}
+
+
+function removerItem(index){
+  carrinho.splice(index, 1);
+  atualizarCarrinho();
+}
+
+
+/* ================= FINALIZAR PEDIDO ================= */
+function finalizar(){
+  if (!Array.isArray(carrinho) || carrinho.length === 0){
+    alert("Carrinho vazio");
+    return;
+  }
+
+  // Fecha mini carrinho
+  fecharCarrinho();
+
+  // Oculta botão flutuante do carrinho
+  const fab = document.getElementById("cart-fab");
+  if (fab) fab.style.display = "none";
+
+  // Abre modal
+  const modal = document.getElementById("modal");
+  if (modal) modal.style.display = "block";
+}
+
+
+/* ================= FECHAR MODAL ================= */
+function fecharModal(){
+  const modal = document.getElementById("modal");
+  if (modal) modal.style.display = "none";
+
+  // Se ainda houver itens, mostra botão do carrinho novamente
+  if (carrinho.length > 0){
+    const fab = document.getElementById("cart-fab");
+    if (fab) fab.style.display = "block";
+  }
+}
+
+
+/* ================= TAXA DE ENTREGA ================= */
+const bairroSelect = document.getElementById("bairro");
+if (bairroSelect){
+  bairroSelect.addEventListener("change", e => {
+    const taxa = taxas[e.target.value] || 0;
+    const taxaEl = document.getElementById("taxa");
+    if (taxaEl){
+      taxaEl.innerText = "Taxa de entrega: R$ " + taxa.toFixed(2);
+    }
+  });
+}
+
+
+/* ================= CONFIRMAR PEDIDO ================= */
+function confirmar(){
+  const nome = document.getElementById("nomeCliente")?.value.trim();
+  const bairroSelecionado = document.getElementById("bairro")?.value;
+  const pagamentoSelecionado = document.getElementById("pagamento")?.value;
+  const troco = document.getElementById("troco")?.value.trim();
+  if (pagamentoSelecionado === "Dinheiro" && !troco){
+  alert("Informe o valor do troco");
+  return;
+}
+
+  const endereco = document.getElementById("endereco")?.value.trim();
+  const taxa = taxas[bairroSelecionado] || 0;
+
+
+  const pagamentoSelect = document.getElementById("pagamento");
+  const trocoInput = document.getElementById("troco");
+
+  pagamentoSelect.addEventListener("change", () => {
+    if (pagamentoSelect.value === "Dinheiro") {
+      trocoInput.style.display = "block";
+    } else {
+      trocoInput.style.display = "none";
+      trocoInput.value = "";
+    }
+  });
+
+
+
+
+  if (!nome || !bairroSelecionado || !pagamentoSelecionado || !endereco){
+    alert("Preencha todos os dados");
+    return;
+  }
+
+  if (!Array.isArray(carrinho) || carrinho.length === 0){
+    alert("Carrinho vazio");
+    return;
+  }
+
+  const totalProdutos = carrinho.reduce((s, i) => s + i.total, 0);
+  const total = totalProdutos + taxa;
+
+  // Salva pedido (opcional)
+  const pedido = {
+    nome,
+    endereco,
+    bairro: bairroSelecionado,
+    pagamento: pagamentoSelecionado,
+    carrinho,
+    taxa,
+    total
+  };
+  localStorage.setItem("pedido", JSON.stringify(pedido));
+
+const nomeFormatado = nome
+  .toLowerCase()
+  .replace(/\b\w/g, letra => letra.toUpperCase());
+
+
+
+  /* ===== MENSAGEM WHATSAPP ===== */
+
+  let msg = `📝 *Novo Pedido de ${nomeFormatado}*%0A`;
+  
+  msg += `📍 *Endereço:* ${endereco}%0A`;
+  msg += `🏘️ *Bairro:* ${bairroSelecionado}%0A`;
+  msg += `💳 *Pagamento:* ${pagamentoSelecionado}%0A`;
+
+if (pagamentoSelecionado === "Dinheiro"){
+  msg += `💵 *Troco para:* R$ ${parseFloat(troco).toFixed(2)}%0A`;
+}
+
+  msg += `━━━━━━━━━━%0A`;
+
+  msg += `🧾 *Itens do Pedido*%0A`;
+  
+  carrinho.forEach(i => {
+    msg += `• ${i.qtd}x ${i.nome}`;
+    if (i.adicionais && i.adicionais.length){
+      msg += ` (%2B ${i.adicionais.join(", ")})`;
+    }
+    msg += ` — R$ ${i.total.toFixed(2)}%0A`;
+  });
+
+  msg += `━━━━━━━━━━%0A`;
+  msg += `🏍️ *Taxa de entrega:* R$ ${taxa.toFixed(2)}%0A`;
+  msg += `💰 *Total:* R$ ${total.toFixed(2)}`;
+
+
+
+  // Limpa tudo após envio
+  carrinho = [];
+  atualizarCarrinho();
+  fecharModal();
+
+  // Abre WhatsApp
+  window.open(`https://wa.me/${whatsapp}?text=${msg}`, "_blank");
+}
+
+
+
+
+/* ================= ADICIONAIS ================= */
+function toggleAdicionais(btn){
+  const card = btn.closest(".card");
+  if (!card) return;
+
+  const lista = card.querySelector(".adicionais");
+  if (!lista) return;
+
+  const aberto = !lista.classList.contains("oculto");
+  lista.classList.toggle("oculto");
+  btn.classList.toggle("aberto", !aberto);
+  btn.innerHTML = aberto ? "➕ Adicionais" : "⬆️ Adicionais";
+}
+
+
+/* ================= CARRINHO ================= */
+function abrirCarrinho(){
+  const cart = document.getElementById("mini-cart");
+  const overlay = document.getElementById("overlay-cart");
+
+  if (cart && overlay){
+    cart.classList.add("aberto");
+    overlay.style.display = "block";
+  }
+}
+
+function fecharCarrinho(){
+  const cart = document.getElementById("mini-cart");
+  const overlay = document.getElementById("overlay-cart");
+
+  if (cart && overlay){
+    cart.classList.remove("aberto");
+    overlay.style.display = "none";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("overlay-cart");
+  if (overlay){
+    overlay.addEventListener("click", fecharCarrinho);
+  }
+});
+
+
+/* ===== BUSCA ===== */
+function filtrarItens(texto){
+  texto = texto.toLowerCase();
+  document.querySelectorAll(".card").forEach(card=>{
+    const nome = card.querySelector("strong").innerText.toLowerCase();
+    card.style.display = nome.includes(texto) ? "flex" : "none";
+  });
+}
+
+/* ===== CATEGORIAS ===== */
+function filtrarCategoria(cat){
+  document.querySelectorAll(".categorias-glass button")
+    .forEach(b => b.classList.remove("ativo"));
+
+  event.currentTarget.classList.add("ativo");
+
+  document.querySelectorAll("h2").forEach(h2=>{
+    const grid = h2.nextElementSibling;
+    if (cat === "Todos" || h2.innerText === cat){
+      h2.style.display = "block";
+      grid.style.display = "grid";
+    } else {
+      h2.style.display = "none";
+      grid.style.display = "none";
+    }
+  });
+}
+
+
+
+
+const inputBusca = document.getElementById("busca");
+const clearBtn = document.querySelector(".clear-btn");
+
+inputBusca.addEventListener("input", () => {
+  clearBtn.style.display = inputBusca.value ? "block" : "none";
+});
+
+function limparBusca(){
+  inputBusca.value = "";
+  clearBtn.style.display = "none";
+  inputBusca.focus();
+  filtrarItens("");
+}
+
+</script>
+
+
+<!-- FUNDO ESCURO PARA FECHAR CARRINHO -->
+<div id="overlay-cart"></div>
+<div id="mini-cart">
+  <div class="mini-cart-header">
+    <span>🛒 Seu pedido</span>
+    <button onclick="fecharCarrinho()">✖</button>
+  </div>
+
+  <div class="mini-cart-items" id="pedido">
+    Nenhum item
+  </div>
+
+  <button class="mini-cart-btn" onclick="finalizar()">
+    Finalizar pedido
+  </button>
+</div>
+
+
+
+</body>
+</html>

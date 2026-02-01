@@ -1,0 +1,619 @@
+{
+  "contato": {
+    "whatsapp": "5561992536718"
+  },
+  "funcionamento": {
+  "segunda": ["18:00", "23:30"],
+  "terca": ["18:00", "23:30"],
+  "quarta": ["18:00", "23:30"],
+  "quinta": ["18:00", "23:30"],
+  "sexta": ["18:00", "00:30"],
+  "sabado": ["18:00", "00:30"],
+  "domingo": ["18:00", "23:00"]
+},
+  "categorias": [
+    {
+      "nome": "Lanches",
+      "itens": [
+        {
+          "nome": "X-Salada",
+          "descricao": "Pão, Hambúrguer, queijo, alface, tomate e maionese",
+          "preco": 8.0,
+          "imagens": ["xsalada.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+        },
+        {
+          "nome": "X-Bacon",
+          "descricao": "Pão, Hambúrguer, Queijo, Alface, Tomate, Bacon, Maionese artesanal",
+          "preco": 10.0,
+          "imagens": ["xbacon.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+        },
+        {
+          "nome": "X-Egg Bacon",
+          "descricao": "Pão, Hambúrguer, Queijo, Alface, Tomate, Ovo, Bacon, Maionese artesanal",
+          "preco": 12.0,
+          "imagens": ["xegg-bacon.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+        },
+        {
+          "nome": "X-Tudo",
+          "descricao": "Pão, Hambúrguer, Queijo, Alface, Tomate, Ovo, Bacon, Salsicha, Maionese artesanal",
+          "preco": 14.0,
+          "imagens": ["xtudo.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+        },
+        {
+          "nome": "X-Bomba",
+          "descricao": "Pão, 2 Hambúrgueres, Queijo, Alface, Tomate, Ovo, Bacon, Salsicha, Milho, Batata palha, Maionese artesanal",
+          "preco": 16.0,
+          "imagens": ["xbomba.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+        },
+        {
+          "nome": "Hot-Molho",
+          "descricao": "Pão, Salsicha, Milho, Batata palha",
+          "preco": 7.0,
+          "imagens": ["hot-molho.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+        },
+        {
+          "nome": "Hot-Chapa",
+          "descricao": "Pão, Salsicha, Milho, Batata palha, Bacon, Queijo",
+          "preco": 12.0,
+          "imagens": ["hot-chapa.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Artesanais",
+      "itens": [
+        {
+          "nome": "Salada Supreme",
+          "descricao": "Pão Brioche, Blend 120g, Alface Americano, Tomate, Queijo Cheddar, Maionese Supreme",
+          "preco": 14.0,
+          "imagens": ["saladasupreme.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne Artesanal", "preco": 7.0 }
+          ]
+        },
+        {
+          "nome": "Smash Onion",
+          "descricao": "Pão Brioche, Blend 120g, Bacon, Cebola Caramelizada, Queijo Cheddar, Molho Churrasco",
+          "preco": 17.0,
+          "imagens": ["saladasupreme.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne Artesanal", "preco": 7.0 }
+          ]
+        },
+        {
+          "nome": "Clássico Americano",
+          "descricao": "Pão Brioche, Blend 120g, Cebola Roxa, Bacon, Queijo Cheddar, Ketchup e Mostarda",
+          "preco": 17.0,
+          "imagens": ["classicoamericano.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne Artesanal", "preco": 7.0 }
+          ]
+        },
+        {
+          "nome": "Barbecue Burger",
+          "descricao": "Pão Australiano, Blend 120g, Cebola Caramelizada, Queijo Cheddar, Bacon, Molho Barbecue e Shoyu",
+          "preco": 18.0,
+          "imagens": ["barbecueburguer.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne Artesanal", "preco": 7.0 }
+          ]
+        },
+        {
+          "nome": "Duplo Barbecue Burger",
+          "descricao": "Pão Australiano, 2 Blend 120g, Cebola Caramelizada, Queijo Cheddar, Bacon, Molho Barbecue e Shoyu",
+          "preco": 23.0,
+          "imagens": ["duplobarbecueburguer.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne Artesanal", "preco": 7.0 }
+          ]
+        }
+      ]
+    },
+
+    {
+   "nome": "Combos Tradicionais",
+   "itens": [
+    {
+      "nome": "Combo X-Salada",
+      "descricao": "X-Salada + Batata + Refri 220ml",
+      "preco": 14.0,
+      "imagens": ["combo-xsalada.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+    },
+    {
+      "nome": "Combo X-Bacon",
+      "descricao": "X-Bacon + Batata + Refri 220ml",
+      "preco": 16.0,
+      "imagens": ["combo-xbacon.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+    },
+    {
+      "nome": "Combo X-Egg",
+      "descricao": "X-Egg + Batata + Refri 220ml",
+      "preco": 18.0,
+      "imagens": ["combo-xegg.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+    },
+    {
+      "nome": "Combo X-Tudo",
+      "descricao": "X-Tudo + Batata + Refri 220ml",
+      "preco": 20.0,
+      "imagens": ["combo-xtudo.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+    },
+    {
+      "nome": "Combo X-Bomba",
+      "descricao": "X-Bomba + Batata + Refri 220ml",
+      "preco": 22.0,
+      "imagens": ["combo-xbomba.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+    },
+    {
+      "nome": "Combo Hot-Molho",
+      "descricao": "Hot-Molho + Batata + Refri 220ml",
+      "preco": 13.0,
+      "imagens": ["combo-hot-molho.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+    },
+    {
+      "nome": "Combo Hot-Chapa",
+      "descricao": "Hot-Chapa + Batata + Refri 220ml",
+      "preco": 18.0,
+      "imagens": ["combo-hot-chapa.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+    },
+    {
+      "nome": "Combo Hot-Bravo",
+      "descricao": "Hot-Bravo + Batata + Refri 220ml",
+      "preco": 20.0,
+      "imagens": ["combo-hot-bravo.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne", "preco": 3.0 }
+          ]
+    }
+    ]
+    },
+
+    {
+   "nome": "Combos Artesanais",
+   "itens": [
+    {
+      "nome": "Combo Salada Supreme",
+      "descricao": "Salada Supreme + batata + Refri 220ml",
+      "preco": 20.0,
+      "imagens": ["combo-salada-supreme.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne Artesanal", "preco": 7.0 }
+          ]
+    },
+    {
+      "nome": "Combo Cheddar Australiano",
+      "descricao": "Cheddar Australiano + batata + Refri 220ml",
+      "preco": 23.0,
+      "imagens": ["combo-cheddar-australiano.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne Artesanal", "preco": 7.0 }
+          ]
+    },
+    {
+      "nome": "Combo Smash Onion",
+      "descricao": "Smash Onion + batata + Refri 220ml",
+      "preco": 23.0,
+      "imagens": ["combo-smash-onion.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne Artesanal", "preco": 7.0 }
+          ]
+    },
+    {
+      "nome": "Combo Clássico Americano",
+      "descricao": "Clássico Americano + batata + Refri 220ml",
+      "preco": 23.0,
+      "imagens": ["combo-classico-americano.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne Artesanal", "preco": 7.0 }
+          ]
+    },
+    {
+      "nome": "Combo Barbecue Burger",
+      "descricao": "Barbecue Burger + batata + Refri 220ml",
+      "preco": 24.0,
+      "imagens": ["combo-barbecue-burger.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne Artesanal", "preco": 7.0 }
+          ]
+    },
+    {
+      "nome": "Combo Duplo Barbecue",
+      "descricao": "Duplo Barbecue + batata + Refri 220ml",
+      "preco": 30.0,
+      "imagens": ["combo-duplo-barbecue.png"],
+          "adicionais": [
+            { "nome": "Bacon", "preco": 2.0 },
+            { "nome": "Ovo", "preco": 2.0 },
+            { "nome": "Salsicha", "preco": 2.0 },
+            { "nome": "Queijo", "preco": 2.0 },
+            { "nome": "Frango", "preco": 2.0 },
+            { "nome": "Carne Moída", "preco": 2.0 },
+            { "nome": "Calabresa", "preco": 2.0 },
+            { "nome": "Cebola", "preco": 2.0 },
+            { "nome": "Molho", "preco": 2.0 },
+            { "nome": "Carne Artesanal", "preco": 7.0 }
+          ]
+    }
+    ]
+    },
+
+    {
+      "nome": "Porções",
+      "itens": [
+        {
+          "nome": "Batata Frita P",
+          "descricao": "Batata crocante e sequinha",
+          "preco": 10.0,
+          "imagens": ["batata-p.png"]
+        },
+        {
+          "nome": "Batata Frita G",
+          "descricao": "Porção grande para compartilhar",
+          "preco": 15.0,
+          "imagens": ["batata-g.png"]
+        },
+        {
+          "nome": "Batata Cheddar com Bacon",
+          "descricao": "Batata frita com bacon crocante e cheddar cremoso",
+          "preco": 16.0,
+          "imagens": ["batata-cheddar-bacon.png"]
+        },
+        {
+          "nome": "Batata Muçarela e Bacon",
+          "descricao": "Batata frita crocante e bacon",
+          "preco": 18.0,
+          "imagens": ["batata-mucarela-bacon.png"]
+        }
+      ]
+    },
+    {
+      "nome": "Bebidas",
+      "itens": [
+        {
+          "nome": "Coca-Cola Lata",
+          "descricao": "Lata 350 ml",
+          "preco": 6.0,
+          "imagens": ["coca-lata.png"]
+        },
+        {
+          "nome": "Guaraná Lata",
+          "descricao": "Lata 350 ml",
+          "preco": 6.0,
+          "imagens": ["guarana-lata.png"]
+        },
+        {
+          "nome": "Fanta Laranja Lata",
+          "descricao": "Lata 350 ml",
+          "preco": 6.0,
+          "imagens": ["fanta-laranja-lata.png"]
+        },
+        {
+          "nome": "Fanta Uva Lata",
+          "descricao": "Lata 350 ml",
+          "preco": 6.0,
+          "imagens": ["fanta-uva-lata.png"]
+        },
+        {
+          "nome": "Sprite Lata",
+          "descricao": "Lata 350 ml",
+          "preco": 6.0,
+          "imagens": ["sprite-lata.png"]
+        },
+        {
+          "nome": "Coca-Cola 2L",
+          "descricao": "Refrigerante 2 Litros – Ideal para compartilhar",
+          "preco": 12.0,
+          "imagens": ["cocacola2l.png"]
+        },
+        {
+          "nome": "Guaraná 2L",
+          "descricao": "Refrigerante 2 Litros – Ideal para compartilhar",
+          "preco": 12.0,
+          "imagens": ["guarana-2l.png"]
+        },
+        {
+          "nome": "Fanta Laranja 2L",
+          "descricao": "Refrigerante 2 Litros – Ideal para compartilhar",
+          "preco": 12.0,
+          "imagens": ["fantalaranja-2l.png"]
+        },
+        {
+          "nome": "Fanta Uva 2L",
+          "descricao": "Refrigerante 2 Litros – Ideal para compartilhar",
+          "preco": 12.0,
+          "imagens": ["fantauva-2l.png"]
+        },
+        {
+          "nome": "Sprite 2L",
+          "descricao": "Refrigerante 2 Litros – Ideal para compartilhar",
+          "preco": 12.0,
+          "imagens": ["sprite-2l.png"]
+        },
+        {
+          "nome": "Suco de Laranja",
+          "descricao": "Suco Natural",
+          "preco": 8.0,
+          "imagens": ["suco-laranja.png"]
+        },
+        {
+          "nome": "Suco de Limão",
+          "descricao": "Suco Natural",
+          "preco": 8.0,
+          "imagens": ["suco-limao.png"]
+        },
+        {
+          "nome": "Suco de Abacaxi",
+          "descricao": "Suco Natural",
+          "preco": 8.0,
+          "imagens": ["suco-abacaxi.png"]
+        }
+      ]
+    }
+  ]
+}

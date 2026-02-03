@@ -572,25 +572,25 @@
           "imagens": ["cocacola2l.png"]
         },
         {
-          "nome": "Guaraná 2L",
+          "nome": "Guaraná 1,5L",
           "descricao": "Refrigerante 1,5 Litros",
           "preco": 12.0,
           "imagens": ["guarana-2l.png"]
         },
         {
-          "nome": "Fanta Laranja 2L",
+          "nome": "Fanta Laranja 1,5L",
           "descricao": "Refrigerante 1,5 Litros",
           "preco": 12.0,
           "imagens": ["fantalaranja-2l.png"]
         },
         {
-          "nome": "Fanta Uva 2L",
+          "nome": "Fanta Uva 1,5L",
           "descricao": "Refrigerante 1,5 Litros",
           "preco": 12.0,
           "imagens": ["fantauva-2l.png"]
         },
         {
-          "nome": "Sprite 2L",
+          "nome": "Sprite 1,5L",
           "descricao": "Refrigerante 1,5 Litros",
           "preco": 12.0,
           "imagens": ["sprite-2l.png"]
@@ -599,6 +599,7 @@
     }
   ]
 }
+
 
 
 

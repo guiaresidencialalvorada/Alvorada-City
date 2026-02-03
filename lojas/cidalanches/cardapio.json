@@ -567,7 +567,7 @@
         },
         {
           "nome": "Coca-Cola 1,5",
-          "descricao": "Refrigerante 2 Litros",
+          "descricao": "Refrigerante 1,5 Litros",
           "preco": 12.0,
           "imagens": ["cocacola2l.png"]
         },
@@ -599,5 +599,6 @@
     }
   ]
 }
+
 
 

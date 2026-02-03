@@ -774,11 +774,14 @@ fetch("horarios.json")
   .catch(err => {
     console.error("Erro ao carregar horarios.json", err);
   });
+
+
+
+document.getElementById("anoAtual").textContent = new Date().getFullYear();
 </script>
-
-
 
 </body>
 </html>
+
 
 

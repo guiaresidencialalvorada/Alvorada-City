@@ -9,7 +9,7 @@
     "nome": "Cabo HDMI 2.0 4K",
     "descricao": "Cabo HDMI alta definição com suporte 4K",
     "preco": 30.00,
-    "imagem": "imagens/cabo-hdmi-4k.WEBP"
+    "imagem": "imagens/cabo-hdmi-4k.jpg"
   },
   {
     "nome": "Cabo HDMI 3D",
@@ -21,25 +21,25 @@
     "nome": "Cabo HDMI HDTV 3 Metros",
     "descricao": "Cabo HDMI ideal para TVs e monitores",
     "preco": 28.00,
-    "imagem": "imagens/cabo-hdmi-hdtv.WEBP"
+    "imagem": "imagens/cabo-hdmi-hdtv.jpg"
   },
   {
     "nome": "Cabo RCA Áudio e Vídeo",
     "descricao": "Cabo RCA para transmissão de áudio e vídeo",
     "preco": 20.00,
-    "imagem": "imagens/cabo-rca.WEBP"
+    "imagem": "imagens/cabo-rca.jpg"
   },
   {
     "nome": "Cabo Auxiliar P2",
     "descricao": "Cabo P2 para conexão de áudio",
     "preco": 15.00,
-    "imagem": "imagens/cabo-p2.WEBP"
+    "imagem": "imagens/cabo-p2.jpg"
   },
   {
     "nome": "Cabo USB Tipo C",
     "descricao": "Cabo USB para carregamento e dados Tipo C",
     "preco": 20.00,
-    "imagem": "imagens/cabo-usb-c.WEBP"
+    "imagem": "imagens/cabo-usb-c.jpg"
   },
   {
     "nome": "Cabo USB Micro USB",
@@ -51,7 +51,7 @@
     "nome": "Cabo USB Lightning",
     "descricao": "Cabo USB compatível com iPhone",
     "preco": 30.00,
-    "imagem": "imagens/cabo-lightning.WEBP"
+    "imagem": "imagens/cabo-lightning.jpg"
   },
   {
     "nome": "Carregador USB de Parede",
@@ -63,50 +63,51 @@
     "nome": "Fone de Ouvido com Fio",
     "descricao": "Fone de ouvido estéreo com microfone",
     "preco": 20.00,
-    "imagem": "imagens/fone-ouvido.WEBP"
+    "imagem": "imagens/fone-ouvido.jpg"
   },
   {
     "nome": "Barbeador Elétrico",
     "descricao": "Barbeador elétrico recarregável",
     "preco": 65.00,
-    "imagem": "imagens/barbeador-eletrico.WEBP"
+    "imagem": "imagens/barbeador-eletrico.jpg"
   },
   
   {
     "nome": "Calculadora Eletrônica",
     "descricao": "Calculadora de mesa com visor grande",
     "preco": 25.00,
-    "imagem": "imagens/calculadora.WEBP"
+    "imagem": "imagens/calculadora.jpg"
   },
   {
     "nome": "Kit Tesoura Multiuso",
     "descricao": "Kit com tesouras para uso doméstico",
     "preco": 30.00,
-    "imagem": "imagens/kit-tesoura.WEBP"
+    "imagem": "imagens/kit-tesoura.jpg"
   },
   {
     "nome": "Estanho para Solda 40g",
     "descricao": "Estanho para soldagem eletrônica",
     "preco": 18.00,
-    "imagem": "imagens/estanho-solda.WEBP"
+    "imagem": "imagens/estanho-solda.jpg"
   },
   
   {
     "nome": "Capa para Celular Silicone",
     "descricao": "Capa protetora em silicone flexível",
     "preco": 20.00,
-    "imagem": "imagens/capa-silicone.WEBP"
+    "imagem": "imagens/capa-silicone.jpg"
   },
   {
     "nome": "Capa para Celular Anti-Impacto",
     "descricao": "Capa reforçada para proteção contra quedas",
     "preco": 30.00,
-    "imagem": "imagens/capa-anti-impacto.WEBP"
+    "imagem": "imagens/capa-anti-impacto.jpg"
   },
   {
     "nome": "Película de Vidro 3D",
     "descricao": "Película de vidro temperado 3D",
     "preco": 15.00,
-    "imagem": "imagens/pelicula-3d.WEBP"
+    "imagem": "imagens/pelicula-3d.jpg"
   }
 ]
+

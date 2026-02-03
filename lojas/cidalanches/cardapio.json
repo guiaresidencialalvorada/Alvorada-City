@@ -537,84 +537,67 @@
       "itens": [
         {
           "nome": "Coca-Cola Lata",
-          "descricao": "Lata 350 ml",
+          "descricao": "Lata 220 ml",
           "preco": 6.0,
           "imagens": ["coca-lata.png"]
         },
         {
           "nome": "Guaraná Lata",
-          "descricao": "Lata 350 ml",
+          "descricao": "Lata 220 ml",
           "preco": 6.0,
           "imagens": ["guarana-lata.png"]
         },
         {
           "nome": "Fanta Laranja Lata",
-          "descricao": "Lata 350 ml",
+          "descricao": "Lata 220 ml",
           "preco": 6.0,
           "imagens": ["fanta-laranja-lata.png"]
         },
         {
           "nome": "Fanta Uva Lata",
-          "descricao": "Lata 350 ml",
+          "descricao": "Lata 220 ml",
           "preco": 6.0,
           "imagens": ["fanta-uva-lata.png"]
         },
         {
           "nome": "Sprite Lata",
-          "descricao": "Lata 350 ml",
+          "descricao": "Lata 220 ml",
           "preco": 6.0,
           "imagens": ["sprite-lata.png"]
         },
         {
-          "nome": "Coca-Cola 2L",
-          "descricao": "Refrigerante 2 Litros – Ideal para compartilhar",
+          "nome": "Coca-Cola 1,5",
+          "descricao": "Refrigerante 2 Litros",
           "preco": 12.0,
           "imagens": ["cocacola2l.png"]
         },
         {
           "nome": "Guaraná 2L",
-          "descricao": "Refrigerante 2 Litros – Ideal para compartilhar",
+          "descricao": "Refrigerante 1,5 Litros",
           "preco": 12.0,
           "imagens": ["guarana-2l.png"]
         },
         {
           "nome": "Fanta Laranja 2L",
-          "descricao": "Refrigerante 2 Litros – Ideal para compartilhar",
+          "descricao": "Refrigerante 1,5 Litros",
           "preco": 12.0,
           "imagens": ["fantalaranja-2l.png"]
         },
         {
           "nome": "Fanta Uva 2L",
-          "descricao": "Refrigerante 2 Litros – Ideal para compartilhar",
+          "descricao": "Refrigerante 1,5 Litros",
           "preco": 12.0,
           "imagens": ["fantauva-2l.png"]
         },
         {
           "nome": "Sprite 2L",
-          "descricao": "Refrigerante 2 Litros – Ideal para compartilhar",
+          "descricao": "Refrigerante 1,5 Litros",
           "preco": 12.0,
           "imagens": ["sprite-2l.png"]
-        },
-        {
-          "nome": "Suco de Laranja",
-          "descricao": "Suco Natural",
-          "preco": 8.0,
-          "imagens": ["suco-laranja.png"]
-        },
-        {
-          "nome": "Suco de Limão",
-          "descricao": "Suco Natural",
-          "preco": 8.0,
-          "imagens": ["suco-limao.png"]
-        },
-        {
-          "nome": "Suco de Abacaxi",
-          "descricao": "Suco Natural",
-          "preco": 8.0,
-          "imagens": ["suco-abacaxi.png"]
         }
       ]
     }
   ]
 }
+
 

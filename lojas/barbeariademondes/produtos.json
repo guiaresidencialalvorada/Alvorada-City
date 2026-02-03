@@ -1,0 +1,16 @@
+[
+  {
+    "nome": "Pomada Modeladora",
+    "descricao": "Fixação média com efeito natural",
+    "preco": 15.00,
+    "imagem": "imagens/pomada.jpg"
+  },
+  {
+    "nome": "Gel Cola Pierry Lohan 250g",
+    "descricao": "MegaFixação ",
+    "preco": 18.00,
+    "imagem": "imagens/gel-cola.jpg"
+  }
+
+
+]

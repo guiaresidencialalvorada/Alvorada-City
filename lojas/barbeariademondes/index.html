@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Barbearia Delmondes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ICONES -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ================= VARIÁVEIS ================= */
+
+:root {
+  --gold: #d4af37;
+  --bg: #070a12;
+  --glass: rgba(255,255,255,.06);
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --shadow: 0 20px 40px rgba(0,0,0,.6);
+}
+
+/* ================= RESET ================= */
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.header p {
+  font-size: 13px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+
+/* ================= BODY ================= */
+
+body {
+  background: radial-gradient(circle at top, #0f172a, var(--bg));
+  color: var(--text);
+  padding: 25px;
+}
+
+
+/* 🎞️ FUNDO REAL (sem fosco) */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("imagens/fundo-logo.png") center / cover no-repeat;
+  z-index: 0;
+}
+
+/* VIDRO ESCURO (não apaga o GIF) */
+.header {
+  position: relative;
+  border-radius: 22px;
+  padding: 35px;
+  text-align: center;
+  margin-bottom: 35px;
+
+  /* vidro leve */
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+
+/* CONTEÚDO */
+.header * {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  position: relative;
+  border-radius: 18px;
+  padding: 20px 18px;
+  text-align: center;
+  margin-bottom: 4px;
+
+  background: rgba(0,0,0,0.22);
+  backdrop-filter: blur(5px);
+
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+
+
+.logo-box {
+  width: 120px;
+  height: 120px;
+  margin: auto auto 10px;
+  border-radius: 50%;
+  background: #000;
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(212,175,55,.35);
+}
+
+
+.header h1 {
+  font-size: 22px;
+  margin-top: 6px;
+  color: var(--gold);
+  text-shadow: 0 0 18px rgba(212,175,55,.5);
+}
+
+.header p {
+  font-size: 13px;
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+
+.status {
+  font-size: 12px;
+  letter-spacing: .6px;
+  padding: 8px 18px;
+}
+
+
+
+@media (max-width: 480px) {
+  .logo-box {
+    width: 95px;
+    height: 95px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+}
+
+
+@keyframes glowPulse {
+  0%,100% {
+    box-shadow: 0 0 25px rgba(212,175,55,.5);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(212,175,55,.85);
+  }
+}
+
+
+/* GIF DE FUNDO */
+.logo-gif {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+  filter: blur(1.5px) saturate(1.2);
+  z-index: 1;
+}
+
+/* LOGO */
+.logo-img {
+  position: relative;
+  width: 85%;
+  z-index: 2;
+}
+
+
+.header h1 {
+  color: var(--gold);
+  text-shadow: 0 0 20px rgba(212,175,55,.5);
+}
+
+.header p {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ================= TITULOS ================= */
+
+.section-title {
+  margin: 35px 0 20px;
+  font-size: 22px;
+  color: var(--gold);
+  text-align: center;
+}
+
+/* ================= GRID ================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+}
+
+/* ================= CARD ================= */
+
+.card {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: var(--shadow);
+  transition: .35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 35px rgba(212,175,55,.4);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 18px;
+  text-align: center;
+}
+
+.card-body h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.preco {
+  color: var(--gold);
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* ================= BOTÃO ================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  background: linear-gradient(135deg, #25d366, #1ebe5d);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(37,211,102,.6);
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+/* ================= CATEGORIAS ================= */
+
+.categorias {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 2px 0 6px;
+  flex-wrap: nowrap;
+}
+
+/* BOTÃO MENOR (≈ 1/3 menor) */
+.categoria-btn {
+  width: 120px;
+  height: 70px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  box-shadow: none;
+  cursor: pointer;
+  transition: .3s ease;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.categoria-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 10px rgba(212,175,55,.3);
+}
+
+/* IMAGEM */
+.categoria-btn img {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+/* TEXTO */
+.categoria-btn span {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.1;
+}
+
+/* HOVER */
+.categoria-btn:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 0 16px rgba(212,175,55,.45);
+}
+
+/* ATIVO */
+.categoria-btn.active {
+  border-color: var(--gold);
+  box-shadow: 0 0 18px rgba(212,175,55,.55);
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .categoria-btn {
+    width: 105px;
+    height: 85px;
+  }
+
+  .categoria-btn span {
+    font-size: 11px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .categoria-btn {
+    width: 135px;
+    height: 72px;
+  }
+
+  .categoria-btn span {
+    font-size: 14px;
+  }
+}
+
+/* ================= MODAL ZOOM IMAGEM ================= */
+
+.img-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(4px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn .3s ease;
+}
+
+.img-modal img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(212,175,55,.6);
+  animation: zoomIn .3s ease;
+}
+
+/* BOTÃO FECHAR */
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.close-modal:hover {
+  color: var(--gold);
+  transform: scale(1.2);
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes zoomIn {
+  from {transform: scale(.6);}
+  to {transform: scale(1);}
+}
+
+
+/* ================= STATUS LOJA ================= */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 0 18px rgba(0,0,0,.55);
+}
+
+/* TEXTO */
+.status-text {
+  color: #fff;
+}
+
+/* BOLINHA */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* ABERTO */
+.status.aberto .dot {
+  background: #22c55e;
+  box-shadow: 0 0 10px rgba(34,197,94,.9);
+  animation: piscarDot 1.2s infinite;
+}
+
+/* FECHADO */
+.status.fechado .dot {
+  background: #ef4444;
+  box-shadow: 0 0 10px rgba(239,68,68,.9);
+  animation: piscarDot 1.2s infinite;
+}
+
+/* ANIMAÇÃO */
+@keyframes piscarDot {
+  0%,100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+  50% {
+    opacity: .35;
+    transform: scale(.7);
+  }
+}
+
+.status.aberto .status-text,
+.status.fechado .status-text {
+  text-transform: none !important;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+
+<div class="header">
+  <div class="logo-box">
+  
+  <img class="logo-img" src="barbeariadelmondes1.png" alt="Logo Barbearia">
+</div>
+
+
+  <h1>Barbearia Delmondes</h1>
+  <p>Estilo • Precisão • Tecnologia</p>
+  <div id="status-loja" class="status">
+    <span class="dot"></span>
+    <span class="status-text">Verificando horário...</span>
+  </div>
+
+</div>
+
+
+
+<!-- CATEGORIAS -->
+<div class="categorias">
+  
+  <button class="categoria-btn active" onclick="mostrarServicos()">
+  <img src="img-servicos.jpg">
+  <span>Serviços</span>
+</button>
+
+<button class="categoria-btn" onclick="mostrarProdutos()">
+  <img src="img-produtos.jpg">
+  <span>Produtos</span>
+</button>
+
+<button class="categoria-btn" onclick="mostrarAcessorios()">
+  <img src="img-acessorios.jpg">
+  <span>Acessórios</span>
+</button>
+
+
+</div>
+
+
+<!-- MODAL IMAGEM -->
+<div id="imgModal" class="img-modal">
+  <span class="close-modal" onclick="fecharModal()">✕</span>
+  <img id="modalImg">
+</div>
+
+
+
+<!-- SERVIÇOS -->
+
+<div id="servicos" class="grid"></div>
+
+<!-- PRODUTOS -->
+
+
+<div id="produtos" class="grid"></div>
+
+<!-- ACESSORIOS -->
+
+<div id="acessorios" class="grid"></div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+© 2026 Barbearia Delmondes — Premium Experience
+</div>
+
+</div>
+
+<script>
+const servicosDiv = document.getElementById("servicos");
+const produtosDiv = document.getElementById("produtos");
+const acessoriosDiv = document.getElementById("acessorios");
+
+
+/* ================= TEMPLATE CARD ================= */
+function criarCard(item, botaoTexto) {
+  return `
+    <div class="card">
+      <img src="${item.imagem}" alt="${item.nome}">
+      <div class="card-body">
+        <h3>${item.nome}</h3>
+        <p>${item.descricao}</p>
+        <div class="preco">R$ ${item.preco.toFixed(2)}</div>
+
+        <a class="btn" target="_blank"
+          href="https://wa.me/5561983585475?text=Tenho%20interesse%20em%20${encodeURIComponent(item.nome)}">
+          <i class="fab fa-whatsapp"></i> ${botaoTexto}
+        </a>
+      </div>
+    </div>
+  `;
+}
+
+/* ================= CARREGAR SERVIÇOS ================= */
+fetch("servicos.json")
+  .then(res => res.json())
+  .then(dados => {
+    dados.forEach(item => {
+      servicosDiv.innerHTML += criarCard(item, "Agendar");
+    });
+  })
+  .catch(err => console.error("Erro serviços:", err));
+
+/* ================= CARREGAR PRODUTOS ================= */
+fetch("produtos.json")
+  .then(res => res.json())
+  .then(dados => {
+    dados.forEach(item => {
+      produtosDiv.innerHTML += criarCard(item, "Comprar");
+    });
+  })
+  .catch(err => console.error("Erro produtos:", err));
+
+/* ================= CARREGAR ACESSORIOS ================= */
+fetch("acessorios.json")
+  .then(res => res.json())
+  .then(dados => {
+    dados.forEach(item => {
+      acessoriosDiv.innerHTML += criarCard(item, "Comprar");
+    });
+  })
+  .catch(err => console.error("Erro acessórios:", err));
+
+
+
+
+</script>
+
+
+
+<script>
+function mostrarServicos() {
+  servicosDiv.style.display = "grid";
+  produtosDiv.style.display = "none";
+  acessoriosDiv.style.display = "none";
+  ativarBotao(0);
+}
+
+function mostrarProdutos() {
+  servicosDiv.style.display = "none";
+  produtosDiv.style.display = "grid";
+  acessoriosDiv.style.display = "none";
+  ativarBotao(1);
+}
+
+function mostrarAcessorios() {
+  servicosDiv.style.display = "none";
+  produtosDiv.style.display = "none";
+  acessoriosDiv.style.display = "grid";
+  ativarBotao(2);
+}
+
+
+
+function ativarBotao(index) {
+  document.querySelectorAll(".categoria-btn").forEach((btn, i) => {
+    btn.classList.toggle("active", i === index);
+  });
+}
+
+/* Estado inicial */
+mostrarServicos();
+
+
+
+
+/* Função Abrir Imagem */
+
+function criarCard(item, botaoTexto) {
+  return `
+    <div class="card">
+      <img src="${item.imagem}" 
+           alt="${item.nome}"
+           onclick="abrirModal('${item.imagem}')">
+
+      <div class="card-body">
+        <h3>${item.nome}</h3>
+        <p>${item.descricao}</p>
+        <div class="preco">R$ ${item.preco.toFixed(2)}</div>
+
+        <a class="btn" target="_blank"
+          href="https://wa.me/5561983585475?text=Tenho%20interesse%20em%20${encodeURIComponent(item.nome)}">
+          <i class="fab fa-whatsapp"></i> ${botaoTexto}
+        </a>
+      </div>
+    </div>
+  `;
+}
+
+
+
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImg");
+
+function abrirModal(src) {
+  modal.style.display = "flex";
+  modalImg.src = src;
+}
+
+function fecharModal() {
+  modal.style.display = "none";
+}
+
+/* FECHAR AO CLICAR FORA DA IMAGEM */
+modal.addEventListener("click", function(e) {
+  if (e.target === modal) {
+    fecharModal();
+  }
+});
+
+fetch("horarios.json")
+  .then(res => res.json())
+  .then(horarios => {
+
+    const statusDiv = document.getElementById("status-loja");
+    const statusText = statusDiv.querySelector(".status-text");
+
+    const dias = [
+      "domingo",
+      "segunda",
+      "terca",
+      "quarta",
+      "quinta",
+      "sexta",
+      "sabado"
+    ];
+
+    const agora = new Date();
+    const diaSemana = dias[agora.getDay()];
+    const horaAtual = agora.getHours() * 60 + agora.getMinutes();
+
+    const hoje = horarios[diaSemana];
+
+    // Se não tiver horário definido
+    if (!hoje || !hoje.abre || !hoje.fecha) {
+      statusDiv.className = "status fechado";
+      statusText.textContent = "Loja Fechada";
+      return;
+    }
+
+    const [ha, ma] = hoje.abre.split(":").map(Number);
+    const [hf, mf] = hoje.fecha.split(":").map(Number);
+
+    const abreMin = ha * 60 + ma;
+    const fechaMin = hf * 60 + mf;
+
+    if (horaAtual >= abreMin && horaAtual < fechaMin) {
+      statusDiv.className = "status aberto";
+      statusText.textContent = "Loja Aberta";
+    } else {
+      statusDiv.className = "status fechado";
+      statusText.textContent = "Loja Fechada";
+    }
+
+  })
+  .catch(err => {
+    console.error("Erro ao carregar horarios.json", err);
+  });
+</script>
+
+
+
+</body>
+</html>
+

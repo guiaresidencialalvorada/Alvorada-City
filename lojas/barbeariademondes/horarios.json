@@ -1,0 +1,9 @@
+{
+  "segunda":  { "abre": null,    "fecha": null },
+  "terca":    { "abre": "08:00", "fecha": "20:00" },
+  "quarta":   { "abre": "08:00", "fecha": "20:00" },
+  "quinta":   { "abre": "08:00", "fecha": "20:00" },
+  "sexta":    { "abre": "08:00", "fecha": "20:00" },
+  "sabado":   { "abre": "08:00", "fecha": "20:00" },
+  "domingo":  { "abre": "08:00", "fecha": "20:00" }
+}

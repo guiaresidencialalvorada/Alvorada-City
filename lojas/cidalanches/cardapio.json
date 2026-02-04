@@ -509,7 +509,7 @@
         {
           "nome": "Batata Frita P",
           "descricao": "Batata crocante e sequinha",
-          "preco": 10.0,
+          "preco": 8.00,
           "imagens": ["batata-p.png"]
         },
         {

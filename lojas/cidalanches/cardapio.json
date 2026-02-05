@@ -168,7 +168,7 @@
           "nome": "Smash Onion",
           "descricao": "Pão Brioche, Blend 120g, Bacon, Cebola Caramelizada, Queijo Cheddar, Molho Churrasco",
           "preco": 17.0,
-          "imagens": ["saladasupreme.png"],
+          "imagens": ["smash-onion.png"],
           "adicionais": [
             { "nome": "Bacon", "preco": 2.0 },
             { "nome": "Ovo", "preco": 2.0 },
@@ -509,7 +509,7 @@
         {
           "nome": "Batata Frita P",
           "descricao": "Batata crocante e sequinha",
-          "preco": 8.00,
+          "preco": 8.0,
           "imagens": ["batata-p.png"]
         },
         {
@@ -538,68 +538,65 @@
         {
           "nome": "Coca-Cola Lata",
           "descricao": "Lata 220 ml",
-          "preco": 6.0,
+          "preco": 3.50,
           "imagens": ["coca-lata.png"]
         },
         {
           "nome": "Guaraná Lata",
           "descricao": "Lata 220 ml",
-          "preco": 6.0,
+          "preco":  3.50,
           "imagens": ["guarana-lata.png"]
         },
         {
           "nome": "Fanta Laranja Lata",
           "descricao": "Lata 220 ml",
-          "preco": 6.0,
+          "preco":  3.50,
           "imagens": ["fanta-laranja-lata.png"]
         },
         {
           "nome": "Fanta Uva Lata",
           "descricao": "Lata 220 ml",
-          "preco": 6.0,
+          "preco":  3.50,
           "imagens": ["fanta-uva-lata.png"]
         },
         {
           "nome": "Sprite Lata",
           "descricao": "Lata 220 ml",
-          "preco": 6.0,
+          "preco":  3.50,
           "imagens": ["sprite-lata.png"]
         },
         {
-          "nome": "Coca-Cola 1,5",
+          "nome": "Coca-Cola 1,5L",
           "descricao": "Refrigerante 1,5 Litros",
-          "preco": 12.0,
+          "preco": 9.0,
           "imagens": ["cocacola2l.png"]
         },
         {
-          "nome": "Guaraná 1,5L",
-          "descricao": "Refrigerante 1,5 Litros",
-          "preco": 12.0,
+          "nome": "Guaraná 1,5",
+          "descricao": "Refrigerante 1,5 Litros ",
+          "preco": 7.0,
           "imagens": ["guarana-2l.png"]
         },
         {
           "nome": "Fanta Laranja 1,5L",
           "descricao": "Refrigerante 1,5 Litros",
-          "preco": 12.0,
+          "preco": 8.0,
           "imagens": ["fantalaranja-2l.png"]
         },
         {
           "nome": "Fanta Uva 1,5L",
           "descricao": "Refrigerante 1,5 Litros",
-          "preco": 12.0,
+          "preco": 8.0,
           "imagens": ["fantauva-2l.png"]
         },
         {
           "nome": "Sprite 1,5L",
           "descricao": "Refrigerante 1,5 Litros",
-          "preco": 12.0,
+          "preco": 8.0,
           "imagens": ["sprite-2l.png"]
         }
+        
       ]
     }
   ]
 }
-
-
-
-

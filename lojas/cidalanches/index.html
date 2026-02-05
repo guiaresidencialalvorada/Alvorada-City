@@ -1,1386 +1,784 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Guia Comercial | Bairro Alvorada</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cida Lanches</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guia Comercial do Bairro Alvorada. Valorize o comércio local.">
 
-  
+
 <style>
-/* ================= RESET ================= */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* ================= BODY ================= */
-body {
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background: #f1f5f9;
-    color: #0f172a;
-    line-height: 1.6;
-}
-
-
-body {
-    overflow-x: hidden;
-}
-
-
-
-/* ================= HEADER ================= */
-.header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    background: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 14px;
-}
-
-
-.logo {
-    font-weight: 800;
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: #ffffff; /* BRANCO */
-    text-transform: uppercase;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-}
-
-
-/* MENU TOGGLE */
-.menu-toggle {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #38bdf8;
-}
-
-/* MENU MOBILE */
-.menu {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background: rgba(2, 6, 23, 0.95);
-    position: absolute;
-    top: 60px;
-    right: 12px;
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-.menu.open {
-    display: flex;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #e5e7eb;
-    font-weight: 600;
-    padding: 10px 14px;
-    border-radius: 10px;
-    transition: all 0.25s ease;
-}
-
-.menu a:hover {
-    background: #38bdf8;
-    color: #020617;
-}
-
-/* ================= CONTAINER ================= */
-.container {
-    padding: 0 6px;
-    max-width: 1300px;
-    margin: auto;
-}
-
-
-h1#empresas {
-    text-align: center;
-    font-size: 26px;
-    margin-bottom: 24px;
-    font-weight: 800;
-    color: #0f172a; /* PRETO */
-    margin: 01px 0 5px;
-    margin-top: 0px;
-}
-
-
-/* ================= GRID ================= */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4px;
-    padding: 0;
-}
-
-
-
-
-
-/* ================= CARD ================= */
-.card {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 8px;
-
-    display: flex;
-    gap: 8px;
-
-    width: 100%;
-    min-width: 0;
-
-    overflow: hidden;
-}
-
-
-
-.card:hover {
-    transform: translateY(-4px) scale(1.01);
-    border-color: #38bdf8;
-    box-shadow: 0 0 18px rgba(56,189,248,0.35);
-}
-  .card {
-    min-width: 0;
-}
-  
-.card h3,
-.card .categoria {
-    white-space: normal;
-    word-break: break-word;
-    overflow-wrap: break-word;
-}
-
-
-.card h3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-
-.card .contatos {
-    flex-wrap: wrap;
-}
-
-.card .btn {
-    width: 100%;
-}
-
-
-
-    
-/* ================= LOGO ================= */
-.card .icone {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.card .icone img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* ================= INFO ================= */
-.card .info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.card h3 {
-    font-size: 13.5px;
-    font-weight: 700;
-    color: #0f172a;
-
-    line-height: 1.2;
-
-    margin: 0 0 2px 0;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    word-break: break-word;
-}
-
-
-
-.card .categoria {
-    font-size: 12px;
-    color: #64748b;
-    margin-bottom: 4px;
-}
-
-/* ================= BOTÕES ================= */
-.card .contatos {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 6px;
-}
-
-
-.card .btn {
-    border-radius: 8px;
-    font-size: 11px;
-    font-weight: 700;
 
-    padding: 5px 6px;
-    font-size: 10.5px;
-
-    width: 100%;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    white-space: nowrap;
-    text-decoration: none;
-}
-
-
-.card {
-    overflow: hidden;
-}
-
-
-/* TELEFONE */
-
-.btn.telefone {
-    font-size: 10.5px;
-    justify-content: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
-
-/* WHATSAPP */
-.btn.whatsapp {
-    background: linear-gradient(135deg,#22c55e,#16a34a);
-    color: #ecfdf5;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* WHATSAPP INATIVO */
-.btn.whatsapp.inativo {
-    background: #e5e7eb !important;
-    color: #64748b !important;
-    pointer-events: none;
-    filter: grayscale(1);
-    opacity: 0.7;
-}
-
-.btn.whatsapp.inativo::before {
-    content: "⛔";
-}
-
-
-
-.btn.whatsapp:hover {
-    filter: brightness(1.15);
-}
-
-/* ================= FOOTER ================= */
-.footer {
-    margin-top: 40px;
-    padding: 20px;
-    text-align: center;
-    font-size: 13px;
-    color: #94a3b8;
-}
-
-/* MAPA */
-.btn.mapa {
-    background: linear-gradient(135deg,#38bdf8,#0284c7);
-    color: #ffffff;
-}
-
-.btn.mapa:hover {
-    filter: brightness(1.1);
-}
-
-.btn.maps {
-    background: #e2e8f0;
-    color: #020617;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
-
-/* ================= RESPONSIVO ================= */
-/* TABLET */
-@media (min-width: 700px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* DESKTOP */
-@media (min-width: 1000px) {
-    .grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-
-    .menu {
-        display: flex !important;
-        flex-direction: row;
-        position: static;
-        background: transparent;
-        border: none;
-        padding: 0;
-        gap: 16px;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-}
-
-
-   /* CELULAR */ 
-@media (max-width: 400px) {
-    .card {
-        padding: 10px;
-    }
-
-    .card .icone {
-        width: 54px;
-        height: 54px;
-        min-width: 54px;
-    }
-
-    .card h3 {
-        font-size: 14px;
-    }
-}
-
-
-    
-
-    
-/* ================= LOADING ================= */
-.loading {
-    text-align: center;
-    font-weight: 700;
-    color: #38bdf8;
-    padding: 20px;
+ header img{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--yellow);
+  outline:2px solid rgba(255,255,255,.15);
+  outline-offset:4px;
+  background:#000;
 }
 
-.hidden {
-    display: none;
+.qtd-box{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:8px;
 }
-/* ================= STATUS LOJA ================= */
 
-.status {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 11px;
-    font-weight: 700;
-    margin-bottom: 6px;
+.qtd-box button{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  border:none;
+  background:var(--pink);
+  color:#fff;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-.status::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
+.qtd-box span{
+  min-width:20px;
+  text-align:center;
 }
 
-.aberto {
-    color: #22c55e;
+.adicionais{
+  font-size:.8rem;
+  margin-top:6px;
 }
 
-.aberto::before {
-    background: #22c55e;
-    box-shadow: 0 0 8px rgba(34,197,94,0.6);
+:root{
+  --pink:#ff4fd8;
+  --yellow:#ffd400;
+  --orange:#ff7a00;
 }
 
-.fechado {
-    color: #ef4444;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', Arial, sans-serif;
 }
 
-.fechado::before {
-    background: #ef4444;
-    box-shadow: 0 0 8px rgba(239,68,68,0.6);
+body{
+  background:#000;
+  color:#fff;
+  padding-bottom:150px;
 }
 
-/* ================= BUSCA ================= */
-.search-box {
-    max-width: 520px;
-    margin: 0 auto 26px;
-    position: relative;
-}
 
-.search-box .icon {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #38bdf8;
+/* ===== HERO FUNDO PREMIUM ===== */
+.header-bg{
+  position:relative;
+  height:340px;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.85), rgba(0,0,0,.4), #000),
+    url("gif/fundo.png") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding-bottom:40px;
 }
 
-.search-box input {
-    width: 100%;
-    padding: 14px 14px 14px 42px;
-    border-radius: 14px;
-    border: 1px solid rgba(56,189,248,0.35);
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(6px);
-    font-size: 14px;
-    font-weight: 600;
-    outline: none;
-    transition: .25s;
+/* Vinheta elegante */
+.header-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  box-shadow:inset 0 -80px 80px rgba(0,0,0,.9);
+  pointer-events:none;
 }
 
-.search-box input::placeholder {
-    color: #64748b;
+/* QUADRO DE VIDRO DA LOGO */
+.header-content{
+  background:transparent;
+  backdrop-filter:none;
+  border:none;
+  box-shadow:none;
+  padding:20px 24px;
+  max-width:340px;
+  width:90%;
 }
 
-.search-box input:focus {
-    border-color: #38bdf8;
-    box-shadow: 0 0 0 3px rgba(56,189,248,0.25);
+header{
+  position:relative;
+  text-align:center;
+  z-index:2;
 }
-/* ================= HERO ALVORADA ================= */
-.hero-alvorada {
-    position: relative;
-    width: 100%;
-    height: 280px;
-    overflow: hidden;
-}
 
-.hero-alvorada img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
 
-/* Gradiente elegante por cima */
-.hero-alvorada::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
 
-    background: linear-gradient(
-        to bottom,
-        rgba(2,6,23,0.55),
-        rgba(2,6,23,0.15),
-        rgba(2,6,23,0.65)
-    );
+header h1{
+  color:var(--pink);
+  font-size:2.2rem;
+  text-shadow:0 0 15px rgba(255,79,216,.8);
 }
 
-
-/* Label DIA / NOITE */
-.hero-label {
-    position: absolute;
-    bottom: 16px;
-    right: 18px;
-    z-index: 2;
-    padding: 6px 14px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    backdrop-filter: blur(6px);
+header p{
+  color:var(--yellow);
+  margin-top:1px;
 }
-
 
-/* Responsivo */
-@media (min-width: 900px) {
-    .hero-alvorada {
-        height: 420px;
-    }
+/* ===== CONTEÚDO ===== */
+.container{
+  padding:0px;
 }
-
-/* ================= DATA & HORA HERO ================= */
-
-.hero-datetime {
-    position: absolute;
-    bottom: 72px;
-    right: 18px;
-    z-index: 3;
-
-    color: #ffffff;
-    font-size: 15px;
-    padding: 0; /* remove caixa */
 
-    font-weight: 700;
-    letter-spacing: 0.6px;
-
-    /* sombra no texto pra manter leitura */
-    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
-
-    /* REMOVE EMBASADO */
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-
-    background: transparent;
-
-    border-radius: 0;
-
-    text-align: right;
+h2{
+  color:var(--yellow);
+  margin:25px 0 15px;
+  font-size:1.4rem;
 }
 
-
-/* HERO TEXTO POSICIONAMENTO */
-
-/* Mobile padrão */
-.hero-overlay {
-    position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 3;
+/* GRID 2 COLUNAS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:0;
 }
-
-/* Desktop */
-@media (min-width: 900px) {
-
-    .hero-overlay {
-        top: 140px; /* distância segura do menu */
-    }
-
-    .hero-overlay h1 {
-        font-size: 42px;
-    }
 
-    .hero-overlay p {
-        font-size: 18px;
-    }
 
+.card{
+  background:rgba(15,15,15,.95);
+  border-radius:18px;
+  padding:10px;
+  border:1px solid rgba(255,212,0,.2);
+  box-shadow:0 0 25px rgba(0,0,0,.6);
+  display:flex;
+  flex-direction:column;
 }
 
-
-
-
-/* ================= NEWS TICKER ================= */
-.news-ticker {
-    width: 100%;
-    background: #020617;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    overflow: hidden;
+.card img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:10px;
 }
 
-.ticker-wrap {
-    width: 100%;
-    overflow: hidden;
+.card strong{
+  color:var(--orange);
+  font-size:1rem;
 }
 
-.ticker {
-    display: inline-flex;
-    align-items: center;
-    gap: 60px;
-    padding: 10px 0;
-    white-space: nowrap;
-    animation: tickerMove 50s linear infinite;
+.card p{
+  font-size:.85rem;
+  color:#ccc;
+  margin:6px 0;
 }
 
-.ticker span {
-    color: #e5e7eb;
-    font-size: 14px;
-    font-weight: 700;
+.card b{
+  color:var(--yellow);
+  margin-top:auto;
 }
 
-/* Animação */
-@keyframes tickerMove {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+.card button{
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--yellow),var(--orange));
+  font-weight:bold;
+  cursor:pointer;
 }
 
-/* Pausa ao passar o mouse */
-.news-ticker:hover .ticker {
-    animation-play-state: paused;
+/* ===== cor do botão Adicionar ===== */
+.card .btn-add{
+  flex:1;
+  padding:3px 10px;        /* ↓ reduz altura */
+  border:none;
+  border-radius:10px;     /* mais elegante */
+  font-weight:600;        /* menos “pesado” */
+  font-size:.85rem;       /* padrão mobile */
+  cursor:pointer;
+  background:linear-gradient(135deg,#00c853,#00a844);
+  color:#fff;
+  min-height:36px;        /* UX mobile */
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-    .ticker span {
-        font-size: 13px;
-    }
-}
 
-.endereco {
-    font-size: 11px;
-    color: #475569;
-    margin-bottom: 4px;
-    display: block;
-}
 
-.search-box {
-    position: relative;
-    max-width: 420px;
-    margin: 0 auto 10px; /* 👈 espaço forte entre busca e cards */
+/* Botão Adicionais - Cinza Premium */
+.card .btn-adicionais{
+  flex:1;
+  padding:10px;
+  border:none;
+  border-radius:12px;
+  font-size:.85rem;
+  font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(135deg,#334155,#0f172a);
+  color:#fff;
 }
 
 
-.search-box input {
-    width: 100%;
-    padding: 12px 42px 12px 42px;
-    border-radius: 30px;
-    border: 1px solid #ddd;
-    font-size: 15px;
-    outline: none;
+/* ===== CARRINHO ===== */
+.cart{
+  position:fixed;
+  bottom:15px;
+  left:15px;
+  right:15px;
+  background:linear-gradient(135deg,#111,#000);
+  border-radius:20px;
+  padding:15px;
+  border:1px solid rgba(255,212,0,.3);
+  box-shadow:0 0 30px rgba(255,212,0,.25);
 }
 
-.search-box .icon {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    opacity: 0.6;
+.cart h3{
+  color:var(--pink);
+  margin-bottom:8px;
 }
 
-.clear-btn {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    background: #eee;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 16px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
+.cart-items{
+  font-size:.9rem;
+  color:#ddd;
+  max-height:70px;
+  overflow:auto;
 }
 
-.clear-btn:hover {
-    background: #d9534f;
-    color: #fff;
+.cart button{
+  margin-top:10px;
+  width:100%;
+  padding:14px;
+  font-size:1rem;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--yellow),var(--orange));
+  font-weight:bold;
 }
 
-/* ================= MODAL NOTÍCIAS ================= */
-.news-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(2,6,23,0.75);
-    backdrop-filter: blur(6px);
-    z-index: 9999;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.news-modal.hidden {
-    display: none;
-}
 
-.news-modal-content {
-    background: #ffffff;
-    width: 92%;
-    max-width: 600px;
-    max-height: 80vh;
-    overflow-y: auto;
 
-    border-radius: 20px;
-    padding: 24px 22px 18px;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.35);
 
-    position: relative;
-    animation: modalUp 0.35s ease;
+.adicionais-box{
+  margin-top:10px;
 }
 
-.news-modal-content h2 {
-    font-size: 18px;
-    margin-bottom: 16px;
-    color: #0f172a;
-    text-align: center;
+/* BOTÃO */
+.btn-adicionais{
+  background:linear-gradient(135deg,var(--pink),var(--orange));
+  color:#000;
+  border:none;
+  width:100%;
+  padding:8px;
+  border-radius:10px;
+  font-size:.85rem;
+  font-weight:bold;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
 }
 
-.news-modal-content ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+/* BOTÃO ATIVO */
+.btn-adicionais.aberto{
+  background:linear-gradient(135deg,var(--orange),var(--yellow));
 }
 
-.news-modal-content li {
-    background: #f1f5f9;
-    border-radius: 12px;
-    padding: 14px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #020617;
+/* LISTA */
+.lista-adicionais{
+  display:none;
+  background:#111;
+  border:1px solid rgba(255,212,0,.2);
+  border-radius:10px;
+  padding:8px;
+  margin-top:6px;
+  font-size:.8rem;
 }
 
-/* Botão fechar */
-.close-modal {
-    position: absolute;
-    top: 14px;
-    right: 16px;
-    border: none;
-    background: #e2e8f0;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 800;
+/* CHECKBOX */
+.lista-adicionais label{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-bottom:4px;
 }
 
-.close-modal:hover {
-    background: #ef4444;
-    color: #ffffff;
-}
 
-/* Animação */
-@keyframes modalUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.96);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
 
-.ticker span {
-    cursor: pointer;
-}
 
 
+/* Função + e - do Quantidade */
 
-/* Remove tamanho fixo */
-.card-clima {
-  width: auto;
-  height: auto;
+.preco-qtd{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:6px;
 }
 
-/* Texto compacto + branco */
-.clima-info h1 {
-  font-size: 20px;
-  margin: 0;
+.preco-qtd b{
+  font-size: 1.3rem; /* aumenta ou diminui aqui */
   font-weight: 700;
-  line-height: 1.1;
-  color: #ffffff;
-}
-
-.clima-info h2 {
-  font-size: 12px;
-  margin: 0;
-  line-height: 1.1;
-  color: #ffffff;
-}
-
-.clima-info span {
-  font-size: 11px;
-  color: rgba(255,255,255,0.9);
-}
-
-/* Nome da cidade */
-#cidade {
-  color: rgba(255,255,255,0.85);
 }
 
 
-
-/* Ícone mini */
-.clima-animacao {
-  width: 28px;
-  height: 28px;
+.btn-adicionais{
+  margin-top:8px;
+  padding:10px;
+  border:none;
+  border-radius:12px;
+  background:var(--yellow);
+  color:#000;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .clima-card {
-    padding: 5px 12px;
-  }
-
-  .clima-info h1 {
-    font-size: 16px;
-  }
-
-  .clima-animacao {
-    width: 22px;
-    height: 22px;
-  }
+.adicionais{
+  margin-top:8px;
+  background:#111;
+  padding:10px;
+  border-radius:12px;
+  font-size:.85rem;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 18px;
-    left: 50%;
-    transform: translateX(-50%);
+.adicionais label{
+  display:block;
+  margin-bottom:6px;
+}
 
-    z-index: 3;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
-    color: #ffffff;
+.oculto{
+  display:none;
 }
 
 
-.hero-overlay h1 {
-    font-size: 26px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 2px;
-    text-shadow: 0 3px 10px rgba(0,0,0,.65);
-}
 
-.hero-overlay p {
-    font-size: 15px;
-    font-weight: 500;
-    opacity: 0.9;
-    text-shadow: 0 2px 6px rgba(0,0,0,.6);
-}
-
-/* Desktop */
-@media (min-width: 900px) {
-    .hero-overlay h1 {
-        font-size: 42px;
-        margin-bottom: 8px; /* 👈 distância entre título e subtítulo */
-    }
-
-    .hero-overlay p {
-        font-size: 12px;
-    }
-}
-
-.banner-alvorada {
-  position: relative;
-  width: 100%;
-  height: 260px;
-
-  background-image: url("alvorada-dia.jpg");
-  background-size: cover;
-  background-position: center;
-
-  border-radius: 0 0 18px 18px;
-  overflow: hidden;
-}
-@media (max-width: 600px) {
-
-  .banner-alvorada {
-    height: 220px;
-  }
-
-  
-
-}
-
-.clima-card {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  /* FUNDO TOTALMENTE TRANSPARENTE */
-  background: transparent;
-
-  /* REMOVE QUALQUER FOSCO */
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-
-  border: none;
-
-  margin: 0;
-  padding: 6px 14px;
-
-  border-radius: 0;
-
-  color: #ffffff;
-
-  /* SOMBRA LEVE PRA DESTACAR DO FUNDO */
-  text-shadow: 0 2px 6px rgba(0,0,0,.7);
-
-  box-shadow: none;
-
-  z-index: 3;
+.card .btn-adicionais:hover,
+.card .btn-add:hover{
+  filter:brightness(1.08);
 }
 
 
 
 
-@media (max-width: 600px) {
-
-  .hero-datetime {
-    bottom: 60px;
-    font-size: 14px;
-  }
-
- 
+/* Cor dos botões da Adicionais */
+.acoes{
+  display:flex;
+  gap:6px;          /* menos espaço entre eles */
+  margin-top:8px;   /* reduz altura geral */
 }
 
-.hero-overlay h1,
-.hero-overlay p {
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 1.1;
-}
-.hero-overlay h1 {
-    margin-bottom: 4px !important;
-}
-.hero-overlay h1 { margin-bottom: ... }
-.hero-overlay p { ... }
-
-
-
-
-
-
-
-
-@keyframes pulseOnline {
-  0% { opacity: 0.7; }
-  50% { opacity: 1; }
-  100% { opacity: 0.7; }
+/* Botão Adicionais */
+.card .btn-adicionais{
+  flex:1;
+  padding:5px 8px;          /* ↓ mais fino */
+  border:none;
+  border-radius:9px;
+  font-size:.78rem;         /* menor */
+  font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(135deg,#2563eb,#1e40af); /* azul big tech */
+  color:#fff;
+  min-height:34px;
 }
 
-.status-bar {
-  max-width: 1300px;
-  margin: 0 auto;
+/* Botão Adicionar */
+.card .btn-add{
+  flex:1;
+  padding:5px 8px;
+  border:none;
+  border-radius:9px;
+  font-size:.8rem;
+  font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(135deg,#2ecc71,#1e8449);
+  color:#fff;
+  min-height:34px;
 }
 
-.news-section {
-  padding: 14px;
-  color: #fff;
+
+
+/* Caixa de adicionais */
+.adicionais{
+  margin-top:8px;
+  background:#111;
+  padding:10px;
+  border-radius:12px;
+  font-size:.85rem;
 }
 
-.news-header {
-  font-size: 16px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.oculto{
+  display:none;
 }
 
-.news-subtitle {
-  font-size: 12px;
-  opacity: .8;
-  margin: 4px 0 10px;
+/* ===== MODAL FINALIZAR ===== */
+.modal-box{
+  background:#0f0f0f;
+  padding:20px;
+  border-radius:18px;
+  max-width:420px;
+  margin:60px auto;
+  box-shadow:0 0 30px rgba(0,0,0,.8);
 }
 
-/* Slider */
-
-.news-slider {
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+.modal-box h3{
+  color:var(--yellow);
+  margin-bottom:15px;
+  text-align:center;
+  font-size:1.4rem;
 }
 
-.news-slider::-webkit-scrollbar {
-  display: none;
+.modal-box input,
+.modal-box select{
+  width:100%;
+  padding:14px;
+  margin-bottom:12px;
+  border-radius:12px;
+  border:none;
+  font-size:.95rem;
+  outline:none;
 }
 
-/* Cards */
-
-.news-card {
-  min-width: 240px;
-  background: rgba(255,255,255,.15);
-  backdrop-filter: blur(10px);
-  border-radius: 14px;
-  padding: 14px;
-  scroll-snap-align: start;
-  box-shadow: 0 10px 20px rgba(0,0,0,.3);
+.modal-box input::placeholder{
+  color:#666;
 }
 
-.news-card h3 {
-  font-size: 14px;
-  margin: 6px 0;
+#taxa{
+  margin:8px 0 14px;
+  color:#ffd400;
+  font-weight:bold;
+  text-align:center;
 }
 
-.news-card p {
-  font-size: 12px;
-  opacity: .9;
+/* Botões */
+.btn-confirmar{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#00c853,#00a844);
+  color:#fff;
+  font-size:1rem;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-.news-time {
-  font-size: 11px;
-  opacity: .7;
-  margin-top: 8px;
-  display: block;
+.btn-voltar{
+  width:100%;
+  margin-top:8px;
+  padding:12px;
+  border:none;
+  border-radius:14px;
+  background:#222;
+  color:#fff;
+  font-size:.95rem;
+  cursor:pointer;
 }
 
-/* Tags */
 
-.news-tag {
-  font-size: 10px;
-  font-weight: bold;
-  background: rgba(0,0,0,.3);
-  padding: 4px 8px;
-  border-radius: 20px;
-  width: fit-content;
+
+/* BOTÃO FLUTUANTE */
+#cart-fab{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:linear-gradient(135deg,var(--yellow),var(--orange));
+  color:#000;
+  padding:14px 18px;
+  border-radius:30px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 0 20px rgba(255,212,0,.5);
+  display:none;
+  z-index:90;
 }
 
-/* Dots */
-
-.news-dots {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 8px;
+#cart-count{
+  background:#000;
+  color:#fff;
+  border-radius:50%;
+  padding:2px 8px;
+  margin-left:6px;
+  font-size:.85rem;
 }
 
-.dot {
-  width: 7px;
-  height: 7px;
-  background: rgba(255,255,255,.4);
-  border-radius: 50%;
+/* MINI CARRINHO */
+#mini-cart{
+  position:fixed;
+  top:0;
+  right:-360px;
+  width:320px;
+  height:100%;
+  background:#0f0f0f;
+  box-shadow:-10px 0 30px rgba(0,0,0,.8);
+  transition:right .3s ease;
+  z-index:100;
+  display:flex;
+  flex-direction:column;
 }
 
-.dot.active {
-  background: #fff;
+#mini-cart.aberto{
+  right:0;
 }
 
-/* Botão */
+/* HEADER */
+.mini-cart-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px;
+  background:#111;
+  border-bottom:1px solid rgba(255,212,0,.2);
+}
 
-.news-btn {
-  display: block;
-  margin: 12px auto 0;
-  text-align: center;
-  font-size: 12px;
-  color: #fff;
-  text-decoration: none;
+.mini-cart-header span{
+  color:var(--pink);
+  font-size:1.1rem;
+  font-weight:bold;
+}
 
-  background: rgba(255,255,255,.2);
+.mini-cart-header button{
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:1.2rem;
+  cursor:pointer;
+}
+
+/* ITENS */
+.mini-cart-items{
+  flex:1;
+  padding:14px;
+  overflow-y:auto;
+  font-size:.9rem;
+}
+
+/* BOTÃO */
+.mini-cart-btn{
+  margin:14px;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#00c853,#00a844);
+  color:#fff;
+  font-size:1rem;
+  font-weight:bold;
+}
+
+/* ===== BUSCA + CATEGORIAS ===== */
+.top-actions{
+  margin-top:-50px;
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  position:relative;
+  z-index:5;
+}
+
+/* BUSCA GLASS */
+.search-box{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 0 20px rgba(255,212,0,.15);
+}
+
+.search-box input{
+  width:100%;
+  padding:14px 16px;
+  background:transparent;
+  border:none;
+  outline:none;
+  color:#fff;
+  font-size:1rem;
+}
+
+.search-box input::placeholder{
+  color:#ccc;
+}
+
+/* CATEGORIAS GLASS */
+.categorias-glass{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding-bottom:4px;
+}
+
+/* CARD */
+.categorias-glass button{
+  min-width:80px;              /* menor */
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:22px;          /* mais redondo */
+  padding:6px 6px 8px;
+  color:#fff;
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  transition:.25s;
+}
+
+/* IMAGEM */
+.categorias-glass img{
+  width:48px;
+  height:48px;                 /* menor */
+  object-fit:cover;
+  border-radius:50%;           /* redonda */
+  background:rgba(255,255,255,.15);
+  padding:4px;
+}
+
+/* TEXTO */
+.categorias-glass span{
+  font-size:.72rem;            /* menor */
+  font-weight:600;
+  text-align:center;
+  line-height:1.1;
+}
+
+/* HOVER */
+.categorias-glass button:hover{
+  transform:translateY(-2px) scale(1.03);
+  box-shadow:0 0 14px rgba(255,212,0,.35);
+}
+
+/* ATIVO */
+.categorias-glass button.ativo{
+  background:linear-gradient(135deg,var(--yellow),var(--orange));
+  color:#000;
+}
+
+
+
+
+/* OVERLAY FUNDO CLICK FORA- FECHAR CARRINHO CLICANDO FORA */
+#overlay-cart{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  backdrop-filter: blur(2px);
+  z-index:95;
+  display:none;
+}
+
+
+.status-box{
+  margin-top:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:6px 14px;
+  border-radius:20px;
+  background:rgba(255,255,255,.08);
   backdrop-filter: blur(8px);
-
-  padding: 8px 16px;
-  border-radius: 30px;
-  width: fit-content;
+  border:1px solid rgba(255,255,255,.15);
+  font-size:.85rem;
+  font-weight:600;
+  width:fit-content;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-/* ================= MINI CARD NOTÍCIAS ================= */
-
-.news-mini-card {
-  position: fixed;
-  top: 100px;
-  right: 14px;
-
-  width: 200px;
-  min-height: 46px;
-
-  background: rgba(2,6,23,0.75);
-
-  border-radius: 12px;
-  padding: 6px 8px;
-
-  color: #ffffff;
-
-  z-index: 9999;
-
-  text-shadow: 0 2px 6px rgba(0,0,0,.75);
-
-  /* FORÇA FIXAÇÃO REAL */
-  transform: none !important;
-  filter: none !important;
-  will-change: auto;
-
-  pointer-events: auto;
+/* Bolinha animada */
+.status-box .dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#00ff7b;
+  box-shadow:0 0 10px #00ff7b;
+  animation:pulse 1.5s infinite;
 }
 
-html, body {
-  transform: none !important;
+/* Quando fechado */
+.status-box.fechado .dot{
+  background:#ff3b3b;
+  box-shadow:0 0 10px #ff3b3b;
 }
 
-.news-progress {
-  width: 100%;
-  height: 3px;
-  background: rgba(255,255,255,.15);
-  border-radius: 4px;
-  overflow: hidden;
-  margin-top: 4px;
+@keyframes pulse{
+  0%{opacity:.5}
+  50%{opacity:1}
+  100%{opacity:.5}
 }
 
-.news-bar {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg,#38bdf8,#22c55e);
+
+.search-box{
+  position:relative;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 0 20px rgba(255,212,0,.15);
 }
 
-/* Hover MUITO sutil */
-.news-mini-card:hover {
-  background: rgba(2,6,23,0.75);
-  box-shadow: 0 10px 22px rgba(0,0,0,.45);
+/* INPUT */
+.search-box input{
+  width:100%;
+  padding:14px 40px 14px 42px; /* espaço lupa + X */
+  background:transparent;
+  border:none;
+  outline:none;
+  color:#fff;
+  font-size:1rem;
 }
 
-.news-mini-content a {
-  font-size: 10.5px;
-  font-weight: 600;
-  line-height: 1.25;
-  color: rgba(255,255,255,0.9);
-
-  text-decoration: none;
-
-  display: block;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+/* LUPA */
+.search-icon{
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:18px;
+  opacity:.7;
+  pointer-events:none;
 }
 
-.news-live {
-  background: rgba(239,68,68,0.85);
-  font-size: 9px;
-  padding: 2px 6px;
-  border-radius: 999px;
-}
-    
-
-
-
-
-/* BARRA STATUS SUPERIOR */
-
-.status-bar {
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 4px 12px;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  color: #ffffff;
-
-  text-shadow: 0 2px 6px rgba(0,0,0,.6);
-
-  gap: 8px;
+/* BOTÃO LIMPAR */
+.clear-btn{
+  position:absolute;
+  right:14px;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+  font-size:18px;
+  color:#aaa;
+  display:none;
 }
 
-/* MENSAGEM */
-
-.daily-message {
-  flex: 1;
-  min-width: 0;
-
-  text-align: left;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  animation: fadeInMsg .5s ease;
-}
-
-/* ONLINE */
-
-.online-container {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-
-  color: #22c55e;
-
-  white-space: nowrap;
-
-  animation: pulseOnline 2s infinite;
-}
-
-/* ANIMAÇÕES */
-
-@keyframes pulseOnline {
-  0% { opacity: .7; }
-  50% { opacity: 1; }
-  100% { opacity: .7; }
-}
-
-@keyframes fadeInMsg {
-  from {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* MOBILE AJUSTE */
-
-@media (max-width: 600px) {
-
-  .status-bar {
-    font-size: 9px;
-  }
-
+.clear-btn:hover{
+  color:#fff;
 }
 
 
 
-.news-mini-card {
-  position: fixed !important;
-  transform: none !important;
-  will-change: transform;
-}
+
 </style>
-
-
-<!-- Fontes Premium -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
-
 
 <body>
 
- <!-- CARD NOTÍCIAS MINI PREMIUM -->
-<div class="news-mini-card" id="newsMini">
+<!-- TOPO COM GIF -->
+<div class="header-bg">
+  <div class="header-gif"></div>
 
-  <div class="news-mini-header">
-    <span class="news-live">🔴 AGORA</span>
-    <span class="news-mini-title">Novo Gama • GO</span>
-  </div>
-
-  <div class="news-mini-content" id="newsMiniContent">
-    Carregando notícias...
-  </div>
-
-  <div class="news-progress">
-    <div class="news-bar" id="newsBar"></div>
-  </div>
-
-</div>   
-
-<!-- HEADER -->
-<header class="header">
-    <div class="logo"></div>
-
-    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-
-    <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="onibus.html">Ônibus</a>
-        <a href="posto_saude.html">Posto de Saúde</a>
-        <a href="eventos.html">Eventos & Lazer</a>
-        <a href="contatos_uteis.html">Contatos Úteis</a>
-        <a href="novo_gama.html">Notícias de Novo Gama</a>
-        <a href="reclamacoes.html">Reclamações e Melhorias</a>
-    </nav>
-</header>
-
-<!-- HERO ALVORADA (DIA / NOITE) -->
-<section class="hero-alvorada">
-    <img id="heroImagem" src="assets/img/alvorada-dia.png" alt="Bairro Alvorada">
-    <div class="hero-overlay">
-        <h1>RESIDENCIAL ALVORADA</h1> 
-        <p>Guia comercial do bairro</p>
+  <header class="header-content">
+    <div class="logo-box">
+      <img src="imagens/logo-cida.png" alt="Cida Lanches">
     </div>
+
+    <h1>Cida Lanches</h1>
+    <p>Lanches feitos com carinho ❤️</p>
     
 
-
-    <div class="hero-datetime" id="heroDateTime"></div>
-
-    
-
-
-<!-- INFORMAÇÕES DO CLIMA--> 
-<section class="clima-card">
-  <div class="clima-info">
-    <p id="cidade">Carregando...</p>
-    <h1 id="temp">--°C</h1>
-    <span id="descricao">---</span>
+  <div id="status-loja" class="status-box">
+  <span class="dot"></span>
+  <span id="status-text">Verificando horário...</span>
   </div>
+  
+  </header>
 
-  <div class="clima-animacao" id="animacao">
-    <!-- Sol animado SVG -->
-    <svg id="sol" width="50" height="50" viewBox="0 0 64 64">
-      <circle cx="32" cy="32" r="14" fill="#FFD93B">
-        <animate attributeName="r" values="14;16;14" dur="3s" repeatCount="indefinite" />
-      </circle>
-      <!-- raios do sol -->
-      <g stroke="#FFD93B" stroke-width="3">
-        <line x1="32" y1="0" x2="32" y2="12"/>
-        <line x1="32" y1="52" x2="32" y2="64"/>
-        <line x1="0" y1="32" x2="12" y2="32"/>
-        <line x1="52" y1="32" x2="64" y2="32"/>
-        <line x1="10" y1="10" x2="18" y2="18"/>
-        <line x1="46" y1="46" x2="54" y2="54"/>
-        <line x1="46" y1="18" x2="54" y2="10"/>
-        <line x1="10" y1="54" x2="18" y2="46"/>
-      </g>
-    </svg>
-  </div>
-
-
-
-</section>
-
-
-
-</section>
-
-
-
-
-</section>
-
-<div class="status-bar">
-
-  <div class="daily-message" id="dailyMessage">
-    Carregando mensagem...
-  </div>
-
-  <div class="online-container">
-    👥 <span id="onlineUsers">12</span> online agora
-  </div>
 
 </div>
 
@@ -1388,751 +786,606 @@ html, body {
 
 
 
-<!-- CONTEÚDO -->
-<main class="container">
-    <h1 id="empresas">Lojas do Bairro</h1>
 
-<div class="search-box">
-    <span class="icon">🔍</span>
+<!-- BUSCA + CATEGORIAS -->
+<div class="top-actions">
 
+  <!-- BUSCA -->
+  <div class="search-box">
+  <span class="search-icon">🔍</span>
+
+  <input 
+    type="text" 
+    id="busca"
+    placeholder="Buscar lanche..."
+    onkeyup="filtrarItens(this.value)"
+  >
+
+  <span class="clear-btn" onclick="limparBusca()">✕</span>
+</div>
+
+
+
+  <!-- CATEGORIAS -->
+  <div class="categorias-glass">
+    <button onclick="filtrarCategoria('Todos')" class="ativo">
+      <img src="imagens/cat-todos.png">
+      <span>Todos</span>
+    </button>
+
+    <button onclick="filtrarCategoria('Lanches')">
+      <img src="imagens/cat-lanches.png">
+      <span>Lanches</span>
+    </button>
+
+    <button onclick="filtrarCategoria('Bebidas')">
+      <img src="imagens/cat-bebidas.png">
+      <span>Bebidas</span>
+    </button>
+
+    <button onclick="filtrarCategoria('Combos Tradicionais')">
+      <img src="imagens/cat-combostradicionais.png">
+      <span>Combos Tradicionais</span>
+    </button>
+
+    <button onclick="filtrarCategoria('Combos Artesanais')">
+      <img src="imagens/cat-combosartesanais.png">
+      <span>Combos Artesanais</span>
+    </button>
+
+  </div>
+
+</div>
+
+
+<div class="container" id="menu"></div>
+
+<div id="cart-fab" onclick="abrirCarrinho()">
+  🛒 Carrinho
+  <span id="cart-count">0</span>
+</div>
+
+
+<div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:99;">
+ <div class="modal-box">
+
+    <h3 style="color:#ffd400">Finalizar Pedido</h3>
+
+    <input id="nomeCliente" placeholder="Seu nome" style="width:100%;margin:8px 0;padding:10px;border-radius:8px">
+    
+    <select id="bairro" style="width:100%;margin:8px 0;padding:10px;border-radius:8px">
+      <option value="">Selecione o bairro</option>
+      <option value="Alvorada">Alvorada</option>
+      <option value="Lago Azul">Boa vista 1</option>
+      <option value="Lunabel">Lunabel</option>
+    </select>
+
+<input id="endereco" placeholder="Rua, número, complemento">
+
+    <select id="pagamento" style="width:100%;margin:8px 0;padding:10px;border-radius:8px">
+      <option value="">Forma de pagamento</option>
+      <option>Dinheiro</option>
+      <option>Cartão</option>
+      <option>Pix</option>
+    </select>
     <input 
-        type="text" 
-        id="busca"
-        placeholder="Buscar loja por nome..."
-        autocomplete="off">
+      id="troco" 
+      placeholder="Troco para quanto?" 
+      style="width:100%;margin:8px 0;padding:10px;border-radius:8px;display:none"
+      type="number"
+      min="0"
+    >
 
-    <button id="clearSearch" class="clear-btn" aria-label="Limpar busca">✕</button>
+
+
+    <p id="taxa"></p>
+
+    <button class="btn-confirmar" onclick="confirmar()">Confirmar Pedido</button>
+
+    <button class="btn-voltar" onclick="fecharModal()">
+      ⬅️ Voltar para o pedido
+    </button>
+
+  </div>
 </div>
 
 
-    <p id="loading" class="loading">Carregando empresas...</p>
-
-   <div class="grid hidden" id="lista-empresas"></div>
-
-</main>
 
 <script>
-const inputBusca = document.getElementById('busca');
-const clearBtn = document.getElementById('clearSearch');
 
-inputBusca.addEventListener('input', () => {
-    // mostra ou esconde o X
-    clearBtn.style.display = inputBusca.value.trim() ? 'flex' : 'none';
-});
+const pagamentoSelect = document.getElementById("pagamento");
+const trocoInput = document.getElementById("troco");
 
-// clique no X
-clearBtn.addEventListener('click', () => {
-    inputBusca.value = '';
-    inputBusca.focus();
-
-    clearBtn.style.display = 'none';
-
-    // volta todas as empresas
-    renderizarEmpresas(todasEmpresas);
-});
-</script>
-
-
-<!-- FOOTER -->
-<footer class="footer" id="contato">
-    <p id="ano"></p>
-    <p>Valorize o comércio local </p>
-</footer>
-
-<script>
-/* MENU MOBILE */
-const toggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
-
-toggle.addEventListener('click', () => {
-    menu.classList.toggle('open');
-});
-
-/* ANO AUTOMÁTICO */
-document.getElementById('ano').innerText =
-    `© ${new Date().getFullYear()} – Guia Comercial do Bairro Alvorada`;
-
-let todasEmpresas = [];
-
-/* ================= CARREGAR EMPRESAS ================= */
-
-fetch('empresas.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro ao carregar empresas.json');
-        }
-        return response.json();
-    })
-    .then(dados => {
-        todasEmpresas = dados;
-        renderizarEmpresas(todasEmpresas);
-
-        document.getElementById('loading').classList.add('hidden');
-        document.getElementById('lista-empresas').classList.remove('hidden');
-    })
-    .catch(error => {
-        console.error(error);
-        document.getElementById('loading').innerHTML = `
-            <p style="color:red; text-align:center; font-weight:bold;">
-                ❌ Erro ao carregar empresas.json
-            </p>`;
-    });
-
-    function ordenarPorStatus(empresas) {
-
-        return empresas.sort((a, b) => {
-
-            const statusA = verificarStatusPorDia(a.horarios).aberto;
-            const statusB = verificarStatusPorDia(b.horarios).aberto;
-
-            // 👉 abertas primeiro
-            if (statusA && !statusB) return -1;
-            if (!statusA && statusB) return 1;
-
-            // 👉 se ambas abertas ou fechadas mantém ordem original
-            return 0;
-        });
-    }
-
-
-
-
-/* ================= RENDERIZAR ================= */
-
-function renderizarEmpresas(empresas) {
-
-    empresas = ordenarPorStatus(empresas);
-
-
-    const grid = document.getElementById('lista-empresas');
-    grid.innerHTML = '';
-
-    if (empresas.length === 0) {
-        grid.innerHTML = `
-            <p style="grid-column:1/-1;text-align:center;color:#ef4444;font-weight:700;">
-                Nenhuma empresa encontrada.
-            </p>`;
-        return;
-    }
-
-    empresas.forEach(empresa => {
-
-        const foneLimpo = (empresa.fone || '').replace(/\D/g, '');
-        let foneFormatado = foneLimpo;
-
-        if (foneLimpo.length === 11) {
-            foneFormatado = foneLimpo.replace(
-                /(\d{2})(\d{5})(\d{4})/,
-                '($1) $2-$3'
-            );
-        }
-
-        grid.innerHTML += `
-        <div class="card"
-            data-horarios='${JSON.stringify(empresa.horarios)}'
-            onclick="abrirSite('${empresa.site || ""}')">
-
-            <div class="icone">
-                <img src="${empresa.logo}" alt="${empresa.nome}"
-                     loading="lazy"
-                     onerror="this.src='assets/img/padrao.png'">
-            </div>
-
-            <div class="info">
-
-                <h3>${empresa.nome}</h3>
-
-                <small class="endereco">
-                    ${empresa.endereco || ""}
-                </small>
-
-                <span class="categoria">${empresa.categoria}</span>
-
-                <span class="status"></span>
-
-                <div class="contatos">
-
-                <a class="btn telefone" onclick="event.stopPropagation()" href="tel:${foneLimpo}">
-                    📞 ${foneFormatado}
-                </a>
-
-                <a class="btn whatsapp" onclick="event.stopPropagation()"
-                   href="https://wa.me/55${foneLimpo}" target="_blank">
-                    🟢 WhatsApp
-                </a>
-
-                ${
-                  empresa.maps 
-                  ? `<a class="btn mapa" onclick="event.stopPropagation()" 
-                        href="${empresa.maps}" target="_blank">
-                        📍 Localização
-                     </a>`
-                  : ""
-                }
-
-            </div>
-
-            </div>
-        </div>`;
-    });
-
-    aplicarStatus();
-}
-
-setInterval(() => {
-    renderizarEmpresas(todasEmpresas);
-}, 60000);
-
-
-/* ================= BUSCA ================= */
-
-document.getElementById('busca').addEventListener('input', function () {
-
-    const termo = this.value.toLowerCase().trim();
-
-    const filtradas = todasEmpresas.filter(empresa =>
-        empresa.nome.toLowerCase().includes(termo) ||
-        empresa.categoria.toLowerCase().includes(termo)
-    );
-
-    renderizarEmpresas(filtradas);
-});
-
-/* ================= STATUS ================= */
-
-function aplicarStatus() {
-
-    document.querySelectorAll(".card").forEach(card => {
-
-        const horarios = JSON.parse(card.dataset.horarios);
-        const status = card.querySelector(".status");
-
-        const resultado = verificarStatusPorDia(horarios);
-
-        if (resultado.aberto) {
-
-        status.textContent = `Aberto agora • Fecha às ${resultado.fecha}`;
-        status.className = "status aberto";
-
-        // ATIVA WHATSAPP
-        const btnWhatsapp = card.querySelector(".btn.whatsapp");
-        if (btnWhatsapp) {
-            btnWhatsapp.classList.remove("inativo");
-        }
-
-        } else {
-
-            status.textContent = "Fechado";
-            status.className = "status fechado";
-
-            // DESATIVA WHATSAPP
-            const btnWhatsapp = card.querySelector(".btn.whatsapp");
-            if (btnWhatsapp) {
-                btnWhatsapp.classList.add("inativo");
-            }
-
-        }
-
-
-    });
-}
-
-function verificarStatusPorDia(horarios) {
-
-    const agora = new Date();
-    const dias = ["dom","seg","ter","qua","qui","sex","sab"];
-
-    const hojeIndex = agora.getDay();
-    const hoje = dias[hojeIndex];
-    const ontem = dias[(hojeIndex + 6) % 7];
-
-    const agoraMin = agora.getHours() * 60 + agora.getMinutes();
-
-    const hojeHorario = horarios[hoje];
-    const ontemHorario = horarios[ontem];
-
-    // 👉 VERIFICA SE CONTINUOU ABERTO DO DIA ANTERIOR
-    if (ontemHorario && ontemHorario.diaSeguinte) {
-
-        const [hA2, mA2] = ontemHorario.abre.split(":").map(Number);
-        const [hF2, mF2] = ontemHorario.fecha.split(":").map(Number);
-
-        const inicioOntem = hA2 * 60 + mA2;
-        const fimHoje = hF2 * 60 + mF2;
-
-        if (agoraMin < fimHoje) {
-            return {
-                aberto: true,
-                fecha: ontemHorario.fecha
-            };
-        }
-    }
-
-    // 👉 VERIFICA HORÁRIO NORMAL DE HOJE
-    if (!hojeHorario || hojeHorario.fechado) {
-        return { aberto: false };
-    }
-
-    const [hA, mA] = hojeHorario.abre.split(":").map(Number);
-    const [hF, mF] = hojeHorario.fecha.split(":").map(Number);
-
-    const inicio = hA * 60 + mA;
-    const fim = hF * 60 + mF;
-
-    // Caso vire o dia
-    if (hojeHorario.diaSeguinte) {
-
-        if (agoraMin >= inicio) {
-            return {
-                aberto: true,
-                fecha: hojeHorario.fecha
-            };
-        }
-
+if (pagamentoSelect){
+  pagamentoSelect.addEventListener("change", e => {
+    if (e.target.value === "Dinheiro"){
+      trocoInput.style.display = "block";
     } else {
-
-        if (agoraMin >= inicio && agoraMin < fim) {
-            return {
-                aberto: true,
-                fecha: hojeHorario.fecha
-            };
-        }
-
+      trocoInput.style.display = "none";
+      trocoInput.value = "";
     }
-
-    return { aberto: false };
+  });
 }
 
-
-/* ================= SITE ================= */
-
-function abrirSite(url) {
-    if (!url) return;
-    window.open(url, "_blank");
-}
-
-
-
-
-
-/* ================= DATA E HORA HERO ================= */
-
-function atualizarDataHoraHero() {
-    const agora = new Date();
-
-    const meses = [
-        "Jan", "Fev", "Mar", "Abr", "Mai", "Jun",
-        "Jul", "Ago", "Set", "Out", "Nov", "Dez"
-    ];
-
-    const dia = String(agora.getDate()).padStart(2, '0');
-    const mes = meses[agora.getMonth()];
-    const ano = agora.getFullYear();
-
-    const hora = String(agora.getHours()).padStart(2, '0');
-    const minuto = String(agora.getMinutes()).padStart(2, '0');
-
-    const texto = `${dia}, de ${mes} ${ano} • ${hora}:${minuto}`;
-
-    document.getElementById("heroDateTime").textContent = texto;
-}
-
-// Executa ao carregar
-atualizarDataHoraHero();
-
-// Atualiza a cada minuto
-setInterval(atualizarDataHoraHero, 60000);
-
-
-
-
-
-
-(() => {
-
-  const CONFIG = {
-    apiKey: "2f654e652d590de2865656ec9faeb51c",
-    lat: -16.0586,
-    lon: -48.0412,
-    cidade: "Residencial Alvorada"
-  };
-
-  const elCidade = document.getElementById("cidade");
-  const elTemp   = document.getElementById("temp");
-  const elDesc   = document.getElementById("descricao");
-  const elAnim   = document.getElementById("animacao");
-  const elSol    = document.getElementById("sol");
-  const heroImg  = document.getElementById("heroImagem");
-
-  function atualizarImagemHero(climaID) {
-
-    const hora = new Date().getHours();
-    const isDia = hora >= 6 && hora < 18;
-
-    let imagem = "alvorada-dia.png"; // padrão
-
-    // 🌧️ Chuva
-    if (climaID >= 200 && climaID < 600) {
-      imagem = isDia
-        ? "alvorada-chuva-dia.png"
-        : "alvorada-chuva-noite.gif";
-    }
-
-    // 🌫️ Neblina
-    else if (climaID >= 700 && climaID < 800) {
-      imagem = isDia
-        ? "alvorada-neblina-dia.png"
-        : "alvorada-neblina-noite.png";
-    }
-
-    // ☁️ Nublado à noite
-    else if (climaID > 800 && !isDia) {
-      imagem = "alvorada-nublado-noite.png";
-    }
-
-    // ☀️ Céu limpo
-    else {
-      imagem = isDia
-        ? "alvorada-dia.png"
-        : "alvorada-noite.png";
-    }
-
-    if (heroImg) {
-      heroImg.src = `assets/img/${imagem}`;
-    }
-
-    console.log("IMAGEM HERO:", imagem);
-  }
-
-  async function buscarClima() {
-
-    try {
-
-      const res = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${CONFIG.lat}&lon=${CONFIG.lon}&units=metric&lang=pt_br&appid=${CONFIG.apiKey}`,
-        { cache: "no-store" }
-      );
-
-      const data = await res.json();
-
-      console.log("CLIMA ATUAL:", data);
-
-      elCidade.textContent = CONFIG.cidade;
-      elTemp.textContent = Math.round(data.main.temp) + "°C";
-      elDesc.textContent = data.weather[0].description;
-
-      const id = data.weather[0].id;
-      elAnim.innerHTML = "";
-
-      if (id >= 200 && id < 300) elAnim.textContent = "⛈️";
-      else if (id >= 300 && id < 600) elAnim.textContent = "🌧️";
-      else if (id >= 700 && id < 800) elAnim.textContent = "🌫️";
-      else if (id === 800) elAnim.innerHTML = elSol.outerHTML;
-      else elAnim.textContent = "☁️";
-
-      if (data.rain && data.rain["1h"]) {
-        elDesc.textContent += " • ☔ " + data.rain["1h"] + " mm";
-      }
-
-      // 🔥 ATUALIZA IMAGEM DO HERO
-      atualizarImagemHero(id);
-
-    } catch (err) {
-
-      console.error("Erro clima:", err);
-
-      elCidade.textContent = CONFIG.cidade;
-      elTemp.textContent = "--°C";
-      elDesc.textContent = "Erro ao carregar clima";
-      elAnim.textContent = "⚠️";
-
-    }
-
-  }
-
-  buscarClima();
-  setInterval(buscarClima, 600000); // 10 minutos
-
-})();
-</script>
-
-
-
-<script>
-(() => {
-
-  const minUsers = 10;   // mínimo online
-  const maxUsers = 38;   // máximo online
-
-  const el = document.getElementById("onlineUsers");
-
-  let online = Math.floor(
-    Math.random() * (maxUsers - minUsers + 1)
-  ) + minUsers;
-
-  el.textContent = online;
-
-  function atualizarOnline() {
-
-    const variacao = Math.floor(Math.random() * 5) - 2;
-    online += variacao;
-
-    if (online < minUsers) online = minUsers;
-    if (online > maxUsers) online = maxUsers;
-
-    el.textContent = online;
-  }
-
-  // Atualiza a cada 7 até 14 segundos
-  setInterval(atualizarOnline, 
-    Math.floor(Math.random() * 7000) + 7000
-  );
-
-})();
-</script>
-
-
-
-<script>
-const slider = document.getElementById("newsSlider");
-const dots = document.querySelectorAll(".dot");
-
-slider.addEventListener("scroll", () => {
-  let index = Math.round(slider.scrollLeft / 260);
-
-  dots.forEach(d => d.classList.remove("active"));
-  if(dots[index]) dots[index].classList.add("active");
+let carrinho = [];
+let whatsapp = "";
+
+const taxas = {
+  "Alvorada": 3,
+  "Boa vista 1": 5,
+  "Lunabel": 5
+};
+
+
+fetch("cardapio.json")
+.then(r => r.json())
+.then(data => {
+  whatsapp = data.contato.whatsapp;
+  verificarStatusLoja(data.funcionamento);
+  const menu = document.getElementById("menu");
+
+  data.categorias.forEach(cat => {
+    let html = `<h2>${cat.nome}</h2><div class="grid">`;
+
+    cat.itens.forEach(item => {
+      html += `
+      <div class="card">
+        <img src="imagens/${item.imagens[0]}">
+        <strong>${item.nome}</strong>
+        <p>${item.descricao}</p>
+
+        <div class="preco-qtd">
+          <b>R$ ${item.preco.toFixed(2)}</b>
+
+          <div class="qtd-box">
+            <button onclick="alterarQtd(this,-1)">−</button>
+            <span>1</span>
+            <button onclick="alterarQtd(this,1)">+</button>
+          </div>
+        </div>
+
+       <div class="acoes">
+      ${item.adicionais ? `
+        <button class="btn-adicionais" onclick="toggleAdicionais(this)">
+          Adicionais
+        </button>
+      ` : ""}
+
+      <button class="btn-add" onclick="add('${item.nome}',${item.preco},this)">
+        Adicionar
+      </button>
+    </div>
+
+    ${item.adicionais ? `
+      <div class="adicionais oculto">
+        ${item.adicionais.map(ad => `
+          <label>
+            <input type="checkbox"
+              data-nome="${ad.nome}"
+              data-preco="${ad.preco}">
+            ${ad.nome} (+R$ ${ad.preco.toFixed(2)})
+          </label>
+        `).join("")}
+      </div>
+    ` : ""}
+
+      </div>
+      `;
+    });
+
+    html += `</div>`;
+    menu.innerHTML += html;
+  });
 });
-</script>
 
 
-<script>
-(() => {
+function verificarStatusLoja(horarios){
 
-const API_KEY = "c67b231c6fc24d7ca03688efed1cde3a";
+  if(!horarios) return;
 
-const container = document.getElementById("newsMiniContent");
-const bar = document.getElementById("newsBar");
-const badge = document.querySelector(".news-mini-title");
+  const dias = [
+    "domingo","segunda","terca","quarta","quinta","sexta","sabado"
+  ];
 
-let noticias = [];
-let index = 0;
-let intervalo;
-let pausado = false;
+  const agora = new Date();
+  const diaAtual = dias[agora.getDay()];
+  const horaAtual = agora.getHours() * 60 + agora.getMinutes();
 
-const tempoTroca = 8000;
+  const statusBox = document.getElementById("status-loja");
+  const statusText = document.getElementById("status-text");
 
-/* FILTROS INTELIGENTES */
-const buscas = [
-  { q: `"Novo Gama"`, label: "Novo Gama • GO" },
-  { q: `"Entorno DF" OR Valparaíso OR Luziânia`, label: "Região • Entorno DF" },
-  { q: `"Goiás"`, label: "Goiás • Estado" }
-];
-
-/* BUSCA INTELIGENTE */
-
-async function buscarNoticiasNivel(nivel = 0) {
-
-  if (nivel >= buscas.length) {
-    container.textContent = "";
+  if(!horarios[diaAtual]){
+    statusText.innerText = "❌ Hoje fechado";
+    statusBox.classList.add("fechado");
     return;
   }
 
-  const filtro = buscas[nivel];
+  const [abre, fecha] = horarios[diaAtual];
 
-  try {
+  const [ah, am] = abre.split(":");
+  const [fh, fm] = fecha.split(":");
 
-    const url = `
-https://newsapi.org/v2/everything?q=${encodeURIComponent(filtro.q)}
-&language=pt
-&sortBy=publishedAt
-&pageSize=10
-&apiKey=${API_KEY}`.replace(/\s/g,'');
+  const inicio = parseInt(ah) * 60 + parseInt(am);
+  const fim = parseInt(fh) * 60 + parseInt(fm);
 
-    const res = await fetch(url);
-    const data = await res.json();
+  const aberto = horaAtual >= inicio && horaAtual <= fim;
 
-    if (!data.articles || data.articles.length === 0) {
-      buscarNoticiasNivel(nivel + 1);
-      return;
-    }
+  if(aberto){
+    statusText.innerText = "🟢 Aberto agora";
+    statusBox.classList.remove("fechado");
+  } else {
+    statusText.innerText = "🔴 Fechado no momento";
+    statusBox.classList.add("fechado");
+  }
+}
 
-    noticias = data.articles.filter(n => n.title && n.url);
 
-    badge.textContent = filtro.label;
+function alterarQtd(btn, valor){
+  const span = btn.parentElement.querySelector("span");
+  let qtd = parseInt(span.innerText) + valor;
 
-    iniciarRotacao();
+  if (qtd < 1) qtd = 1;
 
-  } catch (err) {
+  span.innerText = qtd;
+}
 
-    console.error("Erro notícias:", err);
-    container.textContent = "Erro ao carregar notícias.";
 
+function add(nome, preco, el){
+  const card = el.closest(".card");
+  const qtd = parseInt(card.querySelector(".qtd-box span").innerText);
+
+  let adicionais = [];
+  let totalAdicionais = 0;
+
+  card.querySelectorAll(".adicionais input[type=checkbox]:checked")
+    .forEach(chk => {
+      adicionais.push(chk.dataset.nome);
+      totalAdicionais += parseFloat(chk.dataset.preco);
+    });
+
+  const totalProduto = preco * qtd;
+  const total = totalProduto + totalAdicionais;
+
+  carrinho.push({
+    nome,
+    preco,
+    qtd,
+    adicionais,
+    totalProduto,
+    totalAdicionais,
+    total
+  });
+
+  // Limpa checkboxes
+  card.querySelectorAll(".adicionais input[type=checkbox]")
+    .forEach(chk => chk.checked = false);
+
+  atualizarCarrinho();
+  el.parentElement
+  .querySelectorAll("input[type=checkbox]")
+  .forEach(chk => chk.checked = false);
+
+}
+
+
+function atualizarCarrinho(){
+  const div = document.getElementById("pedido");
+  const fab = document.getElementById("cart-fab");
+  const count = document.getElementById("cart-count");
+
+  if(carrinho.length === 0){
+    div.innerHTML = "Nenhum item";
+    fab.style.display = "none";
+    fecharCarrinho();
+    return;
   }
 
-}
+  // Mostra botão flutuante
+  fab.style.display = "block";
+  count.innerText = carrinho.length;
 
-/* MOSTRAR NOTÍCIA */
+  div.innerHTML = carrinho.map((i, index) => `
+    <div style="
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      margin-bottom:10px;
+      gap:8px;
+      border-bottom:1px dashed rgba(255,212,0,.2);
+      padding-bottom:8px
+    ">
+      <div>
+        <b>${i.qtd}x ${i.nome}</b>
+        ${i.adicionais.length 
+          ? `<br><small style="color:#ffd400">+ ${i.adicionais.join(", ")}</small>` 
+          : ""
+        }
+        <br><span style="color:#fff">R$ ${i.total.toFixed(2)}</span>
+      </div>
 
-function mostrarNoticia() {
-
-  if (!noticias.length) return;
-
-  const n = noticias[index];
-
-  const dominio = new URL(n.url).hostname.replace("www.","");
-
-  container.innerHTML = `
-    <div onclick="abrirModalNoticia('${n.url.replace(/'/g,"")}')"
-      style="cursor:pointer;display:flex;gap:6px;align-items:center">
-      <span style="font-size:11px">📰</span>
-      <span style="flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
-        ${n.title}
-      </span>
+      <button
+        onclick="removerItem(${index})"
+        style="
+          background:none;
+          border:none;
+          color:#ff4fd8;
+          font-size:1.1rem;
+          cursor:pointer;
+          line-height:1
+        "
+        title="Remover item">
+        ❌
+      </button>
     </div>
-  `;
-
-  animarBarra();
-
-  index++;
-  if (index >= noticias.length) index = 0;
+  `).join("");
 }
 
-/* BARRA PROGRESSO */
 
-function animarBarra() {
-
-  bar.style.transition = "none";
-  bar.style.width = "0%";
-
-  setTimeout(() => {
-    bar.style.transition = `width ${tempoTroca}ms linear`;
-    bar.style.width = "100%";
-  }, 50);
-
+function removerItem(index){
+  carrinho.splice(index, 1);
+  atualizarCarrinho();
 }
 
-/* ROTATOR */
 
-function iniciarRotacao() {
+/* ================= FINALIZAR PEDIDO ================= */
+function finalizar(){
+  if (!Array.isArray(carrinho) || carrinho.length === 0){
+    alert("Carrinho vazio");
+    return;
+  }
 
-  clearInterval(intervalo);
+  // Fecha mini carrinho
+  fecharCarrinho();
 
-  mostrarNoticia();
+  // Oculta botão flutuante do carrinho
+  const fab = document.getElementById("cart-fab");
+  if (fab) fab.style.display = "none";
 
-  intervalo = setInterval(() => {
-    if (!pausado) mostrarNoticia();
-  }, tempoTroca);
-
+  // Abre modal
+  const modal = document.getElementById("modal");
+  if (modal) modal.style.display = "block";
 }
 
-/* PAUSA HOVER / TOQUE */
 
-const card = document.getElementById("newsMini");
+/* ================= FECHAR MODAL ================= */
+function fecharModal(){
+  const modal = document.getElementById("modal");
+  if (modal) modal.style.display = "none";
 
-card.addEventListener("mouseenter", () => pausado = true);
-card.addEventListener("mouseleave", () => pausado = false);
-
-card.addEventListener("touchstart", () => pausado = true);
-card.addEventListener("touchend", () => pausado = false);
-
-/* MODAL INTERNO */
-
-window.abrirModalNoticia = function(url) {
-
-  const modal = document.createElement("div");
-  modal.className = "news-modal";
-
-  modal.innerHTML = `
-    <div class="news-modal-content">
-      <button class="close-modal">✕</button>
-      <iframe src="${url}" style="
-        width:100%;
-        height:70vh;
-        border:none;
-        border-radius:12px;
-      "></iframe>
-    </div>
-  `;
-
-  document.body.appendChild(modal);
-
-  modal.querySelector(".close-modal").onclick = () => modal.remove();
-  modal.onclick = e => {
-    if (e.target === modal) modal.remove();
-  };
-
-};
-
-/* PRIMEIRA CARGA */
-buscarNoticiasNivel();
-
-/* ATUALIZA A CADA 1 HORA */
-setInterval(() => buscarNoticiasNivel(), 3600000);
-
-})();
-</script>
+  // Se ainda houver itens, mostra botão do carrinho novamente
+  if (carrinho.length > 0){
+    const fab = document.getElementById("cart-fab");
+    if (fab) fab.style.display = "block";
+  }
+}
 
 
+/* ================= TAXA DE ENTREGA ================= */
+const bairroSelect = document.getElementById("bairro");
+if (bairroSelect){
+  bairroSelect.addEventListener("change", e => {
+    const taxa = taxas[e.target.value] || 0;
+    const taxaEl = document.getElementById("taxa");
+    if (taxaEl){
+      taxaEl.innerText = "Taxa de entrega: R$ " + taxa.toFixed(2);
+    }
+  });
+}
 
 
-
-
-
-<script>
-(async () => {
-
-const box = document.getElementById("dailyMessage");
-
-const hoje = new Date().toLocaleDateString();
-const cacheData = localStorage.getItem("dailyMsgDate");
-const cacheMsg = localStorage.getItem("dailyMsgText");
-
-if (cacheData === hoje && cacheMsg) {
-  box.innerHTML = cacheMsg;
+/* ================= CONFIRMAR PEDIDO ================= */
+function confirmar(){
+  const nome = document.getElementById("nomeCliente")?.value.trim();
+  const bairroSelecionado = document.getElementById("bairro")?.value;
+  const pagamentoSelecionado = document.getElementById("pagamento")?.value;
+  const troco = document.getElementById("troco")?.value.trim();
+  if (pagamentoSelecionado === "Dinheiro" && !troco){
+  alert("Informe o valor do troco");
   return;
 }
 
-// DIA PAR = BÍBLIA | DIA ÍMPAR = MOTIVAÇÃO
-const dia = new Date().getDate();
-const tipo = dia % 2 === 0 ? "biblia" : "motivacao";
+  const endereco = document.getElementById("endereco")?.value.trim();
+  const taxa = taxas[bairroSelecionado] || 0;
 
-try {
 
-  let textoFinal = "";
+  const pagamentoSelect = document.getElementById("pagamento");
+  const trocoInput = document.getElementById("troco");
 
-  if (tipo === "motivacao") {
+  pagamentoSelect.addEventListener("change", () => {
+    if (pagamentoSelect.value === "Dinheiro") {
+      trocoInput.style.display = "block";
+    } else {
+      trocoInput.style.display = "none";
+      trocoInput.value = "";
+    }
+  });
 
-    const res = await fetch("https://zenquotes.io/api/random");
-    const data = await res.json();
 
-    textoFinal = `💬 ${data[0].q} — ${data[0].a}`;
 
-  } else {
 
-    const res = await fetch("https://bible-api.com/random");
-    const data = await res.json();
-
-    textoFinal = `📖 "${data.text.trim()}" — ${data.reference}`;
-
+  if (!nome || !bairroSelecionado || !pagamentoSelecionado || !endereco){
+    alert("Preencha todos os dados");
+    return;
   }
 
-  box.innerHTML = textoFinal;
+  if (!Array.isArray(carrinho) || carrinho.length === 0){
+    alert("Carrinho vazio");
+    return;
+  }
 
-  // CACHE DIÁRIO
-  localStorage.setItem("dailyMsgDate", hoje);
-  localStorage.setItem("dailyMsgText", textoFinal);
+  const totalProdutos = carrinho.reduce((s, i) => s + i.total, 0);
+  const total = totalProdutos + taxa;
 
-} catch (err) {
+  // Salva pedido (opcional)
+  const pedido = {
+    nome,
+    endereco,
+    bairro: bairroSelecionado,
+    pagamento: pagamentoSelecionado,
+    carrinho,
+    taxa,
+    total
+  };
+  localStorage.setItem("pedido", JSON.stringify(pedido));
 
-  console.error("Erro mensagem diária:", err);
+const nomeFormatado = nome
+  .toLowerCase()
+  .replace(/\b\w/g, letra => letra.toUpperCase());
 
-  box.innerHTML = "🌟 Tenha um dia abençoado e produtivo!";
 
+
+  /* ===== MENSAGEM WHATSAPP ===== */
+
+  let msg = `📝 *Novo Pedido de ${nomeFormatado}*%0A`;
+  
+  msg += `📍 *Endereço:* ${endereco}%0A`;
+  msg += `🏘️ *Bairro:* ${bairroSelecionado}%0A`;
+  msg += `💳 *Pagamento:* ${pagamentoSelecionado}%0A`;
+
+if (pagamentoSelecionado === "Dinheiro"){
+  msg += `💵 *Troco para:* R$ ${parseFloat(troco).toFixed(2)}%0A`;
 }
 
-})();
+  msg += `━━━━━━━━━━%0A`;
+
+  msg += `🧾 *Itens do Pedido*%0A`;
+  
+  carrinho.forEach(i => {
+    msg += `• ${i.qtd}x ${i.nome}`;
+    if (i.adicionais && i.adicionais.length){
+      msg += ` (%2B ${i.adicionais.join(", ")})`;
+    }
+    msg += ` — R$ ${i.total.toFixed(2)}%0A`;
+  });
+
+  msg += `━━━━━━━━━━%0A`;
+  msg += `🏍️ *Taxa de entrega:* R$ ${taxa.toFixed(2)}%0A`;
+  msg += `💰 *Total:* R$ ${total.toFixed(2)}`;
+
+
+
+  // Limpa tudo após envio
+  carrinho = [];
+  atualizarCarrinho();
+  fecharModal();
+
+  // Abre WhatsApp
+  window.open(`https://wa.me/${whatsapp}?text=${msg}`, "_blank");
+}
+
+
+
+
+/* ================= ADICIONAIS ================= */
+function toggleAdicionais(btn){
+  const card = btn.closest(".card");
+  if (!card) return;
+
+  const lista = card.querySelector(".adicionais");
+  if (!lista) return;
+
+  const aberto = !lista.classList.contains("oculto");
+  lista.classList.toggle("oculto");
+  btn.classList.toggle("aberto", !aberto);
+  btn.innerHTML = aberto ? "➕ Adicionais" : "⬆️ Adicionais";
+}
+
+
+/* ================= CARRINHO ================= */
+function abrirCarrinho(){
+  const cart = document.getElementById("mini-cart");
+  const overlay = document.getElementById("overlay-cart");
+
+  if (cart && overlay){
+    cart.classList.add("aberto");
+    overlay.style.display = "block";
+  }
+}
+
+function fecharCarrinho(){
+  const cart = document.getElementById("mini-cart");
+  const overlay = document.getElementById("overlay-cart");
+
+  if (cart && overlay){
+    cart.classList.remove("aberto");
+    overlay.style.display = "none";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("overlay-cart");
+  if (overlay){
+    overlay.addEventListener("click", fecharCarrinho);
+  }
+});
+
+
+/* ===== BUSCA ===== */
+function filtrarItens(texto){
+  texto = texto.toLowerCase();
+  document.querySelectorAll(".card").forEach(card=>{
+    const nome = card.querySelector("strong").innerText.toLowerCase();
+    card.style.display = nome.includes(texto) ? "flex" : "none";
+  });
+}
+
+/* ===== CATEGORIAS ===== */
+function filtrarCategoria(cat){
+  document.querySelectorAll(".categorias-glass button")
+    .forEach(b => b.classList.remove("ativo"));
+
+  event.currentTarget.classList.add("ativo");
+
+  document.querySelectorAll("h2").forEach(h2=>{
+    const grid = h2.nextElementSibling;
+    if (cat === "Todos" || h2.innerText === cat){
+      h2.style.display = "block";
+      grid.style.display = "grid";
+    } else {
+      h2.style.display = "none";
+      grid.style.display = "none";
+    }
+  });
+}
+
+
+
+
+const inputBusca = document.getElementById("busca");
+const clearBtn = document.querySelector(".clear-btn");
+
+inputBusca.addEventListener("input", () => {
+  clearBtn.style.display = inputBusca.value ? "block" : "none";
+});
+
+function limparBusca(){
+  inputBusca.value = "";
+  clearBtn.style.display = "none";
+  inputBusca.focus();
+  filtrarItens("");
+}
+
 </script>
+
+
+<!-- FUNDO ESCURO PARA FECHAR CARRINHO -->
+<div id="overlay-cart"></div>
+<div id="mini-cart">
+  <div class="mini-cart-header">
+    <span>🛒 Seu pedido</span>
+    <button onclick="fecharCarrinho()">✖</button>
+  </div>
+
+  <div class="mini-cart-items" id="pedido">
+    Nenhum item
+  </div>
+
+  <button class="mini-cart-btn" onclick="finalizar()">
+    Finalizar pedido
+  </button>
+</div>
+
+
 
 </body>
 </html>

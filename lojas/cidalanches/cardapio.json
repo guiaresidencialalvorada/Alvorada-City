@@ -575,7 +575,8 @@
           "nome": "Kuat 1,5",
           "descricao": "Refrigerante 1,5 Litros ",
           "preco": 7.0,
-          "imagens": ["guarana-2l.png"]
+        {
+          "imagens": ["refrigerante-kuat-l,5l.png"]
         },
         {
           "nome": "Fanta Laranja 1,5L",
@@ -600,3 +601,4 @@
     }
   ]
 }
+

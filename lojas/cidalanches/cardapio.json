@@ -576,7 +576,7 @@
           "descricao": "Refrigerante 1,5 Litros ",
           "preco": 7.0,
         {
-          "imagens": ["refrigerante-kuat-l,5l.png"]
+          "imagens": ["refrigerante-kuat-l-5l.png"]
         },
         {
           "nome": "Fanta Laranja 1,5L",
@@ -601,4 +601,5 @@
     }
   ]
 }
+
 

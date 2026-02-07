@@ -750,6 +750,75 @@ h2{
 .clear-btn:hover{
   color:#fff;
 }
+.modal-box{
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+
+.pix-painel{
+  display:grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap:16px;
+  background:linear-gradient(135deg,#0b0b0b,#000);
+  border:1px solid rgba(0,255,123,.35);
+  border-radius:16px;
+  padding:16px;
+  margin-top:14px;
+}
+
+.pix-info h4{
+  color:#00ff7b;
+  margin-bottom:10px;
+}
+
+.pix-info p{
+  margin-bottom:10px;
+  font-size:.9rem;
+  line-height:1.35;
+}
+
+.pix-info strong{
+  color:#ffd400;
+}
+
+.pix-acao{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:10px;
+}
+
+.pix-acao input{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  text-align:center;
+  font-size:.85rem;
+  background:#111;
+  color:#fff;
+}
+
+.pix-acao button{
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(135deg,#00c853,#00a844);
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.pix-acao button:hover{
+  filter:brightness(1.1);
+}
+
+@media(max-width:600px){
+  .pix-painel{
+    grid-template-columns:1fr;
+  }
+}
+
 
 
 
@@ -846,7 +915,7 @@ h2{
 </div>
 
 
-<div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:99;">
+<div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;">
  <div class="modal-box">
 
     <h3 style="color:#ffd400">Finalizar Pedido</h3>
@@ -880,7 +949,56 @@ h2{
 
     <p id="taxa"></p>
 
-    <button class="btn-confirmar" onclick="confirmar()">Confirmar Pedido</button>
+    <div id="resumo-valores" style="display:none;text-align:center;margin-bottom:14px">
+      <p>🧾 Subtotal: <b id="subtotal">R$ 0,00</b></p>
+      <p>🏍️ Entrega: <b id="valor-entrega">R$ 0,00</b></p>
+      <p style="font-size:1.2rem;color:#00ff7b">
+        💰 Total: <b id="total-final">R$ 0,00</b>
+      </p>
+    </div>
+
+    <div id="pix-box" class="pix-painel" style="display:none">
+
+      <!-- COLUNA ESQUERDA -->
+      <div class="pix-info">
+        <h4>💳 Pagamento via Pix</h4>
+
+        <p><strong>🔑 Chave Pix</strong><br>
+          d627a7fe-e3e5-4efb-b353-d1188f15498f
+        </p>
+
+        <p><strong>🏦 Banco</strong><br>
+          BCO SANTANDER BRASIL S.A
+        </p>
+
+        <p><strong>👤 Titular</strong><br>
+          MICHELLE SOARES DA SILVA DE JESUS
+        </p>
+
+        <p><strong>💰 Valor</strong><br>
+          R$ <span id="pix-valor">21,00</span>
+        </p>
+      </div>
+
+      <!-- COLUNA DIREITA -->
+      <div class="pix-acao">
+        <input
+          id="pix-chave"
+          value="d627a7fe-e3e5-4efb-b353-d1188f15498f"
+          readonly
+        >
+
+        <button onclick="copiarPix()">
+          📋 Copiar PIX
+        </button>
+      </div>
+
+    </div>
+
+    <button class="btn-confirmar" onclick="confirmar()">
+      ✅ Confirmar Pedido
+    </button>
+
 
     <button class="btn-voltar" onclick="fecharModal()">
       ⬅️ Voltar para o pedido
@@ -893,19 +1011,7 @@ h2{
 
 <script>
 
-const pagamentoSelect = document.getElementById("pagamento");
-const trocoInput = document.getElementById("troco");
 
-if (pagamentoSelect){
-  pagamentoSelect.addEventListener("change", e => {
-    if (e.target.value === "Dinheiro"){
-      trocoInput.style.display = "block";
-    } else {
-      trocoInput.style.display = "none";
-      trocoInput.value = "";
-    }
-  });
-}
 
 let carrinho = [];
 let whatsapp = "";
@@ -1134,10 +1240,14 @@ function finalizar(){
     return;
   }
 
-  // Fecha mini carrinho
+  // Fecha o mini carrinho
   fecharCarrinho();
 
-  // Oculta botão flutuante do carrinho
+  // Atualiza valores
+  atualizarResumo(taxas[bairro.value] || 0);
+  atualizarValorPix();
+
+  // Esconde botão flutuante
   const fab = document.getElementById("cart-fab");
   if (fab) fab.style.display = "none";
 
@@ -1145,6 +1255,7 @@ function finalizar(){
   const modal = document.getElementById("modal");
   if (modal) modal.style.display = "block";
 }
+
 
 
 /* ================= FECHAR MODAL ================= */
@@ -1164,13 +1275,13 @@ function fecharModal(){
 const bairroSelect = document.getElementById("bairro");
 if (bairroSelect){
   bairroSelect.addEventListener("change", e => {
-    const taxa = taxas[e.target.value] || 0;
-    const taxaEl = document.getElementById("taxa");
-    if (taxaEl){
-      taxaEl.innerText = "Taxa de entrega: R$ " + taxa.toFixed(2);
-    }
-  });
-}
+  const taxa = taxas[e.target.value] || 0;
+  document.getElementById("taxa").innerText =
+    "Taxa de entrega: R$ " + taxa.toFixed(2);
+
+  atualizarResumo(taxa);
+  atualizarValorPix(); // 👈 AQUI
+});
 
 
 /* ================= CONFIRMAR PEDIDO ================= */
@@ -1178,6 +1289,7 @@ function confirmar(){
   const nome = document.getElementById("nomeCliente")?.value.trim();
   const bairroSelecionado = document.getElementById("bairro")?.value;
   const pagamentoSelecionado = document.getElementById("pagamento")?.value;
+
   const troco = document.getElementById("troco")?.value.trim();
   if (pagamentoSelecionado === "Dinheiro" && !troco){
   alert("Informe o valor do troco");
@@ -1188,19 +1300,7 @@ function confirmar(){
   const taxa = taxas[bairroSelecionado] || 0;
 
 
-  const pagamentoSelect = document.getElementById("pagamento");
-  const trocoInput = document.getElementById("troco");
-
-  pagamentoSelect.addEventListener("change", () => {
-    if (pagamentoSelect.value === "Dinheiro") {
-      trocoInput.style.display = "block";
-    } else {
-      trocoInput.style.display = "none";
-      trocoInput.value = "";
-    }
-  });
-
-
+  
 
 
   if (!nome || !bairroSelecionado || !pagamentoSelecionado || !endereco){
@@ -1363,6 +1463,69 @@ function limparBusca(){
   clearBtn.style.display = "none";
   inputBusca.focus();
   filtrarItens("");
+}
+
+
+function atualizarResumo(taxa){
+  const subtotal = carrinho.reduce((s, i) => s + i.total, 0);
+  const total = subtotal + taxa;
+
+  document.getElementById("subtotal").innerText = `R$ ${subtotal.toFixed(2)}`;
+  document.getElementById("valor-entrega").innerText = `R$ ${taxa.toFixed(2)}`;
+  document.getElementById("total-final").innerText = `R$ ${total.toFixed(2)}`;
+
+  document.getElementById("resumo-valores").style.display = "block";
+}
+
+
+
+
+function copiarPix(){
+  const input = document.getElementById("pix-chave");
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  alert("✅ Chave PIX copiada!");
+}
+
+
+const pagamentoSelect = document.getElementById("pagamento");
+const trocoInput = document.getElementById("troco");
+const pixBox = document.getElementById("pix-box");
+
+pagamentoSelect.addEventListener("change", e => {
+
+  if (e.target.value === "Dinheiro"){
+    trocoInput.style.display = "block";
+    pixBox.style.display = "none";
+  }
+  else if (e.target.value === "Pix"){
+    trocoInput.style.display = "none";
+    trocoInput.value = "";
+    pixBox.style.display = "block";
+    atualizarValorPix(); // 👈 AQUI
+  }
+  else{
+    trocoInput.style.display = "none";
+    pixBox.style.display = "none";
+    trocoInput.value = "";
+  }
+
+});
+}
+
+
+
+
+
+function atualizarValorPix(){
+  const bairro = document.getElementById("bairro").value;
+  const taxa = taxas[bairro] || 0;
+
+  const totalProdutos = carrinho.reduce((s, i) => s + i.total, 0);
+  const totalFinal = totalProdutos + taxa;
+
+  document.getElementById("pix-valor").innerText = totalFinal.toFixed(2);
 }
 
 </script>

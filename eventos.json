@@ -1,30 +1,12 @@
 [
   {
     "id": 1,
-    "titulo": "Volta as Aulas ",
+    "titulo": "Retomada da Obra",
     "data": "04/02/2026",
     "horario": "07:30h",
-    "local": "Escola ",
-    "descricao": "Educar Faz Bem é um evento dedicado a fortalecer a educação como base para um futuro melhor. Um momento de aprendizado, troca de experiências e incentivo ao desenvolvimento de crianças, jovens e famílias, promovendo conhecimento, valores e oportunidades para toda a comunidade.",
-   "imagem": "assets/img/img/eventos/escola.png",
-    "link": ""
-  },
-
-  {
-    "id": 2,
-    "titulo": " Comunicado Entrega de Uniformes do Colégio Estadual Benedito ",
-    "data": "28/01/2026",
-    "horario": "09:00h",
-    "local": "Escola ",
-    "descricao": "Entrega de Uniformes.",
-   "imagem": "assets/img/img/eventos/comunicado.png",
+    "local": "Escola",
+    "descricao": "Retomada das obras na unidade escolar, com o objetivo de dar continuidade às melhorias na estrutura e garantir um ambiente mais adequado para alunos, servidores e comunidade.",
+    "imagem": "assets/img/img/eventos/escola.png",
     "link": ""
   }
-
-  
 ]
-
-
-
-
-

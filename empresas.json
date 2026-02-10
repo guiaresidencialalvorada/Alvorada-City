@@ -782,7 +782,38 @@
   },
   "ativo": true,
   "destaque": false
-} 
+},
+{
+  "id": 30,
+  "nome": "União Material de Construção",
+  "categoria": "Material de Construção",
+  "fone": "61985901353",
+  "whatsapp": "61985901353",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/uniaomaterialdeconstrucao.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": ".",
+  "horarios": {
+    "seg": { "abre": "08:00", "fecha": "18:00" },
+    "ter": { "abre": "08:00", "fecha": "18:00" },
+    "qua": { "abre": "08:00", "fecha": "18:00" },
+    "qui": { "abre": "08:00", "fecha": "18:00" },
+    "sex": { "abre": "08:00", "fecha": "18:00" },
+    "sab": { "abre": "08:00", "fecha": "18:00" },
+    "dom": { "fechado": true }
+  },
+  "redes": {
+    "instagram": "",
+    "facebook": ""
+  },
+  "ativo": true,
+  "destaque": false
+}
+  
+
+  
 
   
 

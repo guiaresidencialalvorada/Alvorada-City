@@ -6,8 +6,17 @@
     "horario": "07:30h",
     "local": "Escola",
     "descricao": "Retomada das obras na unidade escolar, com o objetivo de dar continuidade às melhorias na estrutura e garantir um ambiente mais adequado para alunos, servidores e comunidade.",
-    "imagem": "assets/img/img/eventos/retomadadeobra.jpeg",
+    "imagem": "assets/img/img/eventos/escola.png",
+    "link": ""
+  },
+  {
+    "id": 2,
+    "titulo": "Inscrições para a Catequese 2026",
+    "data": "07/02/2026",
+    "horario": "Após as Santas Missas | Sábados: 9h às 11h",
+    "local": "Matriz e Capelas",
+    "descricao": "A Paróquia Nossa Senhora do Perpétuo Socorro informa que estão abertas as inscrições para novos catequizandos da Catequese 2026, no período de 07 de fevereiro a 1º de março. Documentos necessários: cópia do RG, comprovante de residência e comprovantes de sacramentos, se houver. Contribuição: R$ 10,00 (jovem e adulto) e R$ 35,00 (criança, com livro incluso).",
+    "imagem": "assets/img/img/eventos/catequese.png",
     "link": ""
   }
 ]
-

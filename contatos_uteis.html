@@ -270,6 +270,26 @@ footer {
 
 }
 
+/* ================= BUSCA ================= */
+
+.search-box {
+  margin: 16px 0 24px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  font-size: .95rem;
+  outline: none;
+  box-shadow: var(--shadow);
+}
+
+.search-box input:focus {
+  border-color: var(--primary);
+}
+
 </style>
 
 </head>
@@ -299,6 +319,13 @@ footer {
   </nav>
 </header>
 
+<div class="search-box">
+  <input 
+    type="text" 
+    id="searchInput" 
+    placeholder="🔍 Buscar contato, serviço ou telefone..."
+  >
+</div>
 
 <div class="container">
 
@@ -568,7 +595,28 @@ overlay.addEventListener('click', () => {
 });
 </script>
 
+<script>
+const searchInput = document.getElementById('searchInput');
+const cards = document.querySelectorAll('.card');
+
+searchInput.addEventListener('input', function () {
+  const termo = this.value.toLowerCase();
+
+  cards.forEach(card => {
+    const texto = card.innerText.toLowerCase();
+
+    if (texto.includes(termo)) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});
+</script>
+
+
 </body>
 </html>
+
 
 

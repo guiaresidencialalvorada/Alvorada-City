@@ -810,8 +810,37 @@
   },
   "ativo": true,
   "destaque": false
+},
+
+  {
+  "id": 31,
+  "nome": "Armazém Piauí",
+  "categoria": "Comércio",
+  "fone": "",
+  "whatsapp": "",
+  "email": "",
+  "site": "",
+  "logo": "assets/img/armazempiaui.png",
+  "endereco": "",
+  "maps": "",
+  "descricao": "O Armazém Piauí atende a comunidade com variedade de produtos e horários ampliados para melhor comodidade dos clientes.",
+  "horarios": {
+    "seg": { "abre": "07:30", "fecha": "20:00" },
+    "ter": { "abre": "07:30", "fecha": "20:00" },
+    "qua": { "abre": "07:30", "fecha": "20:00" },
+    "qui": { "abre": "07:30", "fecha": "20:00" },
+    "sex": { "abre": "07:30", "fecha": "20:00" },
+    "sab": { "abre": "07:30", "fecha": "20:00" },
+    "dom": { "abre": "07:30", "fecha": "14:00" }
+  },
+  "redes": {
+    "instagram": "",
+    "facebook": ""
+  },
+  "ativo": true,
+  "destaque": false
 }
-  
+
 
   
 

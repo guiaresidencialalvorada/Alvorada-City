@@ -6,7 +6,7 @@
     "horario": "07:30h",
     "local": "Escola",
     "descricao": "Retomada das obras na unidade escolar, com o objetivo de dar continuidade às melhorias na estrutura e garantir um ambiente mais adequado para alunos, servidores e comunidade.",
-    "imagem": "assets/img/img/eventos/retomadadeobra.jpeg",
+    "imagem": "assets/img/img/eventos/retomadadeobra.png",
     "link": ""
   },
   {
@@ -20,4 +20,5 @@
     "link": ""
   }
 ]
+
 

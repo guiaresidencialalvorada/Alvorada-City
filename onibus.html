@@ -7,17 +7,15 @@
 
 <style>
 
-/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Roboto,sans-serif}
 
-/* BODY */
 body{
 background:linear-gradient(135deg,#0f172a,#1e293b);
 color:#fff;
 padding-bottom:40px;
+overflow-x:hidden;
 }
 
-/* HEADER */
 header{
 padding:18px;
 text-align:center;
@@ -25,6 +23,7 @@ font-weight:800;
 font-size:20px;
 background:rgba(0,0,0,0.3);
 backdrop-filter:blur(10px);
+position:relative;
 }
 
 .sub{
@@ -33,11 +32,38 @@ opacity:.7;
 margin-top:4px;
 }
 
+/* ANIMAÇÃO ÔNIBUS */
+.bus{
+position:absolute;
+bottom:-10px;
+left:-120px;
+font-size:28px;
+animation:moveBus 12s linear infinite;
+}
+
+@keyframes moveBus{
+0%{left:-120px}
+100%{left:110%}
+}
+
 /* CONTAINER */
 .container{
 padding:18px;
 max-width:900px;
 margin:auto;
+}
+
+/* PROXIMO */
+.proximo{
+background:#38bdf8;
+color:#0f172a;
+padding:15px;
+border-radius:16px;
+text-align:center;
+font-weight:800;
+font-size:16px;
+margin-bottom:20px;
+box-shadow:0 6px 20px rgba(56,189,248,0.5);
 }
 
 /* CARD */
@@ -50,14 +76,12 @@ backdrop-filter:blur(12px);
 box-shadow:0 8px 25px rgba(0,0,0,0.4);
 }
 
-/* TITULO */
 .card h2{
 font-size:16px;
 margin-bottom:14px;
 color:#38bdf8;
 }
 
-/* GRID HORÁRIOS */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fill,minmax(70px,1fr));
@@ -71,19 +95,15 @@ border-radius:10px;
 text-align:center;
 font-weight:700;
 font-size:13px;
+transition:.3s;
 }
 
-/* PROXIMO ONIBUS */
-.proximo{
-background:#38bdf8;
+/* DESTAQUE PRÓXIMO */
+.grid div.next{
+background:#22c55e;
 color:#0f172a;
-padding:15px;
-border-radius:16px;
-text-align:center;
-font-weight:800;
-font-size:16px;
-margin-bottom:20px;
-box-shadow:0 6px 20px rgba(56,189,248,0.5);
+transform:scale(1.1);
+box-shadow:0 0 12px #22c55e;
 }
 
 .footer{
@@ -101,6 +121,7 @@ opacity:.6;
 <header>
 Residencial Alvorada
 <div class="sub">Linha 4702 • América do Sul ⇄ Gama</div>
+<div class="bus">🚌</div>
 </header>
 
 <div class="container">
@@ -127,8 +148,7 @@ Horários sujeitos a alteração sem aviso prévio.
 
 <script>
 
-// HORÁRIOS
-const horarios = {
+const horarios={
 util:{
 ida:["05:00","06:30","08:10","10:10","12:00","13:50","16:00","18:00","19:30"],
 volta:["06:00","07:30","09:30","11:20","13:10","15:25","17:00","18:45","20:10"]
@@ -143,57 +163,62 @@ volta:["06:10","07:30","11:20","13:10","17:20","18:40","20:10"]
 }
 };
 
-// IDENTIFICAR DIA
-const hoje = new Date().getDay();
+const hoje=new Date().getDay();
 let tipo;
-
-if(hoje>=1 && hoje<=5) tipo="util";
-else if(hoje==6) tipo="sabado";
+if(hoje>=1&&hoje<=5)tipo="util";
+else if(hoje==6)tipo="sabado";
 else tipo="domingo";
 
-// MOSTRAR HORÁRIOS
-const idaDiv = document.getElementById("ida");
-const voltaDiv = document.getElementById("volta");
+function render(){
+const idaDiv=document.getElementById("ida");
+const voltaDiv=document.getElementById("volta");
+idaDiv.innerHTML="";
+voltaDiv.innerHTML="";
 
 horarios[tipo].ida.forEach(h=>{
-idaDiv.innerHTML += `<div>${h}</div>`;
+idaDiv.innerHTML+=`<div>${h}</div>`;
 });
-
 horarios[tipo].volta.forEach(h=>{
-voltaDiv.innerHTML += `<div>${h}</div>`;
+voltaDiv.innerHTML+=`<div>${h}</div>`;
 });
+}
 
-// CALCULAR PRÓXIMO ÔNIBUS (IDA)
 function atualizarProximo(){
 
-const agora = new Date();
-const minutosAgora = agora.getHours()*60 + agora.getMinutes();
+const agora=new Date();
+const minutosAgora=agora.getHours()*60+agora.getMinutes();
 
-let proximo = null;
+let proximoIndex=null;
+let proximoMin=null;
 
-horarios[tipo].ida.forEach(h=>{
-const [hora,min] = h.split(":");
-const total = parseInt(hora)*60 + parseInt(min);
-
-if(total >= minutosAgora && proximo === null){
-proximo = total;
+horarios[tipo].ida.forEach((h,i)=>{
+const [hora,min]=h.split(":");
+const total=parseInt(hora)*60+parseInt(min);
+if(total>=minutosAgora&&proximoMin===null){
+proximoMin=total;
+proximoIndex=i;
 }
 });
 
-const box = document.getElementById("proximoOnibus");
+const box=document.getElementById("proximoOnibus");
+const horariosDiv=document.querySelectorAll("#ida div");
 
-if(proximo){
-const diff = proximo - minutosAgora;
-const horas = Math.floor(diff/60);
-const minutos = diff%60;
+horariosDiv.forEach(div=>div.classList.remove("next"));
 
-box.innerHTML = `⏳ Próximo ônibus (Alvorada ➝ Gama) em ${horas>0?horas+"h ":""}${minutos}min`;
+if(proximoIndex!==null){
+const diff=proximoMin-minutosAgora;
+const horas=Math.floor(diff/60);
+const minutos=diff%60;
+
+box.innerHTML=`⏳ Próximo ônibus em ${horas>0?horas+"h ":""}${minutos}min`;
+horariosDiv[proximoIndex].classList.add("next");
 }else{
-box.innerHTML = "🚫 Não há mais ônibus hoje.";
+box.innerHTML="🚫 Não há mais ônibus hoje.";
 }
 
 }
 
+render();
 atualizarProximo();
 setInterval(atualizarProximo,60000);
 

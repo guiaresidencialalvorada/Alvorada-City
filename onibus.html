@@ -32,17 +32,31 @@ opacity:.7;
 margin-top:4px;
 }
 
-/* ANIMAÇÃO ÔNIBUS */
+/* DOIS ÔNIBUS ANIMADOS */
 .bus{
 position:absolute;
-bottom:-10px;
-left:-120px;
-font-size:28px;
-animation:moveBus 12s linear infinite;
+font-size:26px;
 }
 
-@keyframes moveBus{
+.bus1{
+left:-120px;
+bottom:-10px;
+animation:moveBus1 14s linear infinite;
+}
+
+.bus2{
+left:-200px;
+bottom:15px;
+animation:moveBus2 18s linear infinite reverse;
+}
+
+@keyframes moveBus1{
 0%{left:-120px}
+100%{left:110%}
+}
+
+@keyframes moveBus2{
+0%{left:-200px}
 100%{left:110%}
 }
 
@@ -62,7 +76,7 @@ border-radius:16px;
 text-align:center;
 font-weight:800;
 font-size:16px;
-margin-bottom:20px;
+margin-bottom:15px;
 box-shadow:0 6px 20px rgba(56,189,248,0.5);
 }
 
@@ -121,13 +135,18 @@ opacity:.6;
 <header>
 Residencial Alvorada
 <div class="sub">Linha 4702 • América do Sul ⇄ Gama</div>
-<div class="bus">🚌</div>
+<div class="bus bus1">🚌</div>
+<div class="bus bus2">🚌</div>
 </header>
 
 <div class="container">
 
-<div class="proximo" id="proximoOnibus">
-Calculando próximo ônibus...
+<div class="proximo" id="proximoIda">
+Calculando próximo ida...
+</div>
+
+<div class="proximo" id="proximoVolta" style="background:#22c55e;color:#0f172a;">
+Calculando próximo volta...
 </div>
 
 <div class="card">
@@ -165,25 +184,28 @@ volta:["06:10","07:30","11:20","13:10","17:20","18:40","20:10"]
 
 const hoje=new Date().getDay();
 let tipo;
-if(hoje>=1&&hoje<=5)tipo="util";
-else if(hoje==6)tipo="sabado";
+
+if(hoje>=1 && hoje<=5) tipo="util";
+else if(hoje==6) tipo="sabado";
 else tipo="domingo";
 
 function render(){
 const idaDiv=document.getElementById("ida");
 const voltaDiv=document.getElementById("volta");
+
 idaDiv.innerHTML="";
 voltaDiv.innerHTML="";
 
 horarios[tipo].ida.forEach(h=>{
 idaDiv.innerHTML+=`<div>${h}</div>`;
 });
+
 horarios[tipo].volta.forEach(h=>{
 voltaDiv.innerHTML+=`<div>${h}</div>`;
 });
 }
 
-function atualizarProximo(){
+function calcularProximo(lista, containerId, gridId){
 
 const agora=new Date();
 const minutosAgora=agora.getHours()*60+agora.getMinutes();
@@ -191,17 +213,18 @@ const minutosAgora=agora.getHours()*60+agora.getMinutes();
 let proximoIndex=null;
 let proximoMin=null;
 
-horarios[tipo].ida.forEach((h,i)=>{
+lista.forEach((h,i)=>{
 const [hora,min]=h.split(":");
 const total=parseInt(hora)*60+parseInt(min);
-if(total>=minutosAgora&&proximoMin===null){
+
+if(total>=minutosAgora && proximoMin===null){
 proximoMin=total;
 proximoIndex=i;
 }
 });
 
-const box=document.getElementById("proximoOnibus");
-const horariosDiv=document.querySelectorAll("#ida div");
+const box=document.getElementById(containerId);
+const horariosDiv=document.querySelectorAll(`#${gridId} div`);
 
 horariosDiv.forEach(div=>div.classList.remove("next"));
 
@@ -210,12 +233,17 @@ const diff=proximoMin-minutosAgora;
 const horas=Math.floor(diff/60);
 const minutos=diff%60;
 
-box.innerHTML=`⏳ Próximo ônibus em ${horas>0?horas+"h ":""}${minutos}min`;
+box.innerHTML=`🚌 Próximo ônibus em ${horas>0?horas+"h ":""}${minutos}min`;
 horariosDiv[proximoIndex].classList.add("next");
+
 }else{
 box.innerHTML="🚫 Não há mais ônibus hoje.";
 }
+}
 
+function atualizarProximo(){
+calcularProximo(horarios[tipo].ida,"proximoIda","ida");
+calcularProximo(horarios[tipo].volta,"proximoVolta","volta");
 }
 
 render();

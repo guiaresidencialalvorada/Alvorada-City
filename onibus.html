@@ -3,149 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <title>Ônibus | Bairro Alvorada</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Itinerário e horários dos ônibus do Bairro Alvorada - Linha 4702 América do Sul / Gama">
-
-<link rel="icon" href="favicon.png">
 
 <style>
 
 /* RESET */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    -webkit-tap-highlight-color: transparent;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Roboto,sans-serif}
 
-body {
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background: #f1f5f9;
-    color: #0f172a;
-    line-height: 1.6;
+/* BODY */
+body{
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:#fff;
+padding-bottom:40px;
 }
 
 /* HEADER */
-.header {
-    position: sticky;
-    top: 0;
-    background: rgba(15,23,42,0.95);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 16px;
+header{
+padding:18px;
+text-align:center;
+font-weight:800;
+font-size:20px;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
 }
 
-.logo {
-    font-weight: 800;
-    font-size: 18px;
-    color: #38bdf8;
-}
-
-.menu-toggle {
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: #38bdf8;
-    cursor: pointer;
-}
-
-.menu {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background: #020617;
-    position: absolute;
-    top: 60px;
-    right: 12px;
-    padding: 12px;
-    border-radius: 12px;
-}
-
-.menu.open {
-    display: flex;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    padding: 8px;
+.sub{
+font-size:13px;
+opacity:.7;
+margin-top:4px;
 }
 
 /* CONTAINER */
-.container {
-    padding: 24px 14px;
-    max-width: 1200px;
-    margin: auto;
+.container{
+padding:18px;
+max-width:900px;
+margin:auto;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.08);
+border-radius:20px;
+padding:20px;
+margin-bottom:20px;
+backdrop-filter:blur(12px);
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
 }
 
 /* TITULO */
-.page-title {
-    text-align: center;
-    margin-bottom: 24px;
+.card h2{
+font-size:16px;
+margin-bottom:14px;
+color:#38bdf8;
 }
 
-.page-title h1 {
-    color: #38bdf8;
-    font-size: 26px;
+/* GRID HORÁRIOS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(70px,1fr));
+gap:8px;
 }
 
-.page-title p {
-    color: #64748b;
+.grid div{
+background:rgba(255,255,255,0.12);
+padding:8px;
+border-radius:10px;
+text-align:center;
+font-weight:700;
+font-size:13px;
 }
 
-/* CARD DIA */
-.dia-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 18px;
-    margin-bottom: 20px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+/* PROXIMO ONIBUS */
+.proximo{
+background:#38bdf8;
+color:#0f172a;
+padding:15px;
+border-radius:16px;
+text-align:center;
+font-weight:800;
+font-size:16px;
+margin-bottom:20px;
+box-shadow:0 6px 20px rgba(56,189,248,0.5);
 }
 
-.dia-card h2 {
-    margin-bottom: 16px;
-    color: #0f172a;
-    font-size: 18px;
-    border-left: 4px solid #38bdf8;
-    padding-left: 8px;
-}
-
-/* LINHA */
-.linha-bloco {
-    margin-bottom: 18px;
-}
-
-.linha-bloco h3 {
-    font-size: 14px;
-    margin-bottom: 8px;
-    color: #0f172a;
-}
-
-.horarios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-    gap: 8px;
-    list-style: none;
-}
-
-.horarios-grid li {
-    background: #e8f4f9;
-    padding: 7px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-/* FOOTER */
-.footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 12px;
-    color: #64748b;
+.footer{
+text-align:center;
+margin-top:20px;
+font-size:12px;
+opacity:.6;
 }
 
 </style>
@@ -153,142 +98,105 @@ body {
 
 <body>
 
-<header class="header">
-    <div class="logo">Residencial Alvorada</div>
-    <button class="menu-toggle">☰</button>
-    <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="onibus.html">Ônibus</a>
-        <a href="posto_saude.html">Posto de Saúde</a>
-        <a href="eventos.html">Eventos & Lazer</a>
-        <a href="contatos_uteis.html">Contatos Úteis</a>
-    </nav>
+<header>
+Residencial Alvorada
+<div class="sub">Linha 4702 • América do Sul ⇄ Gama</div>
 </header>
 
-<main class="container">
+<div class="container">
 
-<section class="page-title">
-    <h1>Linha 4702</h1>
-    <p>América do Sul ⇄ Gama</p>
-</section>
-
-<!-- SEGUNDA A SEXTA -->
-<section class="dia-card">
-<h2>Segunda a Sexta</h2>
-
-<div class="linha-bloco">
-<h3>Alvorada ➝ Gama</h3>
-<ul class="horarios-grid">
-<li>05:00</li>
-<li>06:30</li>
-<li>08:10</li>
-<li>10:10</li>
-<li>12:00</li>
-<li>13:50</li>
-<li>16:00</li>
-<li>18:00</li>
-<li>19:30</li>
-</ul>
+<div class="proximo" id="proximoOnibus">
+Calculando próximo ônibus...
 </div>
 
-<div class="linha-bloco">
-<h3>Gama ➝ Alvorada</h3>
-<ul class="horarios-grid">
-<li>06:00</li>
-<li>07:30</li>
-<li>09:30</li>
-<li>11:20</li>
-<li>13:10</li>
-<li>15:25</li>
-<li>17:00</li>
-<li>18:45</li>
-<li>20:10</li>
-</ul>
+<div class="card">
+<h2>Alvorada ➝ Gama</h2>
+<div class="grid" id="ida"></div>
 </div>
 
-</section>
-
-<!-- SABADO -->
-<section class="dia-card">
-<h2>Sábado</h2>
-
-<div class="linha-bloco">
-<h3>Alvorada ➝ Gama</h3>
-<ul class="horarios-grid">
-<li>05:20</li>
-<li>06:50</li>
-<li>08:10</li>
-<li>10:10</li>
-<li>12:00</li>
-<li>13:50</li>
-<li>16:00</li>
-<li>18:00</li>
-<li>19:30</li>
-</ul>
+<div class="card">
+<h2>Gama ➝ Alvorada</h2>
+<div class="grid" id="volta"></div>
 </div>
 
-<div class="linha-bloco">
-<h3>Gama ➝ Alvorada</h3>
-<ul class="horarios-grid">
-<li>06:10</li>
-<li>07:30</li>
-<li>09:30</li>
-<li>11:20</li>
-<li>13:10</li>
-<li>15:25</li>
-<li>17:00</li>
-<li>18:45</li>
-<li>20:10</li>
-</ul>
+<div class="footer">
+Horários sujeitos a alteração sem aviso prévio.
 </div>
 
-</section>
-
-<!-- DOMINGO -->
-<section class="dia-card">
-<h2>Domingo</h2>
-
-<div class="linha-bloco">
-<h3>Alvorada ➝ Gama</h3>
-<ul class="horarios-grid">
-<li>05:20</li>
-<li>06:50</li>
-<li>08:10</li>
-<li>12:00</li>
-<li>13:50</li>
-<li>18:00</li>
-<li>19:20</li>
-<li>21:00</li>
-</ul>
 </div>
-
-<div class="linha-bloco">
-<h3>Gama ➝ Alvorada</h3>
-<ul class="horarios-grid">
-<li>06:10</li>
-<li>07:30</li>
-<li>11:20</li>
-<li>13:10</li>
-<li>17:20</li>
-<li>18:40</li>
-<li>20:10</li>
-</ul>
-</div>
-
-</section>
-
-</main>
-
-<footer class="footer">
-⚠️ Horários sujeitos a alteração sem aviso prévio.
-</footer>
 
 <script>
-const toggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
-toggle.addEventListener('click', () => {
-    menu.classList.toggle('open');
+
+// HORÁRIOS
+const horarios = {
+util:{
+ida:["05:00","06:30","08:10","10:10","12:00","13:50","16:00","18:00","19:30"],
+volta:["06:00","07:30","09:30","11:20","13:10","15:25","17:00","18:45","20:10"]
+},
+sabado:{
+ida:["05:20","06:50","08:10","10:10","12:00","13:50","16:00","18:00","19:30"],
+volta:["06:10","07:30","09:30","11:20","13:10","15:25","17:00","18:45","20:10"]
+},
+domingo:{
+ida:["05:20","06:50","08:10","12:00","13:50","18:00","19:20","21:00"],
+volta:["06:10","07:30","11:20","13:10","17:20","18:40","20:10"]
+}
+};
+
+// IDENTIFICAR DIA
+const hoje = new Date().getDay();
+let tipo;
+
+if(hoje>=1 && hoje<=5) tipo="util";
+else if(hoje==6) tipo="sabado";
+else tipo="domingo";
+
+// MOSTRAR HORÁRIOS
+const idaDiv = document.getElementById("ida");
+const voltaDiv = document.getElementById("volta");
+
+horarios[tipo].ida.forEach(h=>{
+idaDiv.innerHTML += `<div>${h}</div>`;
 });
+
+horarios[tipo].volta.forEach(h=>{
+voltaDiv.innerHTML += `<div>${h}</div>`;
+});
+
+// CALCULAR PRÓXIMO ÔNIBUS (IDA)
+function atualizarProximo(){
+
+const agora = new Date();
+const minutosAgora = agora.getHours()*60 + agora.getMinutes();
+
+let proximo = null;
+
+horarios[tipo].ida.forEach(h=>{
+const [hora,min] = h.split(":");
+const total = parseInt(hora)*60 + parseInt(min);
+
+if(total >= minutosAgora && proximo === null){
+proximo = total;
+}
+});
+
+const box = document.getElementById("proximoOnibus");
+
+if(proximo){
+const diff = proximo - minutosAgora;
+const horas = Math.floor(diff/60);
+const minutos = diff%60;
+
+box.innerHTML = `⏳ Próximo ônibus (Alvorada ➝ Gama) em ${horas>0?horas+"h ":""}${minutos}min`;
+}else{
+box.innerHTML = "🚫 Não há mais ônibus hoje.";
+}
+
+}
+
+atualizarProximo();
+setInterval(atualizarProximo,60000);
+
 </script>
 
 </body>

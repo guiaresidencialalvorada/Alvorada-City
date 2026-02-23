@@ -68,7 +68,7 @@
     "maps": "https://maps.app.goo.gl/7bhLuUDnZhDEFSweA",
     "descricao": "",
     "horarios": {
-      "seg": { "abre": "08:00", "fecha": "18:00" },
+      "seg": { "fechado": true },
       "ter": { "abre": "08:00", "fecha": "18:00" },
       "qua": { "abre": "08:00", "fecha": "18:00" },
       "qui": { "abre": "08:00", "fecha": "18:00" },

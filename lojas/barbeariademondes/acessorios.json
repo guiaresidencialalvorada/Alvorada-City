@@ -6,7 +6,7 @@
   },
   {
     "nome": "Cabo HDMI 2.0 4K",
-    "descricao": "Cabo HDMI alta definição com suporte 4K",
+    "descricao": "Cabo HDMI 2.0 com suporte a resolução 4K",
     "imagem": "imagens/cabo-hdmi-4k.jpg"
   },
   {
@@ -16,7 +16,7 @@
   },
   {
     "nome": "Cabo HDMI HDTV 3 Metros",
-    "descricao": "Cabo HDMI ideal para TVs e monitores",
+    "descricao": "Cabo HDMI ideal para TVs e monitores (3 metros)",
     "imagem": "imagens/cabo-hdmi-hdtv.jpg"
   },
   {
@@ -30,24 +30,24 @@
     "imagem": "imagens/cabo-p2.jpg"
   },
   {
-    "nome": "Cabo USB Tipo C",
-    "descricao": "Cabo USB para carregamento e dados Tipo C",
+    "nome": "Cabo USB Tipo-C",
+    "descricao": "Cabo USB Tipo-C para carregamento e transferência de dados",
     "imagem": "imagens/cabo-usb-c.jpg"
   },
   {
-    "nome": "Cabo USB Micro USB",
-    "descricao": "Cabo USB compatível com aparelhos Android",
-    "imagem": "imagens/cabo-micro-usb.WEBP"
+    "nome": "Cabo USB Micro-USB",
+    "descricao": "Cabo USB compatível com aparelhos Android (Micro-USB)",
+    "imagem": "imagens/cabo-micro-usb.webp"
   },
   {
     "nome": "Cabo USB Lightning",
-    "descricao": "Cabo USB compatível com iPhone",
+    "descricao": "Cabo USB compatível com iPhone (Lightning)",
     "imagem": "imagens/cabo-lightning.jpg"
   },
   {
     "nome": "Carregador USB de Parede",
     "descricao": "Carregador USB bivolt para celulares",
-    "imagem": "imagens/carregador-usb.WEBP"
+    "imagem": "imagens/carregador-usb.webp"
   },
   {
     "nome": "Fone de Ouvido com Fio",
@@ -71,7 +71,7 @@
   },
   {
     "nome": "Estanho para Solda 40g",
-    "descricao": "Estanho para soldagem eletrônica",
+    "descricao": "Estanho para soldagem eletrônica (40g)",
     "imagem": "imagens/estanho-solda.jpg"
   },
   {
@@ -86,7 +86,7 @@
   },
   {
     "nome": "Película de Vidro 3D",
-    "descricao": "Película de vidro temperado 3D",
+    "descricao": "Película de vidro temperado 3D para celular",
     "imagem": "imagens/pelicula-3d.jpg"
   }
 ]

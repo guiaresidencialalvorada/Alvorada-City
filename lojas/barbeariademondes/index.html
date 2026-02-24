@@ -594,11 +594,17 @@ const acessoriosDiv = document.getElementById("acessorios");
 function criarCard(item, botaoTexto) {
   return `
     <div class="card">
-      <img src="${item.imagem}" alt="${item.nome}">
+      <img src="${item.imagem}" 
+           alt="${item.nome}"
+           onclick="abrirModal('${item.imagem}')">
+
       <div class="card-body">
         <h3>${item.nome}</h3>
         <p>${item.descricao}</p>
-        <div class="preco">R$ ${item.preco.toFixed(2)}</div>
+
+        ${item.preco ? 
+          `<div class="preco">R$ ${Number(item.preco).toFixed(2)}</div>` 
+          : ""}
 
         <a class="btn" target="_blank"
           href="https://wa.me/5561983585475?text=Tenho%20interesse%20em%20${encodeURIComponent(item.nome)}">
@@ -782,6 +788,7 @@ document.getElementById("anoAtual").textContent = new Date().getFullYear();
 
 </body>
 </html>
+
 
 
 

@@ -628,7 +628,7 @@ fetch("produtos.json")
   .then(res => res.json())
   .then(dados => {
     dados.forEach(item => {
-      produtosDiv.innerHTML += criarCard(item, "Comprar");
+      produtosDiv.innerHTML += criarCard(item, "null");
     });
   })
   .catch(err => console.error("Erro produtos:", err));
@@ -638,7 +638,7 @@ fetch("acessorios.json")
   .then(res => res.json())
   .then(dados => {
     dados.forEach(item => {
-      acessoriosDiv.innerHTML += criarCard(item, "Comprar");
+      acessoriosDiv.innerHTML += criarCard(item, "null");
     });
   })
   .catch(err => console.error("Erro acessórios:", err));
@@ -752,4 +752,5 @@ document.getElementById("anoAtual").textContent = new Date().getFullYear();
 
 </body>
 </html>
+
 

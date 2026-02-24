@@ -2,12 +2,13 @@
   {
     "nome": "Pomada Modeladora",
     "descricao": "Pomada profissional para modelar o cabelo com fixação forte",
-    "imagem": "imagens/pomada-modeladora.jpg"
+    "imagem": "imagens/pomada.jpg"
   },
   {
     "nome": "Gel Fixador",
     "descricao": "Gel fixador para penteados com alta durabilidade",
-    "imagem": "imagens/gel-fixador.jpg"
+    "imagem": "imagens/gel-cola.jpg"
   }
  
 ]
+

@@ -1,12 +1,13 @@
 [
   {
     "nome": "Pomada Modeladora",
-    "descricao": "Fixação média com efeito natural",
-    "imagem": "imagens/pomada.jpg"
+    "descricao": "Pomada profissional para modelar o cabelo com fixação forte",
+    "imagem": "imagens/pomada-modeladora.jpg"
   },
   {
-    "nome": "Gel Cola Pierry Lohan 250g",
-    "descricao": "Mega fixação",
-    "imagem": "imagens/gel-cola.jpeg"
+    "nome": "Gel Fixador",
+    "descricao": "Gel fixador para penteados com alta durabilidade",
+    "imagem": "imagens/gel-fixador.jpg"
   }
+ 
 ]

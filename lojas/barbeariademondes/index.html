@@ -613,7 +613,29 @@ function criarCard(item, botaoTexto) {
     </div>
   `;
 }
-/* ================= CARREGAR SERVIÇOS ================= */
+
+function criarCardSemBotao(item) {
+  return `
+    <div class="card">
+      <img src="${item.imagem}" 
+           alt="${item.nome}"
+           onclick="abrirModal('${item.imagem}')">
+
+      <div class="card-body">
+        <h3>${item.nome}</h3>
+        <p>${item.descricao}</p>
+
+        ${item.preco !== undefined ? 
+          `<div class="preco">R$ ${Number(item.preco).toFixed(2)}</div>` 
+          : ""}
+      </div>
+    </div>
+  `;
+}  
+  
+  
+  
+  /* ================= CARREGAR SERVIÇOS ================= */
 fetch("servicos.json")
   .then(res => res.json())
   .then(dados => {
@@ -628,7 +650,7 @@ fetch("produtos.json")
   .then(res => res.json())
   .then(dados => {
     dados.forEach(item => {
-      produtosDiv.innerHTML += criarCard(item, "null");
+     produtosDiv.innerHTML += criarCardSemBotao(item);
     });
   })
   .catch(err => console.error("Erro produtos:", err));
@@ -638,7 +660,7 @@ fetch("acessorios.json")
   .then(res => res.json())
   .then(dados => {
     dados.forEach(item => {
-      acessoriosDiv.innerHTML += criarCard(item, "null");
+    acessoriosDiv.innerHTML += criarCardSemBotao(item);
     });
   })
   .catch(err => console.error("Erro acessórios:", err));
@@ -752,5 +774,6 @@ document.getElementById("anoAtual").textContent = new Date().getFullYear();
 
 </body>
 </html>
+
 
 

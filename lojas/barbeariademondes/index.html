@@ -602,7 +602,7 @@ function criarCard(item, botaoTexto) {
         <h3>${item.nome}</h3>
         <p>${item.descricao}</p>
 
-        ${item.preco ? 
+        ${item.preco !== undefined ? 
           `<div class="preco">R$ ${Number(item.preco).toFixed(2)}</div>` 
           : ""}
 
@@ -787,6 +787,7 @@ document.getElementById("anoAtual").textContent = new Date().getFullYear();
 
 </body>
 </html>
+
 
 
 

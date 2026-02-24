@@ -2,79 +2,67 @@
   {
     "nome": "Corte",
     "descricao": "Corte masculino tradicional ou moderno",
-    "preco": 25.00,
     "imagem": "imagens/corte.jpg"
   },
   {
     "nome": "Só Barba",
     "descricao": "Barba feita na máquina ou navalha",
-    "preco": 15.00,
-    "imagem": "imagens/barba.jpg"
+     "imagem": "imagens/barba.jpg"
   },
   {
     "nome": "Corte e Barba",
     "descricao": "Pacote completo de corte + barba",
-    "preco": 35.00,
     "imagem": "imagens/corte-barba.jpg"
   },
   {
     "nome": "Sobrancelha",
     "descricao": "Design de sobrancelha masculina",
-    "preco": 10.00,
     "imagem": "imagens/sobrancelha.jpg"
   },
   {
     "nome": "Luzes",
     "descricao": "Clareamento capilar com técnica profissional",
-    "preco": 70.00,
     "imagem": "imagens/luzes.jpg"
   },
   {
     "nome": "Alisante",
     "descricao": "Alisamento capilar",
-    "preco": 15.00,
     "imagem": "imagens/alisante.jpg"
   },
   {
     "nome": "Pigmentação",
     "descricao": "Pigmentação capilar ou de barba",
-    "preco": 12.00,
     "imagem": "imagens/pigmentacao.jpg"
   },
   {
     "nome": "Corte Navalhado",
     "descricao": "Corte com acabamento navalhado",
-    "preco": 25.00,
     "imagem": "imagens/corte-navalhado.jpg"
   },
   {
     "nome": "Corte Degradê Máquina",
     "descricao": "Corte degradê feito na máquina",
-    "preco": 25.00,
     "imagem": "imagens/corte-degrade.jpg"
   },
   {
     "nome": "Cabelo e Barba",
     "descricao": "Corte de cabelo + barba completo",
-    "preco": 40.00,
     "imagem": "imagens/cabelo-barba.jpg"
   },
   {
     "nome": "Pézinho",
     "descricao": "Acabamento do pezinho",
-    "preco": 7.00,
     "imagem": "imagens/pezinho.jpg"
   },
   {
     "nome": "Sobrancelhas",
     "descricao": "Design simples de sobrancelhas",
-    "preco": 7.00,
     "imagem": "imagens/sobrancelhas.jpg"
   },
   {
     "nome": "Platinado",
     "descricao": "Descoloração completa estilo platinado",
-    "preco": 100.00,
     "imagem": "imagens/platinado.jpg"
   }
 ]
+

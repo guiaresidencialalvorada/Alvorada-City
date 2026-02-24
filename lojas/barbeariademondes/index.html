@@ -531,8 +531,6 @@ body {
 
 </div>
 
-
-
 <!-- CATEGORIAS -->
 <div class="categorias">
   
@@ -553,7 +551,6 @@ body {
 
 
 </div>
-
 
 <!-- MODAL IMAGEM -->
 <div id="imgModal" class="img-modal">
@@ -644,12 +641,7 @@ fetch("acessorios.json")
   })
   .catch(err => console.error("Erro acessórios:", err));
 
-
-
-
 </script>
-
-
 
 <script>
 function mostrarServicos() {
@@ -672,8 +664,6 @@ function mostrarAcessorios() {
   acessoriosDiv.style.display = "grid";
   ativarBotao(2);
 }
-
-
 
 function ativarBotao(index) {
   document.querySelectorAll(".categoria-btn").forEach((btn, i) => {
@@ -755,18 +745,8 @@ fetch("horarios.json")
     console.error("Erro ao carregar horarios.json", err);
   });
 
-
-
 document.getElementById("anoAtual").textContent = new Date().getFullYear();
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-

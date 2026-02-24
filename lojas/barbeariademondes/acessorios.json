@@ -37,7 +37,7 @@
   {
     "nome": "Cabo USB Micro-USB",
     "descricao": "Cabo USB compatível com aparelhos Android (Micro-USB)",
-    "imagem": "imagens/cabo-micro-usb.webp"
+    "imagem": "imagens/cabo-micro-usb.jpg"
   },
   {
     "nome": "Cabo USB Lightning",
@@ -90,3 +90,4 @@
     "imagem": "imagens/pelicula-3d.jpg"
   }
 ]
+

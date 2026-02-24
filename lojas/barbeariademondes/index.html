@@ -603,10 +603,12 @@ function criarCard(item, botaoTexto) {
           `<div class="preco">R$ ${Number(item.preco).toFixed(2)}</div>` 
           : ""}
 
+        ${botaoTexto ? `
         <a class="btn" target="_blank"
           href="https://wa.me/5561983585475?text=Tenho%20interesse%20em%20${encodeURIComponent(item.nome)}">
           <i class="fab fa-whatsapp"></i> ${botaoTexto}
-        </a>
+        </a>` : ""}
+
       </div>
     </div>
   `;
@@ -750,3 +752,4 @@ document.getElementById("anoAtual").textContent = new Date().getFullYear();
 
 </body>
 </html>
+

@@ -47,7 +47,7 @@
   {
     "nome": "Carregador USB de Parede",
     "descricao": "Carregador USB bivolt para celulares",
-    "imagem": "imagens/carregador-usb.webp"
+    "imagem": "imagens/carregador-usb.jpg"
   },
   {
     "nome": "Fone de Ouvido com Fio",
@@ -90,4 +90,5 @@
     "imagem": "imagens/pelicula-3d.jpg"
   }
 ]
+
 

@@ -1,1850 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Guia Comercial | Bairro Alvorada</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guia Comercial do Bairro Alvorada. Valorize o comércio local.">
-
-  
-<style>
-/* ================= RESET ================= */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* ================= BODY ================= */
-body {
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background: #f1f5f9;
-    color: #0f172a;
-    line-height: 1.6;
-}
-
-
-body {
-    overflow-x: hidden;
-}
-
-
-
-/* ================= HEADER ================= */
-.header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    background: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 14px;
-}
-
-
-.logo {
-    font-weight: 800;
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: #ffffff; /* BRANCO */
-    text-transform: uppercase;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-}
-
-
-/* MENU TOGGLE */
-.menu-toggle {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #38bdf8;
-}
-
-/* MENU MOBILE */
-.menu {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background: rgba(2, 6, 23, 0.95);
-    position: absolute;
-    top: 60px;
-    right: 12px;
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-.menu.open {
-    display: flex;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #e5e7eb;
-    font-weight: 600;
-    padding: 10px 14px;
-    border-radius: 10px;
-    transition: all 0.25s ease;
-}
-
-.menu a:hover {
-    background: #38bdf8;
-    color: #020617;
-}
-
-/* ================= CONTAINER ================= */
-.container {
-    padding: 0 6px;
-    max-width: 1300px;
-    margin: auto;
-}
-
-
-h1#empresas {
-    text-align: center;
-    font-size: 26px;
-    margin-bottom: 24px;
-    font-weight: 800;
-    color: #0f172a; /* PRETO */
-    margin: 01px 0 5px;
-    margin-top: 0px;
-}
-
-
-/* ================= GRID ================= */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4px;
-    padding: 0;
-}
-
-
-
-
-
-/* ================= CARD ================= */
-.card {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 8px;
-
-    display: flex;
-    gap: 8px;
-
-    width: 100%;
-    min-width: 0;
-
-    overflow: hidden;
-}
-
-
-
-.card:hover {
-    transform: translateY(-4px) scale(1.01);
-    border-color: #38bdf8;
-    box-shadow: 0 0 18px rgba(56,189,248,0.35);
-}
-  .card {
-    min-width: 0;
-}
-  
-.card h3,
-.card .categoria {
-    white-space: normal;
-    word-break: break-word;
-    overflow-wrap: break-word;
-}
-
-
-.card h3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-
-.card .contatos {
-    flex-wrap: wrap;
-}
-
-.card .btn {
-    width: 100%;
-}
-
-
-
-    
-/* ================= LOGO ================= */
-.card .icone {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.card .icone img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* ================= INFO ================= */
-.card .info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.card h3 {
-    font-size: 13.5px;
-    font-weight: 700;
-    color: #0f172a;
-
-    line-height: 1.2;
-
-    margin: 0 0 2px 0;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    word-break: break-word;
-}
-
-
-
-.card .categoria {
-    font-size: 12px;
-    color: #64748b;
-    margin-bottom: 4px;
-}
-
-/* ================= BOTÕES ================= */
-.card .contatos {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 6px;
-}
-
-
-.card .btn {
-    border-radius: 8px;
-    font-size: 11px;
-    font-weight: 700;
-
-    padding: 5px 6px;
-    font-size: 10.5px;
-
-    width: 100%;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    white-space: nowrap;
-    text-decoration: none;
-}
-
-
-.card {
-    overflow: hidden;
-}
-
-
-/* TELEFONE */
-
-.btn.telefone {
-    font-size: 10.5px;
-    justify-content: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
-
-/* WHATSAPP */
-.btn.whatsapp {
-    background: linear-gradient(135deg,#22c55e,#16a34a);
-    color: #ecfdf5;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* WHATSAPP INATIVO */
-.btn.whatsapp.inativo {
-    background: #e5e7eb !important;
-    color: #64748b !important;
-    pointer-events: none;
-    filter: grayscale(1);
-    opacity: 0.7;
-}
-
-.btn.whatsapp.inativo::before {
-    content: "⛔";
-}
-
-
-
-.btn.whatsapp:hover {
-    filter: brightness(1.15);
-}
-
-/* ================= FOOTER ================= */
-.footer {
-    margin-top: 40px;
-    padding: 20px;
-    text-align: center;
-    font-size: 13px;
-    color: #94a3b8;
-}
-
-/* MAPA */
-.btn.mapa {
-    background: linear-gradient(135deg,#38bdf8,#0284c7);
-    color: #ffffff;
-}
-
-.btn.mapa:hover {
-    filter: brightness(1.1);
-}
-
-.btn.maps {
-    background: #e2e8f0;
-    color: #020617;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
-
-/* ================= RESPONSIVO ================= */
-/* TABLET */
-@media (min-width: 700px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071426">
+  <meta name="description" content="Descubra lojas, serviços e informações úteis do Residencial Alvorada.">
+  <title>Guia Alvorada | Comércio e serviços do bairro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f3f7fb;--surface:#fff;--surface-2:#eaf2fb;--ink:#0b172a;--muted:#66758a;
+      --line:#dbe6f2;--brand:#0788d1;--brand-2:#05b4d4;--navy:#071426;--green:#0fa968;
+      --red:#df3f4d;--amber:#ee9d18;--shadow:0 20px 60px rgba(7,20,38,.12);
+      --radius:22px;--header:72px;
     }
-}
-
-/* DESKTOP */
-@media (min-width: 1000px) {
-    .grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-
-    .menu {
-        display: flex !important;
-        flex-direction: row;
-        position: static;
-        background: transparent;
-        border: none;
-        padding: 0;
-        gap: 16px;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-}
-
-
-   /* CELULAR */ 
-@media (max-width: 400px) {
-    .card {
-        padding: 10px;
-    }
-
-    .card .icone {
-        width: 54px;
-        height: 54px;
-        min-width: 54px;
-    }
-
-    .card h3 {
-        font-size: 14px;
-    }
-}
-
-
-    
-
-    
-/* ================= LOADING ================= */
-.loading {
-    text-align: center;
-    font-weight: 700;
-    color: #38bdf8;
-    padding: 20px;
-}
-
-.hidden {
-    display: none;
-}
-/* ================= STATUS LOJA ================= */
-
-.status {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 11px;
-    font-weight: 700;
-    margin-bottom: 6px;
-}
-
-.status::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.aberto {
-    color: #22c55e;
-}
-
-.aberto::before {
-    background: #22c55e;
-    box-shadow: 0 0 8px rgba(34,197,94,0.6);
-}
-
-.fechado {
-    color: #ef4444;
-}
-
-.fechado::before {
-    background: #ef4444;
-    box-shadow: 0 0 8px rgba(239,68,68,0.6);
-}
-
-/* ================= BUSCA ================= */
-.search-box {
-    max-width: 520px;
-    margin: 0 auto 26px;
-    position: relative;
-}
-
-.search-box .icon {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #38bdf8;
-}
-
-.search-box input {
-    width: 100%;
-    padding: 14px 14px 14px 42px;
-    border-radius: 14px;
-    border: 1px solid rgba(56,189,248,0.35);
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(6px);
-    font-size: 14px;
-    font-weight: 600;
-    outline: none;
-    transition: .25s;
-}
-
-.search-box input::placeholder {
-    color: #64748b;
-}
-
-.search-box input:focus {
-    border-color: #38bdf8;
-    box-shadow: 0 0 0 3px rgba(56,189,248,0.25);
-}
-/* ================= HERO ALVORADA ================= */
-.hero-alvorada {
-    position: relative;
-    width: 100%;
-    height: 280px;
-    overflow: hidden;
-}
-
-.hero-alvorada img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Gradiente elegante por cima */
-.hero-alvorada::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-
-    background: linear-gradient(
-        to bottom,
-        rgba(2,6,23,0.55),
-        rgba(2,6,23,0.15),
-        rgba(2,6,23,0.65)
-    );
-}
-
-
-/* Label DIA / NOITE */
-.hero-label {
-    position: absolute;
-    bottom: 16px;
-    right: 18px;
-    z-index: 2;
-    padding: 6px 14px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    backdrop-filter: blur(6px);
-}
-
-
-/* Responsivo */
-@media (min-width: 900px) {
-    .hero-alvorada {
-        height: 420px;
-    }
-}
-
-/* ================= DATA & HORA HERO ================= */
-
-.hero-datetime {
-    position: absolute;
-    bottom: 72px;
-    right: 18px;
-    z-index: 3;
-
-    color: #ffffff;
-    font-size: 15px;
-    padding: 0; /* remove caixa */
-
-    font-weight: 700;
-    letter-spacing: 0.6px;
-
-    /* sombra no texto pra manter leitura */
-    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
-
-    /* REMOVE EMBASADO */
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-
-    background: transparent;
-
-    border-radius: 0;
-
-    text-align: right;
-}
-
-
-/* HERO TEXTO POSICIONAMENTO */
-
-/* Mobile padrão */
-.hero-overlay {
-    position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 3;
-}
-
-/* Desktop */
-@media (min-width: 900px) {
-
-    .hero-overlay {
-        top: 140px; /* distância segura do menu */
-    }
-
-    .hero-overlay h1 {
-        font-size: 42px;
-    }
-
-    .hero-overlay p {
-        font-size: 18px;
-    }
-
-}
-
-
-
-
-/* ================= NEWS TICKER ================= */
-.news-ticker {
-    width: 100%;
-    background: #020617;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    overflow: hidden;
-}
-
-.ticker-wrap {
-    width: 100%;
-    overflow: hidden;
-}
-
-.ticker {
-    display: inline-flex;
-    align-items: center;
-    gap: 60px;
-    padding: 10px 0;
-    white-space: nowrap;
-    animation: tickerMove 50s linear infinite;
-}
-
-.ticker span {
-    color: #e5e7eb;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-/* Animação */
-@keyframes tickerMove {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-/* Pausa ao passar o mouse */
-.news-ticker:hover .ticker {
-    animation-play-state: paused;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    .ticker span {
-        font-size: 13px;
-    }
-}
-
-.endereco {
-    font-size: 11px;
-    color: #475569;
-    margin-bottom: 4px;
-    display: block;
-}
-
-.search-box {
-    position: relative;
-    max-width: 420px;
-    margin: 0 auto 10px; /* 👈 espaço forte entre busca e cards */
-}
-
-
-.search-box input {
-    width: 100%;
-    padding: 12px 42px 12px 42px;
-    border-radius: 30px;
-    border: 1px solid #ddd;
-    font-size: 15px;
-    outline: none;
-}
-
-.search-box .icon {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    opacity: 0.6;
-}
-
-.clear-btn {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    background: #eee;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 16px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-}
-
-.clear-btn:hover {
-    background: #d9534f;
-    color: #fff;
-}
-
-/* ================= MODAL NOTÍCIAS ================= */
-.news-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(2,6,23,0.75);
-    backdrop-filter: blur(6px);
-    z-index: 9999;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.news-modal.hidden {
-    display: none;
-}
-
-.news-modal-content {
-    background: #ffffff;
-    width: 92%;
-    max-width: 600px;
-    max-height: 80vh;
-    overflow-y: auto;
-
-    border-radius: 20px;
-    padding: 24px 22px 18px;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.35);
-
-    position: relative;
-    animation: modalUp 0.35s ease;
-}
-
-.news-modal-content h2 {
-    font-size: 18px;
-    margin-bottom: 16px;
-    color: #0f172a;
-    text-align: center;
-}
-
-.news-modal-content ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.news-modal-content li {
-    background: #f1f5f9;
-    border-radius: 12px;
-    padding: 14px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #020617;
-}
-
-/* Botão fechar */
-.close-modal {
-    position: absolute;
-    top: 14px;
-    right: 16px;
-    border: none;
-    background: #e2e8f0;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 800;
-}
-
-.close-modal:hover {
-    background: #ef4444;
-    color: #ffffff;
-}
-
-/* Animação */
-@keyframes modalUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.96);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-.ticker span {
-    cursor: pointer;
-}
-
-
-
-/* Remove tamanho fixo */
-.card-clima {
-  width: auto;
-  height: auto;
-}
-
-/* Texto compacto + branco */
-.clima-info h1 {
-  font-size: 20px;
-  margin: 0;
-  font-weight: 700;
-  line-height: 1.1;
-  color: #ffffff;
-}
-
-.clima-info h2 {
-  font-size: 12px;
-  margin: 0;
-  line-height: 1.1;
-  color: #ffffff;
-}
-
-.clima-info span {
-  font-size: 11px;
-  color: rgba(255,255,255,0.9);
-}
-
-/* Nome da cidade */
-#cidade {
-  color: rgba(255,255,255,0.85);
-}
-
-
-
-/* Ícone mini */
-.clima-animacao {
-  width: 28px;
-  height: 28px;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .clima-card {
-    padding: 5px 12px;
-  }
-
-  .clima-info h1 {
-    font-size: 16px;
-  }
-
-  .clima-animacao {
-    width: 22px;
-    height: 22px;
-  }
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 18px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    z-index: 3;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
-    color: #ffffff;
-}
-
-
-.hero-overlay h1 {
-    font-size: 26px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 2px;
-    text-shadow: 0 3px 10px rgba(0,0,0,.65);
-}
-
-.hero-overlay p {
-    font-size: 15px;
-    font-weight: 500;
-    opacity: 0.9;
-    text-shadow: 0 2px 6px rgba(0,0,0,.6);
-}
-
-/* Desktop */
-@media (min-width: 900px) {
-    .hero-overlay h1 {
-        font-size: 42px;
-        margin-bottom: 8px; /* 👈 distância entre título e subtítulo */
-    }
-
-    .hero-overlay p {
-        font-size: 12px;
-    }
-}
-
-.banner-alvorada {
-  position: relative;
-  width: 100%;
-  height: 260px;
-
-  background-image: url("alvorada-dia.jpg");
-  background-size: cover;
-  background-position: center;
-
-  border-radius: 0 0 18px 18px;
-  overflow: hidden;
-}
-@media (max-width: 600px) {
-
-  .banner-alvorada {
-    height: 220px;
-  }
-
-  
-
-}
-
-.clima-card {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  /* FUNDO TOTALMENTE TRANSPARENTE */
-  background: transparent;
-
-  /* REMOVE QUALQUER FOSCO */
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-
-  border: none;
-
-  margin: 0;
-  padding: 6px 14px;
-
-  border-radius: 0;
-
-  color: #ffffff;
-
-  /* SOMBRA LEVE PRA DESTACAR DO FUNDO */
-  text-shadow: 0 2px 6px rgba(0,0,0,.7);
-
-  box-shadow: none;
-
-  z-index: 3;
-}
-
-
-
-
-@media (max-width: 600px) {
-
-  .hero-datetime {
-    bottom: 60px;
-    font-size: 14px;
-  }
-
- 
-}
-
-.hero-overlay h1,
-.hero-overlay p {
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 1.1;
-}
-.hero-overlay h1 {
-    margin-bottom: 4px !important;
-}
-.hero-overlay h1 { margin-bottom: ... }
-.hero-overlay p { ... }
-
-
-
-
-
-
-
-.online-container {
-  width: 100%;
-  text-align: right;
-
-  margin-bottom: 0;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  color: #22c55e;
-
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  gap: 6px;
-
-  animation: pulseOnline 2s infinite;
-
-}
-
-@keyframes pulseOnline {
-  0% { opacity: 0.7; }
-  50% { opacity: 1; }
-  100% { opacity: 0.7; }
-}
-
-.online-container {
-  padding-right: 12px; /* 👈 empurra pra esquerda */
-}
-
-
-.news-section {
-  padding: 14px;
-  color: #fff;
-}
-
-.news-header {
-  font-size: 16px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.news-subtitle {
-  font-size: 12px;
-  opacity: .8;
-  margin: 4px 0 10px;
-}
-
-/* Slider */
-
-.news-slider {
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-}
-
-.news-slider::-webkit-scrollbar {
-  display: none;
-}
-
-/* Cards */
-
-.news-card {
-  min-width: 240px;
-  background: rgba(255,255,255,.15);
-  backdrop-filter: blur(10px);
-  border-radius: 14px;
-  padding: 14px;
-  scroll-snap-align: start;
-  box-shadow: 0 10px 20px rgba(0,0,0,.3);
-}
-
-.news-card h3 {
-  font-size: 14px;
-  margin: 6px 0;
-}
-
-.news-card p {
-  font-size: 12px;
-  opacity: .9;
-}
-
-.news-time {
-  font-size: 11px;
-  opacity: .7;
-  margin-top: 8px;
-  display: block;
-}
-
-/* Tags */
-
-.news-tag {
-  font-size: 10px;
-  font-weight: bold;
-  background: rgba(0,0,0,.3);
-  padding: 4px 8px;
-  border-radius: 20px;
-  width: fit-content;
-}
-
-/* Dots */
-
-.news-dots {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 8px;
-}
-
-.dot {
-  width: 7px;
-  height: 7px;
-  background: rgba(255,255,255,.4);
-  border-radius: 50%;
-}
-
-.dot.active {
-  background: #fff;
-}
-
-/* Botão */
-
-.news-btn {
-  display: block;
-  margin: 12px auto 0;
-  text-align: center;
-  font-size: 12px;
-  color: #fff;
-  text-decoration: none;
-
-  background: rgba(255,255,255,.2);
-  backdrop-filter: blur(8px);
-
-  padding: 8px 16px;
-  border-radius: 30px;
-  width: fit-content;
-}
-
-
-    
-</style>
-
-
-<!-- Fontes Premium -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,"Segoe UI",sans-serif;line-height:1.5;overflow-x:hidden}
+    button,input,a{font:inherit}
+    button,a{-webkit-tap-highlight-color:transparent}
+    button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(5,180,212,.35);outline-offset:3px}
+    .shell{width:min(1180px,calc(100% - 32px));margin-inline:auto}
+
+    .topbar{height:var(--header);position:absolute;inset:0 0 auto;z-index:20;display:flex;align-items:center;color:#fff}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;color:#fff;text-decoration:none;font-weight:800;letter-spacing:-.02em}
+    .brand-mark{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,var(--brand-2),var(--brand));box-shadow:0 8px 30px rgba(5,180,212,.35)}
+    .brand-mark svg{width:23px;height:23px}
+    .brand small{display:block;font-size:10px;letter-spacing:.13em;text-transform:uppercase;opacity:.72}
+    .nav{display:flex;align-items:center;gap:5px}
+    .nav a{color:rgba(255,255,255,.82);text-decoration:none;font-size:13px;font-weight:700;padding:10px 12px;border-radius:12px;transition:.2s}
+    .nav a:hover{color:#fff;background:rgba(255,255,255,.11)}
+    .menu-btn{display:none;width:44px;height:44px;border:1px solid rgba(255,255,255,.2);border-radius:14px;background:rgba(7,20,38,.35);color:#fff;cursor:pointer}
+
+    .hero{position:relative;min-height:500px;background:var(--navy);overflow:hidden;color:#fff}
+    .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.68}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,14,30,.94) 0%,rgba(4,14,30,.65) 48%,rgba(4,14,30,.24) 100%),linear-gradient(0deg,#071426 0%,transparent 42%)}
+    .hero-grid{position:relative;z-index:2;min-height:500px;padding-top:125px;padding-bottom:70px;display:grid;grid-template-columns:minmax(0,700px) 1fr;align-items:center;gap:40px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(7,20,38,.28);backdrop-filter:blur(12px);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .eyebrow i{width:8px;height:8px;border-radius:50%;background:#35e6aa;box-shadow:0 0 16px #35e6aa}
+    .hero h1{font-size:clamp(38px,6vw,70px);line-height:1.02;letter-spacing:-.055em;margin:22px 0 16px;max-width:760px}
+    .hero h1 span{background:linear-gradient(90deg,#74e7ff,#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-copy{font-size:clamp(16px,2vw,19px);color:rgba(255,255,255,.77);max-width:610px;margin:0 0 27px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .primary-btn,.ghost-btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:15px;padding:0 18px;text-decoration:none;font-weight:800;font-size:14px}
+    .primary-btn{color:#042033;background:linear-gradient(135deg,#6ae8f7,#24b8ec);box-shadow:0 12px 34px rgba(36,184,236,.28)}
+    .ghost-btn{color:#fff;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);backdrop-filter:blur(10px)}
+    .hero-info{justify-self:end;align-self:end;display:grid;gap:12px;width:min(100%,270px)}
+    .glass{border:1px solid rgba(255,255,255,.15);background:rgba(7,20,38,.45);backdrop-filter:blur(16px);border-radius:20px;padding:16px;box-shadow:0 18px 50px rgba(0,0,0,.18)}
+    .datetime{font-size:12px;color:rgba(255,255,255,.68);margin-bottom:5px}.clock{font-size:26px;font-weight:800}
+    .weather{display:flex;align-items:center;justify-content:space-between;gap:16px}.weather strong{font-size:28px}.weather span{font-size:12px;color:rgba(255,255,255,.72);display:block}.weather-icon{font-size:32px}
+
+    .content{position:relative;z-index:5;margin-top:-34px;padding-bottom:70px}
+    .control-panel{background:rgba(255,255,255,.93);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.8);box-shadow:var(--shadow);border-radius:26px;padding:18px}
+    .search-row{display:grid;grid-template-columns:1fr auto;gap:12px}
+    .search{position:relative}.search svg{position:absolute;left:16px;top:50%;translate:0 -50%;width:20px;color:var(--brand)}
+    .search input{width:100%;height:54px;border:1px solid var(--line);border-radius:17px;background:#f8fbfe;color:var(--ink);padding:0 50px 0 48px;font-size:16px;font-weight:600;transition:.2s}
+    .search input:focus{border-color:var(--brand-2);box-shadow:0 0 0 4px rgba(5,180,212,.10);background:#fff;outline:0}
+    .clear-search{position:absolute;right:10px;top:50%;translate:0 -50%;width:34px;height:34px;border:0;border-radius:11px;background:var(--surface-2);color:var(--muted);cursor:pointer;display:none}
+    .open-filter{height:54px;border:1px solid var(--line);border-radius:17px;padding:0 17px;background:#fff;color:var(--ink);font-weight:800;cursor:pointer;white-space:nowrap}
+    .open-filter.active{background:#e9fff6;border-color:#9de8c9;color:#08794b}
+    .chips{display:flex;gap:8px;overflow-x:auto;padding-top:14px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+    .chip{border:1px solid var(--line);background:#fff;color:var(--muted);padding:8px 13px;border-radius:999px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap}
+    .chip.active{background:var(--navy);border-color:var(--navy);color:#fff}
+
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin:34px 2px 18px}
+    .section-head h2{font-size:clamp(24px,4vw,34px);letter-spacing:-.04em;margin:0}.section-head p{margin:4px 0 0;color:var(--muted);font-size:14px}
+    .result-count{font-size:12px;font-weight:800;color:var(--brand);background:#e4f6ff;border-radius:999px;padding:8px 12px;white-space:nowrap}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .card{position:relative;min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;box-shadow:0 9px 30px rgba(16,42,67,.06);transition:transform .22s,border-color .22s,box-shadow .22s;overflow:hidden}
+    .card:hover{transform:translateY(-4px);border-color:#9ddff3;box-shadow:0 19px 48px rgba(16,42,67,.12)}
+    .card-top{display:flex;gap:13px;align-items:flex-start}.icon{width:58px;height:58px;min-width:58px;border-radius:17px;border:1px solid var(--line);background:#f7fafc;display:grid;place-items:center;overflow:hidden}.icon img{width:100%;height:100%;object-fit:contain;padding:4px}
+    .company{min-width:0;flex:1}.company h3{font-size:16px;line-height:1.28;margin:1px 0 6px;letter-spacing:-.02em;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+    .category{display:inline-flex;max-width:100%;font-size:11px;font-weight:800;color:#0875ad;background:#e7f6ff;padding:5px 8px;border-radius:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .status{display:flex;align-items:center;gap:6px;margin:14px 0 8px;font-size:12px;font-weight:800}.status:before{content:"";width:8px;height:8px;border-radius:50%}.status.open{color:var(--green)}.status.open:before{background:var(--green);box-shadow:0 0 0 4px rgba(15,169,104,.12)}.status.closed{color:var(--red)}.status.closed:before{background:var(--red)}
+    .address{color:var(--muted);font-size:12px;min-height:36px;margin-bottom:16px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+    .actions{margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:8px}.action{min-height:42px;border-radius:13px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:7px;font-size:12px;font-weight:800;border:1px solid var(--line);color:var(--ink);background:#f8fbfe;transition:.2s}.action:hover{filter:brightness(.97)}.action.whatsapp{color:#fff;background:linear-gradient(135deg,#18b76f,#079653);border-color:transparent}.action.maps{grid-column:1/-1;color:#0875ad;background:#e9f7ff;border-color:#cdeafa}.action.disabled{pointer-events:none;filter:grayscale(1);opacity:.55}
+    .skeleton{height:245px;border-radius:var(--radius);background:linear-gradient(100deg,#e8eff6 20%,#f7fafc 40%,#e8eff6 60%);background-size:200% 100%;animation:shine 1.2s infinite}@keyframes shine{to{background-position-x:-200%}}
+    .empty{grid-column:1/-1;padding:58px 20px;text-align:center;background:#fff;border:1px dashed #bfd0df;border-radius:var(--radius)}.empty b{font-size:20px;display:block;margin-bottom:6px}.empty span{color:var(--muted)}
+    .error{grid-column:1/-1;padding:26px;text-align:center;color:#9c2732;background:#fff0f1;border:1px solid #ffcdd2;border-radius:var(--radius)}
+    footer{background:var(--navy);color:rgba(255,255,255,.72);padding:30px 0}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px}.footer-inner strong{color:#fff}
+    .toast{position:fixed;left:50%;bottom:24px;translate:-50% 20px;z-index:50;background:var(--navy);color:#fff;padding:11px 15px;border-radius:13px;font-size:13px;font-weight:700;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;translate:-50% 0}
+
+    @media(max-width:900px){.nav{display:none;position:absolute;top:64px;left:16px;right:16px;flex-direction:column;align-items:stretch;padding:10px;background:rgba(7,20,38,.97);border:1px solid rgba(255,255,255,.12);border-radius:18px;box-shadow:var(--shadow)}.nav.open{display:flex}.nav a{padding:12px}.menu-btn{display:grid;place-items:center}.hero-grid{grid-template-columns:1fr}.hero-info{justify-self:start;align-self:auto;grid-template-columns:1fr 1fr;width:min(100%,560px)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:620px){:root{--header:64px}.shell{width:min(100% - 20px,1180px)}.brand-mark{width:38px;height:38px}.brand small{display:none}.hero{min-height:560px}.hero-grid{min-height:560px;padding-top:106px;padding-bottom:82px}.hero:after{background:linear-gradient(0deg,#071426 0%,rgba(4,14,30,.46) 55%,rgba(4,14,30,.8) 100%)}.hero h1{font-size:41px}.hero-info{grid-template-columns:1fr}.glass{padding:13px}.search-row{grid-template-columns:1fr}.open-filter{height:46px}.control-panel{padding:12px;border-radius:20px}.search input{height:52px}.content{margin-top:-28px}.section-head{align-items:center;margin-top:27px}.section-head p{display:none}.grid{grid-template-columns:1fr;gap:12px}.card{padding:15px}.actions{grid-template-columns:1fr 1fr}.footer-inner{flex-direction:column;text-align:center}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
 </head>
-
-
-
 <body>
-
-<!-- HEADER -->
-<header class="header">
-    <div class="logo"></div>
-
-    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-
-    <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="onibus.html">Ônibus</a>
-        <a href="eventos.html">Eventos & Lazer</a>
-        <a href="contatos_uteis.html">Contatos Úteis</a>
-        <a href="novo_gama.html">Notícias de Novo Gama</a>
-        <a href="reclamacoes.html">Reclamações e Melhorias</a>
-    </nav>
-</header>
-
-<!-- HERO ALVORADA (DIA / NOITE) -->
-<section class="hero-alvorada">
-    <img id="heroImagem" src="assets/img/alvorada-dia.png" alt="Bairro Alvorada">
-    <div class="hero-overlay">
-        <h1>RESIDENCIAL ALVORADA</h1> 
-        <p>Guia comercial do bairro</p>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="index.html" aria-label="Página inicial do Guia Alvorada">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5V20a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1v-8.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+        <span>Guia Alvorada<small>Tudo perto de você</small></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="nav" id="menu" aria-label="Navegação principal">
+        <a href="index.html">Início</a><a href="onibus.html">Ônibus</a><a href="eventos.html">Eventos e lazer</a><a href="contatos_uteis.html">Contatos úteis</a><a href="novo_gama.html">Notícias</a><a href="reclamacoes.html">Melhorias</a>
+      </nav>
     </div>
-    
+  </header>
 
+  <section class="hero" aria-labelledby="heroTitle">
+    <img id="heroImage" src="assets/img/alvorada-dia.png" alt="Vista do Residencial Alvorada">
+    <div class="shell hero-grid">
+      <div>
+        <span class="eyebrow"><i></i> Seu bairro conectado</span>
+        <h1 id="heroTitle">Encontre o melhor do <span>Alvorada</span></h1>
+        <p class="hero-copy">Lojas, serviços e contatos do bairro reunidos em um guia rápido, confiável e fácil de usar.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#empresas">Explorar empresas ↓</a><a class="ghost-btn" href="contatos_uteis.html">Contatos úteis</a></div>
+      </div>
+      <aside class="hero-info" aria-label="Informações locais">
+        <div class="glass"><div class="datetime" id="fullDate">Carregando data...</div><div class="clock" id="clock">--:--</div></div>
+        <div class="glass weather"><div><strong id="temperature">--°</strong><span id="weatherDescription">Atualizando clima...</span><span>Residencial Alvorada</span></div><div class="weather-icon" id="weatherIcon" aria-hidden="true">☀️</div></div>
+      </aside>
+    </div>
+  </section>
 
-    <div class="hero-datetime" id="heroDateTime"></div>
+  <main class="content" id="empresas">
+    <div class="shell">
+      <section class="control-panel" aria-label="Pesquisa e filtros">
+        <div class="search-row">
+          <label class="search"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m16.3 16.3 4.2 4.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="searchInput" type="search" placeholder="Busque por loja, serviço ou endereço" autocomplete="off" aria-label="Buscar empresas"><button class="clear-search" id="clearSearch" type="button" aria-label="Limpar busca">×</button></label>
+          <button class="open-filter" id="openFilter" type="button" aria-pressed="false">● Abertos agora</button>
+        </div>
+        <div class="chips" id="categoryChips" aria-label="Categorias"><button class="chip active" data-category="Todos" type="button">Todos</button></div>
+      </section>
 
-<!-- INFORMAÇÕES DO CLIMA--> 
-<section class="clima-card">
-  <div class="clima-info">
-    <p id="cidade">Carregando...</p>
-    <h1 id="temp">--°C</h1>
-    <span id="descricao">---</span>
-  </div>
+      <div class="section-head"><div><h2>Comércio e serviços</h2><p>As empresas abertas aparecem primeiro para agilizar sua escolha.</p></div><span class="result-count" id="resultCount">Carregando…</span></div>
+      <section class="grid" id="companyGrid" aria-live="polite"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></section>
+    </div>
+  </main>
 
-  <div class="clima-animacao" id="animacao">
-    <!-- Sol animado SVG -->
-    <svg id="sol" width="50" height="50" viewBox="0 0 64 64">
-      <circle cx="32" cy="32" r="14" fill="#FFD93B">
-        <animate attributeName="r" values="14;16;14" dur="3s" repeatCount="indefinite" />
-      </circle>
-      <!-- raios do sol -->
-      <g stroke="#FFD93B" stroke-width="3">
-        <line x1="32" y1="0" x2="32" y2="12"/>
-        <line x1="32" y1="52" x2="32" y2="64"/>
-        <line x1="0" y1="32" x2="12" y2="32"/>
-        <line x1="52" y1="32" x2="64" y2="32"/>
-        <line x1="10" y1="10" x2="18" y2="18"/>
-        <line x1="46" y1="46" x2="54" y2="54"/>
-        <line x1="46" y1="18" x2="54" y2="10"/>
-        <line x1="10" y1="54" x2="18" y2="46"/>
-      </g>
-    </svg>
-  </div>
+  <footer><div class="shell footer-inner"><div><strong>Guia Alvorada</strong> · Valorize quem trabalha perto de você.</div><div id="copyright"></div></div></footer>
+  <div class="toast" id="toast" role="status"></div>
 
+  <script>
+    'use strict';
+    const CONFIG={weatherKey:'2f654e652d590de2865656ec9faeb51c',lat:-16.0586,lon:-48.0412};
+    const state={companies:[],query:'',category:'Todos',openOnly:false};
+    const $=s=>document.querySelector(s);
+    const grid=$('#companyGrid'),search=$('#searchInput'),clear=$('#clearSearch');
+    const escapeHTML=value=>String(value??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+    const cleanPhone=value=>String(value??'').replace(/\D/g,'');
+    const formatPhone=value=>{const n=cleanPhone(value);return n.length===11?n.replace(/(\d{2})(\d{5})(\d{4})/,'($1) $2-$3'):n.length===10?n.replace(/(\d{2})(\d{4})(\d{4})/,'($1) $2-$3'):n};
 
-
-</section>
-
-
-
-</section>
-
-
-
-
-</section>
-
-<div class="online-container">
-  👥 <span id="onlineUsers">12</span> pessoas online agora
-</div>
-
-
-
-
-
-
-
-
-<!-- CONTEÚDO -->
-<main class="container">
-    <h1 id="empresas">Lojas do Bairro</h1>
-
-<div class="search-box">
-    <span class="icon">🔍</span>
-
-    <input 
-        type="text" 
-        id="busca"
-        placeholder="Buscar loja por nome..."
-        autocomplete="off">
-
-    <button id="clearSearch" class="clear-btn" aria-label="Limpar busca">✕</button>
-</div>
-
-
-    <p id="loading" class="loading">Carregando empresas...</p>
-
-   <div class="grid hidden" id="lista-empresas"></div>
-
-</main>
-
-<script>
-const inputBusca = document.getElementById('busca');
-const clearBtn = document.getElementById('clearSearch');
-
-inputBusca.addEventListener('input', () => {
-    // mostra ou esconde o X
-    clearBtn.style.display = inputBusca.value.trim() ? 'flex' : 'none';
-});
-
-// clique no X
-clearBtn.addEventListener('click', () => {
-    inputBusca.value = '';
-    inputBusca.focus();
-
-    clearBtn.style.display = 'none';
-
-    // volta todas as empresas
-    renderizarEmpresas(todasEmpresas);
-});
-</script>
-
-
-<!-- FOOTER -->
-<footer class="footer" id="contato">
-    <p id="ano"></p>
-    <p>Valorize o comércio local </p>
-</footer>
-
-<script>
-/* MENU MOBILE */
-const toggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
-
-toggle.addEventListener('click', () => {
-    menu.classList.toggle('open');
-});
-
-/* ANO AUTOMÁTICO */
-document.getElementById('ano').innerText =
-    `© ${new Date().getFullYear()} – Guia Comercial do Bairro Alvorada`;
-
-let todasEmpresas = [];
-
-/* ================= CARREGAR EMPRESAS ================= */
-
-fetch('empresas.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro ao carregar empresas.json');
-        }
-        return response.json();
-    })
-    .then(dados => {
-        todasEmpresas = dados;
-        renderizarEmpresas(todasEmpresas);
-
-        document.getElementById('loading').classList.add('hidden');
-        document.getElementById('lista-empresas').classList.remove('hidden');
-    })
-    .catch(error => {
-        console.error(error);
-        document.getElementById('loading').innerHTML = `
-            <p style="color:red; text-align:center; font-weight:bold;">
-                ❌ Erro ao carregar empresas.json
-            </p>`;
-    });
-
-    function ordenarPorStatus(empresas) {
-
-        return empresas.sort((a, b) => {
-
-            const statusA = verificarStatusPorDia(a.horarios).aberto;
-            const statusB = verificarStatusPorDia(b.horarios).aberto;
-
-            // 👉 abertas primeiro
-            if (statusA && !statusB) return -1;
-            if (!statusA && statusB) return 1;
-
-            // 👉 se ambas abertas ou fechadas mantém ordem original
-            return 0;
-        });
+    function scheduleStatus(hours){
+      if(!hours||typeof hours!=='object') return {open:false,label:'Horário não informado'};
+      const now=new Date(),days=['dom','seg','ter','qua','qui','sex','sab'],today=days[now.getDay()],yesterday=days[(now.getDay()+6)%7],minutes=now.getHours()*60+now.getMinutes();
+      const parse=v=>{if(!v||!/^\d{1,2}:\d{2}$/.test(v))return null;const [h,m]=v.split(':').map(Number);return h*60+m};
+      const prev=hours[yesterday];
+      if(prev&&!prev.fechado&&prev.diaSeguinte){const end=parse(prev.fecha);if(end!==null&&minutes<end)return {open:true,label:`Aberto agora · fecha às ${prev.fecha}`};}
+      const current=hours[today];
+      if(!current||current.fechado)return {open:false,label:'Fechado agora'};
+      const start=parse(current.abre),end=parse(current.fecha);
+      if(start===null||end===null)return {open:false,label:'Consulte o horário'};
+      const open=current.diaSeguinte?minutes>=start:minutes>=start&&minutes<end;
+      return open?{open:true,label:`Aberto agora · fecha às ${current.fecha}`}:{open:false,label:'Fechado agora'};
     }
 
-
-
-
-/* ================= RENDERIZAR ================= */
-
-function renderizarEmpresas(empresas) {
-
-    empresas = ordenarPorStatus(empresas);
-
-
-    const grid = document.getElementById('lista-empresas');
-    grid.innerHTML = '';
-
-    if (empresas.length === 0) {
-        grid.innerHTML = `
-            <p style="grid-column:1/-1;text-align:center;color:#ef4444;font-weight:700;">
-                Nenhuma empresa encontrada.
-            </p>`;
-        return;
+    function filteredCompanies(){
+      const q=state.query.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+      return state.companies.map((company,index)=>({...company,_index:index,_status:scheduleStatus(company.horarios)})).filter(company=>{
+        const hay=[company.nome,company.categoria,company.endereco].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+        return (!q||hay.includes(q))&&(state.category==='Todos'||company.categoria===state.category)&&(!state.openOnly||company._status.open);
+      }).sort((a,b)=>Number(b._status.open)-Number(a._status.open)||a._index-b._index);
     }
 
-    empresas.forEach(empresa => {
-
-        const foneLimpo = (empresa.fone || '').replace(/\D/g, '');
-        let foneFormatado = foneLimpo;
-
-        if (foneLimpo.length === 11) {
-            foneFormatado = foneLimpo.replace(
-                /(\d{2})(\d{5})(\d{4})/,
-                '($1) $2-$3'
-            );
-        }
-
-        grid.innerHTML += `
-        <div class="card"
-            data-horarios='${JSON.stringify(empresa.horarios)}'
-            onclick="abrirSite('${empresa.site || ""}')">
-
-            <div class="icone">
-                <img src="${empresa.logo}" alt="${empresa.nome}"
-                     loading="lazy"
-                     onerror="this.src='assets/img/padrao.png'">
-            </div>
-
-            <div class="info">
-
-                <h3>${empresa.nome}</h3>
-
-                <small class="endereco">
-                    ${empresa.endereco || ""}
-                </small>
-
-                <span class="categoria">${empresa.categoria}</span>
-
-                <span class="status"></span>
-
-                <div class="contatos">
-
-                <a class="btn telefone" onclick="event.stopPropagation()" href="tel:${foneLimpo}">
-                    📞 ${foneFormatado}
-                </a>
-
-                <a class="btn whatsapp" onclick="event.stopPropagation()"
-                   href="https://wa.me/55${foneLimpo}" target="_blank">
-                    🟢 WhatsApp
-                </a>
-
-                ${
-                  empresa.maps 
-                  ? `<a class="btn mapa" onclick="event.stopPropagation()" 
-                        href="${empresa.maps}" target="_blank">
-                        📍 Localização
-                     </a>`
-                  : ""
-                }
-
-            </div>
-
-            </div>
-        </div>`;
-    });
-
-    aplicarStatus();
-}
-
-setInterval(() => {
-    renderizarEmpresas(todasEmpresas);
-}, 60000);
-
-
-/* ================= BUSCA ================= */
-
-document.getElementById('busca').addEventListener('input', function () {
-
-    const termo = this.value.toLowerCase().trim();
-
-    const filtradas = todasEmpresas.filter(empresa =>
-        empresa.nome.toLowerCase().includes(termo) ||
-        empresa.categoria.toLowerCase().includes(termo)
-    );
-
-    renderizarEmpresas(filtradas);
-});
-
-/* ================= STATUS ================= */
-
-function aplicarStatus() {
-
-    document.querySelectorAll(".card").forEach(card => {
-
-        const horarios = JSON.parse(card.dataset.horarios);
-        const status = card.querySelector(".status");
-
-        const resultado = verificarStatusPorDia(horarios);
-
-        if (resultado.aberto) {
-
-        status.textContent = `Aberto agora • Fecha às ${resultado.fecha}`;
-        status.className = "status aberto";
-
-        // ATIVA WHATSAPP
-        const btnWhatsapp = card.querySelector(".btn.whatsapp");
-        if (btnWhatsapp) {
-            btnWhatsapp.classList.remove("inativo");
-        }
-
-        } else {
-
-            status.textContent = "Fechado";
-            status.className = "status fechado";
-
-            // DESATIVA WHATSAPP
-            const btnWhatsapp = card.querySelector(".btn.whatsapp");
-            if (btnWhatsapp) {
-                btnWhatsapp.classList.add("inativo");
-            }
-
-        }
-
-
-    });
-}
-
-function verificarStatusPorDia(horarios) {
-
-    const agora = new Date();
-    const dias = ["dom","seg","ter","qua","qui","sex","sab"];
-
-    const hojeIndex = agora.getDay();
-    const hoje = dias[hojeIndex];
-    const ontem = dias[(hojeIndex + 6) % 7];
-
-    const agoraMin = agora.getHours() * 60 + agora.getMinutes();
-
-    const hojeHorario = horarios[hoje];
-    const ontemHorario = horarios[ontem];
-
-    // 👉 VERIFICA SE CONTINUOU ABERTO DO DIA ANTERIOR
-    if (ontemHorario && ontemHorario.diaSeguinte) {
-
-        const [hA2, mA2] = ontemHorario.abre.split(":").map(Number);
-        const [hF2, mF2] = ontemHorario.fecha.split(":").map(Number);
-
-        const inicioOntem = hA2 * 60 + mA2;
-        const fimHoje = hF2 * 60 + mF2;
-
-        if (agoraMin < fimHoje) {
-            return {
-                aberto: true,
-                fecha: ontemHorario.fecha
-            };
-        }
+    function createCard(company){
+      const phone=cleanPhone(company.fone),hasPhone=phone.length>=10,status=company._status;
+      const article=document.createElement('article');article.className='card';
+      article.innerHTML=`<div class="card-top"><div class="icon"><img src="${escapeHTML(company.logo||'assets/img/padrao.png')}" alt="Logo de ${escapeHTML(company.nome)}" loading="lazy"></div><div class="company"><h3>${escapeHTML(company.nome||'Empresa')}</h3><span class="category">${escapeHTML(company.categoria||'Comércio local')}</span></div></div><div class="status ${status.open?'open':'closed'}">${escapeHTML(status.label)}</div><div class="address">${escapeHTML(company.endereco||'Endereço não informado')}</div><div class="actions"></div>`;
+      article.querySelector('img').addEventListener('error',e=>{e.currentTarget.src='assets/img/padrao.png'},{once:true});
+      const actions=article.querySelector('.actions');
+      const addAction=(label,href,className)=>{const a=document.createElement('a');a.className=`action ${className||''}`;a.textContent=label;a.href=href;if(/^https?:/.test(href)){a.target='_blank';a.rel='noopener noreferrer'}actions.append(a)};
+      if(hasPhone){addAction(`☎ ${formatPhone(phone)}`,`tel:${phone}`,'phone');addAction('WhatsApp',`https://wa.me/55${phone}?text=${encodeURIComponent(`Olá! Encontrei ${company.nome} no Guia Alvorada.`)}`,'whatsapp');}
+      if(company.maps)addAction('📍 Ver localização',company.maps,'maps');
+      if(company.site){article.style.cursor='pointer';article.title='Abrir site da empresa';article.addEventListener('click',e=>{if(!e.target.closest('a'))window.open(company.site,'_blank','noopener')});}
+      return article;
     }
 
-    // 👉 VERIFICA HORÁRIO NORMAL DE HOJE
-    if (!hojeHorario || hojeHorario.fechado) {
-        return { aberto: false };
+    function render(){
+      const companies=filteredCompanies();grid.replaceChildren();
+      $('#resultCount').textContent=`${companies.length} ${companies.length===1?'resultado':'resultados'}`;
+      if(!companies.length){const empty=document.createElement('div');empty.className='empty';empty.innerHTML='<b>Nenhuma empresa encontrada</b><span>Tente outro nome ou remova os filtros.</span>';grid.append(empty);return;}
+      const fragment=document.createDocumentFragment();companies.forEach(c=>fragment.append(createCard(c)));grid.append(fragment);
     }
 
-    const [hA, mA] = hojeHorario.abre.split(":").map(Number);
-    const [hF, mF] = hojeHorario.fecha.split(":").map(Number);
-
-    const inicio = hA * 60 + mA;
-    const fim = hF * 60 + mF;
-
-    // Caso vire o dia
-    if (hojeHorario.diaSeguinte) {
-
-        if (agoraMin >= inicio) {
-            return {
-                aberto: true,
-                fecha: hojeHorario.fecha
-            };
-        }
-
-    } else {
-
-        if (agoraMin >= inicio && agoraMin < fim) {
-            return {
-                aberto: true,
-                fecha: hojeHorario.fecha
-            };
-        }
-
+    function buildCategories(){
+      const container=$('#categoryChips'),categories=[...new Set(state.companies.map(c=>c.categoria).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+      categories.forEach(category=>{const button=document.createElement('button');button.className='chip';button.type='button';button.dataset.category=category;button.textContent=category;container.append(button)});
+      container.addEventListener('click',e=>{const button=e.target.closest('.chip');if(!button)return;state.category=button.dataset.category;container.querySelectorAll('.chip').forEach(c=>c.classList.toggle('active',c===button));render()});
     }
 
-    return { aberto: false };
-}
-
-
-/* ================= SITE ================= */
-
-function abrirSite(url) {
-    if (!url) return;
-    window.open(url, "_blank");
-}
-
-
-
-</script>
-
-<script>
-/* ================= HERO DIA / NOITE (SEM TEXTO) ================= */
-
-<script>
-(() => {
-
-  const CONFIG = {
-    apiKey: "2f654e652d590de2865656ec9faeb51c",
-    lat: -16.0586,
-    lon: -48.0412,
-    pastaImg: "assets/img/",
-    padraoDia: "alvorada-dia.png",
-    padraoNoite: "alvorada-noite.png"
-  };
-
-  const heroImg = document.getElementById("heroImagem");
-
-  function isDia() {
-    const hora = new Date().getHours();
-    return hora >= 6 && hora < 18;
-  }
-
-  function definirImagem(tipo) {
-
-    const periodo = isDia() ? "dia" : "noite";
-
-    let nomeArquivo;
-
-    switch (tipo) {
-
-      case "chuva":
-        nomeArquivo = `alvorada-chuva-${periodo}.png`;
-        break;
-
-      case "neblina":
-        nomeArquivo = `alvorada-neblina-${periodo}.png`;
-        break;
-
-      case "nublado":
-
-        // Só existe nublado-noite no seu padrão
-        if (!isDia()) {
-          nomeArquivo = "alvorada-nublado-noite.png";
-        } else {
-          nomeArquivo = CONFIG.padraoDia;
-        }
-
-        break;
-
-      default:
-        nomeArquivo = isDia()
-          ? CONFIG.padraoDia
-          : CONFIG.padraoNoite;
+    async function loadCompanies(){
+      try{const response=await fetch('empresas.json',{cache:'no-store'});if(!response.ok)throw new Error();const data=await response.json();if(!Array.isArray(data))throw new Error();state.companies=data;buildCategories();render();}
+      catch{grid.innerHTML='<div class="error"><strong>Não foi possível carregar as empresas.</strong><br>Confira se o arquivo <b>empresas.json</b> está na mesma pasta desta página.</div>';$('#resultCount').textContent='Indisponível';}
     }
 
-    heroImg.src = CONFIG.pastaImg + nomeArquivo;
-  }
+    let searchTimer;search.addEventListener('input',()=>{clear.style.display=search.value?'block':'none';clearTimeout(searchTimer);searchTimer=setTimeout(()=>{state.query=search.value.trim();render()},120)});
+    clear.addEventListener('click',()=>{search.value='';state.query='';clear.style.display='none';search.focus();render()});
+    $('#openFilter').addEventListener('click',e=>{state.openOnly=!state.openOnly;e.currentTarget.classList.toggle('active',state.openOnly);e.currentTarget.setAttribute('aria-pressed',String(state.openOnly));render()});
+    $('#menuBtn').addEventListener('click',e=>{const isOpen=$('#menu').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',String(isOpen));e.currentTarget.textContent=isOpen?'×':'☰'});
+    document.addEventListener('click',e=>{if(!e.target.closest('.topbar')&&$('#menu').classList.contains('open')){$('#menu').classList.remove('open');$('#menuBtn').textContent='☰';$('#menuBtn').setAttribute('aria-expanded','false')}});
 
-  async function atualizarHeroClima() {
-<script>
-function atualizarImagemHero(climaID) {
-
-  const agora = new Date();
-  const hora = agora.getHours();
-  const isDia = hora >= 6 && hora < 18;
-
-  let imagem = "alvorada-dia.png"; // padrão
-
-  // 🌧️ Chuva
-  if (climaID >= 200 && climaID < 600) {
-    imagem = isDia ? "alvorada-chuva-dia.png" : "alvorada-chuva-noite.png";
-  }
-
-  // 🌫️ Neblina
-  else if (climaID >= 700 && climaID < 800) {
-    imagem = isDia ? "alvorada-neblina-dia.png" : "alvorada-neblina-noite.png";
-  }
-
-  // ☁️ Nublado noite
-  else if (climaID > 800 && !isDia) {
-    imagem = "alvorada-nublado-noite.png";
-  }
-
-  // ☀️ Normal
-  else {
-    imagem = isDia ? "alvorada-dia.png" : "alvorada-noite.png";
-  }
-
-  const hero = document.getElementById("heroImagem");
-  hero.src = `assets/img/${imagem}`;
-
-  console.log("IMAGEM HERO:", imagem);
-}
-</script>
-
-    
-
-}
-</script>
-
-
-
-
-
-
-
-
-<script>
-/* ================= DATA E HORA HERO ================= */
-
-function atualizarDataHoraHero() {
-    const agora = new Date();
-
-    const meses = [
-        "Jan", "Fev", "Mar", "Abr", "Mai", "Jun",
-        "Jul", "Ago", "Set", "Out", "Nov", "Dez"
-    ];
-
-    const dia = String(agora.getDate()).padStart(2, '0');
-    const mes = meses[agora.getMonth()];
-    const ano = agora.getFullYear();
-
-    const hora = String(agora.getHours()).padStart(2, '0');
-    const minuto = String(agora.getMinutes()).padStart(2, '0');
-
-    const texto = `${dia}, de ${mes} ${ano} • ${hora}:${minuto}`;
-
-    document.getElementById("heroDateTime").textContent = texto;
-}
-
-// Executa ao carregar
-atualizarDataHoraHero();
-
-// Atualiza a cada minuto
-setInterval(atualizarDataHoraHero, 60000);
-</script>
-
-
-
-
-<script>
-(() => {
-
-  const CONFIG = {
-    apiKey: "2f654e652d590de2865656ec9faeb51c",
-    lat: -16.0586,
-    lon: -48.0412,
-    cidade: "Residencial Alvorada"
-  };
-
-  const elCidade = document.getElementById("cidade");
-  const elTemp   = document.getElementById("temp");
-  const elDesc   = document.getElementById("descricao");
-  const elAnim   = document.getElementById("animacao");
-  const elSol    = document.getElementById("sol");
-  const heroImg  = document.getElementById("heroImagem");
-
-  function atualizarImagemHero(climaID) {
-
-    const hora = new Date().getHours();
-    const isDia = hora >= 6 && hora < 18;
-
-    let imagem = "alvorada-dia.png"; // padrão
-
-    // 🌧️ Chuva
-    if (climaID >= 200 && climaID < 600) {
-      imagem = isDia
-        ? "alvorada-chuva-dia.png"
-        : "alvorada-chuva-noite.png";
+    function updateClock(){const now=new Date();$('#clock').textContent=now.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});$('#fullDate').textContent=now.toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'long'});}
+    function weatherImage(id){const day=new Date().getHours()>=6&&new Date().getHours()<18;let file=day?'alvorada-dia.png':'alvorada-noite.png';if(id>=200&&id<600)file=day?'alvorada-chuva-dia.png':'alvorada-chuva-noite.png';else if(id>=700&&id<800)file=day?'alvorada-neblina-dia.png':'alvorada-neblina-noite.png';else if(id>800&&!day)file='alvorada-nublado-noite.png';$('#heroImage').src=`assets/img/${file}`;}
+    async function updateWeather(){
+      try{const response=await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${CONFIG.lat}&lon=${CONFIG.lon}&units=metric&lang=pt_br&appid=${CONFIG.weatherKey}`,{cache:'no-store'});if(!response.ok)throw new Error();const data=await response.json(),id=data.weather?.[0]?.id;$('#temperature').textContent=`${Math.round(data.main.temp)}°` ;$('#weatherDescription').textContent=data.weather[0].description;$('#weatherIcon').textContent=id>=200&&id<300?'⛈️':id<600?'🌧️':id<800?'🌫️':id===800?'☀️':'☁️';weatherImage(id);}
+      catch{$('#weatherDescription').textContent='Clima indisponível';}
     }
-
-    // 🌫️ Neblina
-    else if (climaID >= 700 && climaID < 800) {
-      imagem = isDia
-        ? "alvorada-neblina-dia.png"
-        : "alvorada-neblina-noite.png";
-    }
-
-    // ☁️ Nublado à noite
-    else if (climaID > 800 && !isDia) {
-      imagem = "alvorada-nublado-noite.png";
-    }
-
-    // ☀️ Céu limpo
-    else {
-      imagem = isDia
-        ? "alvorada-dia.png"
-        : "alvorada-noite.png";
-    }
-
-    if (heroImg) {
-      heroImg.src = `assets/img/${imagem}`;
-    }
-
-    console.log("IMAGEM HERO:", imagem);
-  }
-
-  async function buscarClima() {
-
-    try {
-
-      const res = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${CONFIG.lat}&lon=${CONFIG.lon}&units=metric&lang=pt_br&appid=${CONFIG.apiKey}`,
-        { cache: "no-store" }
-      );
-
-      const data = await res.json();
-
-      console.log("CLIMA ATUAL:", data);
-
-      elCidade.textContent = CONFIG.cidade;
-      elTemp.textContent = Math.round(data.main.temp) + "°C";
-      elDesc.textContent = data.weather[0].description;
-
-      const id = data.weather[0].id;
-      elAnim.innerHTML = "";
-
-      if (id >= 200 && id < 300) elAnim.textContent = "⛈️";
-      else if (id >= 300 && id < 600) elAnim.textContent = "🌧️";
-      else if (id >= 700 && id < 800) elAnim.textContent = "🌫️";
-      else if (id === 800) elAnim.innerHTML = elSol.outerHTML;
-      else elAnim.textContent = "☁️";
-
-      if (data.rain && data.rain["1h"]) {
-        elDesc.textContent += " • ☔ " + data.rain["1h"] + " mm";
-      }
-
-      // 🔥 ATUALIZA IMAGEM DO HERO
-      atualizarImagemHero(id);
-
-    } catch (err) {
-
-      console.error("Erro clima:", err);
-
-      elCidade.textContent = CONFIG.cidade;
-      elTemp.textContent = "--°C";
-      elDesc.textContent = "Erro ao carregar clima";
-      elAnim.textContent = "⚠️";
-
-    }
-
-  }
-
-  buscarClima();
-  setInterval(buscarClima, 600000); // 10 minutos
-
-})();
-</script>
-
-
-
-
-<script>
-(() => {
-
-  const minUsers = 10;   // mínimo online
-  const maxUsers = 38;   // máximo online
-
-  const el = document.getElementById("onlineUsers");
-
-  let online = Math.floor(
-    Math.random() * (maxUsers - minUsers + 1)
-  ) + minUsers;
-
-  el.textContent = online;
-
-  function atualizarOnline() {
-
-    const variacao = Math.floor(Math.random() * 5) - 2;
-    online += variacao;
-
-    if (online < minUsers) online = minUsers;
-    if (online > maxUsers) online = maxUsers;
-
-    el.textContent = online;
-  }
-
-  // Atualiza a cada 7 até 14 segundos
-  setInterval(atualizarOnline, 
-    Math.floor(Math.random() * 7000) + 7000
-  );
-
-})();
-</script>
-
-
-
-<script>
-const slider = document.getElementById("newsSlider");
-const dots = document.querySelectorAll(".dot");
-
-slider.addEventListener("scroll", () => {
-  let index = Math.round(slider.scrollLeft / 260);
-
-  dots.forEach(d => d.classList.remove("active"));
-  if(dots[index]) dots[index].classList.add("active");
-});
-</script>
-
-
-
-
-
+    $('#heroImage').addEventListener('error',e=>{e.currentTarget.style.opacity='.18'});
+    $('#copyright').textContent=`© ${new Date().getFullYear()} · Feito para o Residencial Alvorada`;
+    updateClock();setInterval(updateClock,30000);updateWeather();setInterval(updateWeather,600000);loadCompanies();setInterval(render,60000);
+  </script>
 </body>
 </html>

@@ -2,240 +2,32 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Guia Comercial | Informações de Novo Gama</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Informações oficiais de Novo Gama integradas ao Portal do Bairro Alvorada">
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a1425">
+<meta name="description" content="Acompanhe as notícias de Novo Gama e acesse os canais da Prefeitura pelo Guia Alvorada.">
+<title>Notícias de Novo Gama | Guia Alvorada</title>
 <style>
-/* ================= RESET ================= */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* ================= BODY ================= */
-body {
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background: #f1f5f9;
-    color: #0f172a;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* ================= HEADER ================= */
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(15, 23, 42, 0.85);
-    backdrop-filter: blur(12px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.logo {
-    font-weight: 800;
-    font-size: 18px;
-    letter-spacing: 1px;
-    color: #7dd3fc;
-    text-transform: uppercase;
-}
-
-/* MENU TOGGLE */
-.menu-toggle {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #38bdf8;
-}
-
-/* MENU */
-.menu {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background: rgba(2, 6, 23, 0.95);
-    position: absolute;
-    top: 60px;
-    right: 12px;
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-.menu.open {
-    display: flex;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #e5e7eb;
-    font-weight: 600;
-    padding: 10px 14px;
-    border-radius: 10px;
-    transition: .25s;
-}
-
-.menu a:hover {
-    background: #38bdf8;
-    color: #020617;
-}
-
-/* DESKTOP */
-@media (min-width: 900px) {
-    .menu {
-        display: flex !important;
-        flex-direction: row;
-        position: static;
-        background: transparent;
-        border: none;
-        padding: 0;
-        gap: 16px;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-}
-
-/* ================= CONTAINER ================= */
-.container {
-    padding: 26px 14px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* ================= TITLES ================= */
-.page-title {
-    text-align: center;
-    margin-bottom: 26px;
-}
-
-.page-title h1 {
-    font-size: 26px;
-    font-weight: 800;
-    color: #38bdf8;
-}
-
-.page-title p {
-    font-size: 15px;
-    color: #64748b;
-}
-
-/* ================= CARD ================= */
-.card {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 16px;
-    margin-bottom: 24px;
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-/* IFRAME */
-iframe {
-    width: 100%;
-    height: 600px;
-    border: none;
-    border-radius: 12px;
-}
-
-/* LINKS */
-.links a {
-    display: block;
-    padding: 12px;
-    margin-bottom: 10px;
-    background: #f8fafc;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #0f172a;
-    transition: .2s;
-}
-
-.links a:hover {
-    background: #38bdf8;
-    color: #020617;
-}
-
-/* ================= FOOTER ================= */
-footer {
-    margin-top: 30px;
-    padding: 18px;
-    text-align: center;
-    font-size: 13px;
-    color: #64748b;
-}
+:root{color-scheme:dark;--bg:#0a1425;--panel:#14253c;--line:#30455e;--text:#f0f6ff;--muted:#b3c1d5;--accent:#71d6ff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#193a59,transparent 52%),var(--bg);color:var(--text);font:16px/1.6 'Segoe UI',Roboto,Arial,sans-serif}a{color:inherit}button{font:inherit;cursor:pointer}button,a,summary{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,summary:focus-visible,iframe:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.wrap{width:min(1200px,100% - 40px);margin:auto}.skip{position:absolute;left:16px;top:-80px;padding:10px 16px;background:var(--accent);color:#061625;z-index:20}.skip:focus{top:12px}.header{background:#0a1425e8;border-bottom:1px solid var(--line)}.header-inner{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:18px;font-weight:850;text-decoration:none;white-space:nowrap;letter-spacing:-.3px}.brand b{color:var(--accent)}.brand small{display:block;color:var(--muted);font-size:13px;font-weight:400;letter-spacing:0}.nav{display:flex;align-items:center;gap:4px}.nav a{padding:10px 9px;color:var(--muted);font-size:14px;text-decoration:none;border-radius:9px}.nav a:hover,.nav a[aria-current]{background:#1a374e;color:var(--accent)}.mobile{display:none;position:relative}.mobile summary{cursor:pointer;list-style:none;padding:9px 13px;border:1px solid var(--line);border-radius:10px}.mobile summary::-webkit-details-marker{display:none}.mobile .nav{position:absolute;right:0;top:54px;width:min(280px,calc(100vw - 28px));max-height:75vh;overflow:auto;background:#15273f;border:1px solid #45617c;display:flex;flex-direction:column;align-items:stretch;padding:12px;border-radius:16px;box-shadow:0 20px 45px #0009;z-index:5}.intro{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding:34px 0 28px}.eyebrow{color:var(--accent);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700}h1{font-size:clamp(32px,5vw,48px);line-height:1.15;letter-spacing:-1.3px;margin:12px 0}.intro p{color:var(--muted);margin:0}.city{color:var(--accent);border:1px solid #3c607c;border-radius:12px;padding:10px 16px;font-size:14px;white-space:nowrap}.shortcuts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px}.shortcut{display:flex;align-items:center;justify-content:space-between;gap:20px;background:linear-gradient(120deg,#172e46,#112036);border:1px solid var(--line);border-radius:17px;padding:20px 22px;text-decoration:none}.shortcut strong{display:block;font-size:18px}.shortcut small{color:var(--muted);font-size:14px}.shortcut .arrow{font-size:24px;color:var(--accent)}.shortcut:hover{background:#1d3852;border-color:#567d9b}.news{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--panel)}.toolbar{padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:20px}.toolbar h2{font-size:22px;line-height:1.3;margin:0 0 4px}.origin{font-size:14px;color:var(--muted);text-decoration:none}.origin:hover{text-decoration:underline}.actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;border-radius:10px;padding:10px 15px;font-weight:700;font-size:14px;text-decoration:none;background:var(--accent);color:#081b29;border:1px solid var(--accent)}.button:hover{background:#b6eaff}.button.secondary{background:#203a53;color:#dbedff;border-color:#42617d}.button.secondary:hover{background:#315574}.frame-wrap{background:#fff;padding:0}iframe{display:block;width:100%;height:740px;height:clamp(560px,80dvh,960px);border:0;color-scheme:light;background:#fff}.footer{padding:24px 0 32px;display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:14px}.footer a{text-decoration:none}.footer a:hover{color:var(--accent)}@media(max-width:1190px){.desktop{display:none}.mobile{display:block}}@media(max-width:700px){.wrap{width:calc(100% - 28px)}.header-inner{min-height:76px}.intro{padding:26px 0 22px}.city{display:none}.shortcuts{grid-template-columns:1fr;gap:12px;margin-bottom:22px}.shortcut{padding:16px 18px}.toolbar{align-items:stretch;flex-direction:column;padding:18px;gap:16px}.actions{display:grid;grid-template-columns:auto 1fr;gap:8px}.button{padding:10px 12px}.news{border-radius:18px}.footer{flex-direction:column}iframe{height:70vh;height:75dvh;min-height:500px}}@media(prefers-reduced-motion:no-preference){.shortcut,.button{transition:background .2s,border-color .2s}}@media print{body{background:#fff;color:#000}.header,.actions,.footer{display:none}.intro p,.origin,.shortcut small{color:#333}.shortcut,.news{background:#fff;border-color:#ccc}.city{display:none}}
 </style>
 </head>
-
 <body>
-
-<!-- ================= HEADER FIXO ================= -->
-<header class="header">
-    <div class="logo">Residencial Alvorada</div>
-
-    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-
-    <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="onibus.html">Ônibus</a>
-        <a href="posto_saude.html">Posto de Saúde</a>
-        <a href="eventos.html">Eventos & Lazer</a>
-        <a href="contatos_uteis.html">Contatos Úteis</a>
-        <a href="novo_gama.html">Notícias de Novo Gama</a>
-        <a href="reclamacoes.html">Reclamações e Melhorias</a>
-    </nav>
-</header>
-
-<!-- ================= CONTEÚDO ================= -->
-<main class="container">
-
-       <!-- NOTÍCIAS -->
-    <section>
-        <h2>📰 Notícias de Novo Gama</h2>
-        <div class="card">
-            <iframe src="https://novogama.go.gov.br/noticias"></iframe>
-            <p style="margin-top:10px;font-size:13px;color:#64748b;">
-                Caso o conteúdo não carregue, utilize os links abaixo.
-            </p>
-        </div>
-    </section>
-
-    <!-- LINKS -->
-    <section>
-        <h2>🔗 Acessos Oficiais</h2>
-        <div class="card links">
-            <a href="https://novogama.go.gov.br" target="_blank">🌐 Site Oficial da Prefeitura</a>
-            <a href="https://novogama.go.gov.br/contato" target="_blank">📞 Contatos da Prefeitura</a>
-        </div>
-    </section>
-
+<a class="skip" href="#main">Ir para as notícias</a>
+<header class="header"><div class="wrap header-inner"><a href="index.html" class="brand">GUIA <b>ALVORADA</b><small>Residencial Alvorada</small></a><nav class="nav desktop" aria-label="Menu principal"><a href="index.html">Início</a><a href="onibus.html">Ônibus</a><a href="posto_saude.html">Posto de Saúde</a><a href="eventos.html">Eventos & Lazer</a><a href="contatos_uteis.html">Contatos úteis</a><a href="novo_gama.html" aria-current="page">Notícias</a><a href="reclamacoes.html">Reclamações e Melhorias</a></nav><details class="mobile"><summary aria-label="Abrir ou fechar menu">☰ Menu</summary><nav class="nav" aria-label="Menu móvel"><a href="index.html">Início</a><a href="onibus.html">Ônibus</a><a href="posto_saude.html">Posto de Saúde</a><a href="eventos.html">Eventos & Lazer</a><a href="contatos_uteis.html">Contatos úteis</a><a href="novo_gama.html" aria-current="page">Notícias de Novo Gama</a><a href="reclamacoes.html">Reclamações e Melhorias</a></nav></details></div></header>
+<main class="wrap" id="main">
+<div class="intro"><div><span class="eyebrow">Informação da cidade</span><h1>Notícias de Novo Gama</h1><p>Acompanhe as publicações e os canais da Prefeitura.</p></div><span class="city">Novo Gama · GO</span></div>
+<section class="shortcuts" aria-label="Acessos oficiais"><a class="shortcut" href="https://novogama.go.gov.br" target="_blank" rel="noopener noreferrer"><span><strong>Portal da Prefeitura</strong><small>Informações e serviços municipais</small></span><span class="arrow" aria-hidden="true">↗</span></a><a class="shortcut" href="https://novogama.go.gov.br/contato" target="_blank" rel="noopener noreferrer"><span><strong>Contatos da Prefeitura</strong><small>Canais de atendimento</small></span><span class="arrow" aria-hidden="true">↗</span></a></section>
+<section class="news" aria-labelledby="news-title"><div class="toolbar"><div><h2 id="news-title">Publicações da Prefeitura</h2><a class="origin" href="https://novogama.go.gov.br/noticias" target="_blank" rel="noopener noreferrer">novogama.go.gov.br</a></div><div class="actions"><button class="button secondary" id="reload" type="button" hidden aria-label="Recarregar notícias da Prefeitura">↻ Atualizar</button><a class="button" href="https://novogama.go.gov.br/noticias" target="_blank" rel="noopener noreferrer">Abrir notícias <span aria-hidden="true">↗</span></a></div></div><div class="frame-wrap"><iframe id="news-frame" src="https://novogama.go.gov.br/noticias" title="Notícias no site da Prefeitura de Novo Gama" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></section>
 </main>
-
-<!-- ================= FOOTER ================= -->
-<footer>
-    © <span id="ano"></span> – Portal do Bairro Alvorada  
-    <br>
-    Conteúdo oficial fornecido pelo site da Prefeitura de Novo Gama
-</footer>
-
+<footer class="wrap footer"><span>© <span id="year">2026</span> Guia Alvorada</span><a href="index.html">← Voltar ao início</a></footer>
 <script>
-document.getElementById("ano").innerText = new Date().getFullYear();
-
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-    document.querySelector('.menu').classList.toggle('open');
-});
+'use strict';
+document.getElementById('year').textContent=new Date().getFullYear();
+const menu=document.querySelector('.mobile');
+document.addEventListener('click',event=>{if(!menu.contains(event.target))menu.open=false;});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu.open){menu.open=false;menu.querySelector('summary').focus();}});
+menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menu.open=false;}));
+const reload=document.getElementById('reload');reload.hidden=false;
+reload.addEventListener('click',()=>{const frame=document.getElementById('news-frame');frame.src='https://novogama.go.gov.br/noticias';});
 </script>
-
 </body>
 </html>
-
-
-

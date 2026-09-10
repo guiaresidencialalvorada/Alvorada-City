@@ -1,0 +1,36 @@
+GUIA ALVORADA — PROFISSIONAIS E SERVIÇOS
+
+INSTALAÇÃO NO SITE EXISTENTE
+1. Faça uma cópia de segurança do index.html atual.
+2. Envie index.html, profissionais.html, servicos.html e profissional.html para a pasta pública do seu site (htdocs no InfinityFree).
+3. Acrescente os três arquivos profissionais.css, profissionais.js e profissionais-dados.js à pasta assets existente. Não apague a pasta atual.
+4. Mantenha empresas.json, assets/img e as demais páginas do site. Esses arquivos não foram enviados no anexo e não estão incluídos neste pacote.
+5. Abra profissionais.html no navegador para conferir os novos cadastros.
+
+O QUE FOI ALTERADO
+index.html: dois links no menu e dois botões na apresentação inicial: Profissionais e Serviços. O restante do código enviado foi mantido.
+profissionais.html: catálogo de profissionais com pesquisa e filtro por especialidade.
+servicos.html: catálogo dos serviços, com acesso ao profissional responsável.
+profissional.html?id=IDENTIFICADOR: apresentação individual e serviços detalhados.
+
+CADASTROS
+Edite assets/profissionais-dados.js. Os três cadastros atuais são exemplos fictícios, identificados na interface. Não possuem contato real.
+Para cada profissional, preencha:
+- id: identificador único, estável, sem espaços. Exemplo: joao-eletricista.
+- nome, iniciais, categoria, bairro, descricao e sobre.
+- atendimento: texto com forma ou horário de atendimento.
+- regioes: lista das localidades atendidas.
+- whatsapp: número brasileiro com DDD (11 dígitos) ou país 55 + DDD + número. Use apenas números.
+- demonstracao: altere para false somente depois de substituir todos os dados por informações reais autorizadas.
+- servicos: lista de objetos com nome e descricao.
+- cor: blue, orange ou teal.
+A interface usa iniciais, sem depender de fotos externas. Os campos foto e telefone ficam reservados e não são exibidos nesta versão.
+
+O WhatsApp só aparece em cadastros reais (demonstracao:false) com número brasileiro de comprimento válido. Confirme o número; a validação de formato não confirma a titularidade.
+Cada serviço permite abrir uma mensagem com seu nome já preenchido.
+Não há valores, avaliações, certificações ou disponibilidade inventados. Preços são tratados como sob orçamento.
+
+DADOS E LIMITES
+Os novos cadastros são carregados de um arquivo JavaScript local. Esta entrega não inclui login, painel de cadastro ou banco de dados. Atualizações são feitas no arquivo de dados; o formato permite posterior integração com PHP/MySQL.
+Os arquivos novos também abrem localmente. A página inicial original depende do servidor, do empresas.json, das imagens e do serviço de clima já existente.
+Para visualizar com servidor local: python -m http.server 8000, dentro da pasta; abra http://localhost:8000/profissionais.html.

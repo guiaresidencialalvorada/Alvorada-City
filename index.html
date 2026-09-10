@@ -87,7 +87,8 @@
     @media(max-width:900px){.nav{display:none;position:absolute;top:64px;left:16px;right:16px;flex-direction:column;align-items:stretch;padding:10px;background:rgba(7,20,38,.97);border:1px solid rgba(255,255,255,.12);border-radius:18px;box-shadow:var(--shadow)}.nav.open{display:flex}.nav a{padding:12px}.menu-btn{display:grid;place-items:center}.hero-grid{grid-template-columns:1fr}.hero-info{justify-self:start;align-self:auto;grid-template-columns:1fr 1fr;width:min(100%,560px)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:620px){:root{--header:64px}.shell{width:min(100% - 20px,1180px)}.brand-mark{width:38px;height:38px}.brand small{display:none}.hero{min-height:560px}.hero-grid{min-height:560px;padding-top:106px;padding-bottom:82px}.hero:after{background:linear-gradient(0deg,#071426 0%,rgba(4,14,30,.46) 55%,rgba(4,14,30,.8) 100%)}.hero h1{font-size:41px}.hero-info{grid-template-columns:1fr}.glass{padding:13px}.search-row{grid-template-columns:1fr}.open-filter{height:46px}.control-panel{padding:12px;border-radius:20px}.search input{height:52px}.content{margin-top:-28px}.section-head{align-items:center;margin-top:27px}.section-head p{display:none}.grid{grid-template-columns:1fr;gap:12px}.card{padding:15px}.actions{grid-template-columns:1fr 1fr}.footer-inner{flex-direction:column;text-align:center}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
-  </style>
+  .hero-actions{flex-wrap:wrap}@media(min-width:901px) and (max-width:1180px){.nav{gap:0}.nav a{padding:9px 6px;font-size:12px}}
+</style>
 </head>
 <body>
   <header class="topbar">
@@ -98,7 +99,7 @@
       </a>
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
       <nav class="nav" id="menu" aria-label="Navegação principal">
-        <a href="index.html">Início</a><a href="onibus.html">Ônibus</a><a href="eventos.html">Eventos e lazer</a><a href="contatos_uteis.html">Contatos úteis</a><a href="novo_gama.html">Notícias</a><a href="reclamacoes.html">Melhorias</a>
+        <a href="index.html">Início</a><a href="profissionais.html">Profissionais</a><a href="servicos.html">Serviços</a><a href="onibus.html">Ônibus</a><a href="eventos.html">Eventos e lazer</a><a href="contatos_uteis.html">Contatos úteis</a><a href="novo_gama.html">Notícias</a><a href="reclamacoes.html">Melhorias</a>
       </nav>
     </div>
   </header>
@@ -110,7 +111,7 @@
         <span class="eyebrow"><i></i> Seu bairro conectado</span>
         <h1 id="heroTitle">Encontre o melhor do <span>Alvorada</span></h1>
         <p class="hero-copy">Lojas, serviços e contatos do bairro reunidos em um guia rápido, confiável e fácil de usar.</p>
-        <div class="hero-actions"><a class="primary-btn" href="#empresas">Explorar empresas ↓</a><a class="ghost-btn" href="contatos_uteis.html">Contatos úteis</a></div>
+        <div class="hero-actions"><a class="primary-btn" href="#empresas">Explorar empresas ↓</a><a class="ghost-btn" href="profissionais.html">Profissionais</a><a class="ghost-btn" href="servicos.html">Serviços</a></div>
       </div>
       <aside class="hero-info" aria-label="Informações locais">
         <div class="glass"><div class="datetime" id="fullDate">Carregando data...</div><div class="clock" id="clock">--:--</div></div>
